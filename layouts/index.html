@@ -7,6 +7,7 @@
         {{ with .Params.subtitle }}<h2 class="f7 fw7 measure mv0 ttu tracked">{{ . }}</h2>{{ end }}
         {{ with .Params.description }}<p class="f4 measure mv4 lh-copy black-50">{{ . | markdownify }}</p>{{ end }}
         {{ if .Params.show_action_link }}<a class="action {{ .Params.action_type }}" href="{{ .Params.action_link }}">{{ .Params.action_label | safeHTML }}</a>{{ end }}
+        {{ partial "shared/social-links.html" . }}
       </div>
       <div class="tr w-50-l">
       {{ with .Params.images }}

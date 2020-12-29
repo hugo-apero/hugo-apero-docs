@@ -21,6 +21,7 @@ preserveTaxonomyNames = true
   orgLocal = "Brooklyn, NY"
   favicon = "/img/favicon.ico?v=0"
   logo = "/img/blogophonic-mark-dark.png"
+  show_social_links = true
   # font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
   textFontFamily = "sans-serif"
@@ -44,15 +45,15 @@ preserveTaxonomyNames = true
   borderColor = "moon-gray"
   # show/hide social icons in site header/footer
   socialInHeader = false
-  socialInFooter = false
+  socialInFooter = true
 
 [social]
   # social accounts (username only)
-  facebook = "formspree"
+  facebook = "emilyinparis"
   facebook_admin = "" # Facebook Page Admin ID for Domain Insights
-  instagram = ""
+  instagram = "emilyinparis"
   youtube = ""
-  twitter = "formspree"
+  twitter = "hashtag/EmilyInParis"
   github = "formspree"
   medium = ""
 
