@@ -8,9 +8,9 @@ header:
   - name: Blog
     title: Blog
     url: /blog/
-  - name: Contact
-    title: Contact Form
-    url: /contact/
+  - name: Portfolio
+    title: Portfolio
+    url: /portfolio/
   - name: Elements
     title: Element Page
     url: /elements/
@@ -25,6 +25,9 @@ footer:
   - name: Terms of Use
     title: Terms and Conditions
     url: https://help.formspree.io
+  - name: Contact
+    title: Contact Form
+    url: /contact/
   - name: RSS
     title: RSS Feed
     url: /feed.xml
