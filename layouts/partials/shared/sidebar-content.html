@@ -8,9 +8,15 @@
   {{ if .author }}<p class="f7 measure lh-copy i mh0-l">Written by {{ .author }}</p>{{ end }}
   {{ if .text_link_label }}<small class="db f7"><a href="{{ .text_link_url }}" class="dib fw7 ttu bt bw1 b--black-10 pt3">{{ .text_link_label }}</a></small>{{ end }}
 </div>
-   
-{{ if .show_sidebar_adunit }}
+
 <div class="ad-unit pa4">
+{{ if .show_sidebar_toc }}
+  <p class="f7 measure-narrow lh-copy mb4">
+    <span class="b ttu db">Table of Contents</span>
+    <span>{{ .TableOfContents }}</span>
+  </p>
+{{ end }}
+{{ if .show_sidebar_adunit }}
   {{ range $.Site.Data.ads }}
   <p class="f7 measure-narrow lh-copy mv0"><span class="b ttu db">{{ .title }}</span><span>{{ .body | markdownify }}</span></p>
   {{ end }}
