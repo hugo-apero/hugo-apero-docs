@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ with .Site.GetPage "/home/index.md" }}
 <main class="page-main pa4" role="main">
   <section class="page-content mw9 center">
     <div class="flex-l items-center">
@@ -10,11 +11,13 @@
         {{ if .Params.show_action_link }}<a class="action {{ .Params.action_type }}" href="{{ .Params.action_link }}">{{ .Params.action_label | safeHTML }}</a>{{ end }}
       </div>
       <div class="tr w-50-l mr4">
-      {{ with .Params.images }}
-        {{ range first 1 . }}<img class="mv0 w-70-m" src="{{ . }}"/>{{ end }}
+      {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+      {{ with $img }}
+        <img class="mv0 w-70-m" src="{{ .RelPermalink }}"/>
       {{ end }}
       </div>
     </div>
   </section>
 </main>
+{{ end }}
 {{ end }}
