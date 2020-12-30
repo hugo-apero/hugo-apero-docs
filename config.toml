@@ -43,9 +43,10 @@ preserveTaxonomyNames = true
   buttonHoverTextColor = "white"
   buttonHoverBgColor = "blue"
   borderColor = "moon-gray"
-  # show/hide social icons in site header/footer
+  # show/hide social icons in site header/footer/home page
   socialInHeader = false
   socialInFooter = true
+  socialInHome = true
 
 [social]
   # social accounts (username only)
