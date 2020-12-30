@@ -1,11 +1,10 @@
 {{ define "main" }}
 <main class="page-main pa4 {{ .Kind }}" role="main">
   <section class="blog-content mw7 center">
-    {{ $paginator := .Paginate (where .Pages "Type" "project") }}
-    {{ range $paginator.Pages }}
+    {{ $pages := (where .Pages "Type" "project") }}
+    {{ range $pages }}
       {{ .Render "summary" }}
     {{ end }}
-    {{ partial "shared/list-pagination.html" . }}
   </section>
 </main>
 <aside class="page-sidebar" role="complementary">
