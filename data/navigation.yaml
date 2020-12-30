@@ -5,9 +5,9 @@ header:
   - name: Blog
     title: Blog
     url: /blog/
-  - name: Portfolio
-    title: Portfolio
-    url: /portfolio/
+  - name: Projects
+    title: Project Portfolio
+    url: /project/
   - name: Elements
     title: Element Page
     url: /elements/

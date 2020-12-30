@@ -6,7 +6,7 @@ date: 2019-07-01
 author: "Eric Anderson"
 draft: false
 images:
-  - /portfolio/assets/bakeoff.png
+  - /project/assets/bakeoff.png
   - /blog/assets/built-in-contact-form-feature.png
 series:
   - Getting Started

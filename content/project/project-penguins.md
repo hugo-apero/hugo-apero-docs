@@ -6,7 +6,7 @@ date: 2019-07-02
 author: "Eric Anderson"
 draft: false
 images:
-- /portfolio/assets/palmerpenguins.png
+- /project/assets/palmerpenguins.png
 - /blog/assets/css-grid-cover.png
 series:
 - Getting Started

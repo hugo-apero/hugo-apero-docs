@@ -6,7 +6,7 @@
     {{ if .Params.show_author_byline }}<p class="f7 measure lh-copy tc center i">{{ if .Params.author }}Written by {{ .Params.author }}{{ end }}</p>{{ end }}
   </section>
   <section class="blog-content db flex-ns flex-row-ns flex-wrap-ns items-start mw8 center">
-    {{ $paginator := .Paginate (where .Pages "Type" "portfolio") }}
+    {{ $paginator := .Paginate (where .Pages "Type" "project") }}
     {{ range $paginator.Pages }}
       {{ .Render "summary-grid"}}
     {{ end }}
