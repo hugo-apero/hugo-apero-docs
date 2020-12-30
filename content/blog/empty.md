@@ -13,3 +13,5 @@ layout: single
 ---
 
 ## An empty post
+
+<i class="fas fa-mug-hot"></i> woot
