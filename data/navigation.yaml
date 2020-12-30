@@ -1,7 +1,4 @@
 header:
-  - name: Home
-    title: Home Page
-    url: /
   - name: About
     title: About Blogophonic
     url: /about/
