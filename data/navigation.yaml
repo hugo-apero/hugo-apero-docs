@@ -13,15 +13,9 @@ header:
     url: /elements/
 
 footer:
-  - name: Help
-    title: Visit Help Site
-    url: https://help.formspree.io
-  - name: Privacy
-    title: Privacy Policy
-    url: https://help.formspree.io
-  - name: Terms of Use
-    title: Terms and Conditions
-    url: https://help.formspree.io
+  - name: License
+    title: License
+    url: /license/
   - name: Contact
     title: Contact Form
     url: /contact/
