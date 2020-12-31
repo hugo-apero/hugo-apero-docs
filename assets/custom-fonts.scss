@@ -1,44 +1,41 @@
 /* fraunces-regular - latin */
 @font-face {
-  font-family: 'Fraunces';
+  font-family: 'fraunces';
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Fraunces9ptSoft-Thin.woff2') format('woff2');
+       url('/fonts/Fraunces9ptSoft-Thin.woff2') format('woff2');
 }
 
 /* fraunces-italic - latin */
 @font-face {
-  font-family: 'Fraunces';
+  font-family: 'fraunces';
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Fraunces9ptSoft-ThinItalic.woff2')  format('woff2');
+       url('/fonts/Fraunces9ptSoft-ThinItalic.woff2')  format('woff2');
 }
 
 /* commissioner-regular - latin */
 @font-face {
-  font-family: 'Commissioner';
+  font-family: 'commissioner';
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Commissioner-Light.woff2') format('woff2');
+       url('/fonts/Commissioner-Light.woff2') format('woff2');
 }
 
 /* commissioner-italic - latin */
 @font-face {
-  font-family: 'Commissioner';
+  font-family: 'commissioner';
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Commissioner-LightItalic.woff2') format('woff2');
+       url('/fonts/Commissioner-LightItalic.woff2') format('woff2');
 }
 
-$commissioner: 'Commissioner', sans-serif;
-$fraunces: 'Fraunces', serif;
-
-.custom-text-font { font-family: $commissioner; }
-.custom-heading-font { font-family: $fraunces; }
+.custom-text-font { font-family: 'commissioner', sans-serif; }
+.custom-heading-font { font-family: 'fraunces', serif; }
 
 $textFontFamily: custom-text-font;
 $headingFontFamily: custom-heading-font;
