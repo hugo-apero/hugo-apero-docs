@@ -16,9 +16,30 @@
        url('../fonts/Fraunces9ptSoft-ThinItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
+/* commissioner-regular - latin */
+@font-face {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/Commissioner-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+/* commissioner-italic - latin */
+@font-face {
+  font-family: 'Commissioner';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/Commissioner-LightItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
 // USAGE
-.sans-serif, 
-body,
+.sans-serif,
 h2, h2, h3, h4, h5, h6 {
-    font-family: 'Fraunces', sans-serif;
+    font-family: 'Fraunces', serif;
+}
+
+body {
+    font-family: 'Commissioner', sans-serif;
 }
