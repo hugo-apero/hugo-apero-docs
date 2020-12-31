@@ -5,6 +5,8 @@ description: "Not all themes are created equal. With Blogophonic we set out to c
 date: 2019-02-18T12:27:33-06:00
 images:
   - img/revoir.jpg
+image_left: false
+text_align_left: true
 show_action_link: true
 action_link: /about
 action_label: "Read More &rarr;"
