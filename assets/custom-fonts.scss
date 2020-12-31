@@ -36,23 +36,11 @@
        url('../fonts/Commissioner-LightItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
-// USAGE
+// create custom ffont classes based on tachyons prefix when needed
 
-.custom-body-font { 
-  font-family: 'Commissioner', sans-serif;
-}
-
-.custom-header-font { 
-  font-family: 'Fraunces', serif;
-}
+.custom-text-font { font-family: 'Commissioner', sans-serif; }
+.custom-heading-font { font-family: 'Fraunces', serif; }
 
 // override variables used in main with new custom class slugs
-$textFontFamily: custom-body-font;
-$headingFontFamily: custom-header-font;
-
-body {
-  @extend .#{$textFontFamily};
-}
-h1, h2, h3, h4, h5, h6 {
-  @extend .#{$headingFontFamily};
-}
+$textFontFamily: custom-text-font;
+$headingFontFamily: custom-heading-font;
