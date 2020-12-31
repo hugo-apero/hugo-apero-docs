@@ -4,8 +4,7 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('#{$custom-font-path}/Fraunces9ptSoft-Thin.woff2') format('woff2'), 
-       /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Fraunces9ptSoft-Thin.woff2') format('woff2');
 }
 
 /* fraunces-italic - latin */
@@ -14,8 +13,7 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('#{$custom-font-path}/Fraunces9ptSoft-ThinItalic.woff2')  format('woff2'), 
-       /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Fraunces9ptSoft-ThinItalic.woff2')  format('woff2');
 }
 
 /* commissioner-regular - latin */
@@ -24,7 +22,7 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('#{$custom-font-path}/Commissioner-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Commissioner-Light.woff2') format('woff2');
 }
 
 /* commissioner-italic - latin */
@@ -33,14 +31,14 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('#{$custom-font-path}/Commissioner-LightItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Commissioner-LightItalic.woff2') format('woff2');
 }
 
-// create custom font classes based on tachyons prefix when needed
+$commissioner: 'Commissioner', sans-serif;
+$fraunces: 'Fraunces', serif;
 
-.custom-text-font { font-family: 'Commissioner', sans-serif; }
-.custom-heading-font { font-family: 'Fraunces', serif; }
+.custom-text-font { font-family: $commissioner; }
+.custom-heading-font { font-family: $fraunces; }
 
-// override variables used in main with new custom class slugs
 $textFontFamily: custom-text-font;
 $headingFontFamily: custom-heading-font;
