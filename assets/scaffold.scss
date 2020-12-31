@@ -25,6 +25,10 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 // add your own colors at the top of the imported file
 @import 'custom-colors';
 
+// uncomment the import below to activate custom-fonts
+// add your own fonts at the top of the imported file
+@import 'custom-fonts';
+
 // apply tachyons font family and color options from config
 body {
   @extend .bg-#{$siteBgColor}, .#{$textFontFamily}, .#{$textColor};
