@@ -49,3 +49,10 @@
 // override variables used in main with new custom class slugs
 $textFontFamily: custom-body-font;
 $headingFontFamily: custom-header-font;
+
+body {
+  @extend .#{$textFontFamily};
+}
+h1, h2, h3, h4, h5, h6 {
+  @extend .#{$headingFontFamily};
+}
