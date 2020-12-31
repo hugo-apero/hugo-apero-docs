@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Fraunces9ptSoft-Thin.woff2'), 
+       url('../fonts/Fraunces9ptSoft-Thin.woff2') format('woff2'), 
        /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
@@ -14,7 +14,7 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Fraunces9ptSoft-ThinItalic.woff2'), 
+       url('../fonts/Fraunces9ptSoft-ThinItalic.woff2')  format('woff2'), 
        /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
@@ -37,10 +37,15 @@
 }
 
 // USAGE
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fraunces', serif;
+
+.custom-body-font { 
+  font-family: 'Commissioner', sans-serif;
 }
 
-body {
-    font-family: 'Commissioner', sans-serif;
+.custom-header-font { 
+  font-family: 'Fraunces', serif;
 }
+
+// override variables used in main with new custom class slugs
+$textFontFamily: custom-body-font;
+$headingFontFamily: custom-header-font;
