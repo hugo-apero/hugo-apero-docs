@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('fonts/Fraunces9ptSoft-Thin.woff2') format('woff2'), 
+       url('#{$custom-font-path}/Fraunces9ptSoft-Thin.woff2') format('woff2'), 
        /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
@@ -14,7 +14,7 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('fonts/Fraunces9ptSoft-ThinItalic.woff2')  format('woff2'), 
+       url('#{$custom-font-path}/Fraunces9ptSoft-ThinItalic.woff2')  format('woff2'), 
        /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
@@ -24,7 +24,7 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('fonts/Commissioner-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('#{$custom-font-path}/Commissioner-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 /* commissioner-italic - latin */
@@ -33,7 +33,7 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('fonts/Commissioner-LightItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('#{$custom-font-path}/Commissioner-LightItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 }
 
 // create custom font classes based on tachyons prefix when needed
