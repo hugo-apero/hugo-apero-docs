@@ -1,0 +1,22 @@
+/* fraunces-regular - latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/Fraunces9ptSoft-Thin.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+/* fraunces-italic - latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/Fraunces9ptSoft-ThinItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+// USAGE
+body {
+    font-family: 'Fraunces', sans-serif;
+}
