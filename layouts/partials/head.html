@@ -16,4 +16,7 @@
   {{ end }}
   {{ $styles := resources.Get "scaffold.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+  {{ $sassTemplate := resources.Get "template.scss" }}
+  {{ $fonts := $sassTemplate | resources.ExecuteAsTemplate "fonts.scss" . | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $fonts.Permalink }}" integrity="{{ $fonts.Data.Integrity }}" media="screen">
 </head>

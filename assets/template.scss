@@ -34,8 +34,17 @@
        url('/fonts/Commissioner-LightItalic.woff2') format('woff2');
 }
 
-.custom-text-font { font-family: 'commissioner', sans-serif; }
-.custom-heading-font { font-family: 'fraunces', serif; }
+{{ with .Site.Params.customtextFontFamily }}
+$textFontFamily: {{ . }}, sans-serif;
+{{ end }}
 
-$textFontFamily: custom-text-font;
-$headingFontFamily: custom-heading-font;
+{{ with .Site.Params.customheadingFontFamily }}
+$headingFontFamily: {{ . }}, serif;
+{{ end }}
+
+body {
+  font-family: $textFontFamily;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFontFamily;
+}
