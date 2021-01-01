@@ -35,8 +35,8 @@ preserveTaxonomyNames = true
   # for more http://tachyons.io/docs/typography/font-family/
   textFontFamily = "sans-serif"
   headingFontFamily = "sans-serif"
-  customtextFontFamily = "Commissioner"
-  customheadingFontFamily = "Fraunces"
+  #customtextFontFamily = "Commissioner"
+  #customheadingFontFamily = "Fraunces"
   # basic color options: use only color names as shown in the
   # "Color Palette" section of http://tachyons.io/docs/themes/skins/
   siteBgColor = "near-white"
