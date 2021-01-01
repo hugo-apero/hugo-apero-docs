@@ -34,12 +34,12 @@
        url('/fonts/Commissioner-LightItalic.woff2') format('woff2');
 }
 
-{{ with .Site.Params.customtextFontFamily }}
-$textFontFamily: {{ . }}, sans-serif;
+{{ with $.Site.Data.theme.fonts }}
+$textFontFamily: {{ .customtextFontFamily }}, sans-serif;
 {{ end }}
 
-{{ with .Site.Params.customheadingFontFamily }}
-$headingFontFamily: {{ . }}, serif;
+{{ with $.Site.Data.theme.fonts }}
+$headingFontFamily: {{ .customheadingFontFamily }}, serif;
 {{ end }}
 
 body {
