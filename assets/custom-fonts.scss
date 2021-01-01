@@ -1,6 +1,6 @@
 /* fraunces-regular - latin */
 @font-face {
-  font-family: 'fraunces';
+  font-family: 'Fraunces';
   font-style: normal;
   font-weight: 400;
   src: local(''),
@@ -9,7 +9,7 @@
 
 /* fraunces-italic - latin */
 @font-face {
-  font-family: 'fraunces';
+  font-family: 'Fraunces';
   font-style: italic;
   font-weight: 400;
   src: local(''),
@@ -18,7 +18,7 @@
 
 /* commissioner-regular - latin */
 @font-face {
-  font-family: 'commissioner';
+  font-family: 'Commissioner';
   font-style: normal;
   font-weight: 400;
   src: local(''),
@@ -27,7 +27,7 @@
 
 /* commissioner-italic - latin */
 @font-face {
-  font-family: 'commissioner';
+  font-family: 'Commissioner';
   font-style: italic;
   font-weight: 400;
   src: local(''),
@@ -114,7 +114,45 @@
        url('../fonts/alegreya-sans-v13-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* WonderUnitSans-regular - latin */
+@font-face {
+  font-family: 'Wonder Unit Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/WonderUnitSans-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/WonderUnitSans-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
+/* WonderUnitSans-italic - latin */
+@font-face {
+  font-family: 'Wonder Unit Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/WonderUnitSans-RegularItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/WonderUnitSans-RegularItalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* WonderUnitSans-700 - latin */
+@font-face {
+  font-family: 'Wonder Unit Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/WonderUnitSans-Semibold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/WonderUnitSans-Semibold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* WonderUnitSans-700italic - latin */
+@font-face {
+  font-family: 'Wonder Unit Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/WonderUnitSans-SemiboldItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/WonderUnitSans-SemiboldItalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 {{ with $.Site.Data.theme.fonts }}
 $textFontFamily: {{ .customtextFontFamily }}, sans-serif;
