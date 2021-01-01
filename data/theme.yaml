@@ -1,3 +1,5 @@
 fonts:
+  # serif options: Fraunces / EB Garamond
+  # sans-serif options: Commissioner / Alegreya Sans / Wonder Unit Sans
   customtextFontFamily: "Wonder Unit Sans"
   customheadingFontFamily: "Fraunces"
