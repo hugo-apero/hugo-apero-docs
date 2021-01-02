@@ -5,6 +5,6 @@ fonts:
   customheadingFontFamily: "Fraunces"
   navallcaps: true
 colors:
-  # theme options: blue / forest / grayscale / violet
+  # theme options: blue / forest / grayscale / violet / lake
   # if none, defaults to tachyons (override in config.toml)
-  theme: "violet"
+  theme: "lake"
