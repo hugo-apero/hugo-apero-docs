@@ -289,6 +289,45 @@ a > svg.anchor-symbol:hover {
   transition: fill 0.3s ease;
 }
 
+/*----NAV LINK HOVER ANIMATION -----*/
+/* from Desiree: https://github.com/dcossyleon/blogdown_desiree/blob/master/assets/scss/custom.scss */
+
+/* stroke */
+
+.site-links a,
+.site-links a:after,
+.site-links a:before {
+  transition: all .5s;
+}
+
+.site-links a {
+  position: relative;
+}
+
+.site-links a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.'; /* make invisible, dot beneath links */
+  color: transparent;
+  background: lighten( $navLinkColorCustom, 10% );
+  height: .11rem;
+}
+
+.site-links a:hover:after {
+  width: 84%;
+}
+
+.site-links a.active:after {
+  width: 85%;  
+  color: transparent;
+  background: lighten( $navLinkColorCustom, 10% );
+  height: .11rem;
+}
+
 // Fontawesome icons
 $fa-font-path:        "../webfonts";
 @import "fontawesome-free-5.15.1-web/scss/fontawesome.scss";

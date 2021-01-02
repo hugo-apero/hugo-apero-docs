@@ -61,3 +61,25 @@ preserveTaxonomyNames = true
   category = "categories"
   series = "series"
   tag = "tags"
+
+[menu]
+  [[menu.header]]
+    name = "About"
+    title = "About Blogophonic"
+    url = "/about/"
+    weight = 1
+  [[menu.header]]
+    name = "Blog"
+    title = "Blog"
+    url = "/blog/"
+    weight = 2
+  [[menu.header]]
+    name = "Projects"
+    title = "Project Portfolio"
+    url = "/project/"
+    weight = 3
+  [[menu.header]]
+    name = "Elements"
+    title = "Element Page"
+    url = "/elements/"
+    weight = 4
