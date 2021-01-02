@@ -276,6 +276,19 @@ form {
   }
 }
 
+// anchor links
+a > svg.anchor-symbol {
+  color: transparent;
+  margin-left: .5rem;
+  fill: $black-40;
+  height: 22px;
+}
+
+a > svg.anchor-symbol:hover {
+  fill: $black-60;
+  transition: fill 0.3s ease;
+}
+
 // Fontawesome icons
 $fa-font-path:        "../webfonts";
 @import "fontawesome-free-5.15.1-web/scss/fontawesome.scss";
