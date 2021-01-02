@@ -1,17 +1,3 @@
-header:
-  - name: About
-    title: About Blogophonic
-    url: /about/
-  - name: Blog
-    title: Blog
-    url: /blog/
-  - name: Projects
-    title: Project Portfolio
-    url: /project/
-  - name: Elements
-    title: Element Page
-    url: /elements/
-
 footer:
   - name: License
     title: License
