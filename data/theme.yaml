@@ -4,3 +4,7 @@ fonts:
   customtextFontFamily: "Commissioner"
   customheadingFontFamily: "Fraunces"
   navallcaps: true
+colors:
+  # theme options: blue / forest / grayscale / violet
+  # if none, defaults to tachyons (override in config.toml)
+  theme: "violet"
