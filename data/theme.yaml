@@ -3,3 +3,4 @@ fonts:
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
   customtextFontFamily: "Commissioner"
   customheadingFontFamily: "Fraunces"
+  navallcaps: true
