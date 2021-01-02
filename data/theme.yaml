@@ -4,3 +4,6 @@ fonts:
   customtextFontFamily: "Commissioner"
   customheadingFontFamily: "Fraunces"
   navallcaps: true
+colors:
+  # theme options: blue (default) / forest / grayscale / violet
+  theme: "violet"
