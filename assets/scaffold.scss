@@ -318,7 +318,14 @@ a > svg.anchor-symbol:hover {
 }
 
 .site-links a:hover:after {
-  width: 85%;
+  width: 84%;
+}
+
+.site-links a.active:after {
+  width: 85%;  
+  color: transparent;
+  background: lighten( $navLinkColorCustom, 10% );
+  height: .11rem;
 }
 
 // Fontawesome icons
