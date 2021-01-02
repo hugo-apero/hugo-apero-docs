@@ -1,5 +1,5 @@
 fonts:
   # serif options: Fraunces / EB Garamond
-  # sans-serif options: Commissioner / Alegreya Sans
-  customtextFontFamily: "Commissioner"
+  # sans-serif options: Commissioner / Alegreya Sans / Metropolis
+  customtextFontFamily: "Metropolis"
   customheadingFontFamily: "Fraunces"
