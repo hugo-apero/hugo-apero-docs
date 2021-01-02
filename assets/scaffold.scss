@@ -19,11 +19,15 @@ $buttonHoverTextColor: {{ .Site.Params.buttonHoverTextColor | default "white" }}
 $buttonHoverBgColor: {{ .Site.Params.buttonHoverBgColor | default "blue" }};
 $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 
+
 // learn about Tachyons http://tachyons.io
 @import 'tachyons';
+
 // uncomment the import below to activate custom-colors
 // add your own colors at the top of the imported file
-@import 'blue';
+{{ with $.Site.Data.theme.colors.theme }}
+@import '{{ . | default "blue" }}';
+{{ end }}
 // @import 'grayscale';
 // @import 'forest';
 // @import 'violet';
