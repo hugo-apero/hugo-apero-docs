@@ -2,5 +2,5 @@ fonts:
   # serif options: Fraunces / EB Garamond
   # slab option: Aleo / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
-  customtextFontFamily: "Metropolis"
+  customtextFontFamily: "Commissioner"
   customheadingFontFamily: "Bitter"
