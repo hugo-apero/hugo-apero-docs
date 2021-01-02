@@ -1,5 +1,6 @@
 fonts:
   # serif options: Fraunces / EB Garamond
+  # slab option: Aleo
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
   customtextFontFamily: "Metropolis"
-  customheadingFontFamily: "Fraunces"
+  customheadingFontFamily: "Aleo"
