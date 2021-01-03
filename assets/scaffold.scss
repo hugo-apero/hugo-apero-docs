@@ -328,6 +328,18 @@ a > svg.anchor-symbol:hover {
   height: .11rem;
 }
 
+/* Headroom */
+
+.headroom {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+transition: all 2s ease-in-out;
+}
+.headroom--unpinned {top: -200px;}
+.headroom--pinned {top: 0;}
+
 // Fontawesome icons
 $fa-font-path:        "../webfonts";
 @import "fontawesome-free-5.15.1-web/scss/fontawesome.scss";
