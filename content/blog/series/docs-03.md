@@ -14,8 +14,8 @@ tags:
 - hugo-site
 categories:
 - Theme Features
-# layout options: single or single-sidebar
-layout: single-doc
+# layout options: single, single-sidebar, single-series
+layout: single-series
 ---
 
 ## does this work?
