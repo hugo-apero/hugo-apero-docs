@@ -9,6 +9,7 @@
   {{ if .text_link_label }}<small class="db f7"><a href="{{ .text_link_url }}" class="dib fw7 ttu bt bw1 b--black-10 pt3">{{ .text_link_label }}</a></small>{{ end }}
 </div>
 
+{{ if ne $page.Params.layout "single-series" }}
 {{ if or .show_sidebar_toc .show_sidebar_adunit }}
 <div class="ad-unit pa4">
 {{ if .show_sidebar_toc }}
@@ -27,5 +28,27 @@
   {{ end }}
 {{ end }}
 </div>
+{{ end }}
+{{ end }}
+
+{{ if eq $page.Params.layout "single-series" }}
+<div class="flex items-start ad-unit">
+  <div class="w-50 pl4 pr0 ma0">
+    <h3 class="f3 mt3">{{ .text_series_label }}</h3>
+    {{ $series := index ($page.Params.series) 0 | urlize }}
+    {{ $taxonomy :=  $.Site.GetPage (printf "/series/%s" $series) }}
+    <nav id="SeriesTableOfContents">
+        <ul>
+        {{ range $taxonomy.Pages }}
+          {{ $active := eq .RelPermalink $page.RelPermalink }}
+        <li class="{{ if $active }}bt bb b--dotted bw1 bg-near-white{{ end }} pv1" hugo-nav="{{ .RelPermalink }}"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+        </ul>
+      </nav>
+  </div>
+  <div class="outline w-50 pl3 pr0 ml0 bg-near-white">
+    <h3 class="f3 mt3">{{ .text_contents_label }}</h3>
+    {{ $page.TableOfContents }}
+  </div>
 {{ end }}
 {{ end }}

@@ -27,24 +27,6 @@
 <aside class="page-sidebar" role="complementary">
   {{ .Scratch.Set "sidebar" .Site.Data.sidebar_content.blog.docs_sidebar }}
   {{ partial "shared/sidebar-content.html" . }}
-  <div class="flex items-start ad-unit">
-  <div class="w-50 pl4 pr0 ma0">
-    <h3 class="f3 mt3">In this series</h3>
-    {{ $series := index (.Params.series) 0 | urlize }}
-    {{ $taxonomy :=  $.Site.GetPage (printf "/series/%s" $series) }}
-    <nav id="SeriesTableOfContents">
-        <ul>
-        {{ range $taxonomy.Pages }}
-          {{ $active := eq .RelPermalink $page.RelPermalink }}
-        <li class="{{ if $active }}bt bb b--dotted bw1 bg-near-white{{ end }} pv1" hugo-nav="{{ .RelPermalink }}"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-        {{ end }}
-        </ul>
-      </nav>
-  </div>
-  <div class="outline w-50 pl3 pr0 ml0 bg-near-white">
-    <h3 class="f3 mt3">On this page</h3>
-    {{ .TableOfContents }}
-  </div>
 </aside>
 
 {{ end }}

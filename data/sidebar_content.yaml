@@ -25,3 +25,5 @@ blog: # must match the slug of your blog
     title: A Spoonful of Hugo
     description: "This is a series."
     author: Alison Hill
+    text_series_label: "In this series"
+    text_contents_label: "On this page"
