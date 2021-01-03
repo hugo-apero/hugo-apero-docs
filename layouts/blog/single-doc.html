@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $page := . }}
 <main class="page-main pa4" role="main">
   <section class="page-content mw7 center">
     <article class="post-content pa0 ph3-l">
@@ -24,27 +25,26 @@
 </main>
 
 <aside class="page-sidebar" role="complementary">
-  {{ .Scratch.Set "sidebar" .Site.Data.sidebar_content.blog.single_sidebar }}
+  {{ .Scratch.Set "sidebar" .Site.Data.sidebar_content.blog.docs_sidebar }}
   {{ partial "shared/sidebar-content.html" . }}
-  {{ .Scratch.Set "details" "open" }}
-  {{ partial "shared/post-details.html" . }}
+  <div class="flex items-start">
+  <div class="w-50 pl4 pr0 ma0">
+    <h3 class="f3">In this series</h3>
+    {{ $series := index (.Params.series) 0 | urlize }}
+    {{ $taxonomy :=  $.Site.GetPage (printf "/series/%s" $series) }}
+    {{ range $taxonomy.Pages }}
+      <nav id="SeriesTableOfContents">
+        <ul>
+        {{ $active := eq .RelPermalink $page.RelPermalink }}
+        <li class="{{ if $active }}shadow-3 bg-near-white outline{{ end }} pv1" hugo-nav="{{ .RelPermalink }}"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        </ul>
+      </nav>
+    {{ end }}
+  </div>
+  <div class="outline w-50 pl3 pr0 ml0 bg-near-white">
+    <h3 class="f3">On this page</h3>
+    {{ .TableOfContents }}
+  </div>
 </aside>
 
-<aside class="page-contents page-sidebar" role="complementary">
-  <div class="blog-info pa4">
-  <h1 class="f3">On this page</h1>
-  {{ .TableOfContents }}
-  <div class="flex justify-around">
-  <div class="outline w-25 pa3 mr2">
-    <code>1</code>
-  </div>
-  <div class="outline w-25 pa3 mr2">
-    <code>2</code>
-  </div>
-  <div class="outline w-25 pa3 mr2">
-    <code>3</code>
-  </div>
-</div>
-  </div>
-</aside>
 {{ end }}
