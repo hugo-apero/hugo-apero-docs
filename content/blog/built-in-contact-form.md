@@ -12,6 +12,7 @@ tags:
   - hugo-site
 categories:
   - Theme Features
+# layout options: single, single-sidebar, single-series
 layout: single
 ---
 

@@ -9,6 +9,7 @@ images:
 series:
 tags:
 categories:
+# layout options: single, single-sidebar, single-series
 layout: single
 ---
 
