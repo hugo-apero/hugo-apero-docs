@@ -8,8 +8,6 @@ draft: false
 images:
 - /blog/assets/css-grid-thumbnail.png
 - /blog/assets/css-grid-cover.png
-series:
-- Getting Started
 tags:
 - hugo-site
 categories:

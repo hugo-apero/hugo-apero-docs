@@ -8,8 +8,6 @@ draft: false
 images:
   - /blog/assets/tachyons-thumbnail.png
   - /blog/assets/tachyons-logo-script-feature.png
-series:
-  - Getting Started
 tags:
   - hugo-site
 categories:

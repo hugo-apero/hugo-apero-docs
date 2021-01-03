@@ -8,8 +8,6 @@ draft: false
 images:
   - /project/assets/bakeoff.png
   - /blog/assets/built-in-contact-form-feature.png
-series:
-  - Getting Started
 tags:
   - hugo-site
 categories:
