@@ -23,7 +23,7 @@ preserveTaxonomyNames = true
     unsafe = true  # Enable user to embed HTML snippets in Markdown content.
   [markup.tableOfContents]
     startLevel = 2
-    endLevel = 2
+    endLevel = 3
 
 [params]
   orgName = "Formspree"

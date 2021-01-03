@@ -241,6 +241,18 @@ form {
     grid-column: 5 / 7;
   }
 }
+.single-doc {
+  .page-sidebar {
+    grid-column: 1 / 2;
+  }
+  .page-contents {
+    grid-column: 2 / 3;
+  }
+  .page-main {
+    grid-column: 3 / 7;
+  }
+
+}
 
 // SCAFFOLD MEDIA QUERY
 @media screen and (max-width: 768px) {
