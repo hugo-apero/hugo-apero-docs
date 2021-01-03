@@ -9,7 +9,6 @@
   {{ if .text_link_label }}<small class="db f7"><a href="{{ .text_link_url }}" class="dib fw7 ttu bt bw1 b--black-10 pt3">{{ .text_link_label }}</a></small>{{ end }}
 </div>
 
-{{ if ne $page.Params.layout "single-series" }}
 {{ if or .show_sidebar_toc .show_sidebar_adunit }}
 <div class="ad-unit pa4">
 {{ if .show_sidebar_toc }}
@@ -28,7 +27,6 @@
   {{ end }}
 {{ end }}
 </div>
-{{ end }}
 {{ end }}
 
 {{ if eq $page.Params.layout "single-series" }}
