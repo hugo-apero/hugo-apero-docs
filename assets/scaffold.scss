@@ -328,6 +328,16 @@ a > svg.anchor-symbol:hover {
   height: .11rem;
 }
 
+// TOC
+
+nav#TableOfContents ul {
+  @extend .list, .pa0;
+}
+
+nav#TableOfContents ul li {
+  @extend .lh-copy, .dim;
+}
+
 // Fontawesome icons
 $fa-font-path:        "../webfonts";
 @import "fontawesome-free-5.15.1-web/scss/fontawesome.scss";
