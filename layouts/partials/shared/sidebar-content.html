@@ -9,13 +9,12 @@
   {{ if .text_link_label }}<small class="db f7"><a href="{{ .text_link_url }}" class="dib fw7 ttu bt bw1 b--black-10 pt3">{{ .text_link_label }}</a></small>{{ end }}
 </div>
 
-{{ $headers := findRE "<h[2].*>" $page.Content }}
-{{- $has_headers := ge (len $headers) 1 -}}
-
 <div class="ad-unit pa4">
 {{ if .show_sidebar_toc }}
+  {{ $headers := findRE "<h[2].*>" $page.Content }}
+  {{- $has_headers := ge (len $headers) 1 -}}
   {{- if $has_headers -}}
-  <p class="f7 measure-narrow lh-copy mb4">
+  <p class="f6 measure-narrow lh-copy mb2">
     <span class="b ttu db">On this page</span>
     <span>{{ $page.TableOfContents }}</span>
   </p>
