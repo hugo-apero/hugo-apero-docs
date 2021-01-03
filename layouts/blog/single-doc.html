@@ -22,12 +22,14 @@
     {{ end }}
   </section>
 </main>
+
 <aside class="page-sidebar" role="complementary">
   {{ .Scratch.Set "sidebar" .Site.Data.sidebar_content.blog.single_sidebar }}
   {{ partial "shared/sidebar-content.html" . }}
   {{ .Scratch.Set "details" "open" }}
   {{ partial "shared/post-details.html" . }}
 </aside>
+
 <aside class="page-contents page-sidebar" role="complementary">
   <div class="blog-info pa4">
   <h1 class="f3">On this page</h1>
