@@ -1,10 +1,10 @@
 fonts:
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
-  customtextFontFamily: "Commissioner"
-  customheadingFontFamily: "Fraunces"
-  navallcaps: true
+  customtextFontFamily: "Metropolis"
+  customheadingFontFamily: "Bitter"
+  navallcaps: false
 colors:
-  # theme options: blue / forest / grayscale / violet / lake
+  # theme options: blue / forest / grayscale / violet / lake / peach
   # if none, defaults to tachyons (override in config.toml)
   theme: "rust"
