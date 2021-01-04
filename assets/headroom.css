@@ -1,7 +1,6 @@
 .headroom {
   will-change: transform;
   transition: transform 200ms linear;
-  background: #e3f0eeee; /* customize to match bacgkround color of the site */
 }
 .headroom--pinned {
   transform: translateY(0%);
