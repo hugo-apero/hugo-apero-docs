@@ -13,8 +13,6 @@ const headroom = new Headroom(Header, {
   },
   classes: {
     initial: "header--fixed",
-    // pinned: "slideDown",
-    // unpinned: "slideUp",
     top: "top",
     notTop: "not-top"
   }
@@ -22,10 +20,3 @@ const headroom = new Headroom(Header, {
 
 // initialise
 headroom.init();
-
-// When the page is at the top, remove the slideDown class.
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset === 0) {
-    Header.classList.remove("slideDown");
-  }
-});
