@@ -6,6 +6,9 @@
     </figure>
     <div class="flex flex-column w-100 w-60-ns pl3-ns">
       <header class="w-100">
+        {{ range first 1 (.GetTerms "series") }}
+        <h2 class="f5"><a class="link ttu tracked" href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
+        {{ end }}
         <h1 class="f3 mv2 lh-title underline"><a href="{{ .Permalink }}" class="db">{{ .Title }}</a></h1>
       </header>
       <p class="f6 lh-copy mv2 flex-auto">{{ if .Params.Excerpt }}{{ .Params.Excerpt }}{{ else }}{{ .Summary }}{{ end }}</p>
@@ -18,6 +21,9 @@
   {{ else }}
   <div class="measure-wide center mb4 mb5-l">
     <header>
+      {{ range first 1 (.GetTerms "series") }}
+      <h2><a class="link f5 ttu tracked" href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
+      {{ end }}
       <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="{{ .Permalink }}" class="db">{{ .Title }}</a></h1>
     </header>
     <p class="lh-copy mb4">{{ if .Params.Excerpt }}{{ .Params.Excerpt }}{{ else }}{{ .Summary }}{{ end }}</p>
