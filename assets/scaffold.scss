@@ -314,7 +314,7 @@ a > svg.anchor-symbol:hover {
   content: '.'; /* make invisible, dot beneath links */
   color: transparent;
   background: lighten( $navLinkColorCustom, 10% );
-  height: .11rem;
+  height: .08rem;
 }
 
 .site-links a:hover:after {
@@ -325,7 +325,17 @@ a > svg.anchor-symbol:hover {
   width: 85%;  
   color: transparent;
   background: lighten( $navLinkColorCustom, 10% );
-  height: .11rem;
+  height: .08rem;
+}
+
+// TOC
+
+nav#TableOfContents ul {
+  @extend .list, .pa0;
+}
+
+nav#TableOfContents ul li {
+  @extend .lh-copy, .dim;
 }
 
 /* Headroom */
