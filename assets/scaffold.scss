@@ -23,9 +23,9 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 @import 'tachyons';
 
 // colors set in data/theme.yaml
-// one of: blue / forest / grayscale / violet
+// one of: forest / grayscale / peach / poppy / sky / violet / water
 {{ with $.Site.Data.theme.colors.theme }}
-@import '{{ . | default "blue" }}';
+@import '{{ printf "theme/%s" . | default "sky" }}';
 {{ end }}
 
 // uncomment the import below to activate custom-fonts
