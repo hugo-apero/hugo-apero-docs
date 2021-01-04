@@ -20,4 +20,6 @@
   {{ $sassFonts := resources.Get "custom-fonts.scss" }}
   {{ $fonts := $sassFonts | resources.ExecuteAsTemplate "fonts.scss" . | resources.ToCSS }}
   <link rel="stylesheet" href="{{ $fonts.Permalink }}" integrity="{{ $fonts.Data.Integrity }}" media="screen">
+  {{ $headroomCSS := resources.Get "headroom.css" | resources.ToCSS }}
+  <link rel="stylesheet" href="{{ $headroomCSS.Permalink }}" integrity="{{ $headroomCSS.Data.Integrity }}" media="screen">
 </head>

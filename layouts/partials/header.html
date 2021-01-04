@@ -1,5 +1,5 @@
 {{ $page := . }}
-<header class="site-header pa4 bb b--transparent mh5-l" role="banner">
+<header class="site-header pa4 bb b--transparent mh5-l headroom" role="banner">
   <nav class="site-nav db dt-l w-100" role="nav">
     <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="{{ .Site.BaseURL }}" title="Home">
       {{ if .Site.Params.logo }}<img src="{{ .Site.Params.logo }}" class="dib db-l h2 w-auto" alt="{{ .Site.Title }}">{{ else }}<span class="f4 fw7">{{ .Site.Title }}</span>{{ end }}

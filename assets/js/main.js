@@ -1,5 +1,5 @@
 // first import.
-import Headroom from "headroom.js";
+import Headroom from 'js/headroom';
 
 // grab the header element.
 const Header = document.querySelector("header");
@@ -13,8 +13,8 @@ const headroom = new Headroom(Header, {
   },
   classes: {
     initial: "header--fixed",
-    pinned: "slideDown",
-    unpinned: "slideUp",
+    // pinned: "slideDown",
+    // unpinned: "slideUp",
     top: "top",
     notTop: "not-top"
   }
