@@ -19,6 +19,3 @@
     </div>
   </nav>
 </footer>
-
-{{ $mainJs := resources.Get "js/main.js" | js.Build "main.js" | minify | fingerprint }}
-<script src="{{ $mainJs.Permalink }}" type="text/javascript"></script>
