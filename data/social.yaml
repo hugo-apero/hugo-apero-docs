@@ -14,3 +14,6 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/alisonpresmaneshill/
+- icon: rss
+  icon_pack: fas
+  link: /blog/index.xml

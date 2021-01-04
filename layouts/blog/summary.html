@@ -2,7 +2,7 @@
   {{ if .CurrentSection.Params.show_post_thumbnail }}
   <div class="flex flex-column flex-row-ns mb4 mb5-l">
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
-      <a href="{{ .Permalink }}" class="db">{{ with $.Param "images" }}{{ range first 1 .}}<img src="{{ . | absURL }}" class="db ma0" alt="">{{ end }}{{ end }}</a>
+      <a href="{{ .Permalink }}" class="db">{{ with $.Param "images" }}{{ range first 1 .}}<img src="{{ . | absURL }}" class="db ma0 dim" alt="">{{ end }}{{ end }}</a>
     </figure>
     <div class="flex flex-column w-100 w-60-ns pl3-ns">
       <header class="w-100">
@@ -18,7 +18,7 @@
   {{ else }}
   <div class="measure-wide center mb4 mb5-l">
     <header>
-      <h1 class="f3 mt0 mb2 lh-title underline"><a href="{{ .Permalink }}" class="db">{{ .Title }}</a></h1>
+      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="{{ .Permalink }}" class="db">{{ .Title }}</a></h1>
     </header>
     <p class="lh-copy mb4">{{ if .Params.Excerpt }}{{ .Params.Excerpt }}{{ else }}{{ .Summary }}{{ end }}</p>
     <footer>

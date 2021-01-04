@@ -21,9 +21,16 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 
 // learn about Tachyons http://tachyons.io
 @import 'tachyons';
-// uncomment the import below to activate custom-colors
-// add your own colors at the top of the imported file
-@import 'rust';
+
+// colors set in data/theme.yaml
+// one of: blue / forest / grayscale / violet
+{{ with $.Site.Data.theme.colors.theme }}
+@import '{{ . | default "blue" }}';
+{{ end }}
+
+// uncomment the import below to activate custom-fonts
+// add your own fonts at the top of the imported file
+// @import 'custom-fonts';
 
 // apply tachyons font family and color options from config
 body {
@@ -267,6 +274,68 @@ form {
       grid-column: 1 / 7;
     }
   }
+}
+
+// anchor links
+a > svg.anchor-symbol {
+  color: transparent;
+  margin-left: .5rem;
+  fill: $black-40;
+  height: 22px;
+}
+
+a > svg.anchor-symbol:hover {
+  fill: $black-60;
+  transition: fill 0.3s ease;
+}
+
+/*----NAV LINK HOVER ANIMATION -----*/
+/* from Desiree: https://github.com/dcossyleon/blogdown_desiree/blob/master/assets/scss/custom.scss */
+
+/* stroke */
+
+.site-links a,
+.site-links a:after,
+.site-links a:before {
+  transition: all .5s;
+}
+
+.site-links a {
+  position: relative;
+}
+
+.site-links a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.'; /* make invisible, dot beneath links */
+  color: transparent;
+  background: lighten( $navLinkColorCustom, 10% );
+  height: .08rem;
+}
+
+.site-links a:hover:after {
+  width: 84%;
+}
+
+.site-links a.active:after {
+  width: 85%;  
+  color: transparent;
+  background: lighten( $navLinkColorCustom, 10% );
+  height: .08rem;
+}
+
+// TOC
+
+nav#TableOfContents ul {
+  @extend .list, .pa0;
+}
+
+nav#TableOfContents ul li {
+  @extend .lh-copy, .dim;
 }
 
 // Fontawesome icons
