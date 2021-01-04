@@ -7,4 +7,4 @@ fonts:
 colors:
   # theme options: blue / forest / grayscale / violet / lake
   # if none, defaults to tachyons (override in config.toml)
-  theme: "lake"
+  theme: "rust"
