@@ -27,8 +27,8 @@ preserveTaxonomyNames = true
     ordered = false
 
 [params]
-  orgName = "Formspree"
-  orgLocal = "Brooklyn, NY"
+  orgName = "RStudio"
+  orgLocal = "Anywhere"
   favicon = "/img/favicon.ico?v=0"
   logo = "/img/blogophonic-mark-dark.png"
   show_social_links = true
