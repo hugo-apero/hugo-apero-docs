@@ -1,6 +1,6 @@
 /* Syntax highlighting */
 
-/* Background */ .chroma {  }
+/* Background */ .chroma { background: #f8f8f8 }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err {  }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
