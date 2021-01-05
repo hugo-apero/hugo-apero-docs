@@ -3,11 +3,11 @@
 <main class="page-main pa4" role="main">
   <section class="page-content mw9 center">
     <div class="flex-l items-center" style="{{ if .Params.image_left }}flex-direction: row-reverse;{{ end }}">
-      <div class="mh5-l w-50-l {{ if not .Params.text_align_left }}tr{{ end }}">
+      <div class="mh4 w-50-l {{ if not .Params.text_align_left }}tr{{ end }}">
         {{ with .Params.title }}<h1 class="f2 f1-m f-subheadline-l fw5-ns mv4 lh-solid">{{ . }}</h1>{{ end }}
         {{ with .Params.subtitle }}<h2 class="f5 fw7 mt0 mb4 ttu tracked">{{ . }}</h2>{{ end }}
         {{ if .Site.Params.socialInHome }}{{ partial "shared/social-links.html" . }}{{ end }}
-        {{ with .Params.description }}<p class="f4 measure mv4 lh-copy black-70">{{ . | markdownify }}</p>{{ end }}
+        {{ with .Params.description }}<p class="f4 mv4 lh-copy black-70">{{ . | markdownify }}</p>{{ end }}
         {{ if .Params.show_action_link }}<a class="action {{ .Params.action_type }}" href="{{ .Params.action_link }}">{{ .Params.action_label | safeHTML }}</a>{{ end }}
       </div>
       <div class="tr w-50-l {{ if .Params.image_left }}ml4{{ else }}mr4{{ end }}">
