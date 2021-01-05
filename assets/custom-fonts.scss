@@ -155,12 +155,12 @@
        url('../fonts/alegreya-sans-v13-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-{{ with $.Site.Data.theme.fonts }}
-$textFontFamily: {{ .customtextFontFamily }}, sans-serif;
+{{ with $.Site.Params.customtextFontFamily }}
+$textFontFamily: {{ . }}, sans-serif;
 {{ end }}
 
-{{ with $.Site.Data.theme.fonts }}
-$headingFontFamily: {{ .customheadingFontFamily }}, serif;
+{{ with $.Site.Params.customheadingFontFamily }}
+$headingFontFamily: {{ . }}, serif;
 {{ end }}
 
 body {

@@ -24,16 +24,12 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 
 // colors set in data/theme.yaml
 // one of: forest / grayscale / peach / poppy / sky / violet / water
-{{ with $.Site.Data.theme.colors.theme }}
+{{ with $.Site.Params.theme }}
 @import '{{ printf "theme/%s" . | default "sky" }}';
 {{ end }}
 
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
 @import 'headroom';
-
-// uncomment the import below to activate custom-fonts
-// add your own fonts at the top of the imported file
-// @import 'custom-fonts';
 
 // apply tachyons font family and color options from config
 body {
