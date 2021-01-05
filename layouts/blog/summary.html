@@ -4,13 +4,17 @@
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
       <a href="{{ .Permalink }}" class="db">
         {{ $featured := (.Resources.ByType "image").GetMatch "*feature*" }}
-        {{ with $featured }}<img src="{{ .RelPermalink | absURL }}" class="db ma0 dim" alt="">{{ end }}
+        {{ range first 1 (.GetTerms "series") }}
+            {{ $.Scratch.Set "$series_featured" ((.Resources.ByType "image").GetMatch "*feature*") }}
+        {{ end }}
+        {{ $thumbnail := .Scratch.Get "$series_featured" | default $featured }}
+        {{ with $thumbnail }}<img src="{{ .RelPermalink | absURL }}" class="db ma0 dim" alt="">{{ end }}
       </a>
     </figure>
     <div class="flex flex-column w-100 w-60-ns pl3-ns">
       <header class="w-100">
         {{ range first 1 (.GetTerms "series") }}
-        <h2 class="f5"><a class="link ttu tracked" href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
+        <h2 class="f5"><i class="fas fa-stream"></i><a class="link i" href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
         {{ end }}
         <h1 class="f3 mv2 lh-title underline"><a href="{{ .Permalink }}" class="db">{{ .Title }}</a></h1>
       </header>
