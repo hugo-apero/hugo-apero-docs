@@ -6,7 +6,7 @@ slug: []
 categories: []
 tags: []
 subtitle: ''
-excerpt: ''
+excerpt: ' testing the excerpt field'
 draft: yes
 images:
   - ~
