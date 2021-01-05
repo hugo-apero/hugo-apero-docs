@@ -7,8 +7,11 @@
         {{ range first 1 (.GetTerms "series") }}
             {{ $.Scratch.Set "$series_featured" ((.Resources.ByType "image").GetMatch "*feature*") }}
         {{ end }}
-        {{ $thumbnail := .Scratch.Get "$series_featured" | default $featured }}
-        {{ with $thumbnail }}<img src="{{ .RelPermalink | absURL }}" class="db ma0 dim" alt="">{{ end }}
+        {{ $series_featured := .Scratch.Get "$series_featured" }}
+        {{ $thumbnail := $featured | default $series_featured }}
+        {{ with $thumbnail }}
+          <img src="{{ .RelPermalink | absURL }}" class="db ma0 dim" alt="">
+        {{ end }}
       </a>
     </figure>
     <div class="flex flex-column w-100 w-60-ns pl3-ns">
