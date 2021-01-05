@@ -12,6 +12,10 @@ categories:
 layout: single
 ---
 
+```{r}
+knitr::opts_chunk$set(fig.path = "figs/", collapse = TRUE)
+```
+
 ## An empty post
 
 <i class="fas fa-mug-hot"></i> woot

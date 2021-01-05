@@ -17,7 +17,7 @@ output:
 ---
 
 ```{r}
-knitr::opts_chunk$set(fig.path = "figs/")
+knitr::opts_chunk$set(fig.path = "figs/", collapse = TRUE)
 ```
 
 
