@@ -10,7 +10,15 @@ series:
 tags:
 categories:
 layout: single
+output:
+  blogdown::html_page:
+    toc: true
 ---
+
+```{r}
+knitr::opts_chunk$set(fig.path = "figs/")
+```
+
 
 ## An empty post
 
