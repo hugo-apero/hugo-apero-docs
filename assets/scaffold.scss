@@ -22,6 +22,10 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 // learn about Tachyons http://tachyons.io
 @import 'tachyons';
 
+// add chroma CSS for syntax highlighting
+// see: https://github.com/rstudio/hugo-graphite/commit/34f7f518377d7c394205366da1df7aeda9f7db01        
+@import 'chroma';
+
 // colors set in data/theme.yaml
 // one of: forest / grayscale / peach / poppy / sky / violet / water
 {{ with $.Site.Data.theme.colors.theme }}
@@ -30,10 +34,6 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
 @import 'headroom';
-
-// add chroma CSS for syntax highlighting
-// see: https://github.com/rstudio/hugo-graphite/commit/34f7f518377d7c394205366da1df7aeda9f7db01        
-// @import 'chroma';
 
 // uncomment the import below to activate custom-fonts
 // add your own fonts at the top of the imported file
@@ -348,6 +348,14 @@ nav#TableOfContents ul li {
 // Add padding around code blocks
 .highlight pre {
   @extend .pa3, .pre;
+}
+
+pre {
+  background: none;
+}
+
+pre code {
+  background: inherit;
 }
 
 // Fontawesome icons

@@ -24,7 +24,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
   [markup.highlight]
     # if false, need my own Chroma CSS
     # but then code chunk background color is lost
-    noClasses = true
+    noClasses = false
     # one of: https://xyproto.github.io/splash/docs/ 
     style = "manni"
 
