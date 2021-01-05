@@ -23,8 +23,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
     ordered = false
   [markup.highlight]
     # if false, need my own Chroma CSS
-    noClasses = true               
-    style = "friendly"
+    noClasses = false
+    # one of: https://xyproto.github.io/splash/docs/ 
+    style = "manni"
 
 [params]
   orgName = "RStudio"
