@@ -6,14 +6,7 @@ date: 2019-07-03
 author: "Eric Anderson"
 draft: false
 images:
-<<<<<<< HEAD:content/project/tachyons-for-style.md
-  - /blog/assets/tachyons-thumbnail.png
-  - /blog/assets/tachyons-logo-script-feature.png
-=======
   - /project/assets/tinystats.png
-series:
-  - Getting Started
->>>>>>> f62ec2474658a6f9ab44a98d1f8cbcf34a371a66:content/project/tinystats.md
 tags:
   - hugo-site
 categories:
