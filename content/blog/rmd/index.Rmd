@@ -1,5 +1,5 @@
 ---
-title: "An Rmarkdown post"
+title: "An Rmd post"
 subtitle: ""
 excerpt: ""
 date: 2020-12-30
