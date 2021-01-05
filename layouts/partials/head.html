@@ -20,4 +20,7 @@
   {{ $sassFonts := resources.Get "custom-fonts.scss" }}
   {{ $fonts := $sassFonts | resources.ExecuteAsTemplate "fonts.scss" . | resources.ToCSS }}
   <link rel="stylesheet" href="{{ $fonts.Permalink }}" integrity="{{ $fonts.Data.Integrity }}" media="screen">
+  <!-- headroom.js -->
+  {{ $mainJs := resources.Get "js/main.js" | js.Build "main.js" | minify | fingerprint }}
+  <script src="{{ $mainJs.Permalink }}" type="text/javascript"></script>
 </head>

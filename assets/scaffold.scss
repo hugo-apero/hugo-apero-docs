@@ -28,6 +28,9 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 @import '{{ printf "theme/%s" . | default "sky" }}';
 {{ end }}
 
+// learn about headroom.js https://wicky.nillia.ms/headroom.js/
+@import 'headroom';
+
 // uncomment the import below to activate custom-fonts
 // add your own fonts at the top of the imported file
 // @import 'custom-fonts';
