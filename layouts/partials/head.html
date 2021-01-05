@@ -16,11 +16,6 @@
   {{ end }}
   {{ $styles := resources.Get "scaffold.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
-  <!-- grab javascript assets -->
-  {{ $headroom := resources.Get "/js/headroom.js" }}
-  {{ $main := resources.Get "/js/main.js" }}
-  {{ $scripts := slice $headroom $main | resources.Concat "assets/js/scripts.js" | resources.Minify }}
-  <script src="{{ $scripts.RelPermalink }}"></script>
   <!-- grab custom fonts -->
   {{ $sassFonts := resources.Get "custom-fonts.scss" }}
   {{ $fonts := $sassFonts | resources.ExecuteAsTemplate "fonts.scss" . | resources.ToCSS }}
@@ -28,6 +23,4 @@
   <!-- headroom.js -->
   {{ $mainJs := resources.Get "js/main.js" | js.Build "main.js" | minify | fingerprint }}
   <script src="{{ $mainJs.Permalink }}" type="text/javascript"></script>
-  {{ $headroomCSS := resources.Get "headroom.css" | resources.ToCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $headroomCSS.Permalink }}" integrity="{{ $headroomCSS.Data.Integrity }}" media="screen">
 </head>
