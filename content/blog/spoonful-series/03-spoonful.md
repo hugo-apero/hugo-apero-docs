@@ -1,16 +1,13 @@
 ---
-title: "A second post"
-weight: 2
+title: "A third post"
+weight: 3
 subtitle: ""
 excerpt: "Grid is the very first CSS module created specifically to solve the layout problems we’ve all been hacking our way around for as long as we’ve been making websites."
-date: 2019-07-02
+date: 2021-01-01
 author: "Eric Anderson"
 draft: false
-images:
-- /blog/assets/css-grid-thumbnail.png
-- /blog/assets/css-grid-cover.png
 series:
-- Getting Started
+- A Spoonful of Hugo
 tags:
 - hugo-site
 categories:
@@ -19,14 +16,10 @@ categories:
 layout: single-series
 ---
 
-## part 2!
+## are you still here?
 
 ### does this work?
 
 ---
 
-## now for some very cool things
-
-## more
-
-## get ready!
+## final stretch!
