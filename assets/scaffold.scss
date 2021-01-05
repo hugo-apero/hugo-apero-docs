@@ -23,14 +23,13 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 @import 'tachyons';
 
 // colors set in data/theme.yaml
-// one of: blue / forest / grayscale / violet
-{{ with $.Site.Data.theme.colors.theme }}
-@import '{{ . | default "blue" }}';
+// one of: forest / grayscale / peach / poppy / sky / violet / water
+{{ with $.Site.Params.theme }}
+@import '{{ printf "theme/%s" . | default "sky" }}';
 {{ end }}
 
-// uncomment the import below to activate custom-fonts
-// add your own fonts at the top of the imported file
-// @import 'custom-fonts';
+// learn about headroom.js https://wicky.nillia.ms/headroom.js/
+@import 'headroom';
 
 // apply tachyons font family and color options from config
 body {
@@ -323,7 +322,7 @@ a > svg.anchor-symbol:hover {
   content: '.'; /* make invisible, dot beneath links */
   color: transparent;
   background: lighten( $navLinkColorCustom, 10% );
-  height: .11rem;
+  height: .08rem;
 }
 
 .site-links a:hover:after {
@@ -334,7 +333,7 @@ a > svg.anchor-symbol:hover {
   width: 85%;  
   color: transparent;
   background: lighten( $navLinkColorCustom, 10% );
-  height: .11rem;
+  height: .08rem;
 }
 
 // TOC
