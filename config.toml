@@ -7,10 +7,8 @@ copyright = "" # set to override the auto generated copyright using org info and
 googleAnalytics = ""
 disqusShortname = ""
 metaDataFormat = "yaml"
-pygmentsCodeFences = true
-pygmentsOptions = "linenos=table"
-# see more styles https://help.farbox.com/pygments.html
-pygmentsStyle = "friendly"
+# one of https://xyproto.github.io/splash/docs/all.html
+pygmentsStyle = "pygments"
 footnoteReturnLinkContents = "&#8617;" # ↩
 # set deliberately low for testing choose your preffered number based on the blog layout you've chosen
 paginate = 3
