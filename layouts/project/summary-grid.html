@@ -1,7 +1,7 @@
 <article class="w-100 w-50-m w-third-l mb4 pb4 bb bw1 bw0-ns pb0-ns">
   {{ if .CurrentSection.Params.show_post_thumbnail }}
   <div class="ph0 ph2-m ph3-l">
-    <div class="aspect-ratio aspect-ratio--5x7 contain"{{ with $.Param "images" }}{{ range first 1 .}} style="background: url('{{ . | absURL }}') center center no-repeat"{{ end }}{{ end }}><a href="{{ .Permalink }}" class="w-100 absolute top-0 bottom-0"></a></div>
+    <div class="aspect-ratio aspect-ratio--5x7 contain dim"{{ with $.Param "images" }}{{ range first 1 .}} style="background: url('{{ . | absURL }}') center center no-repeat"{{ end }}{{ end }}><a href="{{ .Permalink }}" class="w-100 absolute top-0 bottom-0"></a></div>
   </div>
   {{ end }}
   <div class="ph0 pa2-m pa3-l">

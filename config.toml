@@ -15,7 +15,7 @@ footnoteReturnLinkContents = "&#8617;" # ↩
 # set deliberately low for testing choose your preffered number based on the blog layout you've chosen
 paginate = 3
 preserveTaxonomyNames = true
-
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 
 [markup]
   defaultMarkdownHandler = "goldmark"
@@ -24,10 +24,11 @@ preserveTaxonomyNames = true
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 2
+    ordered = false
 
 [params]
-  orgName = "Formspree"
-  orgLocal = "Brooklyn, NY"
+  orgName = "RStudio"
+  orgLocal = "Anywhere"
   favicon = "/img/favicon.ico?v=0"
   logo = "/img/blogophonic-mark-dark.png"
   show_social_links = true
@@ -61,3 +62,25 @@ preserveTaxonomyNames = true
   category = "categories"
   series = "series"
   tag = "tags"
+
+[menu]
+  [[menu.header]]
+    name = "About"
+    title = "About Blogophonic"
+    url = "/about/"
+    weight = 1
+  [[menu.header]]
+    name = "Blog"
+    title = "Blog"
+    url = "/blog/"
+    weight = 2
+  [[menu.header]]
+    name = "Projects"
+    title = "Project Portfolio"
+    url = "/project/"
+    weight = 3
+  [[menu.header]]
+    name = "Elements"
+    title = "Element Page"
+    url = "/elements/"
+    weight = 4

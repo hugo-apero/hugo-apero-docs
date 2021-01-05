@@ -3,4 +3,12 @@ fonts:
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
   customtextFontFamily: "Commissioner"
   customheadingFontFamily: "Fraunces"
+<<<<<<< HEAD
   navallcaps: true
+=======
+  navallcaps: false
+colors:
+  # one of: forest / grayscale / peach / poppy / sky / violet / water
+  # if none, defaults to tachyons (override in config.toml)
+  theme: "peach"
+>>>>>>> 1a24168408a488a97fccac7b521191aa8718d9f2
