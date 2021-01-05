@@ -1,6 +1,7 @@
 .headroom {
   will-change: transform;
   transition: transform 200ms linear;
+  background-color: rgba( $siteBgColorCustom, .9 )
 }
 .headroom--pinned {
   transform: translateY(0%);
