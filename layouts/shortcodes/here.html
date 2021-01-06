@@ -1,0 +1,13 @@
+Here I am in your `content` folder: {{ .Page.File.Path }}<br>
+My content section is: {{ .Page.Section }}<br>
+
+{{ with .Page }}
+{{ with .Resources.ByType "image" }}
+This bundle contains these images:
+<ul>
+	{{ range . }}
+		<li>{{ .RelPermalink }}</li>
+	{{ end }}
+</ul>
+{{ end }}
+{{ end }}
