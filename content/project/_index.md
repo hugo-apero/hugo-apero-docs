@@ -3,7 +3,7 @@ title: A Project Portfolio That's Real
 description: "This is a fully featured blog that supports categories, tags, series, and pagination."
 author: The Team at Formspree
 images:
-  - /project/assets/palmerpenguins.png
+  - /img/avatar-right.jpg
 date: 2019-02-20T09:31:27-06:00
 publishDate: 2019-02-20T09:31:27-06:00
 layout: list-grid # list, list-sidebar, list-grid
