@@ -47,7 +47,7 @@
 <div class="flex items-start ad-unit">
   <div class="w-50 pl4 pr0 mr2">
     {{ with $taxonomy }}
-    <h2 class="mt3 mb3 f5 fw7 ttu tracked pl2"><a class="no-underline dim" href="{{ .Permalink }}">{{ end }}{{ .text_series_label }}</a></h2>
+    <h2 class="mt3 mb3 f5 fw7 ttu tracked"><a class="no-underline dim" href="{{ .Permalink }}">{{ end }}{{ .text_series_label }}</a></h2>
     <nav id="SeriesTableOfContents">
         <ul>
         {{ range $taxonomy.Pages }}
