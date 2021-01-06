@@ -1,0 +1,57 @@
+<!--meta tags-->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{ hugo.Generator }}
+<title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Page.Title }} | {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ .Description }}" />
+
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Params.excerpt }}{{ end }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}page{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ $og_image := "" }}
+{{ $card_image := "" }}
+{{ $twitter_card := "summary_large_image" }}
+<meta property="twitter:card" content="{{ $twitter_card }}">
+
+<!--all posts-->
+
+{{ if and (eq .Section "blog") (.IsPage) }}
+
+    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+    <meta property="description" content="{{ .Params.description }}">
+    <meta property="og:description" content="{{ .Params.description }}">
+
+    <!--use images from post bundle-->
+    <!--find image with thumbnail or -sq in filename-->
+    {{/* Get featured image for sharing. */}}
+    {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ with $featured }}
+        <meta property="og:image" content="{{ .Permalink }}" >
+        <meta name="twitter:image" content="{{ .Permalink }}" >
+    {{ end }}
+
+<!--home page-->
+{{ else if .IsHome }}
+
+  <meta property="og:title" content="{{ .Site.Title }}">
+  <meta property="description" content="{{ .Site.Params.description }}">
+  <meta property="og:description" content="{{ .Site.Params.description }}">
+
+  <!--use image from site config param-->
+  {{ $og_image = printf "images/%s" .Site.Params.sharing_image | absURL }}
+  {{- with $og_image -}}
+      <meta property="og:image" content="{{ . }}" >
+  {{- end -}}
+
+  {{ $card_image = printf "images/%s" .Site.Params.twitter_image | absURL }}
+  {{- with $card_image -}}
+      <meta name="twitter:image" content="{{ . }}" >
+  {{- end -}}
+
+<!--all content that is not a post-->
+{{- else -}}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+{{- end -}}
