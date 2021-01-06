@@ -1,3 +1,5 @@
+{{ $permalink := .Permalink }}
+
 <!--meta tags-->
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -6,47 +8,58 @@
 <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Page.Title }} | {{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ .Description }}" />
 
-<meta property="og:title" content="{{ .Title }}" />
+<!--opengraph tags-->
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Params.excerpt }}{{ end }}{{ end }}" />
 <meta property="og:type" content="{{ if .IsPage }}page{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 {{ $og_image := "" }}
 {{ $card_image := "" }}
-{{ $twitter_card := "summary_large_image" }}
-<meta property="twitter:card" content="{{ $twitter_card }}">
 
-<!--all posts-->
-
-{{ if and (eq .Section "blog") (.IsPage) }}
-
-    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
-    <meta property="description" content="{{ .Params.description }}">
-    <meta property="og:description" content="{{ .Params.description }}">
-
-    <!--use featured images from page bundle-->
-    {{/* Get featured image for sharing. */}}
-    {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
-    {{ with $featured }}
+<!--sharing images-->
+<!--adapted from: https://github.com/kaushalmodi/hugo-bare-min-theme/blob/6195b5e377c56791ba4067ac0ec5286bf336aedf/layouts/partials/twitter_cards.html-->
+{{/* If images are specified as list variable in section front matter. */}}
+{{- with $.Params.images -}}
+    <meta name="twitter:card" content="summary_large_image"/>
+    {{- $image := (index . 0) -}}
+    {{- $image_link_absolute := (findRE "^/" $image) -}}
+    {{- if $image_link_absolute -}}
+        <meta name="twitter:image" content="{{- $image | absURL -}}"/>
+    {{- else -}}
+        <meta name="twitter:image" content="{{- (printf "%s%s" $permalink $image) -}}"/>
+    {{- end -}}
+{{ end }}
+    
+<!--using featured images-->
+{{ if .IsPage -}}
+    {{/* If images are featured in a page's bundle. */}}
+    {{- $images := $.Resources.ByType "image" -}}
+    {{- $featured := $images.GetMatch "*feature*" -}}
+    {{- $hex := $images.GetMatch "*hex*" -}}
+    {{- $card := cond (ne $hex nil) $hex $featured -}}
+    {{ with $card }}
         <meta property="og:image" content="{{ .Permalink }}" >
+        <meta property="twitter:card" content="{{ if (ne $hex nil) }}summary{{ else }}summary_large_card{{ end }}">
         <meta name="twitter:image" content="{{ .Permalink }}" >
+    {{/* If not featured, use the site card. */}}
+    {{ else }}
+        {{- $site_card := printf "%s" .Site.Params.sharing_image | absURL }}
+        <meta property="og:image" content="{{ $site_card }}" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="{{ $site_card }}" >
     {{ end }}
+{{ end }}
 
 <!--home page-->
-{{ else if .IsHome }}
-
+{{ if .IsHome }}
   <meta property="og:title" content="{{ .Site.Title }}">
   <meta property="description" content="{{ .Site.Params.description }}">
   <meta property="og:description" content="{{ .Site.Params.description }}">
-
   <!--use image from site config param-->
   {{ $og_image = printf "%s" .Site.Params.sharing_image | absURL }}
   {{- with $og_image -}}
       <meta property="og:image" content="{{ . }}" >
+      <meta property="twitter:card" content="summary_large_image">
       <meta name="twitter:image" content="{{ . }}" >
   {{- end -}}
-
-<!--all content that is not a post-->
-{{- else -}}
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
 {{- end -}}
