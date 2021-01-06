@@ -1,4 +1,4 @@
-<details class="f5 fw7 input-reset pa4 mb5 ba b--dotted bw1">
+<details class="f5 fw5 input-reset pa4 mb5 ba b--dotted bw1">
   <summary><i class="fas fa-cat fa-lg pr2"></i>Hi, I'm the here-bot cat!</summary>
   <p>Use me to find your way in your website.</p>
   
@@ -18,11 +18,13 @@
         {{ $.Scratch.Set "$filePath" $RmdFile }}
       {{ end }}
   {{ end }}
+  {{ with .Scratch.Get "$filePath" }}
   <dl class="f5 lh-copy">
-    <dt class="fw7">Here is your R Markdown source file:</dt>
-    <dd class="fw5 ml0">{{ .Scratch.Get "$filePath" }}</dd>
-    <p class="i"><i class="far fa-hand-point-right"></i>You'll want to edit this file, then re-knit to see the changes take effect in your site preview.</p> 
+    <dt class="fw7">Here is my R Markdown source file:</dt>
+    <dd class="fw5 ml0">{{ . }}</dd>
+    <p class="i"><i class="far fa-hand-point-right pr2"></i>You'll want to edit this file, then re-knit to see the changes take effect in your site preview.</p> 
   </dl>
+  {{ end }}
   
   <p>To remove me, delete this line inside that file: <code>{{ print "{{< here >}}" }}</code></p>
   
