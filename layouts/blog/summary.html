@@ -18,7 +18,7 @@
       <header class="w-100">
         <h1 class="f3 mv2 lh-title underline"><a href="{{ .Permalink }}" class="db">{{ .Title }}</a></h1>
         {{ range first 1 (.GetTerms "series") }}
-        <h2 class="f5"><i class="fas fa-film fa-fw fa-lg pr1"></i><small class="f5 ttu tracked">Series: </small><a class="link i" href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
+        <h2 class="f5"><i class="fas fa-film fa-fw fa-lg pr1"></i><small class="f5 ttu tracked">Series: </small><a class="link i dim" href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
         {{ end }}
       </header>
       <p class="f6 lh-copy mv2 flex-auto">{{ if .Params.Excerpt }}{{ .Params.Excerpt }}{{ else }}{{ .Summary }}{{ end }}</p>
