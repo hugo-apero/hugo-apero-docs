@@ -1,5 +1,5 @@
 ---
-title: A Portfolio That's Real
+title: A Project Portfolio That's Real
 description: "This is a fully featured blog that supports categories, tags, series, and pagination."
 author: The Team at Formspree
 images:

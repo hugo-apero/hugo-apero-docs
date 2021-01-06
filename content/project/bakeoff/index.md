@@ -5,9 +5,6 @@ excerpt: "This theme has a form-to-email feature built in, thanks to the simple 
 date: 2019-07-01
 author: "Eric Anderson"
 draft: false
-images:
-  - /project/assets/bakeoff.png
-  - /blog/assets/built-in-contact-form-feature.png
 tags:
   - hugo-site
 categories:
@@ -24,7 +21,7 @@ links:
   url: https://github.com/apreshill/bakeoff
 ---
 
-![Formspree Logo](/blog/assets/formspree-logo.png)
+![Formspree Logo](formspree-logo.png)
 
 ## [Formspree](https://formspree.io) makes it easy to receive submissions from HTML forms on your static website.
 
@@ -58,7 +55,7 @@ matter, and the rest is automatic.
 layout: split-right
 ```
 
-![Contact Form Split Right Layout Screenshot](/blog/assets/built-in-contact-form-feature.png)
+![Contact Form Split Right Layout Screenshot](built-in-contact-form-screenshot.png)
 
 Both layouts display the page title and description opposite the form, and you
 can also choose to show your social icon links if you have those configured in

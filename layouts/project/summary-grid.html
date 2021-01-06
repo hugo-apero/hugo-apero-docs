@@ -1,7 +1,8 @@
 <article class="w-100 w-50-m w-third-l mb4 pb4 bb bw1 bw0-ns pb0-ns">
   {{ if .CurrentSection.Params.show_post_thumbnail }}
   <div class="ph0 ph2-m ph3-l">
-    <div class="aspect-ratio aspect-ratio--5x7 contain dim"{{ with $.Param "images" }}{{ range first 1 .}} style="background: url('{{ . | absURL }}') center center no-repeat"{{ end }}{{ end }}><a href="{{ .Permalink }}" class="w-100 absolute top-0 bottom-0"></a></div>
+    {{ $featured := (.Resources.ByType "image").GetMatch "*feature*" }}
+    <div class="aspect-ratio aspect-ratio--5x7 contain dim"{{ with $featured }} style="background: url('{{ .RelPermalink }}') center center no-repeat"{{ end }}><a href="{{ .Permalink }}" class="w-100 absolute top-0 bottom-0"></a></div>
   </div>
   {{ end }}
   <div class="ph0 pa2-m pa3-l">
