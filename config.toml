@@ -34,6 +34,10 @@ enableEmoji = true
   logo = "/img/blogophonic-mark-dark.png"
   show_social_links = true
   navallcaps = true
+  # Default image for social sharing and search engines. Place image in `static` folder and specify image name here.
+  sharing_image = "/img/papillons.jpg"
+  # Twitter username (without @). Used when a visitor shares your site on Twitter.
+  twitter = "apreshill"
   
   # basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/

@@ -23,8 +23,7 @@
     <meta property="description" content="{{ .Params.description }}">
     <meta property="og:description" content="{{ .Params.description }}">
 
-    <!--use images from post bundle-->
-    <!--find image with thumbnail or -sq in filename-->
+    <!--use featured images from page bundle-->
     {{/* Get featured image for sharing. */}}
     {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
     {{ with $featured }}
@@ -40,13 +39,9 @@
   <meta property="og:description" content="{{ .Site.Params.description }}">
 
   <!--use image from site config param-->
-  {{ $og_image = printf "images/%s" .Site.Params.sharing_image | absURL }}
+  {{ $og_image = printf "%s" .Site.Params.sharing_image | absURL }}
   {{- with $og_image -}}
       <meta property="og:image" content="{{ . }}" >
-  {{- end -}}
-
-  {{ $card_image = printf "images/%s" .Site.Params.twitter_image | absURL }}
-  {{- with $card_image -}}
       <meta name="twitter:image" content="{{ . }}" >
   {{- end -}}
 
