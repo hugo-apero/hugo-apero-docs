@@ -358,10 +358,11 @@ details#PageTableOfContents {
 }
 
 details#PageTableOfContents summary {
-  @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked;
+  @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked, .#{$sidebarLinkColor};
 }
+
 details#PageTableOfContents nav#TableOfContents ul li:hover {
-  @extend .bg-#{$siteBgColor};
+  @extend .bg-#{$siteBgColor}, .grow;
 }
 
 // Fontawesome icons
