@@ -7,8 +7,6 @@ author: "Eric Anderson"
 draft: false
 images:
   - /project/assets/tinystats.png
-series:
-  - Getting Started
 tags:
   - hugo-site
 categories:

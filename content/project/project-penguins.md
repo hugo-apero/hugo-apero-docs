@@ -8,8 +8,6 @@ draft: false
 images:
 - /project/assets/palmerpenguins.png
 - /blog/assets/css-grid-cover.png
-series:
-- Getting Started
 tags:
 - hugo-site
 categories:

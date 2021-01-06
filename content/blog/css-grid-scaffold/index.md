@@ -5,16 +5,11 @@ excerpt: "Grid is the very first CSS module created specifically to solve the la
 date: 2019-07-02
 author: "Eric Anderson"
 draft: false
-images:
-- /blog/assets/css-grid-thumbnail.png
-- /blog/assets/css-grid-cover.png
-series:
-- Getting Started
 tags:
 - hugo-site
 categories:
 - Theme Features
-# layout options: single or single-sidebar
+# layout options: single, single-sidebar, single-series
 layout: single-sidebar
 ---
 
@@ -30,7 +25,7 @@ Since I began building websites in Y2K, I've lost count how many times the phras
 
 Well, technology sure has come a long way since slicing up images to match the table-based layout that was just created in Dreamweaver. You'd be surprised (or maybe you wouldn't) how challenging the standard header, content, sidebar, footer layout could be to actually get right.
 
-{{< figure src="/blog/assets/css-grid-cover.png" alt="Traditional right sidebar layout" caption="A visual example of the traditional right sidebar layout" >}}
+{{< figure src="css-grid-cover.png" alt="Traditional right sidebar layout" caption="A visual example of the traditional right sidebar layout" >}}
 
 ---
 

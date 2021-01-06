@@ -8,17 +8,15 @@ draft: false
 images:
   - /blog/assets/tachyons-thumbnail.png
   - /blog/assets/tachyons-logo-script-feature.png
-series:
-  - Getting Started
 tags:
   - hugo-site
 categories:
   - Theme Features
-# layout options: single or single-sidebar
+# layout options: single, single-sidebar, single-series
 layout: single
 ---
 
-![Tachyons Logo Script](/blog/assets/tachyons-logo-script-feature.png)
+![Tachyons Logo Script](tachyons-logo-script.png)
 
 ## [Tachyons](http://tachyons.io) is a design system that allows you to design gorgeous interfaces in the browser with little effort.
 

@@ -20,3 +20,10 @@ blog: # must match the slug of your blog
     text_link_label: Subscribe via RSS
     text_link_url: /index.xml
     show_sidebar_adunit: false # show ad container
+  docs_sidebar: # for docs-sidebar layout
+    image: img/spoon.jpg  # use to override taxonomy image
+    title: A Spoonful of Hugo
+    description: "This is a series."
+    author: Alison Hill
+    text_series_label: "In this series"
+    text_contents_label: "On this page"
