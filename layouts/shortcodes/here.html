@@ -1,10 +1,27 @@
 <details class="f5 fw7 input-reset pa4 mb5 ba b--dotted bw1">
-  <summary><i class="far fa-compass fa-lg pr2"></i>Hi, I'm the here-bot!</summary>
+  <summary><i class="fas fa-cat fa-lg pr2"></i>Hi, I'm the here-bot cat!</summary>
   <p>Use me to find your way in your website.</p>
   
   <dl class="f5 lh-copy">
-    <dt class="fw7">Here I am in the <code>content</code> folder:</dt>
-    <dd class="fw5 ml0">{{ .Page.File.Path }}</dd>
+    <dt class="fw7">Here I am:</dt>
+    <dd class="fw5 ml0">{{ print "content/" .Page.File.Path }}</dd>
+  </dl>
+  
+  <!--https://github.com/yihui/hugo-prose/blob/master/layouts/partials/correction.html-->
+  {{ $filePath := .Page.File.Path }}
+  {{ $RmdFile := (print .Page.File.Dir .Page.File.BaseFileName ".Rmarkdown") }}
+  {{ if (fileExists (print "content/" $RmdFile)) }}
+    {{ $.Scratch.Set "$filePath" $RmdFile }}
+  {{ else }}
+    {{ $RmdFile = (print .Page.File.Dir .Page.File.BaseFileName ".Rmd") }}
+      {{ if (fileExists (print "content/" $RmdFile)) }}
+        {{ $.Scratch.Set "$filePath" $RmdFile }}
+      {{ end }}
+  {{ end }}
+  <dl class="f5 lh-copy">
+    <dt class="fw7">Here is your R Markdown source file:</dt>
+    <dd class="fw5 ml0">{{ .Scratch.Get "$filePath" }}</dd>
+    <p class="i"><i class="far fa-hand-point-right"></i>You'll want to edit this file, then re-knit to see the changes take effect in your site preview.</p> 
   </dl>
   
   <p>To remove me, delete this line inside that file: <code>{{ print "{{< here >}}" }}</code></p>
@@ -27,18 +44,5 @@
     {{ end }}
   </dl>
   {{ end }}
-  
-  {{ $rmd := .Page.Resources.Match "*.Rmd" }}
-  {{ $any_rmd := $rmd | append (.Page.Resources.Match "*.Rmarkdown") }}
-  {{ with $any_rmd }}
-  <dl class="f5 lh-copy">
-    <dt class="fw7">R Markdown files in this page bundle:</dt>
-    {{ range . }}
-        <dd class="fw5 ml0">{{ .RelPermalink }}</dd>
-    {{ end }}
-    <p>These are the files you'll want to edit, then re-knit to see the changed take effect in your site preview.</p>
-  </dl>
-  {{ end }}
-  
 
 </details>
