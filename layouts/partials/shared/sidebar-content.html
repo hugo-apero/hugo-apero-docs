@@ -1,12 +1,24 @@
 {{ $page := . }}
 {{ with .Scratch.Get "sidebar" }}
 
-{{ if .image }}<img src="{{ .image | relURL }}" class="db ma0">{{ end }}
+{{ $yaml_featured := .image }}
+{{ if $page.Params.series }}
+    {{ $series := index ($page.Params.series) 0 | urlize }}
+    {{ $taxonomy :=  $.Site.GetPage (printf "/series/%s" $series) }}
+    {{ with $taxonomy }}
+        {{ $img := (.Resources.ByType "image").GetMatch "*feature*" }}
+        {{ $.Scratch.Set "$taxo_img" $img.RelPermalink }}
+    {{ end }}
+{{ end }}
+
+{{ $taxo_featured := $.Scratch.Get "$taxo_img" }}
+{{ $thumbnail := $yaml_featured | default $taxo_featured }}
+{{ with $thumbnail }}<img src="{{ . | relURL }}" class="db ma0">{{ end }}
 <div class="blog-info pa4">
-  {{ if .title }}<h1 class="f3">{{ .title }}</h1>{{ end }}
-  {{ if .description }}<p class="f6 lh-copy measure">{{ .description | markdownify }}</p>{{ end }}
-  {{ if .author }}<p class="f7 measure lh-copy i mh0-l">Written by {{ .author }}</p>{{ end }}
-  {{ if .text_link_label }}<small class="db f7"><a href="{{ .text_link_url }}" class="dib fw7 ttu bt bw1 b--black-10 pt3">{{ .text_link_label }}</a></small>{{ end }}
+  {{ with .title }}<h1 class="f3">{{ . }}</h1>{{ end }}
+  {{ with .description }}<p class="f6 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
+  {{ with .author }}<p class="f7 measure lh-copy i mh0-l">Written by {{ . }}</p>{{ end }}
+  {{ with .text_link_label }}<small class="db f7"><a href="{{ . }}" class="dib fw7 ttu bt bw1 b--black-10 pt3">{{ . }}</a></small>{{ end }}
 </div>
 
 {{ if or .show_sidebar_toc .show_sidebar_adunit }}
@@ -44,7 +56,7 @@
         </ul>
       </nav>
   </div>
-  <div class="outline w-50 pl2 pr0 ml0 mr2 bg-near-white">
+    <div class="outline w-50 pl2 pr0 ml0 mr2 bg-near-white">
     <h2 class="mt3 mb3 f5 fw7 ttu tracked pl2">{{ .text_contents_label }}</h2>
     {{ $page.TableOfContents }}
   </div>
