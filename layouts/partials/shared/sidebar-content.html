@@ -42,23 +42,26 @@
 {{ end }}
 
 {{ if eq $page.Params.layout "single-series" }}
+{{ $series := index ($page.Params.series) 0 | urlize }}
+{{ $taxonomy :=  $.Site.GetPage (printf "/series/%s" $series) }}
 <div class="flex items-start ad-unit">
   <div class="w-50 pl4 pr0 mr2">
-    <h2 class="mt3 mb3 f5 fw7 ttu tracked pl2">{{ .text_series_label }}</h2>
-    {{ $series := index ($page.Params.series) 0 | urlize }}
-    {{ $taxonomy :=  $.Site.GetPage (printf "/series/%s" $series) }}
+    {{ with $taxonomy }}
+    <h2 class="mt3 mb3 f5 fw7 ttu tracked pl2"><a class="no-underline dim" href="{{ .Permalink }}">{{ end }}{{ .text_series_label }}</a></h2>
     <nav id="SeriesTableOfContents">
         <ul>
         {{ range $taxonomy.Pages }}
           {{ $active := eq .RelPermalink $page.RelPermalink }}
-        <li class="{{ if $active }}bt bb b--dotted bw1 bg-near-white{{ end }}" hugo-nav="{{ .RelPermalink }}"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        <li class="{{ if $active }}active{{ end }}" hugo-nav="{{ .RelPermalink }}"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
         </ul>
       </nav>
   </div>
-    <div class="outline w-50 pl2 pr0 ml0 mr2 bg-near-white">
-    <h2 class="mt3 mb3 f5 fw7 ttu tracked pl2">{{ .text_contents_label }}</h2>
+  <details id="PageTableOfContents">
+    <summary>{{ .text_contents_label }}</summary>
+    <div class="pl2 pr0 ml0 mr2">
     {{ $page.TableOfContents }}
-  </div>
+    </div>
+  </details>
 {{ end }}
 {{ end }}

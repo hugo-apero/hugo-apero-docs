@@ -337,7 +337,7 @@ a > svg.anchor-symbol:hover {
   height: .08rem;
 }
 
-// TOC
+// TOC + Series
 
 nav#TableOfContents ul,
 nav#SeriesTableOfContents ul {
@@ -349,6 +349,20 @@ nav#SeriesTableOfContents ul li {
   @extend .lh-copy, .pl2, .pv1;
 }
 
+nav#SeriesTableOfContents ul li.active {
+  @extend .bg-#{$siteBgColor};
+}
+
+details#PageTableOfContents {
+  @extend .mt3, .pl2, .pr0, .ml0, .mr2, .w-50;
+}
+
+details#PageTableOfContents summary {
+  @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked;
+}
+details#PageTableOfContents nav#TableOfContents ul li:hover {
+  @extend .bg-#{$siteBgColor};
+}
 
 // Fontawesome icons
 $fa-font-path:        "../webfonts";
