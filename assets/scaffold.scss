@@ -349,7 +349,9 @@ a > svg.anchor-symbol:hover {
   height: .08rem;
 }
 
-// TOC + Series
+// TOCs
+
+// Position page and series TOC
 
 nav#TableOfContents ul,
 nav#SeriesTableOfContents ul {
@@ -361,10 +363,6 @@ nav#SeriesTableOfContents ul li {
   @extend .lh-copy, .pl2, .pv1;
 }
 
-nav#SeriesTableOfContents ul li.active {
-  @extend .bg-#{$siteBgColor};
-}
-
 details#PageTableOfContents {
   @extend .mt3, .pl2, .pr0, .ml0, .mr2, .w-50;
 }
@@ -373,8 +371,22 @@ details#PageTableOfContents summary {
   @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked, .#{$sidebarLinkColor};
 }
 
+// Show active page in series
+
+nav#SeriesTableOfContents ul li.active {
+  @extend .bg-#{$siteBgColor};
+}
+
+nav#SeriesTableOfContents ul li:not(.active) {
+  @extend .hover-bg-#{$buttonHoverBgColor}, .hover-#{$buttonHoverTextColor};
+}
+
+nav#SeriesTableOfContents ul li:hover:not(.active) a {
+  @extend .#{$buttonTextColor};
+}
+
 details#PageTableOfContents nav#TableOfContents ul li:hover {
-  @extend .bg-#{$siteBgColor}, .grow;
+  @extend .bg-#{$siteBgColor};
 }
 
 // Fontawesome icons
