@@ -1,13 +1,44 @@
-Here I am in your `content` folder: {{ .Page.File.Path }}<br>
-My content section is: {{ .Page.Section }}<br>
+<details class="f5 fw7 input-reset pa4 mb5 ba b--dotted bw1">
+  <summary><i class="far fa-compass fa-lg pr2"></i>Hi, I'm the here-bot!</summary>
+  <p>Use me to find your way in your website.</p>
+  
+  <dl class="f5 lh-copy">
+    <dt class="fw7">Here I am in the <code>content</code> folder:</dt>
+    <dd class="fw5 ml0">{{ .Page.File.Path }}</dd>
+  </dl>
+  
+  <p>To remove me, delete this line inside that file: <code>{{ print "{{< here >}}" }}</code></p>
+  
+  <dl class="f5 lh-copy">
+    <dt class="fw7">My content section is:</dt>
+    <dd class="fw5 ml0">{{ .Page.Section }}</dd>
+  </dl>
+  
+  <dl class="f5 lh-copy">
+    <dt class="fw7">My layout is:</dt>
+    <dd class="fw5 ml0">{{ .Page.Params.layout }}</dd>
+  </dl>
+  
+  {{ with .Page.Resources.ByType "image" }}
+  <dl class="f5 lh-copy">
+    <dt class="fw7">Images in this page bundle:</dt>
+    {{ range . }}
+        <dd class="fw5 ml0">{{ .RelPermalink }}</dd>
+    {{ end }}
+  </dl>
+  {{ end }}
+  
+  {{ $rmd := .Page.Resources.Match "*.Rmd" }}
+  {{ $any_rmd := $rmd | append (.Page.Resources.Match "*.Rmarkdown") }}
+  {{ with $any_rmd }}
+  <dl class="f5 lh-copy">
+    <dt class="fw7">R Markdown files in this page bundle:</dt>
+    {{ range . }}
+        <dd class="fw5 ml0">{{ .RelPermalink }}</dd>
+    {{ end }}
+    <p>These are the files you'll want to edit, then re-knit to see the changed take effect in your site preview.</p>
+  </dl>
+  {{ end }}
+  
 
-{{ with .Page }}
-{{ with .Resources.ByType "image" }}
-This bundle contains these images:
-<ul>
-	{{ range . }}
-		<li>{{ .RelPermalink }}</li>
-	{{ end }}
-</ul>
-{{ end }}
-{{ end }}
+</details>
