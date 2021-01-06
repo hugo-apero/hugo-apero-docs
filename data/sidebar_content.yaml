@@ -11,7 +11,7 @@ blog: # must match the slug of your blog
     show_sidebar_toc: true # show toc container
     show_sidebar_adunit: false # show ad container
   list_sidebar: # for list-sidebar layout
-    image: img/avatar.jpg
+    image: img/arbre.jpg
     title: A Blog That's Real
     description: "This is a fully featured blog that supports categories,
     tags, series, and pagination. Even this sidebar offers a ton of customizations.
