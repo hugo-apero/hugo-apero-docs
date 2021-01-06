@@ -283,6 +283,18 @@ form {
       grid-column: 1 / 7;
     }
   }
+  .single-series {
+    .page-main,
+    .page-sidebar {
+      grid-column: 1 / 7;
+    }
+    .page-main {
+      order: 3;
+    }
+    .page-sidebar {
+      order: 2;
+    }
+  }
 }
 
 // anchor links
