@@ -12,7 +12,7 @@
 {{ end }}
 
 {{ $taxo_featured := $.Scratch.Get "$taxo_img" }}
-{{ $thumbnail := $yaml_featured | default $taxo_featured }}
+{{ $thumbnail := $taxo_featured | default $yaml_featured }}
 {{ with $thumbnail }}<img src="{{ . | relURL }}" class="db ma0">{{ end }}
 <div class="blog-info pa4">
   {{ with .title }}<h1 class="f3">{{ . }}</h1>{{ end }}
