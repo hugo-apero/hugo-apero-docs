@@ -47,7 +47,7 @@
     {{ end }}
     
     {{ $series_featured := $.Scratch.Get "$sf" }}
-    {{- $card := cond (ne $series_featured nil) $series_featured $card -}}
+    {{- $card := cond (ne $card nil) $card $series_featured -}}
     {{ with $card }}
         <meta property="og:image" content="{{ .Permalink }}" >
         <meta property="twitter:card" content="{{ if (ne $hex nil) }}summary{{ else }}summary_large_image{{ end }}">
