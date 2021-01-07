@@ -389,6 +389,11 @@ details#PageTableOfContents nav#TableOfContents ul li:hover {
   @extend .bg-#{$siteBgColor};
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 // Fontawesome icons
 $fa-font-path:        "../webfonts";
 @import "fontawesome-free-5.15.1-web/scss/fontawesome.scss";

@@ -12,7 +12,7 @@ action_type: text # text, button
 show_avatar: true
 avatar_shape: rounded # circle, square, rounded
 show_social: true
-number_featured: 1 # pulling from mainSections in config.toml
+number_featured: 2 # pulling from mainSections in config.toml
 links:
 - one
 - 2
