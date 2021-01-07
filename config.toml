@@ -48,13 +48,13 @@ enableEmoji = true
   # alternatively, use a built-in font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
-  customtextFontFamily = "Metropolis"
-  customheadingFontFamily = "Bitter"
+  customtextFontFamily = "Commissioner"
+  customheadingFontFamily = "Fraunces"
   
   # use a built-in color theme
   # one of: forest / grayscale / peach / poppy / 
   #         sky / violet / water
-  theme = "peach"
+  theme = "poppy"
   # or, leave theme empty & make your own palette
   # basic color options: use only color names as shown in the
   # "Color Palette" section of http://tachyons.io/docs/themes/skins/
