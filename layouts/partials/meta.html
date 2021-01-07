@@ -28,20 +28,6 @@
     {{- else -}}
         <meta name="twitter:image" content="{{- (printf "%s%s" $permalink $image) -}}"/>
     {{- end -}}
-{{ end }}
-
-<!--home page-->
-{{ if .IsHome }}
-  <meta property="og:title" content="{{ .Site.Title }}">
-  <meta property="description" content="{{ .Site.Params.description }}">
-  <meta property="og:description" content="{{ .Site.Params.description }}">
-  <!--use image from site config param-->
-  {{ $og_image := printf "%s" .Site.Params.sharing_image | absURL }}
-  {{- with $og_image -}}
-      <meta property="og:image" content="{{ . }}" >
-      <meta property="twitter:card" content="summary_large_image">
-      <meta name="twitter:image" content="{{ . }}" >
-  {{- end -}}
 <!--using featured images-->
 {{ else -}}
     {{/* If images are featured in a page's bundle. */}}
@@ -51,8 +37,8 @@
     {{- $card := cond (ne $hex nil) $hex $featured -}}
     
     {{/* Or if images are featured in a taxonomy term's bundle. */}}
-    {{ if $page.Params.series }}
-        {{- $term := index ($page.Params.series) 0 | urlize -}}
+    {{ with $page.Params.series }}
+        {{- $term := index . 0 | urlize -}}
         {{- $series := $.Site.GetPage "taxonomyTerm" (printf "/%s/%s" "series" $term) -}}
         {{- $featured := $series.Resources.GetMatch "*feature*" -}}
         {{ $.Scratch.Set "$sf" $featured }}
