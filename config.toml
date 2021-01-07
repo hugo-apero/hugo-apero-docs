@@ -2,7 +2,6 @@ baseURL = "/"
 languageCode = "en"
 title = "Blogophonic"
 author = "Formspree"
-description = "A modern, beautiful, and easily configurable blog theme for Hugo."
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
 disqusShortname = ""
@@ -30,6 +29,7 @@ enableEmoji = true
 [params]
   orgName = "RStudio"
   orgLocal = "Anywhere"
+  description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/favicon.ico?v=0"
   logo = "/img/blogophonic-mark-dark.png"
   mainSections = ["blog", "project"]
