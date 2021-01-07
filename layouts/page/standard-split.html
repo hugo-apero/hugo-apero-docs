@@ -1,0 +1,44 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw8 center">
+    {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns">{{ .Title }}</h1>{{ end }}
+    {{ if .Params.headline }}<h1 class="f2 f1-ns measure-narrow lh-solid">{{ .Params.headline }}</h1>{{ end }}
+
+<p class="f4 measure lh-copy">
+  {{ .Params.description }}
+</p>
+
+<hr class="f4 ba b--black-10 mt5 mb4 ml0">
+<div class="flex-l items-start">
+  <div class="mr4-l w-two-thirds-l">
+  {{ partial "shared/summary-li" . }}
+  </div>
+  
+  <div class="mh4-l w-third-l top-0 ad-unit">
+    <div class="pa4 tc">
+      {{ if .Params.show_avatar }}
+      {{ $avatar_shape := .Params.avatar_shape | default "circle" }}
+      {{ with $avatar_shape }}
+        <img src="http://tachyons.io/img/logo.jpg" class="pa1 h4 w4 dib {{if eq . "rounded"}}br3{{end}}{{if eq . "circle"}}br-100{{end}}" alt="avatar">
+      {{ end }}
+      {{ end }}
+      <h1 class="f4-ns fw6">{{ .Params.author }}</h1>
+      <h2 class="f5 fw2 ttu tracked">{{ .Params.role }}</h2>
+      {{ if .Params.show_social }}
+        <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv3">
+          {{ partial "shared/social-links.html" . }}
+        </div>
+      {{ end }}
+    </div>
+    <div class="tc pa1 pa3-ns">
+    <ul class="list pl0 measure center">
+    {{ range .Params.links }}
+    <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-20">{{ . }}</li>
+    {{ end }}
+    </ul>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+{{ end }}
