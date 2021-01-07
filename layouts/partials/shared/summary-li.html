@@ -1,0 +1,34 @@
+<article>
+{{ $page := . }}
+{{ $pages := where .Site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $grouped := $pages.GroupBy "Section" }}
+{{ range $grouped }}
+  {{ with $.Site.GetPage "section" .Key }}
+    <h6 class="f4 fw7 mt4 tracked ttu lh-title"><a href="{{ .Permalink }}" class="dim no-underline">{{ .Title }}</a></h6>
+  {{ else }}
+  <!-- If no _index.md is available, ".Key" defaults to the section title and filters to title casing -->
+    <h6 class="f4 fw7 mt4 tracked ttu lh-title">{{ .Key | title }}</h6>
+  {{ end }}
+  
+<!--now add the content-->
+  {{ $number_featured := $page.Params.number_featured | default 1 }}
+  {{ range first $number_featured .Pages }}
+ <h4 class="f4 mt4 lh-title"><a href="{{ .Permalink }}" class="dim no-underline">{{ .Title }}</a></h4>
+    <p class="measure-wide lh-copy cf">
+        {{ $featured := (.Resources.ByType "image").GetMatch "*feature*" }}
+        {{ range first 1 (.GetTerms "series") }}
+            {{ $.Scratch.Set "$series_featured" ((.Resources.ByType "image").GetMatch "*feature*") }}
+        {{ end }}
+        {{ $series_featured := .Scratch.Get "$series_featured" }}
+        {{ $thumbnail := $featured | default $series_featured }}
+        {{ with $thumbnail }}
+          <img src="{{ .RelPermalink | absURL }}" align="left" class="mw-100 w4 mr3 db br3 br--left"
+        alt="Blue tinted version of the Tachyons avatar on Twitter">
+        {{ end }}
+      {{ .Params.excerpt }}
+      <a href="/blog/tachyons-for-style/">Learn more</a>
+    </p>
+  {{ end}}
+<hr class="f4 ba b--black-10 mt5 mb4 ml0">
+{{ end }}
+</article>
