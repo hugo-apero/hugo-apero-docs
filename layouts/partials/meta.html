@@ -1,4 +1,5 @@
 {{ $permalink := .Permalink }}
+{{ $page := . }}
 
 <!--meta tags-->
 <meta charset="UTF-8">
@@ -36,6 +37,17 @@
     {{- $featured := $images.GetMatch "*feature*" -}}
     {{- $hex := $images.GetMatch "*hex*" -}}
     {{- $card := cond (ne $hex nil) $hex $featured -}}
+    
+    {{/* Or if images are featured in a taxonomy term's bundle. */}}
+    {{ if $page.Params.series }}
+        {{- $term := index ($page.Params.series) 0 | urlize -}}
+        {{- $series := $.Site.GetPage "taxonomyTerm" (printf "/%s/%s" "series" $term) -}}
+        {{- $featured := $series.Resources.GetMatch "*feature*" -}}
+        {{ $.Scratch.Set "$sf" $featured }}
+    {{ end }}
+    
+    {{ $series_featured := $.Scratch.Get "$sf" }}
+    {{- $card := cond (ne $series_featured nil) $series_featured $card -}}
     {{ with $card }}
         <meta property="og:image" content="{{ .Permalink }}" >
         <meta property="twitter:card" content="{{ if (ne $hex nil) }}summary{{ else }}summary_large_image{{ end }}">
