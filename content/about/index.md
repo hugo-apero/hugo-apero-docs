@@ -8,7 +8,7 @@ description: "A blog template for Hugo developed by Formspree and available for 
 date: 2019-02-19T14:47:22-06:00
 draft: false
 layout: standard-split
-action_type: text # text, button
+profile_left: false
 show_avatar: true
 avatar_shape: rounded # circle, square, rounded
 show_social: true

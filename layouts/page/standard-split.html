@@ -9,7 +9,7 @@
 </p>
 
 <hr class="f4 ba b--black-10 mt5 mb4 ml0">
-<div class="flex-l items-start">
+<div class="flex-l items-start {{ if .Params.profile_left}}flex-row-reverse {{ end }}">
   <div class="mr4-l w-two-thirds-l">
   {{ partial "shared/summary-li" . }}
   </div>
