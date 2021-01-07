@@ -7,14 +7,13 @@
 {{ hugo.Generator }}
 <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Page.Title }} | {{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ .Description }}" />
+{{- $site_card := printf "%s" .Site.Params.sharing_image | absURL }}
 
 <!--opengraph tags-->
 <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Params.excerpt }}{{ end }}{{ end }}" />
 <meta property="og:type" content="{{ if .IsPage }}page{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ $og_image := "" }}
-{{ $card_image := "" }}
 
 <!--sharing images-->
 <!--adapted from: https://github.com/kaushalmodi/hugo-bare-min-theme/blob/6195b5e377c56791ba4067ac0ec5286bf336aedf/layouts/partials/twitter_cards.html-->
@@ -39,11 +38,10 @@
     {{- $card := cond (ne $hex nil) $hex $featured -}}
     {{ with $card }}
         <meta property="og:image" content="{{ .Permalink }}" >
-        <meta property="twitter:card" content="{{ if (ne $hex nil) }}summary{{ else }}summary_large_card{{ end }}">
+        <meta property="twitter:card" content="{{ if (ne $hex nil) }}summary{{ else }}summary_large_image{{ end }}">
         <meta name="twitter:image" content="{{ .Permalink }}" >
     {{/* If not featured, use the site card. */}}
     {{ else }}
-        {{- $site_card := printf "%s" .Site.Params.sharing_image | absURL }}
         <meta property="og:image" content="{{ $site_card }}" >
         <meta property="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="{{ $site_card }}" >
@@ -56,7 +54,7 @@
   <meta property="description" content="{{ .Site.Params.description }}">
   <meta property="og:description" content="{{ .Site.Params.description }}">
   <!--use image from site config param-->
-  {{ $og_image = printf "%s" .Site.Params.sharing_image | absURL }}
+  {{ $og_image := printf "%s" .Site.Params.sharing_image | absURL }}
   {{- with $og_image -}}
       <meta property="og:image" content="{{ . }}" >
       <meta property="twitter:card" content="summary_large_image">
