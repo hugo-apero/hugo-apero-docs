@@ -29,9 +29,21 @@
         <meta name="twitter:image" content="{{- (printf "%s%s" $permalink $image) -}}"/>
     {{- end -}}
 {{ end }}
-    
+
+<!--home page-->
+{{ if .IsHome }}
+  <meta property="og:title" content="{{ .Site.Title }}">
+  <meta property="description" content="{{ .Site.Params.description }}">
+  <meta property="og:description" content="{{ .Site.Params.description }}">
+  <!--use image from site config param-->
+  {{ $og_image := printf "%s" .Site.Params.sharing_image | absURL }}
+  {{- with $og_image -}}
+      <meta property="og:image" content="{{ . }}" >
+      <meta property="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="{{ . }}" >
+  {{- end -}}
 <!--using featured images-->
-{{ if .IsPage -}}
+{{ else -}}
     {{/* If images are featured in a page's bundle. */}}
     {{- $images := $.Resources.ByType "image" -}}
     {{- $featured := $images.GetMatch "*feature*" -}}
@@ -58,18 +70,4 @@
         <meta property="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="{{ $site_card }}" >
     {{ end }}
-{{ end }}
-
-<!--home page-->
-{{ if .IsHome }}
-  <meta property="og:title" content="{{ .Site.Title }}">
-  <meta property="description" content="{{ .Site.Params.description }}">
-  <meta property="og:description" content="{{ .Site.Params.description }}">
-  <!--use image from site config param-->
-  {{ $og_image := printf "%s" .Site.Params.sharing_image | absURL }}
-  {{- with $og_image -}}
-      <meta property="og:image" content="{{ . }}" >
-      <meta property="twitter:card" content="summary_large_image">
-      <meta name="twitter:image" content="{{ . }}" >
-  {{- end -}}
 {{- end -}}
