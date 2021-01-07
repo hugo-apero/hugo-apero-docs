@@ -1,10 +1,23 @@
 ---
 title: "About"
-description: A blog template for Hugo developed by Formspree and available for free.
+show_title_as_headline: false
+headline: "Hi, my name is Emily Cooper. Nice to meet you."
+author: "Emily Cooper"
+role: "Social media strategy @ Savoir"
+description: "A blog template for Hugo developed by Formspree and available for free."
 date: 2019-02-19T14:47:22-06:00
 draft: false
-layout: standard
-show_title_as_headline: false
+layout: standard-split
+action_type: text # text, button
+show_avatar: true
+avatar_shape: rounded # circle, square, rounded
+show_social: true
+number_featured: 1 # pulling from mainSections in config.toml
+links:
+- one
+- 2
+- 3
+- 4
 ---
 
 <h1 class="f2 f1-ns measure-narrow lh-solid">
