@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {{ hugo.Generator }}
-<title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Page.Title }} | {{ end }}{{ site.Title }}</title>
+<title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Page.Title }} | {{ site.Title }}{{ end }}</title>
 
 {{ with site.Params.twitter }}
 <meta property="twitter:site" content="@{{ . }}">
@@ -32,7 +32,7 @@
 
 <!--opengraph tags-->
 <meta property="og:site_name" content="{{ site.Title }}">
-<meta property="og:title" content="{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Page.Title }} | {{ end }}{{ site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Page.Title }} | {{ site.Title }}{{ end }}">
 <meta property="og:description" content="{{ $desc }}" />
 <meta property="og:type" content="{{ if .IsPage }}page{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
