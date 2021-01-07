@@ -40,7 +40,7 @@
     {{ with $page.Params.series }}
         {{- $term := index . 0 | urlize -}}
         {{- $series := $.Site.GetPage "taxonomyTerm" (printf "/%s/%s" "series" $term) -}}
-        {{- $featured := $series.Resources.GetMatch "*feature*" -}}
+        {{- $featured := ($series.Resources.ByType "image").GetMatch "*feature*" }}
         {{ $.Scratch.Set "$sf" $featured }}
     {{ end }}
     
@@ -50,7 +50,7 @@
         <meta property="og:image" content="{{ .Permalink }}" >
         <meta property="twitter:card" content="{{ if (ne $hex nil) }}summary{{ else }}summary_large_image{{ end }}">
         <meta name="twitter:image" content="{{ .Permalink }}" >
-    {{/* If not featured, use the site card. */}}
+    {{/* If no featured, use the site card. */}}
     {{ else }}
         <meta property="og:image" content="{{ $site_card }}" >
         <meta property="twitter:card" content="summary_large_image">
