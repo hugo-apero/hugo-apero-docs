@@ -27,7 +27,7 @@
         </div> <!--close wide column -->
         
         <!--narrow profile column: 1/3 -->
-        <div class="mh2-l w-third-l self-start top-0 sticky o-70 glow">
+        <div class="mh2-l w-third-l self-start top-0 sticky {{ if .Params.glow_on_hover }}o-80 glow{{ end }}">
           <div class="pa4 tc">
             {{ if .Params.avatar }}
               {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}

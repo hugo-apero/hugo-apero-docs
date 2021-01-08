@@ -5,7 +5,7 @@ description: "A blog template for Hugo developed by Formspree and available for 
 author: "Emily Cooper"
 headline: "Hi, my name is Emily Cooper.<br> Nice to meet you."
 show_title_as_headline: false
-intro: "I'm a driven 20-something American from Chicago who moves to Paris for an unexpected job opportunity. I've been tasked with bringing an American point of view to a venerable French marketing firm."
+intro: "I'm a driven 20-something American from Chicago who moved to Paris for an unexpected job opportunity. I've been tasked with bringing an American point of view to a venerable French marketing firm."
 outro: "<i class='fas fa-mug-hot pr2'></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/?gclid=CjwKCAiA_9r_BRBZEiwAHZ_v1y06x-XbErvkpkAfMWRPgIZ5JShPqrs6-RbFHOL5RvgaEAtyQhOFKBoCvRkQAvD_BwE)!"
 date: 2019-02-19T14:47:22-06:00
 draft: false
@@ -20,6 +20,7 @@ role: "Social media strategy @ Savoir"
 avatar: avatar.jpg
 avatar_shape: rounded # circle, square, rounded
 show_social: true
+glow_on_hover: true
 list_label: "Interests"
 links:
 - Paris
