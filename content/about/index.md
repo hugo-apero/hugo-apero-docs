@@ -15,6 +15,7 @@ intro: |
   I'm a driven 20-something American from Chicago who moved to Paris for an unexpected job opportunity. 
   I've been tasked with bringing an American point of view to a venerable French marketing firm.
 show_action_link: true
+action_left: true
 action_link: 
 - icon: fa-microphone-alt
   icon_pack: fas

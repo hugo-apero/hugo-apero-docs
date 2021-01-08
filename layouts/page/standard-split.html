@@ -2,13 +2,13 @@
 <main class="page-main pa4" role="main">
   <section class="page-content mw8 center">
     <header class="page-header bb b--black-10 bw1 pb4">
-      <div class="flex-l items-end {{ if .Params.profile_left}}flex-row-reverse {{ end }}">
+      <div class="flex-l items-end {{ if .Params.action_left}}flex-row-reverse{{ end }}">
         <!--wide content column: 2/3 -->
-        <div class="{{ if .Params.profile_left}}ml4-l{{ else }}mr4-l{{ end }} w-two-thirds-l">
+        <div class="{{ if .Params.profile_left}}ml4-l{{ else }}mr4-l{{ end }} w-two-thirds-l {{ if .Params.action_left}}tr{{ end }}">
         {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-title tracked-tight-ns">{{ .Title | markdownify }}</h1>{{ end }}
         {{ if .Params.headline }}<h1 class="f2 f1-ns measure-narrow lh-title">{{ .Params.headline | markdownify }}</h1>{{ end }}
         {{ with .Params.intro }}
-          <p class="f4 measure lh-copy">{{ . | markdownify }}</p>
+          <p class="f4 measure lh-copy dib">{{ . | markdownify }}</p>
         {{ end }}
         </div> <!--close wide column-->
         
@@ -29,7 +29,7 @@
     </header>
 
     <section class="page-body pt5 pb4">
-      <div class="flex-l items-start {{ if .Params.profile_left}}flex-row-reverse {{ end }}">
+      <div class="flex-l items-start {{ if .Params.profile_left}}flex-row-reverse{{ end }}">
         
         <!--wide content column: 2/3 -->
         <div class="{{ if .Params.profile_left}}ml4-l{{ else }}mr4-l{{ end }} w-two-thirds-l {{ if .Params.glow_on_hover }}wide-col glow{{ end }}">
