@@ -14,8 +14,8 @@
 
 <hr class="f4 ba b--black-10 mt5 mb4 ml0">
 <div class="flex-l items-start {{ if .Params.profile_left}}flex-row-reverse {{ end }}">
-  <div class="mr4-l w-two-thirds-l">
-  <h2 class="f2 fw7 mt4 pb3 tl bb">Lately</h2>
+  <div class="{{ if .Params.profile_left}}ml4-l{{ else }}mr4-l{{ end }} w-two-thirds-l">
+  <h2 class="f2 fw7 mt4 pb3 tl bb">{{ .Params.featured_label | markdownify }}</h2>
   {{ partial "shared/summary-li" . }}
   {{ with .Params.outro }}
     <p class="measure-wide lh-copy cf">
