@@ -1,9 +1,12 @@
 ---
-## Configure header of page
 title: "About"
 description: |
   A blog template for Hugo developed by Formspree and available for free.
 author: "Emily Cooper"
+date: 2019-02-19T14:47:22-06:00
+draft: false
+layout: standard-split
+## Configure header of page
 headline: |
   Hi, my name is Emily Cooper.<br>
   Nice to meet you.
@@ -11,23 +14,26 @@ show_title_as_headline: false
 intro: |
   I'm a driven 20-something American from Chicago who moved to Paris for an unexpected job opportunity. 
   I've been tasked with bringing an American point of view to a venerable French marketing firm.
-outro: |
-  <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/?gclid=CjwKCAiA_9r_BRBZEiwAHZ_v1y06x-XbErvkpkAfMWRPgIZ5JShPqrs6-RbFHOL5RvgaEAtyQhOFKBoCvRkQAvD_BwE)!
-date: 2019-02-19T14:47:22-06:00
-draft: false
-layout: standard-split
-## Configure featured
+show_action_link: true
+action_link: 
+- icon: fa-microphone-alt
+  icon_pack: fas
+  name: How to say my name
+  url: audio.m4a
+## Configure content / wide column
 featured_label: "Lately"
 number_featured: 2 # pulling from mainSections in config.toml
 number_categories: 0  # set to zero to exclude
-## Configure profile
+outro: |
+  <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/?gclid=CjwKCAiA_9r_BRBZEiwAHZ_v1y06x-XbErvkpkAfMWRPgIZ5JShPqrs6-RbFHOL5RvgaEAtyQhOFKBoCvRkQAvD_BwE)!
+## Configure profile / narrow column
 profile_left: false
 role: "Social media strategy @ Savoir"
 avatar: avatar.jpg
 avatar_shape: rounded # circle, square, rounded
 show_social: true
 glow_on_hover: true
-list_label: "Interests"
+list_label: "Interests" # bookmarks, currently reading, anything you want
 links:
 - Paris
 - Pastries

@@ -13,14 +13,18 @@
         </div> <!--close wide column-->
         
         <!--narrow profile column: 1/3 -->
+        {{ if .Params.show_action_link }}
         <div class="mh2-l w-third-l tc">
-          <p><i class="fas fa-microphone-alt fa-4x pv2"></i></p>
-          <p class="f4 fw2 ttu tracked pv2">Say my name</p>
+          {{ range .Params.action_link }}
+          <p><i class="{{ .icon_pack }} {{ .icon }} fa-4x pv2"></i></p>
+          <p class="f4 fw2 ttu tracked pv2">{{ .name }}</p>
           <audio controls class="pb4">
-              <source src="audio.m4a" type="audio/mp4">
+              <source src="{{ .url }}" type="audio/mp4">
               <p>Your browser does not support the audio element.</p>
           </audio> 
+          {{ end }}
         </div> <!--close narrow column-->
+        {{ end }}
       </div> <!--close flex-->
     </header>
 
