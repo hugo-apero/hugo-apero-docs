@@ -1,23 +1,25 @@
 ---
 title: "About"
-show_title_as_headline: false
-headline: "Hi, my name is Emily Cooper. Nice to meet you."
-author: "Emily Cooper"
-role: "Social media strategy @ Savoir"
 description: "A blog template for Hugo developed by Formspree and available for free."
+author: "Emily Cooper"
+headline: "Hi, my name is Emily Cooper.<br> Nice to meet you."
+show_title_as_headline: false
+intro: "I'm a driven 20-something American from Chicago who moves to Paris for an unexpected job opportunity. I've been tasked with bringing an American point of view to a venerable French marketing firm."
+outro: "<i class='fas fa-mug-hot pr2'></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/?gclid=CjwKCAiA_9r_BRBZEiwAHZ_v1y06x-XbErvkpkAfMWRPgIZ5JShPqrs6-RbFHOL5RvgaEAtyQhOFKBoCvRkQAvD_BwE) next time you are in Paris!"
 date: 2019-02-19T14:47:22-06:00
 draft: false
 layout: standard-split
 profile_left: false
-show_avatar: true
-avatar_shape: rounded # circle, square, rounded
+role: "Social media strategy @ Savoir"
+avatar: avatar.jpg
+avatar_shape: circle # circle, square, rounded
 show_social: true
 number_featured: 2 # pulling from mainSections in config.toml
+list_label: "Interests"
 links:
-- one
-- 2
-- 3
-- 4
+- Paris
+- Pastries
+- People
 ---
 
 <h1 class="f2 f1-ns measure-narrow lh-solid">

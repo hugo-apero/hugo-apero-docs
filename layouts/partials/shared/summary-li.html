@@ -11,9 +11,9 @@
   {{ end }}
   
 <!--now add the content-->
-  {{ $number_featured := $page.Params.number_featured | default 1 }}
+  {{ $number_featured := $page.Params.number_featured | default 2 }}
   {{ range first $number_featured .Pages }}
- <h4 class="f4 mt4 lh-title"><a href="{{ .Permalink }}" class="dim no-underline">{{ .Title }}</a></h4>
+  <h4 class="f4 mt4 lh-title"><a href="{{ .Permalink }}" class="dim no-underline">{{ .Title }}</a></h4>
     <p class="measure-wide lh-copy cf">
         {{ $featured := (.Resources.ByType "image").GetMatch "*feature*" }}
         {{ range first 1 (.GetTerms "series") }}
