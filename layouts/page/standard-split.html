@@ -1,18 +1,21 @@
 {{ define "main" }}
 <main class="page-main pa4" role="main">
   <section class="page-content mw8 center">
+    <header>
     {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-title tracked-tight-ns">{{ .Title | markdownify }}</h1>{{ end }}
     {{ if .Params.headline }}<h1 class="f2 f1-ns measure-narrow lh-title ">{{ .Params.headline | markdownify }}</h1>{{ end }}
 
-{{ with .Params.intro }}
-<p class="f4 measure lh-copy">
-  {{ . | markdownify }}
-</p>
-{{ end }}
+    {{ with .Params.intro }}
+    <p class="f4 measure lh-copy">
+      {{ . | markdownify }}
+    </p>
+    {{ end }}
+    </header>
 
 <hr class="f4 ba b--black-10 mt5 mb4 ml0">
 <div class="flex-l items-start {{ if .Params.profile_left}}flex-row-reverse {{ end }}">
   <div class="mr4-l w-two-thirds-l">
+  <h2 class="f2 fw7 mt4 pb3 tl bb">Lately</h2>
   {{ partial "shared/summary-li" . }}
   {{ with .Params.outro }}
     <p class="measure-wide lh-copy cf">
@@ -21,7 +24,7 @@
   {{ end }}
   </div>
   
-  <div class="mh4-l w-third-l self-start top-0 sticky">
+  <div class="mh4-l w-third-l self-start top-0 sticky o-70 glow">
     <div class="pa4 tc">
       {{ if .Params.avatar }}
         {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}

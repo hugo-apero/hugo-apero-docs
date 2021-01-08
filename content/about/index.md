@@ -1,4 +1,5 @@
 ---
+## Configure header of page
 title: "About"
 description: "A blog template for Hugo developed by Formspree and available for free."
 author: "Emily Cooper"
@@ -9,12 +10,16 @@ outro: "<i class='fas fa-mug-hot pr2'></i>If my blog has helped you, you can [bu
 date: 2019-02-19T14:47:22-06:00
 draft: false
 layout: standard-split
+## Configure featured
+featured_label: "Lately"
+number_featured: 2 # pulling from mainSections in config.toml
+number_categories: 5
+## Configure profile
 profile_left: false
 role: "Social media strategy @ Savoir"
 avatar: avatar.jpg
 avatar_shape: rounded # circle, square, rounded
 show_social: true
-number_featured: 2 # pulling from mainSections in config.toml
 list_label: "Interests"
 links:
 - Paris

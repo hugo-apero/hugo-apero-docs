@@ -3,11 +3,12 @@
 {{ $pages := where .Site.RegularPages "Type" "in" site.Params.mainSections }}
 {{ $grouped := $pages.GroupBy "Section" }}
 {{ range $grouped }}
-  {{ with $.Site.GetPage "section" .Key }}
-    <h6 class="f4 fw7 mt4 tracked ttu lh-title"><a href="{{ .Permalink }}" class="dim no-underline">{{ .Title }}</a></h6>
+  {{ $section := $.Site.GetPage "section" .Key }}
+  {{ with $section }}
+    <h6 class="f4 fw7 mt4 tracked ttu lh-title mb0"><a href="{{ .Permalink }}" class="dim no-underline">{{ .Title }}</a></h6>
   {{ else }}
   <!-- If no _index.md is available, ".Key" defaults to the section title and filters to title casing -->
-    <h6 class="f4 fw7 mt4 tracked ttu lh-title">{{ .Key | title }}</h6>
+    <h6 class="f4 fw7 mt4 tracked ttu lh-title mb0">{{ .Key | title }}</h6>
   {{ end }}
   
 <!--now add the content-->
@@ -29,6 +30,18 @@
       <a href="/blog/tachyons-for-style/">Learn more</a>
     </p>
   {{ end}}
+  {{ with $section }}
+    <div class="tr">
+    <span class="f5 pv4 action-text tr"><a href="{{ .Permalink }}" class="dim no-underline">See all &rarr;</a></span>
+    </div>
+  {{ end }}
 <hr class="f4 ba b--black-10 mt5 mb4 ml0">
 {{ end }}
+
+{{ $number_categories := $page.Params.number_categories | default 5 }}
+  <h6 class="f4 mv4 tracked ttu lh-title">Featured categories</h6>
+    {{ range first $number_categories site.Taxonomies.categories.ByCount }}
+      <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a> 
+    {{ end }}
+<hr class="f4 ba b--black-10 mt5 mb4 ml0">
 </article>
