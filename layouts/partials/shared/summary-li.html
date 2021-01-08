@@ -38,10 +38,12 @@
 <hr class="f4 ba b--black-10 mt5 mb4 ml0">
 {{ end }}
 
-{{ $number_categories := $page.Params.number_categories | default 5 }}
+{{ $number_categories := $page.Params.number_categories | default 0 }}
+{{ if ge $number_categories 1 }}
   <h6 class="f4 mv4 tracked ttu lh-title">Featured categories</h6>
-    {{ range first $number_categories site.Taxonomies.categories.ByCount }}
+  {{ range first $number_categories site.Taxonomies.categories.ByCount }}
       <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a> 
-    {{ end }}
+  {{ end }}
 <hr class="f4 ba b--black-10 mt5 mb4 ml0">
+{{ end }}
 </article>
