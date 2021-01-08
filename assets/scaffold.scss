@@ -67,8 +67,9 @@ h1, h2, h3, h4, h5, h6 {
   @extend .#{$footerTextColor};
 }
 
-// apply tachyons classes to blog post markdown
-.post-body {
+// apply tachyons classes to blog post and single page markdown
+.post-body,
+.page-body {
 
   h1, h2, h3, h4, h5, h6 { @extend .lh-title ; }
   h1 { @extend .f1 ; }

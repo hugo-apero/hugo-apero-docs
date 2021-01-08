@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main class="page-main pa4" role="main">
   <section class="page-content mw8 center">
-    <header>
+    <header class="page-header bb b--black-10 bw1 pb4">
     {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-title tracked-tight-ns">{{ .Title | markdownify }}</h1>{{ end }}
     {{ if .Params.headline }}<h1 class="f2 f1-ns measure-narrow lh-title ">{{ .Params.headline | markdownify }}</h1>{{ end }}
 
@@ -12,45 +12,49 @@
     {{ end }}
     </header>
 
-<hr class="f4 ba b--black-10 mt5 mb4 ml0">
-<div class="flex-l items-start {{ if .Params.profile_left}}flex-row-reverse {{ end }}">
-  <div class="{{ if .Params.profile_left}}ml4-l{{ else }}mr4-l{{ end }} w-two-thirds-l">
-  <h2 class="f2 fw7 mt4 pb3 tl bb">{{ .Params.featured_label | markdownify }}</h2>
-  {{ partial "shared/summary-li" . }}
-  {{ with .Params.outro }}
-    <p class="measure-wide lh-copy cf">
-    {{ . | markdownify }}
-    </p>
-  {{ end }}
-  </div>
-  
-  <div class="mh2-l w-third-l self-start top-0 sticky o-70 glow">
-    <div class="pa4 tc">
-      {{ if .Params.avatar }}
-        {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}
-        {{ $avatar_shape := .Params.avatar_shape | default "circle" }}
-        {{ with $avatar_shape }}
-        <img src="{{ $avatar }}" class="pa1 h4 w4 dib {{if eq . "rounded"}}br3{{end}}{{if eq . "circle"}}br-100{{end}}" alt="avatar">
-      {{ end }}
-      {{ end }}
-      <h1 class="f4-ns fw6">{{ .Params.author }}</h1>
-      <h2 class="f5 fw2 ttu tracked">{{ .Params.role | markdownify }}</h2>
-      {{ if .Params.show_social }}
-        <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv3">
-          {{ partial "shared/social-links.html" . }}
-        </div>
-      {{ end }}
-    </div>
-    <div class="tc pa1 pa3-ns">
-    <h2 class="f5 fw2 ttu tracked bt bb pv2">{{ .Params.list_label }}</h2>
-    <ul class="list pl0 measure center">
-    {{ range .Params.links }}
-    <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-20">{{ . }}</li>
-    {{ end }}
-    </ul>
-    </div>
-  </div>
-</div>
-</section>
+    <section class="page-body pt5 pb4">
+      <div class="flex-l items-start {{ if .Params.profile_left}}flex-row-reverse {{ end }}">
+        
+        <!--wide content column: 2/3 -->
+        <div class="{{ if .Params.profile_left}}ml4-l{{ else }}mr4-l{{ end }} w-two-thirds-l">
+          <h2 class="f2 fw7 mt4 pb3 tl">{{ .Params.featured_label | markdownify }}</h2>
+          {{ partial "shared/summary-li" . }}
+          {{ with .Params.outro }}
+            <p class="measure-wide lh-copy cf">
+            {{ . | markdownify }}
+            </p>
+          {{ end }}
+        </div> <!--close wide column -->
+        
+        <!--narrow profile column: 1/3 -->
+        <div class="mh2-l w-third-l self-start top-0 sticky o-70 glow">
+          <div class="pa4 tc">
+            {{ if .Params.avatar }}
+              {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}
+              {{ $avatar_shape := .Params.avatar_shape | default "circle" }}
+              {{ with $avatar_shape }}
+                <img src="{{ $avatar }}" class="pa1 h4 w4 dib {{if eq . "rounded"}}br3{{end}}{{if eq . "circle"}}br-100{{end}}" alt="avatar">
+              {{ end }}
+            {{ end }}
+            <h2 class="f4-ns fw6">{{ .Params.author }}</h2>
+            <h5 class="f6 fw2 ttu tracked">{{ .Params.role | markdownify }}</h5>
+            {{ if .Params.show_social }}
+              <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv3">
+              {{ partial "shared/social-links.html" . }}
+              </div>
+            {{ end }}
+          </div>
+          <div class="tc pa1 pa3-ns">
+            <h5 class="f6 fw2 ttu tracked bt bb pv2">{{ .Params.list_label }}</h5>
+            <ul class="list pl0 measure center">
+            {{ range .Params.links }}
+              <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-20">{{ . }}</li>
+            {{ end }}
+            </ul>
+          </div>
+        </div> <!--close narrow column -->
+      </div> <!--close flex-->
+    </section> <!--close body section-->
+  </section> <!--close page content section-->
 </main>
 {{ end }}

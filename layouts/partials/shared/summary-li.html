@@ -5,10 +5,10 @@
 {{ range $grouped }}
   {{ $section := $.Site.GetPage "section" .Key }}
   {{ with $section }}
-    <h6 class="f4 fw7 mt4 tracked ttu lh-title mb0"><a href="{{ .Permalink }}" class="dim no-underline">{{ .Title }}</a></h6>
+    <h5 class="f4 fw7 mt4 tracked ttu lh-title mb0"><a href="{{ .Permalink }}" class="dim no-underline">{{ .Title }}</a></h5>
   {{ else }}
   <!-- If no _index.md is available, ".Key" defaults to the section title and filters to title casing -->
-    <h6 class="f4 fw7 mt4 tracked ttu lh-title mb0">{{ .Key | title }}</h6>
+    <h5 class="f4 fw7 mt4 tracked ttu lh-title mb0"><a href="{{ .Permalink }}" class="dim no-underline">{{ .Key | title }}</a></h5>
   {{ end }}
   
 <!--now add the content-->
@@ -35,7 +35,7 @@
     <span class="f5 pv4 action-text tr"><a href="{{ .Permalink }}" class="dim no-underline">See all &rarr;</a></span>
     </div>
   {{ end }}
-<hr class="f4 ba b--black-10 mt5 mb4 ml0">
+<hr class="f4 ba mt5 mb4 ml0">
 {{ end }}
 
 {{ $number_categories := $page.Params.number_categories | default 0 }}
@@ -44,6 +44,6 @@
   {{ range first $number_categories site.Taxonomies.categories.ByCount }}
       <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a> 
   {{ end }}
-<hr class="f4 ba b--black-10 mt5 mb4 ml0">
+<hr class="f4 ba mt5 mb4 ml0">
 {{ end }}
 </article>
