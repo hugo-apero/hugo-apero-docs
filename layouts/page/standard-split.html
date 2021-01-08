@@ -2,14 +2,26 @@
 <main class="page-main pa4" role="main">
   <section class="page-content mw8 center">
     <header class="page-header bb b--black-10 bw1 pb4">
-    {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-title tracked-tight-ns">{{ .Title | markdownify }}</h1>{{ end }}
-    {{ if .Params.headline }}<h1 class="f2 f1-ns measure-narrow lh-title ">{{ .Params.headline | markdownify }}</h1>{{ end }}
-
-    {{ with .Params.intro }}
-    <p class="f4 measure lh-copy">
-      {{ . | markdownify }}
-    </p>
-    {{ end }}
+      <div class="flex-l items-end {{ if .Params.profile_left}}flex-row-reverse {{ end }}">
+        <!--wide content column: 2/3 -->
+        <div class="{{ if .Params.profile_left}}ml4-l{{ else }}mr4-l{{ end }} w-two-thirds-l">
+        {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-title tracked-tight-ns">{{ .Title | markdownify }}</h1>{{ end }}
+        {{ if .Params.headline }}<h1 class="f2 f1-ns measure-narrow lh-title">{{ .Params.headline | markdownify }}</h1>{{ end }}
+        {{ with .Params.intro }}
+          <p class="f4 measure lh-copy">{{ . | markdownify }}</p>
+        {{ end }}
+        </div> <!--close wide column-->
+        
+        <!--narrow profile column: 1/3 -->
+        <div class="mh2-l w-third-l tc">
+          <p><i class="fas fa-microphone-alt fa-4x pv2"></i></p>
+          <p class="f4 fw2 ttu tracked pv2">Say my name</p>
+          <audio controls class="pb4">
+              <source src="audio.m4a" type="audio/mp4">
+              <p>Your browser does not support the audio element.</p>
+          </audio> 
+        </div> <!--close narrow column-->
+      </div> <!--close flex-->
     </header>
 
     <section class="page-body pt5 pb4">
@@ -52,9 +64,9 @@
             {{ end }}
             </ul>
           </div>
-        </div> <!--close narrow column -->
-      </div> <!--close flex-->
-    </section> <!--close body section-->
-  </section> <!--close page content section-->
+        </div>  <!--close narrow column ->
+      </div>    <!--close flex-->
+    </section>  <!--close body section-->
+  </section>    <!--close page content section-->
 </main>
 {{ end }}
