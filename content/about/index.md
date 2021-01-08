@@ -15,7 +15,7 @@ featured_label: "Lately"
 number_featured: 2 # pulling from mainSections in config.toml
 number_categories: 0  # set to zero to exclude
 ## Configure profile
-profile_left: true
+profile_left: false
 role: "Social media strategy @ Savoir"
 avatar: avatar.jpg
 avatar_shape: rounded # circle, square, rounded
