@@ -19,7 +19,7 @@
         {{ range first 1 (.GetTerms "series") }}
             {{ $.Scratch.Set "$series_featured" ((.Resources.ByType "image").GetMatch "*feature*") }}
         {{ end }}
-        {{ $series_featured := .Scratch.Get "$series_featured" }}
+        {{ $series_featured := $.Scratch.Get "$series_featured" }}
         {{ $thumbnail := $featured | default $series_featured }}
         {{ with $thumbnail }}
           <img src="{{ .RelPermalink | absURL }}" align="left" class="mw-100 w4 mr3 db br3 br--left"
