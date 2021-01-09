@@ -5,9 +5,9 @@ description: |
 date: 2019-02-19T14:47:22-06:00
 draft: false
 layout: standard-split
+show_header: true
 
 ## Configure header of page
-show_header: true
 text_align_right: false
 show_title_as_headline: false
 headline: |
