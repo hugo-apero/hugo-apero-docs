@@ -13,11 +13,15 @@ headline: |
 subheadline: |
   I'm a driven 20-something American from Chicago who moved to Paris for an unexpected job opportunity. I've been tasked with bringing an American point of view to a venerable French marketing firm.
 
+## Configure sidebar position & look
+sidebar_left: true
+glow_on_hover: true  # makes each column dim when no hover
+
 ## Configure page content in wide column
 title_label: "Lately"
 number_featured: 2 # pulling from mainSections in config.toml
 number_categories: 3 # set to zero to exclude
-show_intro: false
+show_intro: true
 intro: |
   Cultures clash as I adjust to the challenges of life in Paris while juggling my career, new friendships, and love life. Here is how to catch up with what I'm up to!
 show_outro: true
@@ -25,10 +29,8 @@ outro: |
   <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/)!
 
 ## Configure sidebar content in narrow column
-sidebar_left: false
 author: "Emily Cooper"
 role: "Social media strategy @ Savoir"
-glow_on_hover: true
 avatar: avatar.jpg
 avatar_shape: rounded # circle, square, rounded
 show_social: true
