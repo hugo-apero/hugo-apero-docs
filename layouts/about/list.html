@@ -1,0 +1,85 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw8 center">
+    {{ if .Params.show_header }}
+    <header class="page-header bb b--black-10 bw1 pb4 {{ if .Params.text_align_right }}tr{{ end }}">
+      {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">{{ .Title | markdownify }}</h1>
+      {{ else }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">{{ .Params.headline | markdownify }}</h1>{{ end }}
+      {{ with .Params.subheadline }}
+        <p class="f4 measure-wide lh-copy dib">{{ . | markdownify }}</p>
+      {{ end }}
+    </header>
+    {{ end }}
+
+    <section class="page-body">
+      <!--make the flexbox a row only on not small screens-->
+      <div class="flex items-start flex-row-l flex-column-ns flex-column">
+        
+        <!--wide content column: 2/3 -->
+        <div class="order-2 {{ if .Params.sidebar_left }}ml5-l order-2-l{{ else }}mr4-l order-1-l{{ end }} w-two-thirds-l w-100-ns {{ if .Params.glow_on_hover }}wide-col glow{{ end }} pt4 mt3">
+          {{ if .Params.show_header }}
+            {{ with .Params.title_label }}
+              <h2 class="f2 fw7 pb3 tl">{{ . | markdownify }}</h2>
+            {{ end }}
+          {{ else }}
+            <h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns">{{ .Params.title_label | markdownify }}</h1>
+          {{ end }}
+          {{ if .Params.show_intro }}
+            <p class="f4 measure lh-copy dib">{{ .Params.intro | markdownify }}</p>
+          {{ end }}
+          {{ partial "shared/summary-li" . }}
+          {{ if .Params.show_outro }}
+            <p class="measure-wide lh-copy cf pt3">
+            {{ .Params.outro | markdownify }}
+            </p>
+          {{ end }}
+        </div> <!--close wide column -->
+        
+        <sidebar class="order-1 {{ if .Params.sidebar_left }}order-1-l{{ else }}mr4-l order-2-l{{ end }} pt5 mv0 mh0 w-third-l w-100-ns self-start sticky {{ if .Params.glow_on_hover }}o-80 glow{{ end }}">
+          <div class="pt3 pb1 pb2-ns tc ph4">
+            {{ if .Params.avatar }}
+              {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}
+              {{ $avatar_shape := .Params.avatar_shape | default "circle" }}
+              {{ with $avatar_shape }}
+                <img src="{{ $avatar }}" class="h4 w4 dib {{if eq . "rounded"}}br3{{end}}{{if eq . "circle"}}br-100{{end}}" alt="avatar">
+              {{ end }}
+            {{ end }}
+            <h2 class="f4-ns fw6">{{ .Params.author }}</h2>
+            <h5 class="f4 fw2 ttu tracked">{{ .Params.role | markdownify }}</h5>
+            {{ if .Params.show_social }}
+              <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2">
+              {{ partial "shared/social-links.html" . }}
+              </div>
+            {{ end }}
+            </div>
+            
+            {{ if .Params.show_audio_link }}
+            <div class="pa1 pa2-ns tc ph4">
+              {{ range .Params.audio_link }}
+                <p class="fw2 pb1">{{ .name }}</p>
+                <p>
+                <audio controls>
+                  <source src="{{ .url }}" type="audio/mp4">
+                  Your browser does not support the audio element.
+                </audio> 
+                </p>
+              {{ end }}
+            </div> 
+            {{ end }}
+          
+          <div class="pa1 pa2-ns tc ph4">
+            <h5 class="f4 fw2 ttu tracked">{{ .Params.link_list_label }}</h5>
+            <ul class="list pl0 measure center">
+            {{ range .Params.link_list }}
+              <li class="lh-copy pv2 ba bl-0 bt-0 br-0 b--dotted b--black-20">
+                <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+              </li>
+            {{ end }}
+            </ul>
+          </div>
+        </sidebar>  
+      </div>    <!--close flex-->
+    </section>  <!--close body section-->
+  </section>    <!--close page content section-->
+</main>
+{{ end }}
