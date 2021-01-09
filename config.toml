@@ -54,7 +54,7 @@ enableEmoji = true
   # use a built-in color theme
   # one of: forest / grayscale / peach / poppy / 
   #         sky / violet / water
-  theme = "poppy"
+  theme = "violet"
   # or, leave theme empty & make your own palette
   # basic color options: use only color names as shown in the
   # "Color Palette" section of http://tachyons.io/docs/themes/skins/

@@ -27,7 +27,7 @@ outro: |
   <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/)!
 
 ## Configure sidebar content in narrow column
-sidebar_left: true
+sidebar_left: false
 author: "Emily Cooper"
 role: "Social media strategy @ Savoir"
 glow_on_hover: true
