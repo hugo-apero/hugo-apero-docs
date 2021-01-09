@@ -13,10 +13,10 @@
 
     <section class="page-body">
       <!--make the flexbox a row only on not small screens-->
-      <div class="flex items-start{{ if .Params.sidebar_left}} flex-row-reverse{{ end }} flex-column-ns flex-column flex-row-l">
+      <div class="flex items-start{{ if .Params.sidebar_left}} flex-row-reverse-l{{ end }} flex-column-ns flex-column flex-row-l">
         
         <!--wide content column: 2/3 -->
-        <div class="{{ if .Params.sidebar_left }}ml5-l order-2{{ else }}mr4-l order-2 order-1-l{{ end }} w-two-thirds-l {{ if .Params.glow_on_hover }}wide-col glow{{ end }} pt4 mt3">
+        <div class="{{ if .Params.sidebar_left }}ml5-l order-2{{ else }}mr4-l order-2 order-1-l{{ end }} w-two-thirds-l w-100-ns {{ if .Params.glow_on_hover }}wide-col glow{{ end }} pt4 mt3">
           {{ if .Params.show_header }}
             {{ with .Params.title_label }}
               <h2 class="f2 fw7 pb3 tl">{{ . | markdownify }}</h2>
