@@ -8,21 +8,24 @@ layout: standard-split
 
 ## Configure header of page
 show_header: true
+text_align_right: false
+show_title_as_headline: false
 headline: |
   Hi, my name is Emily Cooper. Nice to meet you.
-show_title_as_headline: false
-intro: |
-  I'm a driven 20-something American from Chicago who moved to Paris for an unexpected job opportunity. 
-  I've been tasked with bringing an American point of view to a venerable French marketing firm.
-text_align_right: false
+subheadline: |
+  I'm a driven 20-something American from Chicago who moved to Paris for an unexpected job opportunity. I've been tasked with bringing an American point of view to a venerable French marketing firm.
 
 ## Configure page content in wide column
-featured_label: "Lately"
+title_label: "Lately"
 number_featured: 2 # pulling from mainSections in config.toml
 number_categories: 3 # set to zero to exclude
+show_intro: false
+intro: |
+  Cultures clash as I adjust to the challenges of life in Paris while juggling my career, new friendships, and love life. Here is how to catch up with what I'm up to!
+show_outro: true
 outro: |
   <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/)!
-  
+
 ## Configure sidebar content in narrow column
 sidebar_left: true
 author: "Emily Cooper"
@@ -35,7 +38,7 @@ show_audio_link: true
 audio_link: 
 - name: How to say my name
   url: audio.m4a
-link_list_label: "Interests" # bookmarks, etc.
+link_list_label: "Interests" # bookmarks, elsewhere, etc.
 link_list:
 - name: Paris
   url: https://en.wikipedia.org/wiki/Paris
