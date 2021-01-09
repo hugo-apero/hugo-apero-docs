@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// apply tachyons classes to blog lists
+// apply tachyons classes to blog lists 
 .blog-content {
   article { @extend .b--#{$borderColor} ; }
 }
@@ -398,6 +398,21 @@ details#PageTableOfContents nav#TableOfContents ul li:hover {
 // make it possible to dim on NOT hover
 .wide-col:not(:hover) {
   @extend .o-80;
+}
+
+audio {
+  filter: sepia(0%) saturate(0%) grayscale(1) contrast(99%) invert(100%);
+  width: 8rem;
+  height: 2rem;
+}
+.controls button:hover, 
+.controls button:focus {
+  @extend .o-10;
+}
+
+// apply tachyons classes to about page lists 
+.featured-content h5 {
+  @extend .b--#{$borderColor} ; 
 }
 
 // Fontawesome icons
