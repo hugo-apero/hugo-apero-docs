@@ -2,43 +2,47 @@
 title: "About"
 description: |
   A blog template for Hugo developed by Formspree and available for free.
-author: "Emily Cooper"
 date: 2019-02-19T14:47:22-06:00
 draft: false
 layout: standard-split
+
 ## Configure header of page
+show_header: true
 headline: |
-  Hi, my name is Emily Cooper.<br>
-  Nice to meet you.
+  Hi, my name is Emily Cooper. Nice to meet you.
 show_title_as_headline: false
 intro: |
   I'm a driven 20-something American from Chicago who moved to Paris for an unexpected job opportunity. 
   I've been tasked with bringing an American point of view to a venerable French marketing firm.
-show_action_link: true
-action_left: true
-action_link: 
-- icon: fa-microphone-alt
-  icon_pack: fas
-  name: How to say my name
-  url: audio.m4a
-## Configure content / wide column
+text_align_right: false
+
+## Configure page content in wide column
 featured_label: "Lately"
 number_featured: 2 # pulling from mainSections in config.toml
-number_categories: 0  # set to zero to exclude
+number_categories: 3 # set to zero to exclude
 outro: |
-  <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/?gclid=CjwKCAiA_9r_BRBZEiwAHZ_v1y06x-XbErvkpkAfMWRPgIZ5JShPqrs6-RbFHOL5RvgaEAtyQhOFKBoCvRkQAvD_BwE)!
-## Configure profile / narrow column
-profile_left: false
+  <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/)!
+  
+## Configure sidebar content in narrow column
+sidebar_left: true
+author: "Emily Cooper"
 role: "Social media strategy @ Savoir"
+glow_on_hover: true
 avatar: avatar.jpg
 avatar_shape: rounded # circle, square, rounded
 show_social: true
-glow_on_hover: true
-list_label: "Interests" # bookmarks, currently reading, anything you want
-links:
-- Paris
-- Pastries
-- People
+show_audio_link: true
+audio_link: 
+- name: How to say my name
+  url: audio.m4a
+link_list_label: "Interests" # bookmarks, etc.
+link_list:
+- name: Paris
+  url: https://en.wikipedia.org/wiki/Paris
+- name: Pastries
+  url: https://en.wikipedia.org/wiki/Pastry
+- name: People
+  url: https://en.wikipedia.org/wiki/People
 ---
 
 <h1 class="f2 f1-ns measure-narrow lh-solid">
