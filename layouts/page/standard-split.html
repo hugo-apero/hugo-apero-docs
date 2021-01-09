@@ -15,7 +15,7 @@
       <div class="flex-l items-start{{ if .Params.sidebar_left}} flex-row-reverse{{ end }}">
         
         <!--wide content column: 2/3 -->
-        <div class="{{ if .Params.sidebar_left}}ml6-l{{ else }}mr4-l{{ end }} w-two-thirds-l {{ if .Params.glow_on_hover }}wide-col glow{{ end }} pt4">
+        <div class="{{ if .Params.sidebar_left}}ml5-l{{ else }}mr4-l{{ end }} w-two-thirds-l {{ if .Params.glow_on_hover }}wide-col glow{{ end }} pt3 mt2">
           <h2 class="f2 fw7 pb3 tl">{{ .Params.featured_label | markdownify }}</h2>
           {{ partial "shared/summary-li" . }}
           {{ with .Params.outro }}
@@ -25,7 +25,7 @@
           {{ end }}
         </div> <!--close wide column -->
         
-        <sidebar class="pt5 mh2-l w-third-l self-start top-0 sticky {{ if .Params.glow_on_hover }}o-80 glow{{ end }}">
+        <sidebar class="mt4 pt4 mh2-l w-third-l self-start top-0 sticky {{ if .Params.glow_on_hover }}o-80 glow{{ end }}">
           <div class="pt0 pb1 pb2-ns tc">
             {{ if .Params.avatar }}
               {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}
