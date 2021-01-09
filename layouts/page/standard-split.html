@@ -12,10 +12,11 @@
     {{ end }}
 
     <section class="page-body">
-      <div class="flex-l items-start{{ if .Params.sidebar_left}} flex-row-reverse{{ end }}">
+      <!--make the flexbox a row only on not small screens-->
+      <div class="flex items-start{{ if .Params.sidebar_left}} flex-row-reverse{{ end }} flex-column-ns flex-column flex-row-l">
         
         <!--wide content column: 2/3 -->
-        <div class="{{ if .Params.sidebar_left}}ml5-l{{ else }}mr4-l{{ end }} w-two-thirds-l {{ if .Params.glow_on_hover }}wide-col glow{{ end }} pt4 mt3">
+        <div class="{{ if .Params.sidebar_left }}ml5-l order-2{{ else }}mr4-l order-2 order-1-l{{ end }} w-two-thirds-l {{ if .Params.glow_on_hover }}wide-col glow{{ end }} pt4 mt3">
           {{ if .Params.show_header }}
             {{ with .Params.title_label }}
               <h2 class="f2 fw7 pb3 tl">{{ . | markdownify }}</h2>
@@ -34,7 +35,7 @@
           {{ end }}
         </div> <!--close wide column -->
         
-        <sidebar class="pt5 mv0 mh0 w-third-l self-start top-0 sticky {{ if .Params.glow_on_hover }}o-80 glow{{ end }}">
+        <sidebar class="{{ if .Params.sidebar_left }}order-1{{ else }}mr4-l order-1 order-2-l{{ end }} pt5 mv0 mh0 w-third-l w-100-ns self-start sticky {{ if .Params.glow_on_hover }}o-80 glow{{ end }}">
           <div class="pt3 pb1 pb2-ns tc ph4">
             {{ if .Params.avatar }}
               {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}

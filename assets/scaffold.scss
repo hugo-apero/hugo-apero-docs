@@ -393,6 +393,7 @@ details#PageTableOfContents nav#TableOfContents ul li:hover {
 .sticky {
   position: -webkit-sticky;
   position: sticky;
+  @extend .static-l, .top-0-l;
 }
 
 // make it possible to dim on NOT hover
