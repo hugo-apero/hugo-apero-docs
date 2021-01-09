@@ -5,7 +5,7 @@
     <header class="page-header bb b--black-10 bw1 pb4 {{ if .Params.text_align_right }}tr{{ end }}">
       {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns dib">{{ .Title | markdownify }}</h1>{{ end }}
       {{ if .Params.headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns dib">{{ .Params.headline | markdownify }}</h1>{{ end }}
-      {{ with .Params.intro }}
+      {{ with .Params.subheadline }}
         <p class="f4 measure-wide lh-copy dib">{{ . | markdownify }}</p>
       {{ end }}
     </header>
@@ -15,18 +15,27 @@
       <div class="flex-l items-start{{ if .Params.sidebar_left}} flex-row-reverse{{ end }}">
         
         <!--wide content column: 2/3 -->
-        <div class="{{ if .Params.sidebar_left}}ml5-l{{ else }}mr4-l{{ end }} w-two-thirds-l {{ if .Params.glow_on_hover }}wide-col glow{{ end }} pt3 mt2">
-          <h2 class="f2 fw7 pb3 tl">{{ .Params.featured_label | markdownify }}</h2>
+        <div class="{{ if .Params.sidebar_left}}ml5-l{{ else }}mr4-l{{ end }} w-two-thirds-l {{ if .Params.glow_on_hover }}wide-col glow{{ end }} pt4 mt3">
+          {{ if .Params.show_header }}
+            {{ with .Params.title_label }}
+              <h2 class="f2 fw7 pb3 tl">{{ . | markdownify }}</h2>
+            {{ end }}
+          {{ else }}
+            <h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns">{{ .Params.title_label | markdownify }}</h1>
+          {{ end }}
+          {{ if .Params.show_intro }}
+            <p class="f4 measure lh-copy dib">{{ .Params.intro | markdownify }}</p>
+          {{ end }}
           {{ partial "shared/summary-li" . }}
-          {{ with .Params.outro }}
-            <p class="measure-wide lh-copy cf">
-            {{ . | markdownify }}
+          {{ if .Params.show_outro }}
+            <p class="measure-wide lh-copy cf pt3">
+            {{ .Params.outro | markdownify }}
             </p>
           {{ end }}
         </div> <!--close wide column -->
         
-        <sidebar class="mt4 pt4 mh2-l w-third-l self-start top-0 sticky {{ if .Params.glow_on_hover }}o-80 glow{{ end }}">
-          <div class="pt0 pb1 pb2-ns tc">
+        <sidebar class="pt5 mv0 mh0 w-third-l self-start top-0 sticky {{ if .Params.glow_on_hover }}o-80 glow{{ end }}">
+          <div class="pt3 pb1 pb2-ns tc ph4">
             {{ if .Params.avatar }}
               {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}
               {{ $avatar_shape := .Params.avatar_shape | default "circle" }}
@@ -44,7 +53,7 @@
             </div>
             
             {{ if .Params.show_audio_link }}
-            <div class="pa1 pa2-ns tc">
+            <div class="pa1 pa2-ns tc ph4">
               {{ range .Params.audio_link }}
                 <p class="fw2 pb1">{{ .name }}</p>
                 <p>
@@ -57,7 +66,7 @@
             </div> 
             {{ end }}
           
-          <div class="pa1 pa2-ns tc">
+          <div class="pa1 pa2-ns tc ph4">
             <h5 class="f4 fw2 ttu tracked pv1">{{ .Params.link_list_label }}</h5>
             <ul class="list pl0 measure center">
             {{ range .Params.link_list }}

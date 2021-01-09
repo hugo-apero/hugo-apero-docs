@@ -17,7 +17,7 @@
   <article>
     <h4 class="f4 mt4 lh-title"><a href="{{ .Permalink }}" class="dim no-underline">{{ .Title }}</a></h4>
       <div class="flex flex-column flex-row-ns mb4 mb5-l items-center">
-        <div class="flex flex-column w-20-ns">
+        <div class="flex flex-column w-25-ns">
           <figure class="mr3">
             {{ $featured := (.Resources.ByType "image").GetMatch "*feature*" }}
             {{ range first 1 (.GetTerms "series") }}
@@ -38,20 +38,22 @@
           </p>
         </div>
     </article>
-  {{ end}}
+  {{ end }} <!--end range across grouped pages-->
   
   {{ with $section }}
-    <div class="tr">
-    <span class="f5 pv4 tr ttu tracked"><a href="{{ .Permalink }}" class="dim no-underline">See all &rarr;</a></span>
-    </div>
+      <div class="tr">
+        <span class="f5 pv4 tr ttu tracked"><a href="{{ .Permalink }}" class="dim no-underline">See all &rarr;</a></span>
+      </div>
   {{ end }}
-{{ end }}
+{{ end }} 
 
 {{ $number_categories := $page.Params.number_categories | default 0 }}
 {{ if ge $number_categories 1 }}
+  <article{{ if .Params.show_outro }} class="bb pb5"{{ end }}>
   <h5 class="f4 mv4 ttu tracked lh-title bt pv3">Featured categories</h5>
   {{ range first $number_categories site.Taxonomies.categories.ByCount }}
       <a class="f6 link dim ba ph3 pv2 mb2 dib mr2" href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a> 
   {{ end }}
+  </article>
 {{ end }}
 </section>
