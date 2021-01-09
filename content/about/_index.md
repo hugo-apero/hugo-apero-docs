@@ -3,8 +3,6 @@ title: "About"
 description: |
   A blog template for Hugo developed by Formspree and available for free.
 date: 2019-02-19T14:47:22-06:00
-draft: false
-layout: standard-split
 show_header: true
 
 ## Configure header of page
@@ -27,7 +25,7 @@ outro: |
   <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/)!
 
 ## Configure sidebar content in narrow column
-sidebar_left: true
+sidebar_left: false
 author: "Emily Cooper"
 role: "Social media strategy @ Savoir"
 glow_on_hover: true
