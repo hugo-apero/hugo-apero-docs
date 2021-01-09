@@ -1,39 +1,22 @@
 {{ define "main" }}
 <main class="page-main pa4" role="main">
   <section class="page-content mw8 center">
-    <header class="page-header bb b--black-10 bw1 pb4">
-      <div class="flex-l items-end {{ if .Params.action_left}}flex-row-reverse{{ end }}">
-        <!--wide content column: 2/3 -->
-        <div class="{{ if .Params.action_left}}ml4-l{{ else }}mr4-l{{ end }} w-two-thirds-l {{ if .Params.action_left}}tr{{ end }}">
-        {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-title tracked-tight-ns">{{ .Title | markdownify }}</h1>{{ end }}
-        {{ if .Params.headline }}<h1 class="f2 f1-ns measure-narrow lh-title">{{ .Params.headline | markdownify }}</h1>{{ end }}
-        {{ with .Params.intro }}
-          <p class="f4 measure lh-copy dib">{{ . | markdownify }}</p>
-        {{ end }}
-        </div> <!--close wide column-->
-        
-        <!--narrow profile column: 1/3 -->
-        {{ if .Params.show_action_link }}
-        <div class="mh2-l w-third-l tc">
-          {{ range .Params.action_link }}
-          <p><i class="{{ .icon_pack }} {{ .icon }} fa-4x pv2"></i></p>
-          <p class="f4 fw2 ttu tracked pv2">{{ .name }}</p>
-          <audio controls class="pb4">
-              <source src="{{ .url }}" type="audio/mp4">
-              <p>Your browser does not support the audio element.</p>
-          </audio> 
-          {{ end }}
-        </div> <!--close narrow column-->
-        {{ end }}
-      </div> <!--close flex-->
+    {{ if .Params.show_header }}
+    <header class="page-header bb b--black-10 bw1 pb4 {{ if .Params.text_align_right }}tr{{ end }}">
+      {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns dib">{{ .Title | markdownify }}</h1>{{ end }}
+      {{ if .Params.headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns dib">{{ .Params.headline | markdownify }}</h1>{{ end }}
+      {{ with .Params.intro }}
+        <p class="f4 measure-wide lh-copy dib">{{ . | markdownify }}</p>
+      {{ end }}
     </header>
+    {{ end }}
 
-    <section class="page-body pt5 pb4">
-      <div class="flex-l items-start {{ if .Params.profile_left}}flex-row-reverse{{ end }}">
+    <section class="page-body">
+      <div class="flex-l items-start{{ if .Params.sidebar_left}} flex-row-reverse{{ end }}">
         
         <!--wide content column: 2/3 -->
-        <div class="{{ if .Params.profile_left}}ml4-l{{ else }}mr4-l{{ end }} w-two-thirds-l {{ if .Params.glow_on_hover }}wide-col glow{{ end }}">
-          <h2 class="f2 fw7 mt4 pb3 tl">{{ .Params.featured_label | markdownify }}</h2>
+        <div class="{{ if .Params.sidebar_left}}ml6-l{{ else }}mr4-l{{ end }} w-two-thirds-l {{ if .Params.glow_on_hover }}wide-col glow{{ end }} pt4">
+          <h2 class="f2 fw7 pb3 tl">{{ .Params.featured_label | markdownify }}</h2>
           {{ partial "shared/summary-li" . }}
           {{ with .Params.outro }}
             <p class="measure-wide lh-copy cf">
@@ -42,33 +25,49 @@
           {{ end }}
         </div> <!--close wide column -->
         
-        <!--narrow profile column: 1/3 -->
-        <div class="mh2-l w-third-l self-start top-0 sticky {{ if .Params.glow_on_hover }}o-80 glow{{ end }}">
-          <div class="pa4 tc">
+        <sidebar class="pt5 mh2-l w-third-l self-start top-0 sticky {{ if .Params.glow_on_hover }}o-80 glow{{ end }}">
+          <div class="pt0 pb1 pb2-ns tc">
             {{ if .Params.avatar }}
               {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}
               {{ $avatar_shape := .Params.avatar_shape | default "circle" }}
               {{ with $avatar_shape }}
-                <img src="{{ $avatar }}" class="pa1 h4 w4 dib {{if eq . "rounded"}}br3{{end}}{{if eq . "circle"}}br-100{{end}}" alt="avatar">
+                <img src="{{ $avatar }}" class="h4 w4 dib {{if eq . "rounded"}}br3{{end}}{{if eq . "circle"}}br-100{{end}}" alt="avatar">
               {{ end }}
             {{ end }}
             <h2 class="f4-ns fw6">{{ .Params.author }}</h2>
-            <h5 class="f6 fw2 ttu tracked">{{ .Params.role | markdownify }}</h5>
+            <h5 class="f4 fw2 ttu tracked">{{ .Params.role | markdownify }}</h5>
             {{ if .Params.show_social }}
-              <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv3">
+              <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2">
               {{ partial "shared/social-links.html" . }}
               </div>
             {{ end }}
-          </div>
-          <div class="tc pa1 pa3-ns">
-            <h5 class="f6 fw2 ttu tracked bt bb pv2">{{ .Params.list_label }}</h5>
+            </div>
+            
+            {{ if .Params.show_audio_link }}
+            <div class="pa1 pa2-ns tc">
+              {{ range .Params.audio_link }}
+                <p class="fw2 pb1">{{ .name }}</p>
+                <p>
+                <audio controls>
+                  <source src="{{ .url }}" type="audio/mp4">
+                  Your browser does not support the audio element.
+                </audio> 
+                </p>
+              {{ end }}
+            </div> 
+            {{ end }}
+          
+          <div class="pa1 pa2-ns tc">
+            <h5 class="f4 fw2 ttu tracked pv1">{{ .Params.link_list_label }}</h5>
             <ul class="list pl0 measure center">
-            {{ range .Params.links }}
-              <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-20">{{ . }}</li>
+            {{ range .Params.link_list }}
+              <li class="lh-copy pv2 ba bl-0 bt-0 br-0 b--dotted b--black-20">
+                <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+              </li>
             {{ end }}
             </ul>
           </div>
-        </div>  <!--close narrow column ->
+        </sidebar>  
       </div>    <!--close flex-->
     </section>  <!--close body section-->
   </section>    <!--close page content section-->
