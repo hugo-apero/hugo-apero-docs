@@ -411,7 +411,8 @@ audio {
 }
 
 // apply tachyons classes to about page lists 
-.featured-content h5 {
+.featured-content h5,
+.featured-content article {
   @extend .b--#{$borderColor} ; 
 }
 
