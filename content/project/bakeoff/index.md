@@ -9,6 +9,8 @@ tags:
   - hugo-site
 categories:
   - Theme Features
+  - R
+  - package
 layout: single
 links:
 - icon: door-open
