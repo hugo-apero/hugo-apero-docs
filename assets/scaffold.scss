@@ -390,15 +390,11 @@ details#PageTableOfContents nav#TableOfContents ul li:hover {
   @extend .bg-#{$siteBgColor};
 }
 
+// about page
 .sticky {
   position: -webkit-sticky;
   position: sticky;
   @extend .static-l, .top-0-l;
-}
-
-// make it possible to dim on NOT hover
-.wide-col:not(:hover) {
-  @extend .o-80;
 }
 
 audio {
@@ -410,11 +406,18 @@ audio {
 .controls button:focus {
   @extend .o-10;
 }
-
 // apply tachyons classes to about page lists 
 .featured-content h5,
 .featured-content article {
   @extend .b--#{$borderColor} ; 
+}
+.glow-on-hover {
+  @extend .o-80, .glow;
+}
+@media screen and (max-width: 48em) {
+  .glow-on-hover {
+    opacity: 1;
+  }
 }
 
 // Fontawesome icons
