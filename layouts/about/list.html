@@ -2,7 +2,7 @@
 <main class="page-main pa4" role="main">
   <section class="page-content mw8 center">
     {{ if .Params.show_header }}
-    <header class="page-header bb b--black-10 bw1 pb5 mb6 {{ if .Params.text_align_right }}tr{{ end }}">
+    <header class="page-header bb b--black-10 bw1 pb4 mb5 {{ if .Params.text_align_right }}tr{{ end }}">
       {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">{{ .Title | markdownify }}</h1>
       {{ else }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">{{ .Params.headline | markdownify }}</h1>{{ end }}
       {{ with .Params.subheadline }}
