@@ -14,7 +14,7 @@ subheadline: |
   I'm a driven 20-something American from Chicago who moved to Paris for an unexpected job opportunity. I've been tasked with bringing an American point of view to a venerable French marketing firm.
 
 ## Configure sidebar position & look
-sidebar_left: true
+sidebar_left: false
 glow_on_hover: true  # makes each column dim when no hover
 
 ## Configure page content in wide column
