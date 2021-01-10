@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://cranky-lalande-e3373f.netlify.app/"
 languageCode = "en"
 title = "Blogophonic"
 author = "Hi there"
