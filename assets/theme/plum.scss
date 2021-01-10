@@ -1,0 +1,60 @@
+
+// set your custom colors here
+$siteBgColorCustom: #f6f7f9;         // cultured
+$sidebarBgColorCustom: #E8D9DB;      // lavendar blush
+$textColorCustom: #38383A;           // onyx
+$sidebarTextColorCustom: #020202;    // black
+
+$headlineColorCustom: #414A37;       // rifle green 
+$headingColorCustom: #5B0B15;        // rosewood
+
+$bodyLinkColorCustom: #490910;       // black bean
+$navLinkColorCustom: #6D0D19;        // persian plum
+$sidebarLinkColorCustom: #414A37;    // rifle green 
+
+$footerTextColorCustom: #38383A;     // onyx
+
+$buttonTextColorCustom: #F5F5F4;
+$buttonHoverTextColorCustom: #F5F5F4;
+
+$buttonBgColorCustom: #6D0D19;       // persian plum
+$buttonHoverBgColorCustom: #490910;  // black bean
+
+$borderColorCustom: #C4B1B2;         // silver pink
+
+// ------------------------------
+// DO NOT EDIT BELOW THIS LINE
+
+// create custom color classes based on tachyons prefix when needed
+.bg-custom-site-bg-color { background-color: $siteBgColorCustom; }
+.bg-custom-sidebar-bg-color { background-color: $sidebarBgColorCustom; }
+.custom-text-color { color: $textColorCustom; }
+.custom-sidebar-text-color { color: $sidebarTextColorCustom; }
+.custom-headline-color { color: $headlineColorCustom; }
+.custom-heading-color { color: $headingColorCustom; }
+.custom-body-link-color { color: $bodyLinkColorCustom; }
+.custom-nav-link-color { color: $navLinkColorCustom; }
+.custom-sidebar-link-color { color: $sidebarLinkColorCustom; }
+.custom-footer-text-color { color: $footerTextColorCustom; }
+.custom-button-text-color { color: $buttonTextColorCustom; }
+.hover-custom-button-hover-text-color:hover { color: $buttonHoverTextColorCustom; }
+.bg-custom-button-bg-color { background-color: $buttonBgColorCustom; }
+.hover-bg-custom-button-hover-bg-color:hover { background-color: $buttonHoverBgColorCustom; }
+.b--custom-border-color { border-color: $borderColorCustom; }
+
+// override variables used in main with new custom class slugs
+$siteBgColor: custom-site-bg-color;
+$sidebarBgColor: custom-sidebar-bg-color;
+$textColor: custom-text-color;
+$sidebarTextColor: custom-sidebar-text-color;
+$headlineColor: custom-headline-color;
+$headingColor: custom-heading-color;
+$bodyLinkColor: custom-body-link-color;
+$navLinkColor: custom-nav-link-color;
+$sidebarLinkColor: custom-sidebar-link-color;
+$footerTextColor: custom-footer-text-color;
+$buttonTextColor: custom-button-text-color;
+$buttonHoverTextColor: custom-button-hover-text-color;
+$buttonBgColor: custom-button-bg-color;
+$buttonHoverBgColor: custom-button-hover-bg-color;
+$borderColor: custom-border-color;

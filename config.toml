@@ -52,9 +52,10 @@ enableEmoji = true
   customheadingFontFamily = "Fraunces"
   
   # use a built-in color theme
-  # one of: forest / grayscale / peach / poppy / 
-  #         sky / violet / water
-  theme = "peach"
+  # one of: forest / grayscale / peach / plum /
+  #         poppy / sky / violet / water
+  theme = "plum"
+
   # or, leave theme empty & make your own palette
   # basic color options: use only color names as shown in the
   # "Color Palette" section of http://tachyons.io/docs/themes/skins/
