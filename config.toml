@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "en"
 title = "Blogophonic"
-author = "Formspree"
+author = "Hi there"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
 disqusShortname = ""
@@ -55,6 +55,7 @@ enableEmoji = true
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water
   theme = "plum"
+
   # or, leave theme empty & make your own palette
   # basic color options: use only color names as shown in the
   # "Color Palette" section of http://tachyons.io/docs/themes/skins/

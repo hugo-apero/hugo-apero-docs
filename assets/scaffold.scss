@@ -67,8 +67,9 @@ h1, h2, h3, h4, h5, h6 {
   @extend .#{$footerTextColor};
 }
 
-// apply tachyons classes to blog post markdown
-.post-body {
+// apply tachyons classes to blog post and single page markdown
+.post-body,
+.page-body {
 
   h1, h2, h3, h4, h5, h6 { @extend .lh-title ; }
   h1 { @extend .f1 ; }
@@ -115,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// apply tachyons classes to blog lists
+// apply tachyons classes to blog lists 
 .blog-content {
   article { @extend .b--#{$borderColor} ; }
 }
@@ -387,6 +388,40 @@ nav#SeriesTableOfContents ul li:hover:not(.active) a {
 
 details#PageTableOfContents nav#TableOfContents ul li:hover {
   @extend .bg-#{$siteBgColor};
+}
+
+// about page
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  @extend .static-l, .top-0-l;
+}
+
+audio {
+  filter: sepia(0%) saturate(0%) grayscale(1) contrast(99%) invert(100%);
+  width: 8rem;
+  height: 2rem;
+}
+.controls button:hover, 
+.controls button:focus {
+  @extend .o-10;
+}
+// apply tachyons classes to about page lists 
+.featured-content h5,
+.featured-content article {
+  @extend .b--#{$borderColor} ; 
+}
+.glow-on-hover {
+  @extend .o-80, .glow;
+}
+@media screen and (max-width: 48em) {
+  .glow-on-hover {
+    opacity: 1;
+  }
+}
+
+.about-sidebar {
+  @extend .bg-#{$sidebarBgColor};
 }
 
 // Fontawesome icons
