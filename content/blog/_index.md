@@ -1,7 +1,7 @@
 ---
+show_post_thumbnail: false # must be set for whole section
 cascade:    # do not remove cascade!
   layout: list-sidebar # list, list-sidebar, list-grid
-  show_post_thumbnail: true
   show_author_byline: true
   show_post_date: true
   show_disqus_comments: false # see disqusShortname in site config
