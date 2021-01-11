@@ -7,7 +7,7 @@
 {{ $leaf := ($page.Resources.ByType "image").GetMatch "*sidebar*" }}
 
 <!--use leaf featured, if exists; if not, use branch featured-->
-{{ $thumbnail := $branch }}
+{{ $thumbnail := $leaf | default $branch }}
 {{ with $thumbnail }}<img src="{{ .RelPermalink | relURL }}" class="db ma0">{{ end }}
 <div class="blog-info pa4">
   {{ with .Title }}<h1 class="f3">{{ . | markdownify }}</h1>{{ end }}
