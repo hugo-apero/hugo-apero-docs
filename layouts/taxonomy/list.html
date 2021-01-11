@@ -2,10 +2,18 @@
 <main class="page-main pa4" role="main">
   <section class="blog-intro mw7 center mb5">
     <h1 class="f2 f1-ns fw4 lh-solid tc center">Posts in <span class="i">{{ .Title }}</span></h1>
+    <p class="f6 f5-ns measure lh-copy tc center">{{ .Description | markdownify }}</p>
   </section>
   <section class="blog-content mw7 center">
-    {{ range .Pages }}
-      {{ .Render "summary"}}
+    {{ $sort_weight := .Params.sort_weight | default false }}
+    {{ if $sort_weight }}
+      {{ range .Pages.ByWeight }}
+        {{ .Render "summary"}}
+      {{ end }}
+    {{ else }}
+      {{ range .Pages.ByDate.Reverse }}
+        {{ .Render "summary"}}
+      {{ end }}
     {{ end }}
   </section>
 </main>
