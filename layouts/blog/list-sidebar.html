@@ -1,15 +1,18 @@
 {{ define "main" }}
 <main class="page-main pa4 {{ .Kind }}" role="main">
   <section class="blog-content mw7 center">
+    {{ $section_show_thumbnail := .Params.show_post_thumbnail }}
     {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" "blog") }}
     {{ $sort_weight := .Params.sort_weight | default false }}
     {{ if $sort_weight }}
       {{ range $paginator.Pages.ByWeight }}
-        {{ .Render "summary"}}
+        {{ .Scratch.Set "$section_show_thumbnail" $section_show_thumbnail }}
+        {{ partial "shared/summary" . }}
       {{ end }}
     {{ else }}
       {{ range $paginator.Pages.ByDate.Reverse }}
-        {{ .Render "summary"}}
+        {{ .Scratch.Set "$section_show_thumbnail" $section_show_thumbnail }}
+        {{ partial "shared/summary" . }}
       {{ end }}
     {{ end }}
     {{ partial "shared/list-pagination.html" . }}

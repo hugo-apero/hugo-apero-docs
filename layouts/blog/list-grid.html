@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $section_show_thumbnail := .Params.show_post_thumbnail }}
 <main class="page-main pa4" role="main">
   <section class="blog-intro mw8 center tc mb5">
     {{ range first 1 (.GetTerms "series") }}
@@ -13,11 +14,13 @@
     {{ $sort_weight := .Params.sort_weight | default false }}
     {{ if $sort_weight }}
       {{ range $paginator.Pages.ByWeight }}
-        {{ .Render "summary-grid"}}
+        {{ .Scratch.Set "$section_show_thumbnail" $section_show_thumbnail }}
+        {{ partial "shared/summary-grid" . }}
       {{ end }}
     {{ else }}
       {{ range $paginator.Pages.ByDate.Reverse }}
-        {{ .Render "summary-grid"}}
+        {{ .Scratch.Set "$section_show_thumbnail" $section_show_thumbnail }}
+        {{ partial "shared/summary-grid" . }}
       {{ end }}
     {{ end }}
     {{ partial "shared/list-pagination.html" . }}

@@ -6,7 +6,7 @@
   </section>
   <section class="blog-content mw7 center">
   {{ range .Pages.ByDate.Reverse }}
-    {{ .Render "summary"}}
+    {{ partial "shared/summary" . }}
   {{ end }}
   </section>
 </main>
