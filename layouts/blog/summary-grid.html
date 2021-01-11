@@ -1,11 +1,17 @@
-{{ $page := . }}                       <!--save current page-->
-{{ $section := $page.CurrentSection }} <!--save current section-->
+{{ $page := . }}                           <!--save current page-->
+{{ $section := $page.CurrentSection }}     <!--save branch section-->
 
 <article class="w-100 w-50-m w-third-l mb4 pb4 bb bw1 bw0-ns pb0-ns">
-  {{ if .CurrentSection.Params.show_post_thumbnail }}
+{{ $show_tb := "" }}
+{{ if eq $section $page.FirstSection }}
+  {{ $show_tb := $page.FirstSection.Params.show_post_thumbnail }}
+{{ else }}
+  {{ $show_tb := $section.Params.show_post_thumbnail }}
+{{ end }}
+{{ if $show_tb }}
   <div class="ph0 ph2-m ph3-l">
     <!--featured image for the branch bundle-->
-    {{ $branch := ($page.CurrentSection.Resources.ByType "image").GetMatch "*feature*" }}
+    {{ $branch := ($section.Resources.ByType "image").GetMatch "*feature*" }}
     <!--featured image for the leaf bundle-->
     {{ $leaf := ($page.Resources.ByType "image").GetMatch "*feature*" }}
     {{ $thumbnail := $leaf | default $branch }}
