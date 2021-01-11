@@ -2,8 +2,15 @@
 <main class="page-main pa4 {{ .Kind }}" role="main">
   <section class="blog-content mw7 center">
     {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" "blog") }}
-    {{ range $paginator.Pages.ByDate.Reverse }}
-      {{ .Render "summary" }}
+    {{ $sort_weight := .Params.sort_weight | default false }}
+    {{ if $sort_weight }}
+      {{ range $paginator.Pages.ByWeight }}
+        {{ .Render "summary"}}
+      {{ end }}
+    {{ else }}
+      {{ range $paginator.Pages.ByDate.Reverse }}
+        {{ .Render "summary"}}
+      {{ end }}
     {{ end }}
     {{ partial "shared/list-pagination.html" . }}
   </section>

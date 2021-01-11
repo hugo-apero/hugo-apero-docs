@@ -5,20 +5,18 @@ cascade:    # do not remove cascade!
   show_author_byline: true
   show_post_date: true
   show_disqus_comments: false # see disqusShortname in site config
+  
   # for list-sidebar layout
   title: A Blog That's Real
-  
   description: |
     This is a fully featured blog that supports categories,
     tags, series, and pagination. 
     Even this sidebar offers a ton of customizations.
     Check out the _index.md file in the /blog folder 
     to edit this content.
-    
   excerpt: |
     This is a fully featured blog that supports categories, 
     tags, series, and pagination.
-    
   author: The Team at Formspree
   text_link_label: Subscribe via RSS
   text_link_url: /index.xml
