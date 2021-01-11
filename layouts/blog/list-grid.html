@@ -10,7 +10,7 @@
   </section>
   <section class="blog-content db flex-ns flex-row-ns flex-wrap-ns items-start mw8 center">
     {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" "blog") }}
-    {{ range $paginator.Pages }}
+    {{ range $paginator.Pages.ByDate.Reverse }}
       {{ .Render "summary-grid"}}
     {{ end }}
     {{ partial "shared/list-pagination.html" . }}
