@@ -1,14 +1,9 @@
 {{ $page := . }}                           <!--save current page-->
 {{ $section := $page.CurrentSection }}     <!--save branch section-->
+{{ $section_show_thumbnail := .Scratch.Get "$section_show_thumbnail" }}
 
 <article class="mv4 mv5-l bb">
-{{ $show_tb := "" }}
-{{ if eq $section $page.FirstSection }}
-  {{ $show_tb := $page.FirstSection.Params.show_post_thumbnail }}
-{{ else }}
-  {{ $show_tb := $section.Params.show_post_thumbnail }}
-{{ end }}
-{{ if $show_tb }}
+{{ if $section_show_thumbnail }}
   <div class="flex flex-column flex-row-ns mb4 mb5-l">
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
       <a href="{{ .RelPermalink }}" class="db">
