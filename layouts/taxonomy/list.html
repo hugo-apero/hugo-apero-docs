@@ -5,16 +5,9 @@
     <p class="f6 f5-ns measure lh-copy tc center">{{ .Description | markdownify }}</p>
   </section>
   <section class="blog-content mw7 center">
-    {{ $sort_weight := .Params.sort_weight | default false }}
-    {{ if $sort_weight }}
-      {{ range .Pages.ByWeight }}
-        {{ .Render "summary"}}
-      {{ end }}
-    {{ else }}
-      {{ range .Pages.ByDate.Reverse }}
-        {{ .Render "summary"}}
-      {{ end }}
-    {{ end }}
+  {{ range .Pages.ByDate.Reverse }}
+    {{ .Render "summary"}}
+  {{ end }}
   </section>
 </main>
 {{ end }}
