@@ -2,9 +2,9 @@
 {{ $section := $page.CurrentSection }} <!--save current section-->
 
 <!--featured image for the branch bundle-->
-{{ $branch := ($page.CurrentSection.Resources.ByType "image").GetMatch "*feature*" }}
+{{ $branch := ($page.CurrentSection.Resources.ByType "image").GetMatch "*sidebar*" }}
 <!--featured image for the leaf bundle-->
-{{ $leaf := ($page.Resources.ByType "image").GetMatch "*feature*" }}
+{{ $leaf := ($page.Resources.ByType "image").GetMatch "*sidebar*" }}
 
 <!--use leaf featured, if exists; if not, use branch featured-->
 {{ $thumbnail := $branch }}
