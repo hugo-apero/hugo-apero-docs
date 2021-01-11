@@ -1,7 +1,16 @@
 {{ define "main" }}
 <main class="page-main pa4 {{ .Kind }}" role="main">
   <section class="blog-content mw7 center">
-    {{ $paginator := .Paginate (where .Pages "Type" "blog") }}
+    <!--nested sections can be listed https://discourse.gohugo.io/t/index-md-in-nested-sections/19766/8-->
+    {{ $pages := slice }}
+    {{ $currentSection := .CurrentSection }}
+    {{ range where .Site.RegularPages "Section" .Section }}
+	    {{ if in (.Permalink | string) $currentSection.RelPermalink }}
+		    {{ $pages = $pages | append . }}
+    	{{ end }}
+    {{ end }}
+    
+    {{ $paginator := .Paginate $pages }}
     {{ range $paginator.Pages }}
       {{ .Render "summary" }}
     {{ end }}
