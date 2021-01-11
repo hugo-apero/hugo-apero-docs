@@ -18,7 +18,7 @@
 
 {{ if or .Params.show_sidebar_toc .Params.show_sidebar_adunit }}
 <div class="ad-unit pa4">
-{{ if .show_sidebar_toc }}
+{{ if .Params.show_sidebar_toc }}
   {{ $headers := findRE "<h[2].*>" $page.Content }}
   {{- $has_headers := ge (len $headers) 1 -}}
   {{- if $has_headers -}}
