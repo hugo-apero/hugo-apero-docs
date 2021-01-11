@@ -1,5 +1,8 @@
+{{ $page := . }}                       <!--save current page-->
+{{ $section := $page.CurrentSection }} <!--save current section-->
+
 <article class="mv4 mv5-l bb">
-  {{ if .CurrentSection.Params.show_post_thumbnail }}
+  {{ if $section.Params.show_post_thumbnail }}
   <div class="flex flex-column flex-row-ns mb4 mb5-l">
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
       <a href="{{ .Permalink }}" class="db">
@@ -18,7 +21,7 @@
       <header class="w-100">
         <h1 class="f3 mv2 lh-title underline"><a href="{{ .Permalink }}" class="db">{{ .Title | markdownify }}</a></h1>
         {{ range first 1 (.GetTerms "series") }}
-        <h2 class="f5"><i class="fas fa-stream fa-fw pr1"></i><small class="f5 ttu tracked">Series: </small><a class="link i dim" href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
+        <h2 class="f5"><i class="fas fa-stream fa-fw pr1"></i><small class="f5 ttu tracked">Series: </small><a class="link i dim" href="{{ $section.RelPermalink }}">{{ .LinkTitle }}</a></h2>
         {{ end }}
       </header>
       <p class="f6 lh-copy mv2 flex-auto">{{ if .Params.Excerpt }}{{ .Params.Excerpt | markdownify }}{{ else }}{{ .Summary | markdownify }}{{ end }}</p>
