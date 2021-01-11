@@ -3,6 +3,7 @@
   <section class="blog-content mw7 center">
     {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" "blog") }}
     {{ range $paginator.Pages }}
+    Reading from front matter: <b>{{ .Params.key }}</b>
       {{ .Render "summary" }}
     {{ end }}
     {{ partial "shared/list-pagination.html" . }}

@@ -1,6 +1,8 @@
 {{ $page := . }}
 {{ with .Scratch.Get "sidebar" }}
 
+Reading from front matter: <b>{{ $page.Params.key }}</b>
+
 {{ $yaml_featured := .image }}
 {{ if $page.Params.series }}
     {{ $series := index ($page.Params.series) 0 | urlize }}
