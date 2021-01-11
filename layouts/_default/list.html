@@ -7,7 +7,7 @@
   </section>
   <section class="blog-content mw7 center">
     {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" .Section) }}
-    {{ range $paginator.Pages }}
+    {{ range $paginator.Pages.ByDate.Reverse }}
       {{ .Render "summary"}}
     {{ end }}
     {{ partial "shared/list-pagination.html" . }}
