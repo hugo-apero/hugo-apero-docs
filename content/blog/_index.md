@@ -1,8 +1,7 @@
 ---
 # for listing page layout
-layout: list # list, list-sidebar, list-grid
-title: A Blog That's Real
-author: The Team @RStudio
+layout: list-sidebar # list, list-sidebar, list-grid
+title: A Blog That Works
 description: |
   This is a fully featured blog that supports categories,
   tags, series, and pagination. 
@@ -12,7 +11,7 @@ description: |
 excerpt: |
   This is a fully featured blog that supports categories, 
   tags, series, and pagination.
-show_post_thumbnail: false
+show_post_thumbnail: true
 show_author_byline: true 
 show_post_date: true
 show_disqus_comments: false # see disqusShortname in site config
@@ -24,6 +23,7 @@ show_sidebar_adunit: false # show ad container
 
 # set up common front matter for all pages inside blog/
 cascade:  
+  author: The Team @RStudio
   show_author_byline: true
   show_post_date: true
 ---

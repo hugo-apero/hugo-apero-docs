@@ -1,15 +1,15 @@
 ---
 # for series listing page layout
-layout: list-sidebar # list, list-sidebar, list-grid
+layout: list # list, list-sidebar, list-grid
 title: "Posts from *A Spoonful of Hugo*"
-author: Alison Hill
+author: The Team @RStudio
 description: |
   A forking fun new feature for series. 
   Even this sidebar offers a ton of customizations!
   Check out the _index.md file in the /blog/spoonful-series/ folder 
   to edit this content.
 show_post_thumbnail: false
-show_author_byline: false
+show_author_byline: true
 show_post_date: false
 show_disqus_comments: false # see disqusShortname in site config
 
@@ -17,7 +17,9 @@ show_disqus_comments: false # see disqusShortname in site config
 cascade:
   layout: single-series       # for a series, do not change
   series: A Spoonful of Hugo  # name it!
-  author: Alison Hill         
+  author: Alison Hill        
+  show_author_byline: true
+  show_post_date: true
   text_series_label: "In this series" 
   text_contents_label: "On this page" 
   tags:
