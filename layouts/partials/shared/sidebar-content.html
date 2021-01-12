@@ -11,6 +11,7 @@
   <img src="{{ .RelPermalink | relURL }}" class="db ma0">
 {{ end }}
 
+<!--force using _index.md parameters here-->
 {{ with $section }}
 <div class="blog-info pa4">
   {{ with .Title }}<h1 class="f3">{{ . | markdownify }}</h1>{{ end }}
@@ -51,7 +52,7 @@
         <ul>
         {{ range $section.Pages }}
           {{ $active := eq .RelPermalink $page.RelPermalink }}
-        <li class="{{ if $active }}active{{ end }}" hugo-nav="{{ .RelPermalink }}"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+          <li class="{{ if $active }}active{{ end }}" hugo-nav="{{ .RelPermalink }}"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
         </ul>
       </nav>

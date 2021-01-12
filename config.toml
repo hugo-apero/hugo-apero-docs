@@ -54,7 +54,7 @@ enableEmoji = true
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water
-  theme = "forest"
+  theme = "peach"
 
   # or, leave theme empty & make your own palette
   # basic color options: use only color names as shown in the

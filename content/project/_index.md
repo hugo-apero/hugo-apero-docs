@@ -2,8 +2,9 @@
 title: A Project Portfolio That's Real
 description: "Give your projects a place to live online."
 author: The Team at Formspree
-layout: list-sidebar # list, list-sidebar, list-grid
+layout: list-grid # list, list-sidebar, list-grid
 show_post_thumbnail: true
+
 cascade:    # do not remove cascade!
   show_author_byline: true
   show_post_date: true
