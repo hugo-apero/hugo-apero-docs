@@ -10,19 +10,11 @@
     {{ if .Params.show_author_byline }}<p class="f7 measure lh-copy tc center i">{{ if .Params.author }}Written by {{ .Params.author }}{{ end }}</p>{{ end }}
   </section>
   <section class="blog-content db flex-ns flex-row-ns flex-wrap-ns items-start mw8 center">
-    {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" "blog") }}
-    {{ $sort_weight := .Params.sort_weight | default false }}
-    {{ if $sort_weight }}
-      {{ range $paginator.Pages.ByWeight }}
+    {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" "blog").ByDate.Reverse }}
+      {{ range $paginator.Pages }}
         {{ .Scratch.Set "$section_show_thumbnail" $section_show_thumbnail }}
         {{ partial "shared/summary-grid" . }}
       {{ end }}
-    {{ else }}
-      {{ range $paginator.Pages.ByDate.Reverse }}
-        {{ .Scratch.Set "$section_show_thumbnail" $section_show_thumbnail }}
-        {{ partial "shared/summary-grid" . }}
-      {{ end }}
-    {{ end }}
     {{ partial "shared/list-pagination.html" . }}
   </section>
 </main>

@@ -7,19 +7,11 @@
   </section>
   <section class="blog-content mw7 center">
     {{ $caller := . }}
-    {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" .Section) }}
-    {{ $sort_weight := .Params.sort_weight | default false }}
-    {{ if $sort_weight }}
-      {{ range $paginator.Pages.ByWeight }}
+    {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" .Section).ByDate.Reverse }}
+      {{ range $paginator.Pages }}
         {{ .Scratch.Set "$root" $caller }}
         {{ partial "shared/summary" . }}
       {{ end }}
-    {{ else }}
-      {{ range $paginator.Pages.ByDate.Reverse }}
-        {{ .Scratch.Set "$root" $caller }}
-        {{ partial "shared/summary" . }}
-      {{ end }}
-    {{ end }}
     {{ partial "shared/list-pagination.html" . }}
   </section>
 </main>
