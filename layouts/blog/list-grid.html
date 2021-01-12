@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $section_show_thumbnail := .Params.show_post_thumbnail }}
+{{ $section_show_thumbnail := .Params.show_post_thumbnail | default true }}
 <main class="page-main pa4" role="main">
   <section class="blog-intro mw8 center tc mb5">
     {{ range first 1 (.GetTerms "series") }}

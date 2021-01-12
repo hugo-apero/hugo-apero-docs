@@ -5,7 +5,9 @@
     <p class="f6 f5-ns measure lh-copy tc center">{{ .Description | markdownify }}</p>
   </section>
   <section class="blog-content mw7 center">
+  {{ $section_show_thumbnail := .Params.show_post_thumbnail | default true }}
   {{ range .Pages.ByDate.Reverse }}
+    {{ .Scratch.Set "$section_show_thumbnail" $section_show_thumbnail }}
     {{ partial "shared/summary" . }}
   {{ end }}
   </section>

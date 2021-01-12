@@ -6,7 +6,7 @@
     {{ if .Params.show_author_byline }}<p class="f7 measure lh-copy tc center i">{{ if .Params.author }}Written by {{ .Params.author }}{{ end }}</p>{{ end }}
   </section>
   <section class="blog-content mw7 center">
-    {{ $section_show_thumbnail := .Params.show_post_thumbnail }}
+    {{ $section_show_thumbnail := .Params.show_post_thumbnail | default true }}
     {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" .Section) }}
     {{ $sort_weight := .Params.sort_weight | default false }}
     {{ if $sort_weight }}
