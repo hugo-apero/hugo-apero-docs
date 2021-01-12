@@ -4,7 +4,7 @@ description: "Give your projects a place to live online."
 author: The Team at Formspree
 layout: list-grid # list, list-sidebar, list-grid
 show_post_thumbnail: true
-show_author_byline: false
+show_author_byline: true
 show_post_date: false
 
 # for list-sidebar layout only
