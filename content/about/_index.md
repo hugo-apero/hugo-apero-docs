@@ -3,7 +3,7 @@ title: "About"
 description: |
   A blog template for Hugo developed by Formspree and available for free.
 date: 2019-02-19T14:47:22-06:00
-show_header: true
+show_header: false
 
 ## Configure header of page
 text_align_right: false
