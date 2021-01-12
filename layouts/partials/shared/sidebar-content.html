@@ -1,20 +1,24 @@
 {{ $page := . }}                       <!--save current page-->
 {{ $section := $page.CurrentSection }} <!--save current section-->
 
-<!--featured image for the branch bundle-->
-{{ $branch := ($page.CurrentSection.Resources.ByType "image").GetMatch "*sidebar*" }}
-<!--featured image for the leaf bundle-->
+<!--featured sidebar image for the branch bundle-->
+{{ $branch := ($section.Resources.ByType "image").GetMatch "*sidebar*" }}
+<!--featured sidebar image for the leaf bundle-->
 {{ $leaf := ($page.Resources.ByType "image").GetMatch "*sidebar*" }}
-
-<!--use leaf featured, if exists; if not, use branch featured-->
+<!--use leaf sidebar, if exists; if not, use branch sidebar-->
 {{ $thumbnail := $leaf | default $branch }}
-{{ with $thumbnail }}<img src="{{ .RelPermalink | relURL }}" class="db ma0">{{ end }}
+{{ with $thumbnail }}
+  <img src="{{ .RelPermalink | relURL }}" class="db ma0">
+{{ end }}
+
+{{ with $section }}
 <div class="blog-info pa4">
-  {{ with $section.Title }}<h1 class="f3">{{ . | markdownify }}</h1>{{ end }}
-  {{ with $section.Description }}<p class="f6 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
-  {{ with $section.Params.Author }}<p class="f7 measure lh-copy i mh0-l">Written by {{ . }}</p>{{ end }}
+  {{ with .Title }}<h1 class="f3">{{ . | markdownify }}</h1>{{ end }}
+  {{ with .Description }}<p class="f6 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
+  {{ with .Params.author }}<p class="f7 measure lh-copy i mh0-l">Written by {{ . }}</p>{{ end }}
   {{ if .Params.text_link_label }}<small class="db f7"><a href="{{ .Params.text_link_url }}" class="dib fw7 ttu bt bw1 b--black-10 pt3">{{ .Params.text_link_label }}</a></small>{{ end }}
 </div>
+{{ end }}
 
 {{ if or .Params.show_sidebar_toc .Params.show_sidebar_adunit }}
 <div class="ad-unit pa4">

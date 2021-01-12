@@ -11,7 +11,7 @@ categories:
   - Theme Features
   - R
   - package
-layout: single
+layout: single-sidebar
 links:
 - icon: door-open
   icon_pack: fas
