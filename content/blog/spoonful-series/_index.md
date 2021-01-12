@@ -1,10 +1,30 @@
 ---
+# for series listing page layout
+layout: list-sidebar # list, list-sidebar, list-grid
 title: "Posts from *A Spoonful of Hugo*"
-description: "A forking fun new feature for series."
 author: Alison Hill
-show_post_thumbnail: true
-layout: list # list, list-sidebar, list-grid
-sort_weight: true # use weight, not date, per page to order listing page
+description: |
+  A forking fun new feature for series. 
+  Even this sidebar offers a ton of customizations!
+  Check out the _index.md file in the /blog/spoonful-series/ folder 
+  to edit this content.
+show_post_thumbnail: false
+show_author_byline: false
+show_post_date: false
+show_disqus_comments: false # see disqusShortname in site config
+
+# set up common front matter for all pages in series
+cascade:
+  layout: single-series       # for a series, do not change
+  series: A Spoonful of Hugo  # name it!
+  author: Alison Hill         
+  text_series_label: "In this series" 
+  text_contents_label: "On this page" 
+  tags:
+  - hugo-site
+  categories:
+  - Theme Features
+  - R
 ---
 
-** No content below YAML for the series _index. This file is a leaf bundle, and provides front matter for all pages inside this series, including the listing page layout and sidebar content.**
+** No content below YAML for the series _index. This file is a leaf bundle, and provides settings for the listing page layout and sidebar content.**
