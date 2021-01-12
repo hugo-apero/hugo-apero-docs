@@ -1,6 +1,6 @@
 ---
 title: A Project Portfolio That's Real
-description: "This is a fully featured blog that supports categories, tags, series, and pagination."
+description: "Give your projects a place to live online."
 author: The Team at Formspree
 images:
   - /img/avatar-right.jpg
