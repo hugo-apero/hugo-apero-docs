@@ -4,14 +4,17 @@
 
 <article class="mv4 mv5-l bb">
 {{ if $section_show_thumbnail }}
-  <div class="flex flex-column flex-row-ns mb4 mb5-l">
+<!--featured image for the leaf bundle-->
+{{- $images := $page.Resources.ByType "image" -}}
+{{ $leaf := $images.GetMatch "*feature*" }}
+{{- $hex := $images.GetMatch "*hex*" -}}
+{{- $thumbnail := cond (ne $hex nil) $hex $leaf -}}
+<!--sidebar image for the branch bundle-->
+{{ $branch := ($section.Resources.ByType "image").GetMatch "*feature*" }}
+{{- $thumbnail := cond (ne $thumbnail nil) $thumbnail $branch -}}
+  <div class="flex flex-column flex-row-ns mb4 mb5-l {{ if (ne $hex nil) }}items-center{{ end }}">
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
       <a href="{{ .RelPermalink }}" class="db">
-        <!--featured image for the branch bundle-->
-        {{ $branch := ($section.Resources.ByType "image").GetMatch "*feature*" }}
-        <!--featured image for the leaf bundle-->
-        {{ $leaf := ($page.Resources.ByType "image").GetMatch "*feature*" }}
-        {{ $thumbnail := $leaf | default $branch }}
         {{ with $thumbnail }}
           <img src="{{ .RelPermalink | absURL }}" class="db ma0 dim" alt="">
         {{ end }}
