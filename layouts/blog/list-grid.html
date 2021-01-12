@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $section_show_thumbnail := .Params.show_post_thumbnail | default true }}
+{{ $caller := . }}
 <main class="page-main pa4" role="main">
   <section class="blog-intro mw8 center tc mb5">
     {{ range first 1 (.GetTerms "series") }}
@@ -12,7 +12,7 @@
   <section class="blog-content db flex-ns flex-row-ns flex-wrap-ns items-start mw8 center">
     {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" "blog").ByDate.Reverse }}
       {{ range $paginator.Pages }}
-        {{ .Scratch.Set "$section_show_thumbnail" $section_show_thumbnail }}
+        {{ .Scratch.Set "$root" $caller }}
         {{ partial "shared/summary-grid" . }}
       {{ end }}
     {{ partial "shared/list-pagination.html" . }}
