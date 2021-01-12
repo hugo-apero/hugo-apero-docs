@@ -1,17 +1,18 @@
 {{ $page := . }}                           <!--save current page-->
 {{ $section := $page.CurrentSection }}     <!--save branch section-->
-{{ $section_show_thumbnail := .Scratch.Get "$section_show_thumbnail" }}
-
+{{ $root := .Scratch.Get "$root" }}     <!--save root section-->
 <article class="mv4 mv5-l bb">
-{{ if $section_show_thumbnail }}
-<!--featured image for the leaf bundle-->
-{{- $images := $page.Resources.ByType "image" -}}
-{{ $leaf := $images.GetMatch "*feature*" }}
-{{- $hex := $images.GetMatch "*hex*" -}}
-{{- $thumbnail := cond (ne $hex nil) $hex $leaf -}}
-<!--sidebar image for the branch bundle-->
-{{ $branch := ($section.Resources.ByType "image").GetMatch "*feature*" }}
-{{- $thumbnail := cond (ne $thumbnail nil) $thumbnail $branch -}}
+  
+  <!--if show_post_thumbnail is TRUE in root-->
+  {{ if $root.Params.show_post_thumbnail }}
+  <!--featured image for the leaf bundle-->
+  {{- $images := $page.Resources.ByType "image" -}}
+  {{ $leaf := $images.GetMatch "*feature*" }}
+  {{- $hex := $images.GetMatch "*hex*" -}}
+  {{- $thumbnail := cond (ne $hex nil) $hex $leaf -}}
+  <!--sidebar image for the branch bundle-->
+  {{ $branch := ($section.Resources.ByType "image").GetMatch "*feature*" }}
+  {{- $thumbnail := cond (ne $thumbnail nil) $thumbnail $branch -}}
   <div class="flex flex-column flex-row-ns mb4 mb5-l {{ if (ne $hex nil) }}items-center{{ end }}">
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-40-ns">
       <a href="{{ .RelPermalink }}" class="db">
@@ -29,11 +30,14 @@
       </header>
       <p class="f6 lh-copy mv2 flex-auto">{{ if .Params.excerpt }}{{ .Params.excerpt | markdownify }}{{ else }}{{ .Summary | markdownify }}{{ end }}</p>
       <footer class="w-100">
-        {{ if .Params.show_author_byline }}<p class="f7 db mv1">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>{{ end }}
-      {{ if .Params.show_post_date }}<p class="f7 db mv1">{{ .PublishDate.Format "January 2, 2006" }}</p>{{ end }}
+      <!--ensures section Params are respected-->
+      {{ if $root.Params.show_author_byline }}<p class="f7 db mv1">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>{{ end }}
+      {{ if $root.Params.show_post_date }}<p class="f7 db mv1">{{ .PublishDate.Format "January 2, 2006" }}</p>{{ end }}
     </footer>
     </div>
   </div>
+  
+  <!--if show_post_thumbnail is FALSE in root-->
   {{ else }}
   <div class="measure-wide center mb4 mb5-l">
     <header>
@@ -44,8 +48,8 @@
     </header>
     <p class="lh-copy mb4">{{ if .Params.excerpt }}{{ .Params.excerpt | markdownify }}{{ else }}{{ .Summary | markdownify }}{{ end }}</p>
     <footer>
-      {{ if .Params.show_author_byline }}<p class="f7 db mv2">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>{{ end }}
-      {{ if .Params.show_post_date }}<p class="f7 db mv2">{{ .PublishDate.Format "January 2, 2006" }}</p>{{ end }}
+      {{ if $root.Params.show_author_byline }}<p class="f7 db mv2">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>{{ end }}
+      {{ if $root.Params.show_post_date }}<p class="f7 db mv2">{{ .PublishDate.Format "January 2, 2006" }}</p>{{ end }}
     </footer>
   </div>
   {{ end }}
