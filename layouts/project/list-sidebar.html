@@ -1,10 +1,10 @@
 {{ define "main" }}
+{{ $caller := . }}
 <main class="page-main pa4 {{ .Kind }}" role="main">
   <section class="blog-content mw7 center">
-    {{ $section_show_thumbnail := .Params.show_post_thumbnail | default true }}
     {{ $pages := (where .RegularPagesRecursive "Type" "project") }}
     {{ range $pages }}
-      {{ .Scratch.Set "$section_show_thumbnail" $section_show_thumbnail }}
+      {{ .Scratch.Set "$root" $caller }}
       {{ partial "shared/summary" . }}
     {{ end }}
   </section>
