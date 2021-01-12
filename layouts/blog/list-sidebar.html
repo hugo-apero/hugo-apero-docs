@@ -19,6 +19,7 @@
   </section>
 </main>
 <aside class="page-sidebar" role="complementary">
+  {{ .Scratch.Set "sidebar" .Params.list_sidebar }}
   {{ partial "shared/sidebar-content.html" . }}
 </aside>
 {{ end }}
