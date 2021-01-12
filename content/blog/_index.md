@@ -14,7 +14,6 @@ excerpt: |
 show_post_thumbnail: true
 show_author_byline: true 
 show_post_date: true
-show_disqus_comments: false # see disqusShortname in site config
 
 # for list-sidebar layout only
 text_link_label: Subscribe via RSS
