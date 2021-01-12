@@ -24,16 +24,18 @@
             <!--featured image for the leaf bundle-->
             {{ $leaf := (.Resources.ByType "image").GetMatch "*feature*" }}
             {{ $thumbnail := $leaf | default $branch }}
-            {{ with $thumbnail }}
-              <img src="{{ .RelPermalink | absURL }}" align="left" class="mw-100 w4 db" alt="Blue tinted version of the Tachyons avatar on Twitter">
+            <a href="{{ .RelPermalink }}">
+              {{ with $thumbnail }}
+              <img src="{{ .RelPermalink | absURL }}" align="left" class="mw-100 w4 db">
             {{ end }}
+            </a>
           </figure>
         </div>
         
         <div class="flex flex-column w-two-thirds-ns pl3-ns">
           <p class="measure lh-copy cf">
             {{ .Params.excerpt }}
-            <a href="/blog/tachyons-for-style/">Learn more</a>
+            <a href="{{ .RelPermalink }}">Read more</a>
           </p>
         </div>
     </article>
