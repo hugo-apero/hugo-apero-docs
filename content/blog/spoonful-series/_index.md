@@ -3,7 +3,7 @@ cascade:
   show_post_thumbnail: true
   title: "Posts from *A Spoonful of Hugo*"
   description: "A forking fun new feature for series."
-  layout: list-sidebar # list, list-sidebar, list-grid
+  layout: list # list, list-sidebar, list-grid
   author: Alison Hill
   sort_weight: true # use weight, not date, per page to reorder on listing page
 ---
