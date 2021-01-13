@@ -16,6 +16,7 @@ show_sidebar_adunit: false # show ad container
 cascade:    
   show_author_byline: true
   show_post_date: true
+  show_sidebar_adunit: true # show ad container
   show_disqus_comments: false # see disqusShortname in site config
 ---
 
