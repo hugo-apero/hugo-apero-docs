@@ -1,15 +1,17 @@
 {{ define "main" }}
 <main class="page-main pa4" role="main">
   <section class="blog-intro mw7 center mb5">
-    <h2 class="f2 f1-ns lh-solid tc center fw4">{{ .Title }}</h2>
-    <p class="f6 f5-ns measure lh-copy tc center">{{ .Description }}</p>
+    <h2 class="f2 f1-ns lh-solid tc center fw4">{{ .Title | markdownify }}</h2>
+    <p class="f6 f5-ns measure lh-copy tc center">{{ .Description | markdownify }}</p>
     {{ if .Params.show_author_byline }}<p class="f7 measure lh-copy tc center i">{{ if .Params.author }}Written by {{ .Params.author }}{{ end }}</p>{{ end }}
   </section>
   <section class="blog-content mw7 center">
-    {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" .Section) }}
-    {{ range $paginator.Pages }}
-      {{ .Render "summary"}}
-    {{ end }}
+    {{ $caller := . }}
+    {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" .Section).ByDate.Reverse }}
+      {{ range $paginator.Pages }}
+        {{ .Scratch.Set "$root" $caller }}
+        {{ partial "shared/summary" . }}
+      {{ end }}
     {{ partial "shared/list-pagination.html" . }}
   </section>
 </main>

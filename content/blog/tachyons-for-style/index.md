@@ -5,14 +5,11 @@ excerpt: "Building this static site generator theme was the first time I used an
 date: 2019-07-03
 author: "Eric Anderson"
 draft: false
-images:
-  - /blog/assets/tachyons-thumbnail.png
-  - /blog/assets/tachyons-logo-script-feature.png
 tags:
   - hugo-site
 categories:
   - Theme Features
-# layout options: single, single-sidebar, single-series
+# layout options: single, single-sidebar
 layout: single
 ---
 

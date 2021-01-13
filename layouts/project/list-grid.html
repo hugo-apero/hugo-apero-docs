@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $caller := . }}
 <main class="page-main pa4" role="main">
   <section class="blog-intro mw8 center tc mb5">
     <h2 class="f2 f1-ns lh-solid center fw4">{{ .Title }}</h2>
@@ -7,9 +8,11 @@
   </section>
   <section class="blog-content db flex-ns flex-row-ns flex-wrap-ns items-start mw8 center">
     {{ $pages := (where .RegularPagesRecursive "Type" "project") }}
-    {{ range $pages }}
-      {{ .Render "summary-grid"}}
-    {{ end }}
+      {{ range $pages }}
+        {{ .Scratch.Set "$root" $caller }}
+        {{ partial "shared/summary-grid" . }}
+      {{ end }}
+    {{ partial "shared/list-pagination.html" . }}
   </section>
 </main>
 {{ end }}

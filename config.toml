@@ -12,7 +12,7 @@ pygmentsOptions = "linenos=table"
 pygmentsStyle = "friendly"
 footnoteReturnLinkContents = "&#8617;" # ↩
 # set deliberately low for testing choose your preffered number based on the blog layout you've chosen
-paginate = 3
+paginate = 5
 preserveTaxonomyNames = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 enableEmoji = true
@@ -54,7 +54,7 @@ enableEmoji = true
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water
-  theme = "plum"
+  theme = "peach"
 
   # or, leave theme empty & make your own palette
   # basic color options: use only color names as shown in the
