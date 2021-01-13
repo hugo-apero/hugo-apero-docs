@@ -15,7 +15,6 @@ subheadline: |
 
 ## Configure sidebar position & look
 sidebar_left: false
-glow_on_hover: true  # makes each column dim when no hover
 
 ## Configure page content in wide column
 title_label: "What I'm up to lately" # leave blank to exclude

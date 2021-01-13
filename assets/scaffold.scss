@@ -406,18 +406,11 @@ audio {
 .controls button:focus {
   @extend .o-10;
 }
+
 // apply tachyons classes to about page lists 
 .featured-content h5,
 .featured-content article {
   @extend .b--#{$borderColor} ; 
-}
-.glow-on-hover {
-  @extend .o-80, .glow;
-}
-@media screen and (max-width: 48em) {
-  .glow-on-hover {
-    opacity: 1;
-  }
 }
 
 .about-sidebar {
