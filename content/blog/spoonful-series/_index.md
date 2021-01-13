@@ -20,6 +20,9 @@ cascade:
   author: Alison Hill        
   show_author_byline: true
   show_post_date: true
+  show_sidebar_adunit: false  # show ad container
+  text_link_label: ""         # leave blank to exclude
+  text_link_url: ""           # leave blank to exclude
   text_series_label: "In this series" 
   text_contents_label: "On this page" 
   tags:

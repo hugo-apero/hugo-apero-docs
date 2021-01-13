@@ -17,9 +17,9 @@
   {{ with .Title }}<h1 class="f3">{{ . | markdownify }}</h1>{{ end }}
   {{ with .Description }}<p class="f6 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
   {{ with .Params.author }}<p class="f7 measure lh-copy i mh0-l">Written by {{ . }}</p>{{ end }}
+{{ end }}
   {{ if .Params.text_link_label }}<small class="db f7"><a href="{{ .Params.text_link_url }}" class="dib fw7 ttu bt bw1 b--black-10 pt3">{{ .Params.text_link_label }}</a></small>{{ end }}
 </div>
-{{ end }}
 
 {{ if or .Params.show_sidebar_toc .Params.show_sidebar_adunit }}
 <div class="ad-unit pa4">

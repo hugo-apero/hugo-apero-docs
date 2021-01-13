@@ -16,8 +16,11 @@ show_sidebar_adunit: false # show ad container
 cascade:    
   show_author_byline: true
   show_post_date: true
-  show_sidebar_adunit: true # show ad container
   show_disqus_comments: false # see disqusShortname in site config
+  # for single-sidebar layout only
+  text_link_label: View all projects
+  text_link_url: /project/
+  show_sidebar_adunit: true # show ad container
 ---
 
 ** No content for the project index. This file provides front matter for the blog including the layout and boolean options. **
