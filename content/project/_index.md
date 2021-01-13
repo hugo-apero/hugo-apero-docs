@@ -1,5 +1,5 @@
 ---
-title: A Project Portfolio That's Real
+title: A Project Portfolio To Grow
 description: "Give your projects a place to live online."
 author: The Team at Formspree
 layout: list-grid # list, list-sidebar, list-grid
