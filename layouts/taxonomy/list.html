@@ -6,7 +6,7 @@
     <p class="f6 f5-ns measure lh-copy tc center">{{ .Description | markdownify }}</p>
   </section>
   <section class="blog-content mw7 center">
-  {{ range .Pages.ByDate.Reverse }}
+  {{ range .RegularPages.ByDate.Reverse }}
     {{ .Scratch.Set "$root" $caller }}
     {{ partial "shared/summary" . }}
   {{ end }}
