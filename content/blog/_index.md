@@ -18,14 +18,14 @@ list_sidebar: # for list-sidebar layout
     Even this sidebar offers a ton of customizations.
     Check out the _index.md file in the /blog folder 
     to edit this content.
-  author:
+  author: "The R Markdown Team @RStudio"
   text_link_label: Subscribe via RSS
   text_link_url: /index.xml
   show_sidebar_adunit: true # show ad container
 
 # set up common front matter for all pages inside blog/
 cascade:  
-  author: The Team @RStudio
+  author: Alison Hill
   show_author_byline: true
   show_post_date: true
   show_disqus_comments: false # see disqusShortname in site config
