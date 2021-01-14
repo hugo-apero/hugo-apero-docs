@@ -29,7 +29,8 @@ cascade:
   show_author_byline: true
   show_post_date: true
   show_disqus_comments: false # see disqusShortname in site config
-  single_sidebar: # for single-sidebar layout
+  # for single-sidebar layout
+  single_sidebar:
     text_link_label: View recent posts
     text_link_url: /blog/
     show_sidebar_adunit: true # show ad container

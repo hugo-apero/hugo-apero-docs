@@ -17,20 +17,17 @@ list_sidebar: # for list-sidebar layout
     Even this sidebar offers a ton of customizations!
     Check out the _index.md file in the /blog/spoonful-series/ folder 
     to edit this content.
-  text_link_label: Subscribe via RSS
-  text_link_url: /index.xml
+  text_link_label: ""
+  text_link_url: ""
   show_sidebar_adunit: false # show ad container
 
 # set up common front matter for all pages in series
 cascade:
   layout: single-series       # for a series, do not change
-  series: A Spoonful of Hugo  # name it!
+  series: A Spoonful of Hugo  # name your series
   author: Alison Hill        
   show_author_byline: true
   show_post_date: true
-  show_sidebar_adunit: false  # show ad container
-  text_link_label: ""         # leave blank to exclude
-  text_link_url: ""           # leave blank to exclude
   text_series_label: "In this series" 
   text_contents_label: "On this page" 
   tags:
