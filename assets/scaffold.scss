@@ -411,14 +411,6 @@ audio {
 .featured-content article {
   @extend .b--#{$borderColor} ; 
 }
-.glow-on-hover {
-  @extend .o-80, .glow;
-}
-@media screen and (max-width: 48em) {
-  .glow-on-hover {
-    opacity: 1;
-  }
-}
 
 .about-sidebar {
   @extend .bg-#{$sidebarBgColor};

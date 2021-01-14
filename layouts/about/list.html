@@ -1,28 +1,36 @@
 {{ define "main" }}
+{{ $page := . }}
 <main class="page-main pa4" role="main">
   <section class="page-content mw8 center">
+    
+    <!--begin header-->
     {{ if .Params.show_header }}
-    <header class="page-header bb b--black-10 bw1 pb4 mb5 {{ if .Params.text_align_right }}tr{{ end }}">
+    {{ $header := printf "/%s/%s" .Section "header/index.md" }}
+    {{ with site.GetPage $header }}
+      <header class="page-header bb b--black-10 bw1 pb4 mb5 {{ if .Params.text_align_right }}tr{{ end }}">
       {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">{{ .Title | markdownify }}</h1>
       {{ else }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">{{ .Params.headline | markdownify }}</h1>{{ end }}
-      {{ with .Params.subheadline }}
-        <p class="f4 measure-wide lh-copy dib">{{ . | markdownify }}</p>
+      {{ with .Content }}
+        <p class="f4 measure-wide lh-copy db">{{ . | markdownify }}</p>
       {{ end }}
-    </header>
+      </header>
+    {{ end }}
     {{ end }}
 
     <section class="page-body">
       <!--make the flexbox a row only on not small screens-->
       <div class="flex items-start flex-row-l flex-column-ns flex-column {{ if not .Params.show_header }}mt4{{ end }}">
         
-        <!--wide content column: 2/3 -->
-        <div class="order-2 {{ if .Params.sidebar_left }}ml5-l order-2-l{{ else }}mr4-l order-1-l{{ end }} w-two-thirds-l w-100-ns {{ if .Params.glow_on_hover }}glow-on-hover{{ end }} pt5">
-          {{ if .Params.show_header }}
-            {{ with .Params.title_label }}
+        <!--begin main content column: 2/3-->
+        {{ $main := printf "/%s/%s" .Section "main/index.md" }}
+        {{ with site.GetPage $main }}
+        <div class="order-2 {{ if .Params.sidebar_left }}ml5-l order-2-l{{ else }}mr4-l order-1-l{{ end }} w-two-thirds-l w-100-ns pt5">
+          {{ if $page.Params.show_header }}
+            {{ with .Title}}
               <h2 class="f2 fw7 tl">{{ . | markdownify }}</h2>
             {{ end }}
           {{ else }}
-            {{ with .Params.title_label }}  
+            {{ with .Title }}  
             <h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns">{{ . | markdownify }}</h1>
             {{ end }}
           {{ end }}
@@ -36,8 +44,12 @@
             </p>
           {{ end }}
         </div> <!--close wide column -->
-        
-        <sidebar class="about-sidebar order-1 {{ if .Params.sidebar_left }}order-1-l{{ else }}mr4-l order-2-l{{ end }} pt5 mh0 w-third-l w-100-ns self-start sticky {{ if .Params.glow_on_hover }}glow-on-hover{{ end }}" id="profile">
+        {{ end }}
+
+    <!--begin sidebar-->
+    {{ $sidebar := printf "/%s/%s" .Section "sidebar/index.md" }}
+    {{ with site.GetPage $sidebar }}
+        <sidebar class="about-sidebar order-1 {{ if .Params.sidebar_left }}order-1-l{{ else }}mr4-l order-2-l{{ end }} pt5 mh0 w-third-l w-100-ns self-start sticky" id="profile">
           <div class="pt3 pb1 pb2-ns tc ph4">
             {{ if .Params.avatar }}
               {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}
@@ -80,6 +92,8 @@
             </ul>
           </div>
         </sidebar>  
+        {{ end }}
+        
       </div>    <!--close flex-->
     </section>  <!--close body section-->
   </section>    <!--close page content section-->
