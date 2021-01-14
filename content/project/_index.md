@@ -15,8 +15,8 @@ list_sidebar: # for list-sidebar layout
     Check out the _index.md file in the /project folder 
     to edit this content.
   author: "The R Markdown Team @RStudio"
-  text_link_label: About me
-  text_link_url: /about/
+  text_link_label: View all projects
+  text_link_url: /project/
   show_sidebar_adunit: false # show ad container
 
 # set up common front matter for all pages inside project/
