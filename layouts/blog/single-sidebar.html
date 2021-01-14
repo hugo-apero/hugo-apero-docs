@@ -23,7 +23,7 @@
   </section>
 </main>
 <aside class="page-sidebar" role="complementary">
-  {{ partial "shared/sidebar-content.html" . }}
+  {{ partial "shared/sidebar-content.html" .CurrentSection }}
   {{ .Scratch.Set "details" "open" }}
   {{ partial "shared/post-details.html" . }}
 </aside>
