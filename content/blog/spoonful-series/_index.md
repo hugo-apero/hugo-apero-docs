@@ -1,17 +1,25 @@
 ---
-# for series listing page layout
-layout: list # list, list-sidebar, list-grid
-title: "Posts from *A Spoonful of Hugo*"
-author: The Team @RStudio
+title: A Spoonful of Hugo
 description: |
-  A forking fun new feature for series. 
-  Even this sidebar offers a ton of customizations!
-  Check out the _index.md file in the /blog/spoonful-series/ folder 
-  to edit this content.
-show_post_thumbnail: false
+  A forking fun new feature for series.
+author: Alison Hill
+show_post_thumbnail: true
 show_author_byline: true
-show_post_date: false
-show_disqus_comments: false # see disqusShortname in site config
+show_post_date: true
+# for series listing page layout
+layout: list-sidebar # list, list-sidebar, list-grid
+
+list_sidebar: # for list-sidebar layout
+  title: A Spoonful of Hugo
+  author: Alison Hill
+  description: |
+    A forking fun new feature for series. 
+    Even this sidebar offers a ton of customizations!
+    Check out the _index.md file in the /blog/spoonful-series/ folder 
+    to edit this content.
+  text_link_label: Subscribe via RSS
+  text_link_url: /index.xml
+  show_sidebar_adunit: true # show ad container
 
 # set up common front matter for all pages in series
 cascade:
