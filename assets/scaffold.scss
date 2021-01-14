@@ -397,6 +397,19 @@ details#PageTableOfContents nav#TableOfContents ul li:hover {
   @extend .static-l, .top-0-l;
 }
 
+.about-sidebar {
+  @extend .self-start, .sticky, .bg-#{$sidebarBgColor}, .#{$sidebarTextColor};
+}
+.about-sidebar a:not(.link) {
+  @extend .#{$sidebarLinkColor};
+}
+
+@media screen and (max-width: 768px) {
+  .about-sidebar {
+    order: 1;
+  }
+}
+
 audio {
   filter: sepia(0%) saturate(0%) grayscale(1) contrast(99%) invert(100%);
   width: 8rem;

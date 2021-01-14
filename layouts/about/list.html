@@ -47,7 +47,7 @@
     <!--begin sidebar-->
     {{ $sidebar := printf "/%s/%s" .Section "sidebar/index.md" }}
     {{ with site.GetPage $sidebar }}
-        <sidebar class="page-sidebar order-1 {{ if $page.Params.sidebar_left }}order-1-l{{ else }}mr4-l order-2-l{{ end }} pt5 mh0 w-third-l w-100-ns self-start sticky" id="profile">
+        <sidebar class="about-sidebar order-1 {{ if $page.Params.sidebar_left }}order-1-l{{ else }}mr4-l order-2-l{{ end }} pt5 mh0 w-third-l w-100-ns" id="profile">
           <div class="pt3 pb1 pb2-ns tc ph4">
             {{ if .Params.avatar }}
               {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}
