@@ -10,7 +10,9 @@
       <header class="page-header bb b--black-10 bw1 pb4 mb5 {{ if .Params.text_align_right }}tr{{ end }}">
       {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">{{ .Title | markdownify }}</h1>
       {{ else }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">{{ .Params.headline | markdownify }}</h1>{{ end }}
-        {{ .Content | replaceRE "<p>" "<p class=\"f4 measure-wide lh-copy db\">" | safeHTML }}
+      {{ with .Content}}
+        <div class="pt2 f4 measure-wide lh-copy db">{{ . | markdownify }}</div>
+      {{ end }}
       </header>
     {{ end }}
     {{ end }}
@@ -33,13 +35,11 @@
             {{ end }}
           {{ end }}
           {{ if .Params.show_intro }}
-            <p class="f4 measure lh-copy dib">{{ .Params.intro | markdownify }}</p>
+            <div class="pv3 f4 measure lh-copy dib">{{ .Params.intro | markdownify }}</div>
           {{ end }}
           {{ partial "shared/summary-li" . }}
           {{ if .Params.show_outro }}
-            <p class="measure-wide lh-copy cf pt3">
-            {{ .Params.outro | markdownify }}
-            </p>
+            <div class="pt3 measure-wide lh-copy cf">{{ .Params.outro | markdownify }}</div>
           {{ end }}
         </div> <!--close wide column -->
         {{ end }}
