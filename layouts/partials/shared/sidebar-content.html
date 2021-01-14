@@ -1,41 +1,17 @@
 {{ $page := . }}                       <!--save current page-->
 {{ $section := $page.CurrentSection }} <!--save current section-->
+{{ $is_branch := eq .CurrentSection .FirstSection }}
 
-<!--featured sidebar image for the branch bundle-->
-{{ $branch := ($section.Resources.ByType "image").GetMatch "*sidebar*" }}
-<!--featured sidebar image for the leaf bundle-->
-{{ $leaf := ($page.Resources.ByType "image").GetMatch "*sidebar*" }}
-<!--use leaf sidebar, if exists; if not, use branch sidebar-->
-{{ $thumbnail := $leaf | default $branch }}
-{{ with $thumbnail }}
-  <img src="{{ .RelPermalink | relURL }}" class="db ma0">
-{{ end }}
+{{ partial "shared/sidebar-image.html" $page }}
 
-{{ with .Params.list_sidebar }}
 <div class="blog-info pa4">
-  {{ with .title }}<h1 class="f3">{{ . | markdownify }}</h1>{{ end }}
-  {{ with .description }}<p class="f6 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
-  {{ with .author }}<p class="f7 measure lh-copy i mh0-l">Written by {{ . | markdownify }}</p>{{ end }}
-  {{ if .text_link_label }}<small class="db f7"><a href="{{ .text_link_url }}" class="dib fw7 ttu bt bw1 b--black-10 pt3">{{ .text_link_label }}</a></small>{{ end }}
+  {{ partial "shared/sidebar-header.html" $section }}
+  {{ if and .IsPage ($is_branch) }}{{ partial "shared/sidebar-link.html" .Params.single_sidebar }}
+  {{ else }}{{ partial "shared/sidebar-link.html" .Params.list_sidebar }}
+  {{ end }}
 </div>
 
-{{ if or .show_sidebar_toc .show_sidebar_adunit }}
-<div class="ad-unit pa4">
-{{ if .show_sidebar_toc }}
-  {{ $headers := findRE "<h[2].*>" $page.Content }}
-  {{- $has_headers := ge (len $headers) 1 -}}
-  {{- if $has_headers -}}
-  <p class="f6 measure-narrow lh-copy mb2">
-    <span class="b ttu db">On this page</span>
-    <span>{{ $page.TableOfContents }}</span>
-  </p>
-  {{- end -}}
-{{ end }}
-{{ if .show_sidebar_adunit }}
-  {{ range $.Site.Data.ads }}
-  <p class="f7 measure-narrow lh-copy mv0"><span class="b ttu db">{{ .title }}</span><span>{{ .body | markdownify }}</span></p>
-  {{ end }}
-{{ end }}
-</div>
-{{ end }}
+{{ .Params.list_sidebar.show_sidebar_adunit }}
+{{ if and .IsPage ($is_branch) }}{{ partial "shared/sidebar-adunit.html" .Params.single_sidebar }}
+{{ else }}{{ partial "shared/sidebar-adunit.html" .Params.list_sidebar }}
 {{ end }}
