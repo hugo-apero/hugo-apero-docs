@@ -24,7 +24,7 @@
         <!--begin main content column: 2/3-->
         {{ $main := printf "/%s/%s" .Section "main/index.md" }}
         {{ with site.GetPage $main }}
-        <div class="order-2 {{ if .Params.sidebar_left }}ml5-l order-2-l{{ else }}mr4-l order-1-l{{ end }} w-two-thirds-l w-100-ns pt5">
+        <div class="order-2 {{ if $page.Params.sidebar_left }}ml5-l order-2-l{{ else }}mr4-l order-1-l{{ end }} w-two-thirds-l w-100-ns pt5">
           {{ if $page.Params.show_header }}
             {{ with .Title}}
               <h2 class="f2 fw7 tl">{{ . | markdownify }}</h2>
@@ -49,7 +49,7 @@
     <!--begin sidebar-->
     {{ $sidebar := printf "/%s/%s" .Section "sidebar/index.md" }}
     {{ with site.GetPage $sidebar }}
-        <sidebar class="about-sidebar order-1 {{ if .Params.sidebar_left }}order-1-l{{ else }}mr4-l order-2-l{{ end }} pt5 mh0 w-third-l w-100-ns self-start sticky" id="profile">
+        <sidebar class="page-sidebar order-1 {{ if $page.Params.sidebar_left }}order-1-l{{ else }}mr4-l order-2-l{{ end }} pt5 mh0 w-third-l w-100-ns self-start sticky" id="profile">
           <div class="pt3 pb1 pb2-ns tc ph4">
             {{ if .Params.avatar }}
               {{ $avatar := printf "/%s%s" .File.Dir .Params.avatar }}
