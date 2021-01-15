@@ -50,7 +50,8 @@ h1, h2, h3, h4, h5, h6 {
 .site-links a,
 .site-header .social-icon-links a,
 .site-footer .social-icon-links a,
-.page-main a.link:not(.action.button) {
+.page-main a.link,
+.home a.link:not(.action.button) {
   @extend .#{$navLinkColor};
 }
 .page-main a:not(.link),
