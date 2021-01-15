@@ -195,8 +195,8 @@ form {
 
 // home page action jackson
 .home {
-  .action.button {
-    @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .b--transparent, .link, .pointer, .bg-animate, .#{$buttonTextColor}, .hover-#{$buttonHoverTextColor}, .bg-#{$buttonBgColor}, .hover-bg-#{$buttonHoverBgColor} ;
+  a.action.button {
+    @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .link, .pointer, .bg-animate, .#{$buttonTextColor}, .hover-#{$buttonHoverTextColor}, .bg-#{$buttonBgColor}, .hover-bg-#{$buttonHoverBgColor}, .b--#{$borderColor};
   }
   .action.text {
     @extend .db, .mb4, .ttu, .tracked, .b, .link ;
@@ -424,6 +424,11 @@ audio {
 .featured-content article {
   @extend .b--#{$borderColor} ; 
 }
+
+a.btn-links {
+    @extend .input-reset, .fw4, .ph3, .pv2, .mb3, .f6, .ttu, .tracked, .b, .br0, .link, .pointer, .bg-animate, .#{$buttonTextColor}, .hover-#{$buttonHoverTextColor}, .bg-transparent, .hover-bg-#{$buttonHoverBgColor}, .b--#{$borderColor} ;
+}
+
 
 // Fontawesome icons
 $fa-font-path:        "../webfonts";
