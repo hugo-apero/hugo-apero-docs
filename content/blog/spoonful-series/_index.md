@@ -7,7 +7,7 @@ show_post_thumbnail: false
 show_author_byline: true
 show_post_date: true
 # for series listing page layout
-layout: list # list, list-sidebar, list-grid
+layout: list-sidebar # list, list-sidebar, list-grid
 
 list_sidebar: # for list-sidebar layout
   title: A Spoonful of Hugo
