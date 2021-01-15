@@ -9,7 +9,8 @@ show_post_date: true
 # for series listing page layout
 layout: list-sidebar # list, list-sidebar, list-grid
 
-list_sidebar: # for list-sidebar layout
+# for list-sidebar layout
+sidebar: 
   title: A Spoonful of Hugo
   author: Alison Hill
   description: |
@@ -30,6 +31,10 @@ cascade:
   show_post_date: true
   text_series_label: "In this series" 
   text_contents_label: "On this page" 
+  sidebar:
+    text_link_label: ""
+    text_link_url: ""
+    show_sidebar_adunit: false # show ad container
   tags:
   - hugo-site
   categories:

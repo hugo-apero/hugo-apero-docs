@@ -6,11 +6,7 @@
 
 <div class="blog-info pa4">
   {{ partial "shared/sidebar/sidebar-header.html" $section }}
-  {{ if and .IsPage ($is_root) }}{{ partial "shared/sidebar/sidebar-link.html" .Params.single_sidebar }}
-  {{ else }}{{ partial "shared/sidebar/sidebar-link.html" .Params.list_sidebar }}
-  {{ end }}
+  {{ partial "shared/sidebar/sidebar-link.html" .Params.sidebar }}
 </div>
 
-{{ if and .IsPage ($is_root) }}{{ partial "shared/sidebar/sidebar-adunit.html" .Params.single_sidebar }}
-{{ else }}{{ partial "shared/sidebar/sidebar-adunit.html" .Params.list_sidebar }}
-{{ end }}
+{{ partial "shared/sidebar/sidebar-adunit.html" .Params.sidebar }}
