@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 // make the ad unit sticky and pad details
 .page-sidebar {
   .ad-unit {
-    @extend .bg-#{$sidebarBgColor}, .top-0 ;
+    @extend .bg-#{$sidebarBgColor}, .top-0;
     position: -webkit-sticky;
     position: sticky;
   }
@@ -390,11 +390,11 @@ details#PageTableOfContents nav#TableOfContents ul li:hover {
   @extend .bg-#{$siteBgColor};
 }
 
-// about page
+// stickies should make room for headroom to peek down
 .sticky {
   position: -webkit-sticky;
   position: sticky;
-  @extend .static-l, .top-0-l;
+  @extend .static-l, .top-0-l, .pt5;
 }
 
 .about-sidebar {

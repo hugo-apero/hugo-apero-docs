@@ -3,7 +3,7 @@
 
 {{ $series_toc_label := .Params.sidebar.text_series_label | default "In this series" }}
 {{ $page_toc_label := .Params.sidebar.text_contents_label | default "On this page" }}
-<div class="flex items-start ad-unit">
+<div class="flex items-start sticky">
   <div class="w-50 pl4 pr0 mr2">
     {{ with $section }}
     <h2 class="mt3 mb3 f5 fw7 ttu tracked"><a class="no-underline dim" href="{{ .RelPermalink }}">{{ end }}{{ $series_toc_label }}</a></h2>
