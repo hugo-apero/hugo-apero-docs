@@ -12,7 +12,7 @@ layout: list-sidebar # list, list-sidebar, list-grid
 # for list-sidebar layout
 sidebar: 
   title: A Spoonful of Hugo
-  author: ""
+  author: Alison Hill
   description: |
     A forking fun new feature for series.
     Even this sidebar offers a ton of customizations!
