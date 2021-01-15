@@ -21,6 +21,7 @@ enableEmoji = true
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark.renderer]
     unsafe = true  # Enable user to embed HTML snippets in Markdown content.
+    hardwraps = false 
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 2
@@ -54,7 +55,7 @@ enableEmoji = true
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water
-  theme = "peach"
+  theme = "sky"
 
   # or, leave theme empty & make your own palette
   # basic color options: use only color names as shown in the

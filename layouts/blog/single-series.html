@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $page := . }}
+{{ $page := . }}                       <!--save current page-->
 <main class="page-main pa4" role="main">
   <section class="page-content mw7 center">
     <article class="post-content pa0 ph3-l">
@@ -25,7 +25,8 @@
 </main>
 
 <aside class="page-sidebar" role="complementary">
-  {{ partial "shared/sidebar-content.html" . }}
+  {{ partial "shared/sidebar-scaffold.html" . }}
+  {{ partial "shared/series-sidebar.html" . }}
 </aside>
 
 {{ end }}

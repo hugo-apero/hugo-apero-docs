@@ -2,9 +2,6 @@
 {{ $caller := . }}
 <main class="page-main pa4" role="main">
   <section class="blog-intro mw8 center tc mb5">
-    {{ range first 1 (.GetTerms "series") }}
-    <h2><a class="link f5 ttu tracked" href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
-    {{ end }}
     <h2 class="f2 f1-ns lh-solid center fw4">{{ .Title | markdownify }}</h2>
     <p class="f6 f5-ns measure lh-copy center">{{ .Description | markdownify }}</p>
     {{ if .Params.show_author_byline }}<p class="f7 measure lh-copy tc center i">{{ if .Params.author }}Written by {{ .Params.author }}{{ end }}</p>{{ end }}
