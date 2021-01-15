@@ -23,7 +23,7 @@ sidebar:
   text_link_url: ""
   show_sidebar_adunit: false # show ad container
 
-# set up common front matter for all pages in series
+# set up common front matter for all individual pages in series
 cascade:
   layout: single-series       # for a series, do not change
   series: A Spoonful of Hugo  # name your series
