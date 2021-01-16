@@ -1,5 +1,6 @@
 {{ $permalink := .Permalink }}
-{{ $page := . }}
+{{ $page := . }}                           <!--save current page-->
+{{ $section := $page.CurrentSection }}     <!--save branch section-->
 
 <!--meta tags-->
 <meta charset="UTF-8">
@@ -52,28 +53,19 @@
     {{- end -}}
 <!--using featured images-->
 {{ else -}}
-    {{/* If images are featured in a page's bundle. */}}
-    {{- $images := $.Resources.ByType "image" -}}
-    {{- $featured := $images.GetMatch "*feature*" -}}
+    <!--featured image for the leaf bundle-->
+    {{- $images := $page.Resources.ByType "image" -}}
+    {{ $leaf := $images.GetMatch "*feature*" }}
     {{- $hex := $images.GetMatch "*hex*" -}}
-    {{- $card := cond (ne $hex nil) $hex $featured -}}
-    
-    {{/* Or if images are featured in a taxonomy term's bundle. */}}
-    {{ with $page.Params.series }}
-        {{- $term := index . 0 | urlize -}}
-        {{- $series := $.Site.GetPage "taxonomyTerm" (printf "/%s/%s" "series" $term) -}}
-        {{- $featured := ($series.Resources.ByType "image").GetMatch "*feature*" }}
-        {{ $.Scratch.Set "$sf" $featured }}
-    {{ end }}
-    
-    {{ $series_featured := $.Scratch.Get "$sf" }}
-    {{- $card := cond (ne $card nil) $card $series_featured -}}
+    {{- $card := cond (ne $hex nil) $hex $leaf -}}
+    <!--sidebar image for the branch bundle-->
+    {{ $branch := ($section.Resources.ByType "image").GetMatch "*sidebar*" }}
+    {{- $card := cond (ne $card nil) $card $branch -}}
     {{ with $card }}
         <meta property="og:image" content="{{ .Permalink }}" >
         <meta property="twitter:card" content="{{ if (ne $hex nil) }}summary{{ else }}summary_large_image{{ end }}">
         <meta name="twitter:image" content="{{ .Permalink }}" >
-        
-    {{/* If no featured, use the site card. */}}
+    <!--if no featured, use the site card-->
     {{ else }}
         <meta property="og:image" content="{{ $site_card }}" >
         <meta property="twitter:card" content="summary_large_image">
