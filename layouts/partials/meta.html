@@ -59,7 +59,7 @@
     {{- $hex := $images.GetMatch "*hex*" -}}
     {{- $card := cond (ne $hex nil) $hex $leaf -}}
     <!--sidebar image for the branch bundle-->
-    {{ $branch := ($section.Resources.ByType "image").GetMatch "*sidebar-listing*" }}
+    {{ $branch := ($section.Resources.ByType "image").GetMatch "*sidebar*" }}
     {{- $card := cond (ne $card nil) $card $branch -}}
     {{ with $card }}
         <meta property="og:image" content="{{ .Permalink }}" >

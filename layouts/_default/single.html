@@ -8,11 +8,9 @@
         {{ if .Params.show_author_byline }}<p class="f6 measure lh-copy mv1">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>{{ end }}
         {{ if .Params.show_post_date }}<p class="f7 db mv0 ttu">{{ .PublishDate.Format "January 2, 2006" }}</p>{{ end }}
 
-<div class="ph0 mt4">
-  {{ range .Params.links }}
-  <a class="f6 link dim ba ph3 pv2 mb2 dib near-black" href="{{ .url | safeURL }}">{{ .name }}</a>
-  {{ end }}
-</div>
+{{ if .Params.links }}
+  {{ partial "shared/btn-links.html" . }}
+{{ end }}
 
       </header>
       <section class="post-body pt5 pb4">
