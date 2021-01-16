@@ -50,8 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 .site-links a,
 .site-header .social-icon-links a,
 .site-footer .social-icon-links a,
-.page-main a.link,
-.home a.link:not(.action.button) {
+.page-main a.link {
   @extend .#{$navLinkColor};
 }
 .page-main a:not(.link),
@@ -338,7 +337,7 @@ a > svg.anchor-symbol:hover {
   width: 0%;
   content: '.'; /* make invisible, dot beneath links */
   color: transparent;
-  background: lighten( $navLinkColorCustom, 10% );
+  background: $navLinkColorCustom;
   height: .08rem;
 }
 
@@ -349,7 +348,7 @@ a > svg.anchor-symbol:hover {
 .site-links a.active:after {
   width: 85%;  
   color: transparent;
-  background: lighten( $navLinkColorCustom, 10% );
+  background: $navLinkColorCustom;
   height: .08rem;
 }
 
