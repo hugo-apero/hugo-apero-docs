@@ -197,13 +197,15 @@ form {
 // home page action jackson
 .home {
   .action.button {
-    @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .b--transparent, .link, .pointer, .bg-animate, .#{$buttonTextColor}, .hover-#{$buttonHoverTextColor}, .bg-#{$buttonBgColor}, .hover-bg-#{$buttonHoverBgColor} ;
+    @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .link, .pointer, .bg-animate, .b--transparent, .hover-#{$buttonHoverTextColor}, .hover-bg-#{$buttonHoverBgColor}, .bg-#{$sidebarBgColor}, .#{$sidebarLinkColor};
+  }
+  a.action.button:hover {
+  @extend .#{$buttonTextColor};
   }
   .action.text {
     @extend .db, .mb4, .ttu, .tracked, .b, .link ;
   }
 }
-
 
 // CSS GRID SCAFFOLD
 .grid-container {
