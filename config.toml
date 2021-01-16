@@ -21,6 +21,7 @@ enableEmoji = true
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark.renderer]
     unsafe = true  # Enable user to embed HTML snippets in Markdown content.
+    hardwraps = false 
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 2
@@ -55,7 +56,7 @@ enableEmoji = true
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water
   theme = "water"
-
+  
   # or, leave theme empty & make your own palette
   # basic color options: use only color names as shown in the
   # "Color Palette" section of http://tachyons.io/docs/themes/skins/
