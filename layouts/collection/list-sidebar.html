@@ -12,5 +12,8 @@
 </main>
 <aside class="page-sidebar" role="complementary">
   {{ partial "shared/sidebar-scaffold.html" . }}
+  {{- if not .Sections -}}
+    {{ partial "shared/series-sidebar.html" . }}
+  {{ end }}
 </aside>
 {{ end }}
