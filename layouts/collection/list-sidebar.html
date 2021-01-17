@@ -2,7 +2,7 @@
 {{ $caller := . }}
 <main class="page-main pa4 {{ .Kind }}" role="main">
   <section class="blog-content mw7 center">
-    {{ $paginator := .Paginate (where .Pages "Type" "collection") }}
+    {{ $paginator := .Paginate (where .Pages "Type" "collection").ByWeight }}
       {{ range $paginator.Pages }}
         {{ .Scratch.Set "$root" $caller }}
         {{ partial "shared/summary" . }}
