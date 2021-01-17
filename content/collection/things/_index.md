@@ -14,6 +14,20 @@ show_author_byline: true
 show_post_date: false
 show_disqus_comments: false # see disqusShortname in site config
 
+# for list-sidebar layout
+sidebar: 
+  title: Collect your Collections
+  description: |
+    Customize your collections. Even this sidebar offers 
+    a ton of customizations.
+    
+    Check out the _index.md file in the /collection folder 
+    to edit this content. 
+  author: "The R Markdown Team @RStudio"
+  text_link_label: Subscribe via RSS
+  text_link_url: /index.xml
+  show_sidebar_adunit: true # show ad container
+
 # set up common front matter for all pages in series
 cascade:
   layout: single-series
