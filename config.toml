@@ -50,7 +50,7 @@ enableEmoji = true
   # serif options: Bitter / Fraunces / Petrona
   # sans-serif options: Commissioner / Metropolis / Sarabun
   customtextFontFamily = "Sarabun"
-  customheadingFontFamily = "Bitter"
+  customheadingFontFamily = "Petrona"
   
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
