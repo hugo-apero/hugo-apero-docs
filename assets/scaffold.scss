@@ -31,6 +31,9 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
 @import 'headroom';
 
+// add support for panelset from xaringanExtra
+@import 'panelset';
+
 // apply tachyons font family and color options from config
 body {
   @extend .bg-#{$siteBgColor}, .#{$textFontFamily}, .#{$textColor};
