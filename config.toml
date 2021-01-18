@@ -47,15 +47,15 @@ enableEmoji = true
   textFontFamily = "sans-serif"
   headingFontFamily = "sans-serif"
   # alternatively, use a built-in font-family
-  # serif options: Bitter / Fraunces / Petrona
+  # serif options: Amiri / Bitter / Fraunces
   # sans-serif options: Commissioner / Metropolis / Sarabun
   customtextFontFamily = "Sarabun"
-  customheadingFontFamily = "Petrona"
+  customheadingFontFamily = "Amiri"
   
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water
-  theme = "sky"
+  theme = "water"
 
   # or, leave theme empty & make your own palette
   # basic color options: use only color names as shown in the
