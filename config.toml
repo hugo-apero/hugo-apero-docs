@@ -35,7 +35,7 @@ enableEmoji = true
   logo = "/img/blogophonic-mark-dark.png"
   mainSections = ["blog", "project"]
   show_social_links = true
-  navallcaps = true
+  navallcaps = false
   # Default image for social sharing and search engines. 
   # Place image file in `static` folder and specify image name here.
   sharing_image = "/img/papillons.jpg"
@@ -50,7 +50,7 @@ enableEmoji = true
   # serif options: Bitter / EB Garamond / Fraunces
   # sans-serif options: Commissioner / Metropolis / Sarabun
   customtextFontFamily = "Sarabun"
-  customheadingFontFamily = "EB Garamond"
+  customheadingFontFamily = "Fraunces"
   
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
