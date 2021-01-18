@@ -137,26 +137,6 @@
        url('../fonts/eb-garamond-v14-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* rosario-300 - latin */
-@font-face {
-  font-family: 'Rosario';
-  font-style: normal;
-  font-weight: 300;
-  src: local(''),
-       url('../fonts/Rosario-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/Rosario-Light.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* rosario-300italic - latin */
-@font-face {
-  font-family: 'Rosario';
-  font-style: italic;
-  font-weight: 300;
-  src: local(''),
-       url('../fonts/Rosario-LightItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/Rosario-LightItalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
 {{ with $.Site.Params.customtextFontFamily }}
 $textFontFamily: {{ . }}, sans-serif;
 {{ end }}
