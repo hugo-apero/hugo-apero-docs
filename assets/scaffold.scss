@@ -338,18 +338,18 @@ a > svg.anchor-symbol:hover {
   content: '.'; /* make invisible, dot beneath links */
   color: transparent;
   background: $navLinkColorCustom;
-  height: .08rem;
+  height: .08em;
 }
 
 .site-links a:hover:after {
-  width: 84%;
+  width: 85%;
 }
 
 .site-links a.active:after {
   width: 85%;  
   color: transparent;
   background: $navLinkColorCustom;
-  height: .08rem;
+  height: .08em;
 }
 
 // TOCs
