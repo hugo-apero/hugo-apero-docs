@@ -49,8 +49,8 @@ enableEmoji = true
   # alternatively, use a built-in font-family
   # serif options: Bitter / EB Garamond / Fraunces
   # sans-serif options: Commissioner / Metropolis / Sarabun
-  customtextFontFamily = "Rosario"
-  customheadingFontFamily = "EB Garamond"
+  customtextFontFamily = "Sarabun"
+  customheadingFontFamily = "Fraunces"
   
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
