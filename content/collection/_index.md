@@ -5,7 +5,7 @@ description: |
   This is a fully featured blog that supports categories, 
   tags, series, and pagination.
 author: Alison Hill
-show_post_thumbnail: true
+show_post_thumbnail: false
 show_author_byline: true
 show_post_date: false
 # for listing page layout

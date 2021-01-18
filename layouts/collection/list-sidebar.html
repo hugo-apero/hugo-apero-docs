@@ -5,7 +5,7 @@
     {{ $paginator := .Paginate (where .Pages "Type" "collection").ByWeight }}
       {{ range $paginator.Pages }}
         {{ .Scratch.Set "$root" $caller }}
-        {{ partial "shared/summary" . }}
+        {{ partial "shared/summary.html" . }}
       {{ end }}
     {{ partial "shared/list-pagination.html" . }}
   </section>
