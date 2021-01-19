@@ -1,8 +1,7 @@
 ---
-title: A Blog That Works
+title: A List of Talks to Last
 description: |
-  This is a fully featured blog that supports categories, 
-  tags, series, and pagination.
+  This is a list for your talks, workshops, or other events with a time, date, and place.
 author: "The R Markdown Team @RStudio"
 show_post_thumbnail: true
 show_author_byline: true

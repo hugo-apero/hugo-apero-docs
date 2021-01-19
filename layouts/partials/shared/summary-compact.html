@@ -1,6 +1,7 @@
 {{ $page := . }}                           <!--save current page-->
 {{ $section := $page.CurrentSection }}     <!--save branch section-->
 {{ $root := .Scratch.Get "$root" }}     <!--save root section-->
+<!--each article is a row-->
 <article class="mv4 bb">
   
   <!--if show_post_thumbnail is TRUE in root-->
@@ -13,7 +14,7 @@
   <!--sidebar image for the branch bundle-->
   {{ $branch := ($section.Resources.ByType "image").GetMatch "*feature*" }}
   {{- $thumbnail := cond (ne $thumbnail nil) $thumbnail $branch -}}
-  <div class="flex flex-column flex-row-ns mb4 {{ if (ne $hex nil) }}items-center{{ end }}">
+  <div class="flex flex-column flex-row-ns mb4 mb5-l{{ if (ne $hex nil) }} items-center{{ end }}">
     <figure class="mr4-ns ma0 mb2 mb0-l w-100 w-20-ns">
       <a href="{{ .RelPermalink }}" class="db">
         {{ with $thumbnail }}
@@ -21,7 +22,7 @@
         {{ end }}
       </a>
     </figure>
-    <div class="flex flex-column w-100 w-80-ns pl2-ns">
+    <div class="flex flex-column w-100 w-80-ns pl3-ns">
       <header class="w-100">
         <h1 class="f4 mv1 lh-title underline"><a href="{{ .RelPermalink }}" class="db">{{ .Title | markdownify }}</a></h1>
         {{ range first 1 (.GetTerms "series") }}
@@ -37,7 +38,7 @@
     </footer>
     </div>
   </div>
-  
+
   <!--if show_post_thumbnail is FALSE in root-->
   {{ else }}
   <div class="measure-wide center mb4 mb5-l">
@@ -53,6 +54,6 @@
       <span class="middot-divider"></span>
       {{ if $root.Params.show_author_byline }}<p class="f7 dib mv1">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>{{ end }}
     </footer>
-  </div>
   {{ end }}
+
 </article>

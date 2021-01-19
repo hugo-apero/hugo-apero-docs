@@ -9,11 +9,18 @@
     {{ $caller := . }}
     {{ $paginator := .Paginate ((where .RegularPages "Type" .Section).GroupByDate "2006") }}
     {{ range $paginator.PageGroups}}
-      {{ .Key }}
+    <!--each year starts a new column-->
+    <div class="flex flex-column flex-row-ns mb2 items-start">
+      <div class="w-10 pt4 mr4 mt4"><h3 class="pt0 mt0">{{ .Key }}</h3></div>
+      <div class="w-90 pa4 mt0">
       {{ range .Pages }}
-        {{ .Scratch.Set "$root" $caller }}
-        {{ partial "shared/summary-compact.html" . }}
-      {{ end }}
+          <div>
+          {{ .Scratch.Set "$root" $caller }}
+          {{ partial "shared/summary-compact.html" . }}
+          </div>
+        {{ end }}
+      </div>
+    </div> <!--close flex-column-->        
     {{ end }}
     {{ partial "shared/list-pagination.html" . }}
   </section>
