@@ -7,11 +7,14 @@
   </section>
   <section class="blog-content mw7 center">
     {{ $caller := . }}
-    {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" .Section).ByDate.Reverse }}
-      {{ range $paginator.Pages }}
+    {{ $paginator := .Paginate ((where .RegularPages "Type" .Section).GroupByDate "2006") }}
+    {{ range $paginator.PageGroups}}
+      {{ .Key }}
+      {{ range .Pages }}
         {{ .Scratch.Set "$root" $caller }}
         {{ partial "shared/summary-compact.html" . }}
       {{ end }}
+    {{ end }}
     {{ partial "shared/list-pagination.html" . }}
   </section>
 </main>
