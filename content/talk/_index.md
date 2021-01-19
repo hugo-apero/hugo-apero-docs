@@ -7,7 +7,8 @@ show_post_thumbnail: true
 show_author_byline: true
 show_post_date: true
 show_post_time: true
-layout: list
+# for listing page layout
+layout: list # list, list-sidebar
 
 # for list-sidebar layout
 sidebar: 
