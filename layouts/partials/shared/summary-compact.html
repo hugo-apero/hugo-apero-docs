@@ -33,6 +33,12 @@
       <footer class="w-100">
       <!--ensures section Params are respected-->
       {{ if $root.Params.show_post_date }}<p class="f7 dib mv1">{{ partial "shared/date-range.html" . }}</p>{{ end }}
+      {{ if ($root.Params.show_post_time | default true) }}
+        <span class="middot-divider"></span>
+        <p class="f7 dib mv1">
+          {{ partial "shared/time-range.html" . }}
+        </p>
+      {{ end }}
       {{ with .Params.location }}
         <span class="middot-divider"></span>
         <p class="f7 dib mv1">{{ . }}</p>
