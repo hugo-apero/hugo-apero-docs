@@ -4,6 +4,7 @@ subtitle: "Testing"
 excerpt: "One idea"
 date: 2021-01-12
 date_end: "2021-01-13"
+show_post_time: false
 author: "Alison Hill"
 location: "Sydney, Australia"
 draft: false
