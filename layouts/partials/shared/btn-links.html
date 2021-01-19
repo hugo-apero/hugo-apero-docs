@@ -1,5 +1,4 @@
-<div class="ph0 pt5">
-  {{ range .Params.links }}
+{{ range .Params.links }}
     {{ $pack := or .icon_pack "fas" }}
     {{ $pack_prefix := $pack }}
     {{ if in (slice "fab" "fas" "far" "fal") $pack }}
@@ -14,5 +13,4 @@
       {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
     {{ end }}  
   <a class="btn-links mr2 ba dib" href="{{ $link | safeURL }}">{{ with .icon }}<i class="{{ $pack }} {{ $pack_prefix }}-{{ . }} fa-lg fa-fw mr2"></i>{{ end }}{{ .name }}</a>
-  {{ end }}
-</div>
+{{ end }}
