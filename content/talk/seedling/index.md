@@ -10,6 +10,6 @@ draft: false
 # layout options: single, single-sidebar
 layout: single
 categories:
-- seedling
+- meetup
 ---
 
