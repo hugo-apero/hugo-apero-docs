@@ -1,5 +1,5 @@
 ---
-title: "hello"
+title: "All about collections"
 subtitle: "A collection is made up of bundles."
 description: |
   This is a fully featured blog that supports categories, 
