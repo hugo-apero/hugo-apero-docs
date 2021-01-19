@@ -9,11 +9,9 @@
       <h5 class="article-list f4 fw7 tracked ttu lh-title mb0 bt pv3">{{ .Key | title }}</h5>
       <div class="w-100">
       {{ range .Pages }}
-          <div>
           {{ .Scratch.Set "$root" $caller }}
           {{ partial "shared/summary-compact.html" . }}
-          </div>
-        {{ end }}
+      {{ end }}
       </div>
     {{ end }}
     {{ partial "shared/list-pagination.html" . }}

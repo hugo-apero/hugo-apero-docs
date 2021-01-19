@@ -32,8 +32,8 @@
       <p class="f6 lh-copy mv2 flex-auto measure-wide">{{ if .Params.excerpt }}{{ .Params.excerpt | markdownify }}{{ else }}{{ .Summary | markdownify }}{{ end }}</p>
       <footer class="w-100">
       <!--ensures section Params are respected-->
-      {{ if $root.Params.show_post_date }}<p class="f7 dib mv1">{{ partial "shared/date-range.html" . }}</p>{{ end }}
-      {{ if ($root.Params.show_post_time | default true) }}
+      {{ if .Params.show_post_date }}<p class="f7 dib mv1">{{ partial "shared/date-range.html" . }}</p>{{ end }}
+      {{ if .Params.show_post_time }}
         <span class="middot-divider"></span>
         <p class="f7 dib mv1">
           {{ partial "shared/time-range.html" . }}
@@ -43,7 +43,7 @@
         <span class="middot-divider"></span>
         <p class="f7 dib mv1">{{ . }}</p>
       {{ end }}
-      {{ if $root.Params.show_author_byline }}
+      {{ if .Params.show_author_byline }}
         <span class="middot-divider"></span>
         <p class="f7 dib mv1">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>
       {{ end }}
