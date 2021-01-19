@@ -12,7 +12,7 @@
     <!--each year starts a new column-->
     <div class="article-list flex flex-column flex-row-ns mb2 items-start bt">
       <div class="w-10 pr4"><h3 class="pt3 mt0">{{ .Key }}</h3></div>
-      <div class="w-90 pl4 pt3">
+      <div class="w-90 pl4 pv3">
       {{ range .Pages }}
           {{ .Scratch.Set "$root" $caller }}
           {{ partial "shared/summary-compact.html" . }}

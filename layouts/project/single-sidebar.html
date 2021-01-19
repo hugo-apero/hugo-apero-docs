@@ -9,7 +9,9 @@
         {{ if .Params.show_post_date }}<p class="f7 db mv0 ttu">{{ .PublishDate.Format "January 2, 2006" }}</p>{{ end }}
         
       {{ if .Params.links }}
+      <div class="ph0 pt5">
         {{ partial "shared/btn-links.html" . }}
+      </div>
       {{ end }}
       
       </header>

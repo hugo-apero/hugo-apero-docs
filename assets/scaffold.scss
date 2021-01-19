@@ -430,10 +430,12 @@ audio {
 }
 
 // button links in headers
-.post-header a.btn-links {
+.post-header a.btn-links,
+.article-list a.btn-links {
     @extend .fw4, .ph3, .pv2, .mb3, .f6, .ttu, .tracked, .b, .br0, .link, .pointer, .bg-animate, .#{$headingColor}, .hover-#{$buttonHoverTextColor}, .bg-transparent, .hover-bg-#{$buttonHoverBgColor};
 }
 
+// dividers for talks
 .middot-divider::after {
 	content: '\00B7';
 	@extend .mh1, .#{$headingColor};

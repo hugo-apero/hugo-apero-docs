@@ -2,8 +2,8 @@
 {{ $section := $page.CurrentSection }}     <!--save branch section-->
 {{ $root := .Scratch.Get "$root" }}     <!--save root section-->
 <!--each article is a row-->
-<article class="pv4">
-  
+<article class="pt4">
+
   <!--if show_post_thumbnail is TRUE in root-->
   {{ if $root.Params.show_post_thumbnail }}
   <!--featured image for the leaf bundle-->
@@ -14,7 +14,7 @@
   <!--sidebar image for the branch bundle-->
   {{ $branch := ($section.Resources.ByType "image").GetMatch "*feature*" }}
   {{- $thumbnail := cond (ne $thumbnail nil) $thumbnail $branch -}}
-  <div class="flex flex-column flex-row-ns mb4 mb5-l{{ if (ne $hex nil) }} items-center{{ end }}">
+  <div class="flex flex-column flex-row-ns mb3 mb4-l">
     <figure class="mr3-ns ma0 mb2 mb0-l w-100 w-20-ns">
       <a href="{{ .RelPermalink }}" class="db">
         {{ with $thumbnail }}
@@ -46,6 +46,11 @@
       {{ if .Params.show_author_byline }}
         <span class="middot-divider"></span>
         <p class="f7 dib mv1">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>
+      {{ end }}
+      {{ if .Params.links }}
+        <p class="dib pt1">
+        {{ partial "shared/btn-links.html" . }}
+        </p>
       {{ end }}
     </footer>
     </div>
