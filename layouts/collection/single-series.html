@@ -1,9 +1,10 @@
 {{ define "main" }}
 {{ $page := . }}
-<main class="page-main pa4" role="main">
+<main class="page-main ph4 pt4" role="main">
   <section class="page-content mw7 center">
-    <article class="post-content pa0 ph3-l">
+    <article class="post-content pa0 pr3-l">
       <header class="post-header">
+        {{ partial "shared/breadcrumb.html" . }}
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">{{ .Title }}</h1>
         {{ if .Params.subtitle }}<h4 class="f4 mt0 mb4 lh-title measure">{{ .Params.subtitle }}</h4>{{ end }}
         {{ if .Params.show_author_byline }}<p class="f6 measure lh-copy mv1">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>{{ end }}
