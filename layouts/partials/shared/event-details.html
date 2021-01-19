@@ -1,53 +1,35 @@
 <div class="flex flex-wrap pt5">
   {{ with .Params.excerpt }}
   <div class="flex flex-row" style="flex-basis: 100%;">
-    <div class="pv2 mr2 w-20">
-      <h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy ">Abstract</h5>
-    </div>
-    <div class="pv2 mr2 flex-grow-1">
-      <p class="f5 measure lh-copy mv0">{{ . }}</p>
-    </div>
+    <div class="pv2 mr2 w-20"><h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy ">Abstract</h5></div>
+    <div class="pv2 mr2 flex-grow-1"><p class="f5 measure lh-copy mv0">{{ . }}</p></div>
   </div>
   {{ end }}
   {{ if .Date }}
   <div class="flex flex-row" style="flex-basis: 100%;">
-    <div class="pv2 mr2 w-20">
-      <h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy ">Date</h5>
-    </div>
-    <div class="pv2 mr2 flex-grow-1">
-      <p class="f5 measure lh-copy mv0">{{ partial "shared/date-range.html" . }}</p>
-    </div>
+    <div class="pv2 mr2 w-20"><h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy ">Date</h5></div>
+    <div class="pv2 mr2 flex-grow-1"><p class="f5 measure lh-copy mv0">{{ partial "shared/date-range.html" . }}</p></div>
   </div>
   <div class="flex flex-row" style="flex-basis: 100%;">
-    <div class="pv2 mr2 w-20">
-      <h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy">Time</h5>
-    </div>
-    <div class="pv2 mr2 flex-grow-1">
-      <p class="f5 measure lh-copy mv0">{{ partial "shared/time-range.html" . }}</p>
-    </div>
+    <div class="pv2 mr2 w-20"><h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy">Time</h5></div>
+    <div class="pv2 mr2 flex-grow-1"><p class="f5 measure lh-copy mv0">{{ partial "shared/time-range.html" . }}</p></div>
   </div>
   {{ end }}
   {{ with .Params.location }}
   <div class="flex flex-row" style="flex-basis: 100%;">
-    <div class="pv2 mr2 w-20">
-      <h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy">Location</h5>
-    </div>
-    <div class="pv2 mr2 flex-grow-1">
-      <p class="f5 measure lh-copy mv0">{{ . }}</p>
-    </div>
+    <div class="pv2 mr2 w-20"><h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy">Location</h5></div>
+    <div class="pv2 mr2 flex-grow-1"><p class="f5 measure lh-copy mv0">{{ . }}</p></div>
   </div>
   {{ end }}
   {{ if .Params.event }}
   <div class="flex flex-row" style="flex-basis: 100%;">
-    <div class="pv2 mr2 w-20">
-      <h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy">Event</h5>
-    </div>
+    <div class="pv2 mr2 w-20"><h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy">Event</h5></div>
     <div class="pv2 mr2 flex-grow-1">
       <p class="f5 measure lh-copy mv0">
-        {{ with .Params.event_url }}<a href="{{ . | safeHTML }}" target="_blank">{{ end }}
-          {{ .Params.event }}{{ if .Params.event_url }}</a>{{ end }}
+      {{ with .Params.event_url }}<a href="{{ . | safeHTML }}" target="_blank">{{ end }}
+        {{ .Params.event }}{{ if .Params.event_url }}</a>{{ end }}
       </p>
     </div>
-  {{ end }}
   </div>
+  {{ end }}
 </div>
