@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $caller := . }}
+<main class="page-main pa4 {{ .Kind }}" role="main">
+  <section class="blog-content mw7 center">
+    {{ $caller := . }}
+    {{ $paginator := .Paginate ((where .RegularPages "Type" .Section).GroupByDate "2006") }}
+    {{ range $paginator.PageGroups }}
+    <!--each year starts a new column-->
+      <h5 class="article-list f4 fw7 tracked ttu lh-title mb0 bt pv3">{{ .Key | title }}</h5>
+      <div class="w-100">
+      {{ range .Pages }}
+          <div>
+          {{ .Scratch.Set "$root" $caller }}
+          {{ partial "shared/summary-compact.html" . }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+    {{ partial "shared/list-pagination.html" . }}
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+  {{ partial "shared/sidebar-scaffold.html" . }}
+</aside>
+{{ end }}
