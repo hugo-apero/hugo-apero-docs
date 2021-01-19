@@ -2,7 +2,7 @@
 {{ $section := $page.CurrentSection }}     <!--save branch section-->
 {{ $root := .Scratch.Get "$root" }}     <!--save root section-->
 <!--each article is a row-->
-<article class="mv4 bb">
+<article class="pv4">
   
   <!--if show_post_thumbnail is TRUE in root-->
   {{ if $root.Params.show_post_thumbnail }}
@@ -47,7 +47,7 @@
 
   <!--if show_post_thumbnail is FALSE in root-->
   {{ else }}
-  <div class="measure-wide center mb4 mb5-l">
+  <div class="measure-wide mb4 mb5-l">
     <header>
       <h1 class="f4 mt0 mb2 lh-title underline fw4"><a href="{{ .RelPermalink }}" class="db">{{ .Title | markdownify }}</a></h1>
       {{ range first 1 (.GetTerms "series") }}

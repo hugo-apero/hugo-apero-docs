@@ -119,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 // apply tachyons classes to blog lists 
 .blog-content {
   article { @extend .b--#{$borderColor} ; }
+ .article-list { @extend .b--#{$borderColor} ; }
 }
 .list-sidebar {
   article:first-of-type {

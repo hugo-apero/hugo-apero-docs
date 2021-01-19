@@ -10,9 +10,9 @@
     {{ $paginator := .Paginate ((where .RegularPages "Type" .Section).GroupByDate "2006") }}
     {{ range $paginator.PageGroups}}
     <!--each year starts a new column-->
-    <div class="flex flex-column flex-row-ns mb2 items-start">
-      <div class="w-10 pt4 mr4 mt4"><h3 class="pt0 mt0">{{ .Key }}</h3></div>
-      <div class="w-90 pa4 mt0">
+    <div class="article-list flex flex-column flex-row-ns mb2 items-start bt">
+      <div class="w-10 pr4"><h3 class="pt4 mt0">{{ .Key }}</h3></div>
+      <div class="w-90 pl4">
       {{ range .Pages }}
           <div>
           {{ .Scratch.Set "$root" $caller }}
