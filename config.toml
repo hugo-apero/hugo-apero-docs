@@ -33,7 +33,7 @@ enableEmoji = true
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/favicon.ico?v=0"
   logo = "/img/blogophonic-mark-dark.png"
-  mainSections = ["blog", "project"]
+  mainSections = ["blog", "project", "talk"]
   show_social_links = true
   navallcaps = true
   # Default image for social sharing and search engines. 
