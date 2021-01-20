@@ -117,24 +117,24 @@
        url('../fonts/sarabun-v8-latin-500italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* eb-garamond-regular - latin */
+/* spectral-300 - latin */
 @font-face {
-  font-family: 'EB Garamond';
+  font-family: 'Spectral';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   src: local(''),
-       url('../fonts/eb-garamond-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/eb-garamond-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../fonts/spectral-v6-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/spectral-v6-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* eb-garamond-italic - latin */
+/* spectral-300italic - latin */
 @font-face {
-  font-family: 'EB Garamond';
+  font-family: 'Spectral';
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
   src: local(''),
-       url('../fonts/eb-garamond-v14-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/eb-garamond-v14-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../fonts/spectral-v6-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/spectral-v6-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 {{ with $.Site.Params.customtextFontFamily }}

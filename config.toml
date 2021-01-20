@@ -47,10 +47,10 @@ enableEmoji = true
   textFontFamily = "sans-serif"
   headingFontFamily = "sans-serif"
   # alternatively, use a built-in font-family
-  # serif options: Bitter / EB Garamond / Fraunces
+  # serif options: Bitter / Fraunces / Spectral
   # sans-serif options: Commissioner / Metropolis / Sarabun
   customtextFontFamily = "Commissioner"
-  customheadingFontFamily = "Fraunces"
+  customheadingFontFamily = "Spectral"
   
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
