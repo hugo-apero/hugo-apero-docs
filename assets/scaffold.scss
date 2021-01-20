@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 // apply tachyons classes to blog lists 
 .blog-content {
   article { @extend .b--#{$borderColor} ; }
- .article-list { @extend .b--#{$borderColor} ; }
+ .group-content { @extend .b--#{$borderColor} ; }
 }
 .list-sidebar {
   article:first-of-type {
@@ -430,9 +430,9 @@ audio {
   @extend .b--#{$borderColor} ; 
 }
 
-// button links in headers
+// button links in single page headers + listing page footers
 .post-header a.btn-links,
-.article-list a.btn-links {
+article footer a.btn-links {
     @extend .fw4, .ph3, .pv2, .mb3, .f6, .ttu, .tracked, .b, .br0, .link, .pointer, .bg-animate, .#{$headingColor}, .hover-#{$buttonHoverTextColor}, .bg-transparent, .hover-bg-#{$buttonHoverBgColor};
 }
 
