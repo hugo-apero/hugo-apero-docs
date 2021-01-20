@@ -340,6 +340,7 @@ a > svg.anchor-symbol:hover {
   color: transparent;
   background: $navLinkColorCustom;
   height: .08em;
+  pointer-events: none;
 }
 
 .site-links a:hover:after {

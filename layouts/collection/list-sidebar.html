@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{ $caller := . }}
+<main class="page-main pa4 {{ .Kind }}" role="main">
+  <section class="blog-content mw7 center">
+    {{ if not .Sections }}
+      {{ partial "shared/breadcrumb.html" . }}
+    {{ end }}
+    {{ $paginator := .Paginate (where .Pages "Type" "collection").ByWeight }}
+      {{range $paginator.Pages }}
+        {{ .Scratch.Set "$root" $caller }}
+        {{ partial "shared/summary.html" . }}
+      {{ end }}
+    {{ partial "shared/list-pagination.html" . }}
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+  {{ partial "shared/sidebar-scaffold.html" . }}
+</aside>
+{{ end }}
