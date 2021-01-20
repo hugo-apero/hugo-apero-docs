@@ -9,8 +9,7 @@ show_post_thumbnail: false
 show_author_byline: true
 show_post_date: false
 # for listing page layout
-layout: list-sidebar # list, list-sidebar, list-grid
-type: collection
+layout: list-sidebar # list, list-sidebar
 
 # for list-sidebar layout
 sidebar: 
