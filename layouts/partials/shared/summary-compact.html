@@ -2,7 +2,7 @@
 {{ $section := $page.CurrentSection }}     <!--save branch section-->
 {{ $root := .Scratch.Get "$root" }}     <!--save root section-->
 <!--each article is a row-->
-<article class="pt4">
+<article class="pt4 w-100">
 
   <!--if show_post_thumbnail is TRUE in root-->
   {{ if $root.Params.show_post_thumbnail }}
@@ -15,14 +15,14 @@
   {{ $branch := ($section.Resources.ByType "image").GetMatch "*feature*" }}
   {{- $thumbnail := cond (ne $thumbnail nil) $thumbnail $branch -}}
   <div class="flex flex-column flex-row-ns mb3 mb4-l">
-    <figure class="mr3-ns ma0 mb2 mb0-l w-100 w-20-ns">
+    <figure class="mr3-ns ma0 mb2 mb0-l w-100 w-30-ns">
       <a href="{{ .RelPermalink }}" class="db">
         {{ with $thumbnail }}
           <img src="{{ .RelPermalink | absURL }}" class="db ma0 dim" alt="">
         {{ end }}
       </a>
     </figure>
-    <div class="flex flex-column w-100 w-80-ns pl3-ns">
+    <div class="flex flex-column w-100 w-70-ns pl3-ns">
       <header class="w-100">
         <h1 class="f4 mv1 lh-title underline"><a href="{{ .RelPermalink }}" class="db">{{ .Title | markdownify }}</a></h1>
         {{ range first 1 (.GetTerms "series") }}
