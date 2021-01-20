@@ -1,53 +1,43 @@
-<div class="flex flex-wrap pt5">
+<section class="event-details cf pt5-ns pt4">
   {{ with .Params.excerpt }}
-  <div class="flex flex-row" style="flex-basis: 100%;">
-    <div class="pv2 mr2 w-20">
-      <h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy ">Abstract</h5>
-    </div>
-    <div class="pv2 mr2 flex-grow-1">
-      <p class="f5 measure lh-copy mv0">{{ . }}</p>
-    </div>
+  <div class="first-column">
+    <h5 class="row-label">Abstract</h5>
+  </div>
+  <div class="second-column">
+    <p class="row-details">{{ . }}</p>
   </div>
   {{ end }}
   {{ if .Date }}
-  <div class="flex flex-row" style="flex-basis: 100%;">
-    <div class="pv2 mr2 w-20">
-      <h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy ">Date</h5>
-    </div>
-    <div class="pv2 mr2 flex-grow-1">
-      <p class="f5 measure lh-copy mv0">{{ partial "shared/date-range.html" . }}</p>
-    </div>
+  <div class="first-column">
+    <h5 class="row-label">Date</h5>
   </div>
-  <div class="flex flex-row" style="flex-basis: 100%;">
-    <div class="pv2 mr2 w-20">
-      <h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy">Time</h5>
-    </div>
-    <div class="pv2 mr2 flex-grow-1">
-      <p class="f5 measure lh-copy mv0">{{ partial "shared/time-range.html" . }}</p>
-    </div>
+  <div class="second-column">
+    <p class="row-details">{{ partial "shared/date-range.html" . }}</p>
+  </div>
+  <div class="first-column">
+    <h5 class="row-label">Time</h5>
+  </div>
+  <div class="second-column">
+    <p class="row-details">{{ partial "shared/time-range.html" . }}</p>
   </div>
   {{ end }}
   {{ with .Params.location }}
-  <div class="flex flex-row" style="flex-basis: 100%;">
-    <div class="pv2 mr2 w-20">
-      <h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy">Location</h5>
-    </div>
-    <div class="pv2 mr2 flex-grow-1">
-      <p class="f5 measure lh-copy mv0">{{ . }}</p>
-    </div>
+  <div class="first-column">
+    <h5 class="row-label">Location</h5>
+  </div>
+  <div class="second-column">
+    <p class="row-details">{{ . }}</p>
   </div>
   {{ end }}
   {{ if .Params.event }}
-  <div class="flex flex-row" style="flex-basis: 100%;">
-    <div class="pv2 mr2 w-20">
-      <h5 class="f-subheadline f5 fw2 ttu tracked pa0 ma0 lh-copy">Event</h5>
-    </div>
-    <div class="pv2 mr2 flex-grow-1">
-      <p class="f5 measure lh-copy mv0">
+  <div class="first-column">
+    <h5 class="row-label">Event</h5>
+  </div>
+  <div class="second-column">
+      <p class="row-details">
         {{ with .Params.event_url }}<a href="{{ . | safeHTML }}" target="_blank">{{ end }}
           {{ .Params.event }}{{ if .Params.event_url }}</a>{{ end }}
       </p>
-    </div>
-  {{ end }}
   </div>
-</div>
+  {{ end }}
+</section>
