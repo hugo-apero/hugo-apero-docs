@@ -49,7 +49,7 @@ enableEmoji = true
   # alternatively, use a built-in font-family
   # serif options: Bitter / EB Garamond / Fraunces
   # sans-serif options: Commissioner / Metropolis / Sarabun
-  customtextFontFamily = "Sarabun"
+  customtextFontFamily = "Commissioner"
   customheadingFontFamily = "Fraunces"
   
   # use a built-in color theme
