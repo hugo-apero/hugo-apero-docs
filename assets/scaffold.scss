@@ -212,7 +212,7 @@ form {
   @extend .w-100 ;
 
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: repeat(3, auto);
   grid-auto-flow: dense;
   grid-gap: 0px;
