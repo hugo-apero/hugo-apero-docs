@@ -477,7 +477,8 @@ nav#SectionTableOfContents ul li {
 }
 
 nav#SectionTableOfContents ul details {
-  @extend .pl0, .pv1, .mv0;
+  @extend .pv1, .mv0, .pr0;
+  padding-left: 1.25rem;
   summary { @extend .#{$sidebarLinkColor}, .pb2; }
   li { @extend .pl0; }
 }
