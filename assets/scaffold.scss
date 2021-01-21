@@ -78,6 +78,8 @@ h1, h2, h3, h4, h5, h6 {
   h4 { @extend .f4 ; }
   h5 { @extend .f5 ; }
   h6 { @extend .f6 ; }
+  
+  h2 { @extend .pt5 ; }
 
   > p { @extend .lh-copy ; }
 
