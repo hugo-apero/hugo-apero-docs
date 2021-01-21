@@ -359,12 +359,14 @@ a > svg.anchor-symbol:hover {
 // Position page and series TOC
 
 nav#TableOfContents ul,
-nav#SeriesTableOfContents ul {
+nav#SeriesTableOfContents ul,
+nav#SectionTableOfContents ul {
   @extend .list, .pa0;
 }
 
 nav#TableOfContents ul li,
-nav#SeriesTableOfContents ul li {
+nav#SeriesTableOfContents ul li,
+nav#SectionTableOfContents ul li {
   @extend .lh-copy, .pl2, .pv1;
 }
 
@@ -378,16 +380,16 @@ details#PageTableOfContents summary {
 
 // Show active page in series
 
-nav#SeriesTableOfContents ul li.active {
-  @extend .bg-#{$siteBgColor};
-}
-
-nav#SeriesTableOfContents ul li:not(.active) {
-  @extend .hover-bg-#{$buttonHoverBgColor}, .hover-#{$buttonHoverTextColor};
-}
-
-nav#SeriesTableOfContents ul li:hover:not(.active) a {
-  @extend .#{$buttonTextColor};
+nav#SeriesTableOfContents ul li {
+  &.active {
+    @extend .bg-#{$siteBgColor};
+  }
+  &:not(.active) {
+    @extend .hover-bg-#{$buttonHoverBgColor}, .hover-#{$buttonHoverTextColor};
+  }
+  &:hover:not(.active) a {
+    @extend .#{$buttonTextColor};
+  }
 }
 
 details#PageTableOfContents nav#TableOfContents ul li:hover {
@@ -457,6 +459,27 @@ article footer a.btn-links {
       @extend .f5, .measure, .lh-copy, .mv0;
     }
   }
+}
+
+// Collections: section table of contents
+
+nav#SectionTableOfContents ul li {
+  @extend .pl2, .bl, .bw2, .b--transparent;
+  &.active {
+    @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw2;
+  }
+  &:not(.active) {
+    @extend .pl3, .dim, .bl, .bw2, .b--transparent;
+  }
+  &:hover:not(.active) a {
+    @extend .#{$headlineColor}, .b--#{$borderColor};
+  }
+}
+
+nav#SectionTableOfContents ul details {
+  @extend .pl0, .pv1, .mv0;
+  summary { @extend .#{$sidebarLinkColor}, .pb2; }
+  li { @extend .pl0; }
 }
 
 // Fontawesome icons
