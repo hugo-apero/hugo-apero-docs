@@ -3,11 +3,11 @@
 
 {{ $series_toc_label := .Params.sidebar.text_series_label | default "In this series" }}
 {{ $page_toc_label := .Params.sidebar.text_contents_label | default "On this page" }}
-<div class="flex items-start sticky ph4 pb4">
-  <div class="w-50 ph0">
-    <h2 class="mt3 mb3 f5 fw7 ttu tracked">
+<div class="flex items-start sticky ph4 pb4 flex-row">
+  <div class="w-50-ns w-100 ph0">
+    <h2 class="mb3 f5 fw7 ttu tracked">
       <a class="no-underline dim" href="{{ $section.RelPermalink }}">{{ $series_toc_label }}</a></h2>
-    <nav id="SectionTableOfContents">
+    <nav id="SectionTableOfContents" aria-label="SectionTableOfContents">
         <ul>
         {{ range $index, $element := $section.Pages }}
           {{ $active := eq $element.RelPermalink $page.RelPermalink }}
