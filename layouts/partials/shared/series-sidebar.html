@@ -19,7 +19,7 @@
   {{ $headers := findRE "<h[2].*>" $page.Content }}
   {{- $has_headers := ge (len $headers) 1 -}}
   {{- if $has_headers -}}
-  <details id="PageTableOfContents">
+  <details open id="PageTableOfContents">
     <summary>{{ $page_toc_label }}</summary>
     <div class="pl2 pr0 mh0">
     {{ $page.TableOfContents }}
