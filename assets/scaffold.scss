@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     cite { @extend .f6, .i ; }
   }
 
-  ul, ol, dl { @extend .measure, .lh-copy ; }
+  ul, ol, dl { @extend .measure-wide, .lh-copy ; }
   > dl dt { @extend .pl3, .b, .mb2 ; }
 
   hr { @extend .mv4, .ba, .b--#{$borderColor} ; }
