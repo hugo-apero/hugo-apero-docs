@@ -6,14 +6,17 @@
       {{ partial "shared/breadcrumb.html" . }}
     {{ end }}
     {{ $paginator := .Paginate (where .Pages "Type" "collection").ByWeight }}
-      {{range $paginator.Pages }}
+      {{ range $paginator.Pages }}
+      {{ .Sections }}
+      {{ .RegularPages }}
         {{ .Scratch.Set "$root" $caller }}
-        {{ partial "shared/summary.html" . }}
+        {{ partial "shared/summary-section.html" . }}
       {{ end }}
     {{ partial "shared/list-pagination.html" . }}
   </section>
 </main>
 <aside class="page-sidebar" role="complementary">
   {{ partial "shared/sidebar-scaffold.html" . }}
+  {{ partial "shared/section-sidebar.html" . }}
 </aside>
 {{ end }}
