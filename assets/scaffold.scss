@@ -78,6 +78,9 @@ h1, h2, h3, h4, h5, h6 {
   h4 { @extend .f4 ; }
   h5 { @extend .f5 ; }
   h6 { @extend .f6 ; }
+  
+  // make room for headroom.js
+  h2 { @extend .pt5 ; }
 
   > p { @extend .lh-copy ; }
 
@@ -92,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     cite { @extend .f6, .i ; }
   }
 
-  ul, ol, dl { @extend .measure, .lh-copy ; }
+  ul, ol, dl { @extend .measure-wide, .lh-copy ; }
   > dl dt { @extend .pl3, .b, .mb2 ; }
 
   hr { @extend .mv4, .ba, .b--#{$borderColor} ; }
@@ -359,12 +362,14 @@ a > svg.anchor-symbol:hover {
 // Position page and series TOC
 
 nav#TableOfContents ul,
-nav#SeriesTableOfContents ul {
+nav#SeriesTableOfContents ul,
+nav#SectionTableOfContents ul {
   @extend .list, .pa0;
 }
 
 nav#TableOfContents ul li,
-nav#SeriesTableOfContents ul li {
+nav#SeriesTableOfContents ul li,
+nav#SectionTableOfContents ul li {
   @extend .lh-copy, .pl2, .pv1;
 }
 
@@ -378,16 +383,16 @@ details#PageTableOfContents summary {
 
 // Show active page in series
 
-nav#SeriesTableOfContents ul li.active {
-  @extend .bg-#{$siteBgColor};
-}
-
-nav#SeriesTableOfContents ul li:not(.active) {
-  @extend .hover-bg-#{$buttonHoverBgColor}, .hover-#{$buttonHoverTextColor};
-}
-
-nav#SeriesTableOfContents ul li:hover:not(.active) a {
-  @extend .#{$buttonTextColor};
+nav#SeriesTableOfContents ul li {
+  &.active {
+    @extend .bg-#{$siteBgColor};
+  }
+  &:not(.active) {
+    @extend .hover-bg-#{$buttonHoverBgColor}, .hover-#{$buttonHoverTextColor};
+  }
+  &:hover:not(.active) a {
+    @extend .#{$buttonTextColor};
+  }
 }
 
 details#PageTableOfContents nav#TableOfContents ul li:hover {
@@ -457,6 +462,43 @@ article footer a.btn-links {
       @extend .f5, .measure, .lh-copy, .mv0;
     }
   }
+}
+
+// Collections: section table of contents
+
+nav#SectionTableOfContents ul li {
+  @extend .pl2, .bl, .bw2, .b--transparent;
+  &.active {
+    @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw2;
+  }
+  &:not(.active) {
+    @extend .pl3, .dim, .bl, .bw2, .b--transparent;
+  }
+  &:hover:not(.active) a {
+    @extend .#{$headlineColor}, .b--#{$borderColor};
+  }
+}
+
+nav#SectionTableOfContents ul details {
+  @extend .pv1, .mv0, .pr0;
+  padding-left: 1.25rem;
+  &.active {
+    @extend .b--#{$borderColor}, .bl, .bw2, .pl3;
+  }
+  summary { 
+    @extend .#{$sidebarLinkColor}, .pb2; 
+  }
+  li { 
+    @extend .pl0; 
+    &.active {
+      @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--transparent, .bw2;
+    }
+  }
+}
+
+.list-sidebar ul li::marker,
+.list ul li::marker{
+  @extend .#{$headingColor}, .f5;
 }
 
 // Fontawesome icons
