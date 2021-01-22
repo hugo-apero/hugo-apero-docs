@@ -30,7 +30,7 @@
       {{ with .Params.excerpt }}<p class="f6 lh-copy mv2 flex-auto">{{ . | markdownify }}</p>{{ end }}
       {{ if .Pages }}
       <!-- Ranges through content/posts/*.md -->
-      <h2 class="f5 ttu tracked mb0 pb0">In this section:</h2>
+      <h2 class="f5 ttu tracked mv2 pb0">In this section:</h2>
       <ul class="pa0 ml3 mv0">
       {{ range .RegularPages.ByWeight }}
         <li class="pl2"><p class="lh-solid measure-wide"><a class="" href="{{ .Permalink }}">{{ .Title }}</a>{{ with .Params.subtitle }}: {{ . | markdownify }}{{ end }}</p></li>
@@ -57,7 +57,7 @@
       {{ with .Params.excerpt }}<p class="f6 lh-copy mv2 flex-auto">{{ . | markdownify }}</p>{{ end }}
       {{ if .Pages }}
       <!-- Ranges through content/posts/*.md -->
-      <h2 class="f5 ttu tracked mb0 pb0">In this section:</h2>
+      <h2 class="f5 ttu tracked mv2 pb0">In this section:</h2>
       <ul class="pa0 ml3 mv0">
       {{ range .RegularPages.ByWeight }}
         <li class="pl2"><p class="lh-solid measure-wide"><a class="" href="{{ .Permalink }}">{{ .Title }}</a>{{ with .Params.subtitle }}: {{ . | markdownify }}{{ end }}</p></li>
