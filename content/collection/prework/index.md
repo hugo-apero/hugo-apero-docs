@@ -1,9 +1,8 @@
 ---
 title: "Prework"
-layout: single-series
 weight: 1
 subtitle: ""
-excerpt: "Grid is the very first CSS module created specifically to solve the layout problems we’ve all been hacking our way around for as long as we’ve been making websites."
+excerpt: "How to prepare ahead of time."
 date: 2021-01-01
 draft: false
 ---
@@ -12,7 +11,7 @@ Welcome to the [Introducing Yourself Online](/) workshop! We look forward to mee
 
 ## Set up RStudio Cloud
 
-Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. I recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember).
+Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. I recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember). I want you to be able to work from your own laptop in this workshop, but Cloud is an important back-up plan should you run into troubles.
 
 ## Set up GitHub
 
@@ -34,14 +33,39 @@ Please bring a laptop that has the following installed:
 
 + A recent version of R (>=3.6.0), which is available for free at https://cloud.r-project.org/
     
-+ A recent version of RStudio Desktop (>=1.4), available for free ([RStudio Desktop Open Source License](https://www.rstudio.com/products/rstudio/download/#download))
++ A recent version of RStudio Desktop (>=1.4), available for free ([RStudio Desktop Open Source License](https://www.rstudio.com/products/rstudio/download/#download)). Read up on the latest version [here](https://blog.rstudio.com/2021/01/19/announcing-rstudio-1-4/).
     
 + The R packages we will use, which you can install by connecting to the internet, opening RStudio, and running at the command line:
 
     ```
-    install.packages(c("rmarkdown", "usethis", 
-                        "distill", "postcards", "blogdown"))
+    > install.packages(c("usethis", "remotes", "distill", 
+                       "postcards", "blogdown"))
     ```
     
+    You'll also need to install the development version of the `rmarkdown` package:
+    
+    ```
+    > remotes::install_github("rmarkdown")
+    ```
 
-On the day of the workshop, I'll provide you with an RStudio Cloud project that contains all of the course materials. We will use the software listed above only as an important backup should you experience any problems with your local setup.
+## Install Hugo
+
+To use blogdown, please install Hugo:
+```
+> blogdown::install_hugo()
+```
+
+And ensure your current version is at least as high as:
+```
+> hugo_version()
+[1] ‘0.79.0’
+```
+
+## Check pandoc
+
+The RStudio IDE bundles an updated version of pandoc- if you did install v1.4 of the IDE, you should be all set!
+
+```
+> rmarkdown::pandoc_version()
+[1] ‘2.11.3’
+```

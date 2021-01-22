@@ -114,36 +114,20 @@ You should be committing this files:
 
 Easy: 
 
-+ push, publish to GitHub pages
++ Push, publish to GitHub pages
 https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site
-+ drag and drop into netlify
 
 Medium:
 
 ```
 > use_github_pages(branch = "main", path = "/")
+✓ Setting active project to '/Users/alison/rscratch/global-postcard'
 ✓ Activating GitHub Pages for 'apreshill/global-postcard'
 ✓ GitHub Pages is publishing from:
 ● URL: 'https://apreshill.github.io/global-postcard/'
 ● Branch: 'main'
 ● Path: '/'
 ```
-
-:rotating_light: DANGER :rotating_light: Advanced:
-
-```
-use_github_action("render-rmarkdown")
-✓ Setting active project to '/Users/alison/rscratch/global-postcard'
-✓ Creating '.github/'
-✓ Adding '^\\.github$' to '.Rbuildignore'
-✓ Adding '*.html' to '.github/.gitignore'
-✓ Creating '.github/workflows/'
-✓ Writing '.github/workflows/render-rmarkdown.yaml'
-```
-
-Delete your `index.html` file now, then add the postcards package, then commit and push.
-
-Make a change- anything- in your `.Rmd` file and push! Watch the action build your Rmd.
 
 ## Share your postcard!
 
