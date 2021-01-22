@@ -32,8 +32,8 @@
       <!-- Ranges through content/posts/*.md -->
       <h2 class="f5 ttu tracked mb0 pb0">In this section:</h2>
       <ul class="pa0 ml3 mv0">
-      {{ range first 5 .RegularPages.ByWeight }}
-        <li class="pl2"><p class="lh-copy measure-wide"><a class="" href="{{ .Permalink }}">{{ .Title }}</a>{{ with .Params.subtitle }}: {{ . | markdownify }}{{ end }}</p></li>
+      {{ range .RegularPages.ByWeight }}
+        <li class="pl2"><p class="lh-solid measure-wide"><a class="" href="{{ .Permalink }}">{{ .Title }}</a>{{ with .Params.subtitle }}: {{ . | markdownify }}{{ end }}</p></li>
       {{ end }}
       </ul>
       {{ end }}
@@ -59,8 +59,8 @@
       <!-- Ranges through content/posts/*.md -->
       <h2 class="f5 ttu tracked mb0 pb0">In this section:</h2>
       <ul class="pa0 ml3 mv0">
-      {{ range first 5 .RegularPages.ByWeight }}
-        <li class="pl2"><p class="lh-copy measure-wide"><a class="" href="{{ .Permalink }}">{{ .Title }}</a>: {{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}</p></li>
+      {{ range .RegularPages.ByWeight }}
+        <li class="pl2"><p class="lh-solid measure-wide"><a class="" href="{{ .Permalink }}">{{ .Title }}</a>{{ with .Params.subtitle }}: {{ . | markdownify }}{{ end }}</p></li>
       {{ end }}
       </ul>
       {{ end }}
