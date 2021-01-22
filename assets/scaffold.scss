@@ -486,7 +486,8 @@ nav#SectionTableOfContents ul details {
   li { @extend .pl0; }
 }
 
-.list-sidebar ul li::marker {
+.list-sidebar ul li::marker,
+.list ul li::marker{
   @extend .#{$headingColor}, .f5;
 }
 
