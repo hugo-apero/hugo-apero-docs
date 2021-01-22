@@ -25,6 +25,6 @@ cascade:
     text_link_label: ""
     text_link_url: ""
     show_sidebar_adunit: true # show ad container, first page only
-    text_series_label: "In this workshop" 
+    text_series_label: "Contents" 
     text_contents_label: "On this page" 
 ---
