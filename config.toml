@@ -1,22 +1,23 @@
-baseURL = "/"
+baseURL = "https://cranky-lalande-e3373f.netlify.app/"
 languageCode = "en"
 title = "Blogophonic"
-author = "Formspree"
-description = "A modern, beautiful, and easily configurable blog theme for Hugo."
+author = "Hi there"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
 disqusShortname = ""
 metaDataFormat = "yaml"
 footnoteReturnLinkContents = "&#8617;" # ↩
 # set deliberately low for testing choose your preffered number based on the blog layout you've chosen
-paginate = 3
+paginate = 5
 preserveTaxonomyNames = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
+enableEmoji = true
 
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark.renderer]
     unsafe = true  # Enable user to embed HTML snippets in Markdown content.
+    hardwraps = false 
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 2
@@ -31,13 +32,34 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
 [params]
   orgName = "RStudio"
   orgLocal = "Anywhere"
+  description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/favicon.ico?v=0"
   logo = "/img/blogophonic-mark-dark.png"
+  mainSections = ["blog", "project", "talk"]
   show_social_links = true
-  # font options: sans-serif or serif
+  navallcaps = true
+  # Default image for social sharing and search engines. 
+  # Place image file in `static` folder and specify image name here.
+  sharing_image = "/img/papillons.jpg"
+  # Twitter username (without @). Used when a visitor shares your site on Twitter.
+  twitter = "apreshill"
+  
+  # basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
   textFontFamily = "sans-serif"
   headingFontFamily = "sans-serif"
+  # alternatively, use a built-in font-family
+  # serif options: Fraunces / EB Garamond / Bitter
+  # sans-serif options: Commissioner / Alegreya Sans / Metropolis
+  customtextFontFamily = "Commissioner"
+  customheadingFontFamily = "Fraunces"
+  
+  # use a built-in color theme
+  # one of: forest / grayscale / peach / plum /
+  #         poppy / sky / violet / water
+  theme = "sky"
+  
+  # or, leave theme empty & make your own palette
   # basic color options: use only color names as shown in the
   # "Color Palette" section of http://tachyons.io/docs/themes/skins/
   siteBgColor = "near-white"
@@ -55,6 +77,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
   buttonHoverTextColor = "white"
   buttonHoverBgColor = "blue"
   borderColor = "moon-gray"
+  
   # show/hide social icons in site header/footer/home page
   socialInHeader = false
   socialInFooter = true
@@ -82,7 +105,17 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
     url = "/project/"
     weight = 3
   [[menu.header]]
+    name = "Talks"
+    title = "Talks"
+    url = "/talk/"
+    weight = 4
+  [[menu.header]]
+    name = "Collections"
+    title = "Tutorials"
+    url = "/collection/"
+    weight = 5
+  [[menu.header]]
     name = "Elements"
     title = "Element Page"
     url = "/elements/"
-    weight = 4
+    weight = 6

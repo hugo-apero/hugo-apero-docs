@@ -28,16 +28,12 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 
 // colors set in data/theme.yaml
 // one of: forest / grayscale / peach / poppy / sky / violet / water
-{{ with $.Site.Data.theme.colors.theme }}
+{{ with $.Site.Params.theme }}
 @import '{{ printf "theme/%s" . | default "sky" }}';
 {{ end }}
 
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
 @import 'headroom';
-
-// uncomment the import below to activate custom-fonts
-// add your own fonts at the top of the imported file
-// @import 'custom-fonts';
 
 // apply tachyons font family and color options from config
 body {
@@ -57,7 +53,8 @@ h1, h2, h3, h4, h5, h6 {
 .site-brand,
 .site-links a,
 .site-header .social-icon-links a,
-.site-footer .social-icon-links a {
+.site-footer .social-icon-links a,
+.page-main a.link {
   @extend .#{$navLinkColor};
 }
 .page-main a:not(.link),
@@ -74,8 +71,9 @@ h1, h2, h3, h4, h5, h6 {
   @extend .#{$footerTextColor};
 }
 
-// apply tachyons classes to blog post markdown
-.post-body {
+// apply tachyons classes to blog post and single page markdown
+.post-body,
+.page-body {
 
   h1, h2, h3, h4, h5, h6 { @extend .lh-title ; }
   h1 { @extend .f1 ; }
@@ -84,6 +82,9 @@ h1, h2, h3, h4, h5, h6 {
   h4 { @extend .f4 ; }
   h5 { @extend .f5 ; }
   h6 { @extend .f6 ; }
+  
+  // make room for headroom.js
+  h2 { @extend .pt5 ; }
 
   > p { @extend .lh-copy ; }
 
@@ -98,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
     cite { @extend .f6, .i ; }
   }
 
-  ul, ol, dl { @extend .measure, .lh-copy ; }
+  ul, ol, dl { @extend .measure-wide, .lh-copy ; }
   > dl dt { @extend .pl3, .b, .mb2 ; }
 
   hr { @extend .mv4, .ba, .b--#{$borderColor} ; }
@@ -122,9 +123,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// apply tachyons classes to blog lists
+// apply tachyons classes to blog lists 
 .blog-content {
   article { @extend .b--#{$borderColor} ; }
+ .group-content { @extend .b--#{$borderColor} ; }
 }
 .list-sidebar {
   article:first-of-type {
@@ -135,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 // make the ad unit sticky and pad details
 .page-sidebar {
   .ad-unit {
-    @extend .bg-#{$sidebarBgColor}, .top-0 ;
+    @extend .bg-#{$sidebarBgColor}, .top-0;
     position: -webkit-sticky;
     position: sticky;
   }
@@ -202,20 +204,22 @@ form {
 // home page action jackson
 .home {
   .action.button {
-    @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .b--transparent, .link, .pointer, .bg-animate, .#{$buttonTextColor}, .hover-#{$buttonHoverTextColor}, .bg-#{$buttonBgColor}, .hover-bg-#{$buttonHoverBgColor} ;
+    @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .link, .pointer, .bg-animate, .b--transparent, .#{$headlineColor}, .bg-#{$sidebarBgColor}, .hover-bg-#{$buttonHoverBgColor} ;
+  }
+  a.action.button:hover {
+  @extend .#{$buttonTextColor};
   }
   .action.text {
     @extend .db, .mb4, .ttu, .tracked, .b, .link ;
   }
 }
 
-
 // CSS GRID SCAFFOLD
 .grid-container {
   @extend .w-100 ;
 
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: repeat(3, auto);
   grid-auto-flow: dense;
   grid-gap: 0px;
@@ -248,6 +252,15 @@ form {
     grid-column: 5 / 7;
   }
 }
+.single-series {
+  .page-sidebar {
+    grid-column: 1 / 3;
+  }
+  .page-main {
+    grid-column: 3 / 7;
+  }
+
+}
 
 // SCAFFOLD MEDIA QUERY
 @media screen and (max-width: 768px) {
@@ -279,6 +292,18 @@ form {
     .page-main,
     .page-sidebar {
       grid-column: 1 / 7;
+    }
+  }
+  .single-series {
+    .page-main,
+    .page-sidebar {
+      grid-column: 1 / 7;
+    }
+    .page-main {
+      order: 3;
+    }
+    .page-sidebar {
+      order: 2;
     }
   }
 }
@@ -320,29 +345,164 @@ a > svg.anchor-symbol:hover {
   width: 0%;
   content: '.'; /* make invisible, dot beneath links */
   color: transparent;
-  background: lighten( $navLinkColorCustom, 10% );
-  height: .08rem;
+  background: $navLinkColorCustom;
+  height: .08em;
+  pointer-events: none;
 }
 
 .site-links a:hover:after {
-  width: 84%;
+  width: 85%;
 }
 
 .site-links a.active:after {
   width: 85%;  
   color: transparent;
-  background: lighten( $navLinkColorCustom, 10% );
-  height: .08rem;
+  background: $navLinkColorCustom;
+  height: .08em;
 }
 
-// TOC
+// TOCs
 
-nav#TableOfContents ul {
+// Position page and series TOC
+
+nav#TableOfContents ul,
+nav#SeriesTableOfContents ul,
+nav#SectionTableOfContents ul {
   @extend .list, .pa0;
 }
 
-nav#TableOfContents ul li {
-  @extend .lh-copy, .dim;
+nav#TableOfContents ul li,
+nav#SeriesTableOfContents ul li,
+nav#SectionTableOfContents ul li {
+  @extend .lh-copy, .pl2, .pv1;
+}
+
+details#PageTableOfContents {
+  @extend .mt3, .pl2, .pr0, .ml0, .mr2, .w-50;
+}
+
+details#PageTableOfContents summary {
+  @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked, .#{$sidebarLinkColor};
+}
+
+// Show active page in series
+
+nav#SeriesTableOfContents ul li {
+  &.active {
+    @extend .bg-#{$siteBgColor};
+  }
+  &:not(.active) {
+    @extend .hover-bg-#{$buttonHoverBgColor}, .hover-#{$buttonHoverTextColor};
+  }
+  &:hover:not(.active) a {
+    @extend .#{$buttonTextColor};
+  }
+}
+
+details#PageTableOfContents nav#TableOfContents ul li:hover {
+  @extend .bg-#{$siteBgColor};
+}
+
+// stickies should make room for headroom to peek down
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  @extend .static-l, .top-0-l, .pt5;
+}
+
+.about-sidebar {
+  @extend .self-start, .sticky, .bg-#{$sidebarBgColor}, .#{$sidebarTextColor};
+}
+.about-sidebar a:not(.link) {
+  @extend .#{$sidebarLinkColor};
+}
+
+@media screen and (max-width: 768px) {
+  .about-sidebar {
+    order: 1;
+  }
+}
+
+audio {
+  filter: sepia(0%) saturate(0%) grayscale(1) contrast(99%) invert(100%);
+  width: 8rem;
+  height: 2rem;
+}
+.controls button:hover, 
+.controls button:focus {
+  @extend .o-10;
+}
+
+// apply tachyons classes to about page lists 
+.featured-content h5,
+.featured-content article {
+  @extend .b--#{$borderColor} ; 
+}
+
+// button links in single page headers + listing page footers
+.post-header a.btn-links,
+article footer a.btn-links {
+    @extend .fw4, .ph3, .pv2, .mb3, .f6, .ttu, .tracked, .b, .br0, .link, .pointer, .bg-animate, .#{$headingColor}, .hover-#{$buttonHoverTextColor}, .bg-transparent, .hover-bg-#{$buttonHoverBgColor};
+}
+
+// dividers for talks
+.middot-divider::after {
+	content: '\00B7';
+	@extend .mh1, .#{$headingColor};
+}
+
+// Responsive table to hold event details
+
+.event-details {
+  .first-column {
+    @extend .fl, .w-100, .pv2, .w-25-ns;
+    .row-label {
+      @extend .f-subheadline, .f5, .fw2, .ttu, .tracked, .pa0, .ma0, .lh-copy;
+    }
+  }
+  .second-column {
+    @extend .fl, .w-100, .pv2, .w-75-ns;
+    .row-details {
+      @extend .f5, .measure, .lh-copy, .mv0;
+    }
+  }
+}
+
+// Collections: section table of contents
+
+nav#SectionTableOfContents ul li {
+  @extend .pl2, .bl, .bw2, .b--transparent;
+  &.active {
+    @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw2;
+  }
+  &:not(.active) {
+    @extend .pl3, .dim, .bl, .bw2, .b--transparent;
+  }
+  &:hover:not(.active) a {
+    @extend .#{$headlineColor}, .b--#{$borderColor};
+  }
+}
+
+nav#SectionTableOfContents ul details {
+  @extend .pv1, .mv0, .pr0;
+  padding-left: 1.25rem;
+  &.active {
+    @extend .b--#{$borderColor}, .bl, .bw2, .pl3;
+  }
+  summary { 
+    @extend .#{$sidebarLinkColor}, .pb2; 
+  }
+  li { 
+    @extend .pl0; 
+    &.active {
+      @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--transparent, .bw2;
+    }
+  }
+}
+
+.list-sidebar ul li::marker,
+.list ul li::marker{
+  @extend .#{$headingColor}, .f5;
 }
 
 // Add padding around code blocks
