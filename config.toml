@@ -108,8 +108,8 @@ enableEmoji = true
     url = "/talk/"
     weight = 4
   [[menu.header]]
-    name = "Collections"
-    title = "Tutorials"
+    name = "A collection"
+    title = "A collection"
     url = "/collection/"
     weight = 5
   [[menu.header]]

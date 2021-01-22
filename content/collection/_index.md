@@ -1,8 +1,10 @@
 ---
-title: "Introduce yourself online"
-subtitle: "Materials for the workshop given at rstudio::global(2021)."
+title: "Create a Collection"
+subtitle: "A collection, minus the blog."
 description: |
-  This workshop will be hands-on and in-person, although you may always come back to these materials on your own.
+  Sometimes you want a souped-up series- a bundle of related pages 
+  meant to be read in sequence. This section is like a blog series, 
+  minus the blog.
 author: Alison Hill
 show_post_thumbnail: true
 show_author_byline: false
@@ -14,7 +16,7 @@ layout: list-sidebar # list, list-sidebar
 cascade:
   layout: single-series 
   sidebar:
-    title: "Introduce yourself online"
+    title: "Create a Collection"
     author: Alison Hill
     description: |
       Sometimes you want a souped-up series- a bundle of related pages 

@@ -7,7 +7,7 @@
         {{ partial "shared/breadcrumb.html" . }}
         {{ if .Pages }}
         <h1 class="i fw1 f1 tc mb0">{{ .Title }}</h1>
-        {{ with .Params.subtitle }}<h2 class="pb4 mt2 f4 fw4 ttu tracked bb tc">{{ . }}</h2>{{ end }}
+        {{ with .Params.subtitle }}<h2 class="pb4 mt2 f4 fw4 ttu tracked bb bw1 tc">{{ . }}</h2>{{ end }}
         {{ else }}
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">{{ .Title }}</h1>
         {{ with .Params.subtitle }}<h4 class="f4 mt0 mb4 lh-title measure">{{ . }}</h4>{{ end }}
