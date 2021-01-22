@@ -16,7 +16,7 @@
             <a href="{{ $element.Permalink }}">{{ $element.LinkTitle }}</a></li>
           {{ else }}
           {{ $active := eq $element.RelPermalink $page.CurrentSection.RelPermalink }}
-          <details {{ if $active }}open{{ end }}>
+          <details {{ if $active }}open{{ end }} class="{{ if $active }}active{{ end }}">
             <summary class="{{ if $active }}active{{ end }}" hugo-nav="{{ $element.RelPermalink }}"><a href="{{ $element.Permalink }}">{{ $element.LinkTitle }}</a></summary>
             {{ range $element.Pages }}
               {{ $active := eq .RelPermalink $page.RelPermalink }}

@@ -482,8 +482,18 @@ nav#SectionTableOfContents ul li {
 nav#SectionTableOfContents ul details {
   @extend .pv1, .mv0, .pr0;
   padding-left: 1.25rem;
-  summary { @extend .#{$sidebarLinkColor}, .pb2; }
-  li { @extend .pl0; }
+  &.active {
+    @extend .b--#{$borderColor}, .bl, .bw2, .pl3;
+  }
+  summary { 
+    @extend .#{$sidebarLinkColor}, .pb2; 
+  }
+  li { 
+    @extend .pl0; 
+    &.active {
+      @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--transparent, .bw2;
+    }
+  }
 }
 
 .list-sidebar ul li::marker,
