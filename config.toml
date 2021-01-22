@@ -1,7 +1,7 @@
-baseURL = "https://cranky-lalande-e3373f.netlify.app/"
+baseURL = "https://hugo-apero.netlify.app/"
 languageCode = "en"
-title = "Blogophonic"
-author = "Hi there"
+title = "Apéro"
+author = "Alison Hill"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
 disqusShortname = ""
@@ -110,8 +110,8 @@ enableEmoji = true
     url = "/talk/"
     weight = 4
   [[menu.header]]
-    name = "Collections"
-    title = "Tutorials"
+    name = "A collection"
+    title = "A collection"
     url = "/collection/"
     weight = 5
   [[menu.header]]

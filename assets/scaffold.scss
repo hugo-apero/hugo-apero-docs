@@ -433,9 +433,10 @@ audio {
   @extend .o-10;
 }
 
-// apply tachyons classes to about page lists 
+// apply tachyons classes to about page lists and collections
 .featured-content h5,
-.featured-content article {
+.featured-content article,
+.post-header h2 {
   @extend .b--#{$borderColor} ; 
 }
 
@@ -471,12 +472,12 @@ article footer a.btn-links {
 // Collections: section table of contents
 
 nav#SectionTableOfContents ul li {
-  @extend .pl2, .bl, .bw2, .b--transparent;
+  @extend .pl2, .bl, .bw1, .b--transparent;
   &.active {
-    @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw2;
+    @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw1;
   }
   &:not(.active) {
-    @extend .pl3, .dim, .bl, .bw2, .b--transparent;
+    @extend .pl3, .dim, .bl, .bw1, .b--transparent;
   }
   &:hover:not(.active) a {
     @extend .#{$headlineColor}, .b--#{$borderColor};
@@ -487,7 +488,7 @@ nav#SectionTableOfContents ul details {
   @extend .pv1, .mv0, .pr0;
   padding-left: 1.25rem;
   &.active {
-    @extend .b--#{$borderColor}, .bl, .bw2, .pl3;
+    @extend .b--#{$borderColor}, .bl, .bw1, .pl3;
   }
   summary { 
     @extend .#{$sidebarLinkColor}, .pb2; 
@@ -495,7 +496,7 @@ nav#SectionTableOfContents ul details {
   li { 
     @extend .pl0; 
     &.active {
-      @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--transparent, .bw2;
+      @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--transparent, .bw1;
     }
   }
 }
