@@ -1,19 +1,13 @@
 social:
 - icon: facebook-square
   icon_pack: fab
-  link: https://twitter.com/apreshill
+  link: https://www.facebook.com/hashtag/ap%C3%A9ro
 - icon: instagram
   icon_pack: fab
-  link: https://twitter.com/apreshill
+  link: https://www.instagram.com/explore/tags/apero
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/apreshill
-- icon: github
-  icon_pack: fab
-  link: https://github.com/apreshill
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/alisonpresmaneshill/
+  link: https://twitter.com/hashtag/apéro
 - icon: rss
   icon_pack: fas
   link: /blog/index.xml

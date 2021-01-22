@@ -1,7 +1,7 @@
 ---
 ## Configure sidebar content in narrow column
-author: "Emily Cooper"
-role: "Social media strategy @ Savoir"
+author: "Hugo Apéro"
+role: "A Hugo theme"
 avatar: avatar.jpg
 avatar_shape: rounded # circle, square, rounded
 show_social: true
