@@ -2,13 +2,8 @@
 {{ $caller := . }}
 <main class="page-main pa4 {{ .Kind }}" role="main">
   <section class="blog-content mw7 center">
-    {{ if not .Sections }}
-      {{ partial "shared/breadcrumb.html" . }}
-    {{ end }}
     {{ $paginator := .Paginate (where .Pages "Type" "collection").ByWeight }}
       {{ range $paginator.Pages }}
-      {{ .Sections }}
-      {{ .RegularPages }}
         {{ .Scratch.Set "$root" $caller }}
         {{ partial "shared/summary-section.html" . }}
       {{ end }}
@@ -16,7 +11,6 @@
   </section>
 </main>
 <aside class="page-sidebar" role="complementary">
-  {{ partial "shared/sidebar/sidebar-image.html" . }}
-  {{ partial "shared/section-sidebar.html" . }}
+  {{ partial "shared/sidebar-scaffold.html" . }}
 </aside>
 {{ end }}
