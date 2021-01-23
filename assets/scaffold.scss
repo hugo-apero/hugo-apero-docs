@@ -502,17 +502,14 @@ nav#SectionTableOfContents ul details {
   @extend .#{$headingColor}, .f5;
 }
 
-// Add padding around code blocks
-.highlight pre {
-  @extend .pa3, .pre;
-}
-
+// Style code
 pre {
-  @extend .pa3, .ba, .b--moon-gray, .bg-transparent;
+  @extend .pre, .br1, .pa3, .bg-transparent;
+  border: 1px solid #ebebeb;
 }
 
-pre code {
-  @extend .bg-transparent, .lh-copy;
+pre code span {
+	font-weight: normal !important;
 }
 
 // Fontawesome icons
