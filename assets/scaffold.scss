@@ -22,10 +22,6 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 // learn about Tachyons http://tachyons.io
 @import 'tachyons';
 
-// add chroma CSS for syntax highlighting
-// see: https://github.com/rstudio/hugo-graphite/commit/34f7f518377d7c394205366da1df7aeda9f7db01        
-@import 'chroma';
-
 // colors set in data/theme.yaml
 // one of: forest / grayscale / peach / poppy / sky / violet / water
 {{ with $.Site.Params.theme }}
@@ -512,11 +508,11 @@ nav#SectionTableOfContents ul details {
 }
 
 pre {
-  background: none;
+  @extend .pa3, .ba, .b--moon-gray, .bg-transparent;
 }
 
 pre code {
-  background: none;
+  @extend .bg-transparent, .lh-copy;
 }
 
 // Fontawesome icons
@@ -525,3 +521,6 @@ $fa-font-path:        "../webfonts";
 @import "fontawesome-free-5.15.1-web/scss/solid.scss";
 @import "fontawesome-free-5.15.1-web/scss/regular.scss";
 @import "fontawesome-free-5.15.1-web/scss/brands.scss";
+
+// import a custom css file in assets
+@import "custom";
