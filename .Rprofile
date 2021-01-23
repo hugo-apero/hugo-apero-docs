@@ -15,5 +15,5 @@ options(
   blogdown.hugo.server = c('--disableFastRender', '-D', '-F', '--navigateToChanged')
 )
 
-# fix Hugo version
+# pin Hugo version
 options(blogdown.hugo.version = "0.79.0")
