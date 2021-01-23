@@ -10,10 +10,6 @@ series:
 tags:
 categories:
 layout: single
-output:
-  blogdown::html_page:
-    toc: true
-    highlight: pygments
 ---
 
 ```{r}
