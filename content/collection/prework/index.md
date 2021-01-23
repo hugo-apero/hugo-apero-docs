@@ -37,26 +37,26 @@ Please bring a laptop that has the following installed:
     
 + The R packages we will use, which you can install by connecting to the internet, opening RStudio, and running at the command line:
 
-    ```
+    ```r
     > install.packages(c("usethis", "remotes", "distill", 
                        "postcards", "blogdown"))
     ```
     
     You'll also need to install the development version of the `rmarkdown` package:
     
-    ```
+    ```r
     > remotes::install_github("rmarkdown")
     ```
 
 ## Install Hugo
 
 To use blogdown, please install Hugo:
-```
+```r
 > blogdown::install_hugo()
 ```
 
 And ensure your current version is at least as high as:
-```
+```r
 > hugo_version()
 [1] ‘0.79.0’
 ```
@@ -65,7 +65,7 @@ And ensure your current version is at least as high as:
 
 The RStudio IDE bundles an updated version of pandoc- if you did install v1.4 of the IDE, you should be all set!
 
-```
+```r
 > rmarkdown::pandoc_version()
 [1] ‘2.11.3’
 ```
