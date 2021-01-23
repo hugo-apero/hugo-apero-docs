@@ -23,12 +23,9 @@ enableEmoji = true
     endLevel = 2
     ordered = false
   [markup.highlight]
-    # if false, need my own Chroma CSS
-    # but then code chunk background color is lost
-    noClasses = false
     # one of: https://xyproto.github.io/splash/docs/ 
-    style = "fruity"
-
+    style = "github"
+    
 [params]
   orgName = "RStudio"
   orgLocal = "Anywhere"
