@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   h6 { @extend .f6 ; }
   
   // make room for headroom.js
-  h2 { @extend .pt5 ; }
+  h2:not(.about-main) { @extend .pt5-l ; }
 
   > p { @extend .lh-copy ; }
 
