@@ -381,24 +381,6 @@ details#PageTableOfContents summary {
   @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked, .#{$sidebarLinkColor};
 }
 
-// Show active page in series
-
-nav#SeriesTableOfContents ul li {
-  &.active {
-    @extend .bg-#{$siteBgColor};
-  }
-  &:not(.active) {
-    @extend .hover-bg-#{$buttonHoverBgColor}, .hover-#{$buttonHoverTextColor};
-  }
-  &:hover:not(.active) a {
-    @extend .#{$buttonTextColor};
-  }
-}
-
-details#PageTableOfContents nav#TableOfContents ul li:hover {
-  @extend .bg-#{$siteBgColor};
-}
-
 // stickies should make room for headroom to peek down
 .sticky {
   position: -webkit-sticky;
@@ -465,9 +447,14 @@ article footer a.btn-links {
   }
 }
 
-// Collections: section table of contents
+// Series + collections table of contents
 
-nav#SectionTableOfContents ul li {
+details#PageTableOfContents nav#TableOfContents ul li:hover {
+  @extend .bg-#{$siteBgColor};
+}
+
+nav#SectionTableOfContents ul li,
+nav#SeriesTableOfContents ul li {
   @extend .pl2, .bl, .bw1, .b--transparent;
   &.active {
     @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw1;
