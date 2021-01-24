@@ -31,6 +31,10 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
 @import 'headroom';
 
+// add support for panelset from xaringanExtra package
+// written by Garrick Aden-Buie
+@import 'panelset';
+
 // apply tachyons font family and color options from config
 body {
   @extend .bg-#{$siteBgColor}, .#{$textFontFamily}, .#{$textColor};
@@ -95,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
     cite { @extend .f6, .i ; }
   }
 
-  ul, ol, dl { @extend .measure-wide, .lh-copy ; }
+  ul:not(.panel-tabs), ol, dl { @extend .measure-wide, .lh-copy ; }
   > dl dt { @extend .pl3, .b, .mb2 ; }
 
   hr { @extend .mv4, .ba, .b--#{$borderColor} ; }
