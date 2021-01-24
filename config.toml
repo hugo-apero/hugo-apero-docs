@@ -1,6 +1,6 @@
 baseURL = "https://hugo-apero.netlify.app/"
 languageCode = "en"
-title = "Apéro"
+title = "Hugo Apéro"
 author = "Alison Hill"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
