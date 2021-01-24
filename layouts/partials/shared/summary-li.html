@@ -32,12 +32,14 @@
           </figure>
         </div>
         
+        {{ if .Params.excerpt }}
         <div class="flex flex-column w-two-thirds-ns pl3-ns">
           <p class="measure lh-copy cf">
             {{ .Params.excerpt }}
             <a href="{{ .RelPermalink }}">Read more</a>
           </p>
         </div>
+        {{ end }}
     </article>
   {{ end }} <!--end range across grouped pages-->
   

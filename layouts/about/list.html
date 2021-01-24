@@ -27,7 +27,7 @@
         <div class="order-2 {{ if $page.Params.sidebar_left }}ml5-l order-2-l{{ else }}mr4-l order-1-l{{ end }} w-two-thirds-l w-100-ns pt5">
           {{ if $page.Params.show_header }}
             {{ with .Title}}
-              <h2 class="f2 fw7 tl">{{ . | markdownify }}</h2>
+              <h2 class="about-main f2 fw7 tl">{{ . | markdownify }}</h2>
             {{ end }}
           {{ else }}
             {{ with .Title }}  

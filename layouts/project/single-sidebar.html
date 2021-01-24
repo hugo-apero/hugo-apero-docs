@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main class="page-main pa4" role="main">
   <section class="page-content mw7 center">
-    <article class="post-content pa0 ph3-l">
+    <article class="post-content pa0 pr3-l">
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">{{ .Title }}</h1>
         {{ if .Params.subtitle }}<h4 class="f4 mt0 mb4 lh-title measure">{{ .Params.subtitle }}</h4>{{ end }}
@@ -9,7 +9,9 @@
         {{ if .Params.show_post_date }}<p class="f7 db mv0 ttu">{{ .PublishDate.Format "January 2, 2006" }}</p>{{ end }}
         
       {{ if .Params.links }}
+      <div class="ph0 pt5">
         {{ partial "shared/btn-links.html" . }}
+      </div>
       {{ end }}
       
       </header>
