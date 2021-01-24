@@ -2,9 +2,8 @@
 
 .post-body {
     .panelset {
-      width: 100%;
-      position: relative;
-      --panel-tabs-border-bottom: #ddd;
+      @extend .mw-100, .relative, .pv3;
+      --panel-tabs-border-bottom: currentColor;
       --panel-tab-foreground: currentColor;
       --panel-tab-background: unset;
       --panel-tab-active-foreground: currentColor;
@@ -36,7 +35,7 @@
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       padding: 0 0 2px 0;
-      box-shadow: inset 0 -2px 0px var(--panel-tabs-border-bottom);
+      box-shadow: inset 0 -1px 0px var(--panel-tabs-border-bottom);
     }
     
     .panelset .panel-tabs * {
@@ -55,8 +54,8 @@
       padding: 0.5em 1em;
       font-family: var(--panel-tab-font-family);
       opacity: var(--panel-tab-inactive-opacity);
-      border-top: 2px solid transparent;
-      border-bottom: 2px solid transparent;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
       margin-bottom: -2px;
       color: var(--panel-tab-foreground);
       background-color: var(--panel-tab-background);
