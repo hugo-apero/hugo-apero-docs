@@ -374,11 +374,10 @@ nav#SectionTableOfContents ul li {
 }
 
 details#PageTableOfContents {
-  @extend .mt3, .pl2, .pr0, .ml0, .mr2, .w-50;
-}
-
-details#PageTableOfContents summary {
-  @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked, .#{$sidebarLinkColor};
+  @extend .mt3, .pl2, .pr0, .ml0, .mr2, .w-50, .dn, .db-l;
+  summary {
+    @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked, .#{$sidebarLinkColor};
+  }
 }
 
 // stickies should make room for headroom to peek down
