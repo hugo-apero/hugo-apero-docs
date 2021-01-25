@@ -82,9 +82,6 @@ h1, h2, h3, h4, h5, h6 {
   h4 { @extend .f4 ; }
   h5 { @extend .f5 ; }
   h6 { @extend .f6 ; }
-  
-  // make room for headroom.js
-  h2:not(.about-main) { @extend .pt5-l ; }
 
   > p { @extend .lh-copy ; }
 
@@ -501,6 +498,11 @@ pre {
 pre code span {
 	font-weight: normal !important;
 }
+
+html, body {
+  scroll-padding-top: 73px;
+}
+
 
 // Fontawesome icons
 $fa-font-path:        "../webfonts";
