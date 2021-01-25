@@ -8,7 +8,7 @@
     {{ $scheme := (urls.Parse $link).Scheme }}
     {{ $target := "" }}
     {{ if not $scheme }}
-      {{ $link = .link | relLangURL }}
+      {{ $link = .url | relLangURL }}
     {{ else if in (slice "http" "https") $scheme }}
       {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
     {{ end }}  
