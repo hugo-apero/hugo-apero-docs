@@ -27,13 +27,13 @@
         <h2 class="f5"><i class="fas fa-stream fa-fw pr1"></i><small class="f5 ttu tracked">Series: </small><a class="link i dim" href="{{ $section.RelPermalink }}">{{ .LinkTitle }}</a></h2>
         {{ end }}
       </header>
-      {{ with .Params.excerpt }}<p class="f6 lh-copy mv2 flex-auto">{{ . | markdownify }}</p>{{ end }}
+      {{ with .Params.excerpt }}<p class="f5 lh-copy mv2 flex-auto">{{ . | markdownify }}</p>{{ end }}
       {{ if .Pages }}
       <!-- Ranges through content/posts/*.md -->
       <h2 class="f5 ttu tracked mv2 pb0">In this section:</h2>
       <ul class="pa0 ml3 mv0">
       {{ range .RegularPages.ByWeight }}
-        <li class="pl2"><p class="lh-solid measure-wide"><a class="" href="{{ .Permalink }}">{{ .Title }}</a>{{ with .Params.subtitle }}: {{ . | markdownify }}{{ end }}</p></li>
+        <li class="pl2"><p class="lh-copy measure-wide"><a class="" href="{{ .Permalink }}">{{ .Title }}</a>{{ with .Params.subtitle }}: {{ . | markdownify }}{{ end }}</p></li>
       {{ end }}
       </ul>
       {{ end }}
@@ -54,13 +54,13 @@
       <h2 class="f5"><i class="fas fa-stream fa-fw pr1"></i><small class="f5 ttu tracked">Series: </small><a class="link i dim" href="{{ $section.RelPermalink }}">{{ .LinkTitle }}</a></h2>
       {{ end }}
     </header>
-      {{ with .Params.excerpt }}<p class="f6 lh-copy mv2 flex-auto">{{ . | markdownify }}</p>{{ end }}
+      {{ with .Params.excerpt }}<p class="f5 lh-copy mv2 flex-auto">{{ . | markdownify }}</p>{{ end }}
       {{ if .Pages }}
       <!-- Ranges through content/posts/*.md -->
       <h2 class="f5 ttu tracked mv2 pb0">In this section:</h2>
       <ul class="pa0 ml3 mv0">
       {{ range .RegularPages.ByWeight }}
-        <li class="pl2"><p class="lh-solid measure-wide"><a class="" href="{{ .Permalink }}">{{ .Title }}</a>{{ with .Params.subtitle }}: {{ . | markdownify }}{{ end }}</p></li>
+        <li class="pl2"><p class="lh-copy measure-wide"><a class="" href="{{ .Permalink }}">{{ .Title }}</a>{{ with .Params.subtitle }}: {{ . | markdownify }}{{ end }}</p></li>
       {{ end }}
       </ul>
       {{ end }}
