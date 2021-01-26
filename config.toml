@@ -79,6 +79,15 @@ enableEmoji = true
   socialInHeader = false
   socialInFooter = true
   socialInHome = true
+  
+  [comments]
+  # Configuration of https://utteranc.es/ for comments
+  [comments.utterances]
+    use_utterances = true
+    repo_name = "apreshill/hugo-apero"
+    issue_term = "pathname" # url, pathname, or title
+    theme = "github-light"
+    label = "comments :crystal_ball:"
 
 [taxonomies]
   category = "categories"
