@@ -11,9 +11,11 @@ options(
   blogdown.serve_site.startup = FALSE,
   # to disable knitting Rmd files on save, set this option to FALSE
   blogdown.knit.on_save = FALSE,
+  # full markdown mode
+  blogdown.method = "markdown",
   # so the live preview actually live previews
   blogdown.hugo.server = c('--disableFastRender', '-D', '-F', '--navigateToChanged')
 )
 
-# fix Hugo version
+# pin Hugo version
 options(blogdown.hugo.version = "0.79.0")

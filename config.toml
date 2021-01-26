@@ -1,15 +1,11 @@
-baseURL = "https://cranky-lalande-e3373f.netlify.app/"
+baseURL = "https://hugo-apero.netlify.app/"
 languageCode = "en"
-title = "Blogophonic"
-author = "Hi there"
+title = "Hugo Apéro"
+author = "Alison Hill"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
 disqusShortname = ""
 metaDataFormat = "yaml"
-pygmentsCodeFences = true
-pygmentsOptions = "linenos=table"
-# see more styles https://help.farbox.com/pygments.html
-pygmentsStyle = "friendly"
 footnoteReturnLinkContents = "&#8617;" # ↩
 # set deliberately low for testing choose your preffered number based on the blog layout you've chosen
 paginate = 5
@@ -26,7 +22,10 @@ enableEmoji = true
     startLevel = 2
     endLevel = 2
     ordered = false
-
+  [markup.highlight]
+    # one of: https://xyproto.github.io/splash/docs/ 
+    style = "github"
+    
 [params]
   orgName = "RStudio"
   orgLocal = "Anywhere"
@@ -80,6 +79,15 @@ enableEmoji = true
   socialInHeader = false
   socialInFooter = true
   socialInHome = true
+  
+  [comments]
+  # Configuration of https://utteranc.es/ for comments
+  [comments.utterances]
+    use_utterances = true
+    repo_name = "apreshill/hugo-apero"
+    issue_term = "pathname" # url, pathname, or title
+    theme = "github-light"
+    label = "comments :crystal_ball:"
 
 [taxonomies]
   category = "categories"
@@ -108,8 +116,8 @@ enableEmoji = true
     url = "/talk/"
     weight = 4
   [[menu.header]]
-    name = "Collections"
-    title = "Tutorials"
+    name = "A collection"
+    title = "A collection"
     url = "/collection/"
     weight = 5
   [[menu.header]]

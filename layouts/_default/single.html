@@ -28,6 +28,10 @@
     <div class="post-comments pa0 pa4-l mt4">
       {{ template "_internal/disqus.html" . }}
     </div>
+    {{ else if site.Params.comments.utterances.use_utterances }}
+      <div class="post-comments pa0 pa4-l mt4">
+      {{ partial "shared/utterances.html" . }}
+      </div>
     {{ end }}
   </section>
 </main>

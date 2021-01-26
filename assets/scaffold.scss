@@ -31,6 +31,10 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
 @import 'headroom';
 
+// add support for panelset from xaringanExtra package
+// written by Garrick Aden-Buie
+@import 'panelset';
+
 // apply tachyons font family and color options from config
 body {
   @extend .bg-#{$siteBgColor}, .#{$textFontFamily}, .#{$textColor};
@@ -92,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
     cite { @extend .f6, .i ; }
   }
 
-  ul, ol, dl { @extend .measure, .lh-copy ; }
+  ul:not(.panel-tabs), ol, dl { @extend .measure-wide, .lh-copy ; }
   > dl dt { @extend .pl3, .b, .mb2 ; }
 
   hr { @extend .mv4, .ba, .b--#{$borderColor} ; }
@@ -119,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 // apply tachyons classes to blog lists 
 .blog-content {
   article { @extend .b--#{$borderColor} ; }
- .article-list { @extend .b--#{$borderColor} ; }
+ .group-content { @extend .b--#{$borderColor} ; }
 }
 .list-sidebar {
   article:first-of-type {
@@ -212,7 +216,7 @@ form {
   @extend .w-100 ;
 
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: repeat(3, auto);
   grid-auto-flow: dense;
   grid-gap: 0px;
@@ -359,39 +363,22 @@ a > svg.anchor-symbol:hover {
 // Position page and series TOC
 
 nav#TableOfContents ul,
-nav#SeriesTableOfContents ul {
+nav#SeriesTableOfContents ul,
+nav#SectionTableOfContents ul {
   @extend .list, .pa0;
 }
 
 nav#TableOfContents ul li,
-nav#SeriesTableOfContents ul li {
+nav#SeriesTableOfContents ul li,
+nav#SectionTableOfContents ul li {
   @extend .lh-copy, .pl2, .pv1;
 }
 
 details#PageTableOfContents {
-  @extend .mt3, .pl2, .pr0, .ml0, .mr2, .w-50;
-}
-
-details#PageTableOfContents summary {
-  @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked, .#{$sidebarLinkColor};
-}
-
-// Show active page in series
-
-nav#SeriesTableOfContents ul li.active {
-  @extend .bg-#{$siteBgColor};
-}
-
-nav#SeriesTableOfContents ul li:not(.active) {
-  @extend .hover-bg-#{$buttonHoverBgColor}, .hover-#{$buttonHoverTextColor};
-}
-
-nav#SeriesTableOfContents ul li:hover:not(.active) a {
-  @extend .#{$buttonTextColor};
-}
-
-details#PageTableOfContents nav#TableOfContents ul li:hover {
-  @extend .bg-#{$siteBgColor};
+  @extend .mt3, .pl2, .pr0, .ml0, .mr2, .w-50, .dn, .db-l;
+  summary {
+    @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked, .#{$sidebarLinkColor};
+  }
 }
 
 // stickies should make room for headroom to peek down
@@ -424,15 +411,16 @@ audio {
   @extend .o-10;
 }
 
-// apply tachyons classes to about page lists 
+// apply tachyons classes to about page lists and collections
 .featured-content h5,
-.featured-content article {
+.featured-content article,
+.post-header h2 {
   @extend .b--#{$borderColor} ; 
 }
 
-// button links in headers
+// button links in single page headers + listing page footers
 .post-header a.btn-links,
-.article-list a.btn-links {
+article footer a.btn-links {
     @extend .fw4, .ph3, .pv2, .mb3, .f6, .ttu, .tracked, .b, .br0, .link, .pointer, .bg-animate, .#{$headingColor}, .hover-#{$buttonHoverTextColor}, .bg-transparent, .hover-bg-#{$buttonHoverBgColor};
 }
 
@@ -442,9 +430,86 @@ audio {
 	@extend .mh1, .#{$headingColor};
 }
 
+// Responsive table to hold event details
+
+.event-details {
+  .first-column {
+    @extend .fl, .w-100, .pv2, .w-25-ns;
+    .row-label {
+      @extend .f-subheadline, .f5, .fw2, .ttu, .tracked, .pa0, .ma0, .lh-copy;
+    }
+  }
+  .second-column {
+    @extend .fl, .w-100, .pv2, .w-75-ns;
+    .row-details {
+      @extend .f5, .measure, .lh-copy, .mv0;
+    }
+  }
+}
+
+// Series + collections table of contents
+
+details#PageTableOfContents nav#TableOfContents ul li:hover {
+  @extend .bg-#{$siteBgColor};
+}
+
+nav#SectionTableOfContents ul li,
+nav#SeriesTableOfContents ul li {
+  @extend .pl2, .bl, .bw1, .b--transparent;
+  &.active {
+    @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw1;
+  }
+  &:not(.active) {
+    @extend .pl3, .dim, .bl, .bw1, .b--transparent;
+  }
+  &:hover:not(.active) a {
+    @extend .#{$headlineColor}, .b--#{$borderColor};
+  }
+}
+
+nav#SectionTableOfContents ul details {
+  @extend .pv1, .mv0, .pr0;
+  padding-left: 1.25rem;
+  &.active {
+    @extend .b--#{$borderColor}, .bl, .bw1, .pl3;
+  }
+  summary { 
+    @extend .#{$sidebarLinkColor}, .pb2; 
+  }
+  li { 
+    @extend .pl0; 
+    &.active {
+      @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--transparent, .bw1;
+    }
+  }
+}
+
+.list-sidebar ul li::marker,
+.list ul li::marker{
+  @extend .#{$headingColor}, .f5;
+}
+
+// Style code
+pre {
+  @extend .pre, .br1, .pa3, .bg-transparent;
+  border: 1px solid #ebebeb;
+}
+
+pre code span {
+	font-weight: normal !important;
+}
+
+html, body {
+  scroll-padding-top: 73px;
+}
+
+
 // Fontawesome icons
 $fa-font-path:        "../webfonts";
 @import "fontawesome-free-5.15.1-web/scss/fontawesome.scss";
 @import "fontawesome-free-5.15.1-web/scss/solid.scss";
 @import "fontawesome-free-5.15.1-web/scss/regular.scss";
 @import "fontawesome-free-5.15.1-web/scss/brands.scss";
+
+// import a custom css file in assets
+@import "custom";

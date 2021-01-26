@@ -7,6 +7,9 @@
 {{ $leaf := ($page.Resources.ByType "image").GetMatch "*sidebar*" }}
 <!--use leaf sidebar, if exists; if not, use branch sidebar-->
 {{ $thumbnail := $leaf | default $branch }}
+<!--if neither, use first section sidebar-->
+{{ $first := (.FirstSection.Resources.ByType "image").GetMatch "*sidebar*" }}
+{{ $thumbnail := cond (eq $thumbnail nil) $first $thumbnail }}
 {{ with $thumbnail }}
   <img src="{{ .RelPermalink | relURL }}" class="db ma0">
 {{ end }}
