@@ -57,23 +57,9 @@ enableEmoji = true
   theme = "sky"
   
   # or, leave theme empty & make your own palette
-  # basic color options: use only color names as shown in the
-  # "Color Palette" section of http://tachyons.io/docs/themes/skins/
-  siteBgColor = "near-white"
-  sidebarBgColor = "light-gray"
-  headlineColor = "dark-pink"
-  headingColor = "near-black"
-  textColor = "dark-gray"
-  sidebarTextColor = "mid-gray"
-  bodyLinkColor = "blue"
-  navLinkColor = "near-black"
-  sidebarLinkColor = "near-black"
-  footerTextColor = "silver"
-  buttonTextColor = "near-white"
-  buttonBgColor = "black"
-  buttonHoverTextColor = "white"
-  buttonHoverBgColor = "blue"
-  borderColor = "moon-gray"
+  # the custom scss file must be in the assets-folder
+  # and added here with the file-name without scss extension
+  customSCSS = "custom"
   
   # show/hide social icons in site header/footer/home page
   socialInHeader = false
