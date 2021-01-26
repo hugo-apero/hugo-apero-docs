@@ -11,6 +11,7 @@ $headlineColor: {{ .Site.Params.headlineColor | default "black" }};
 $headingColor: {{ .Site.Params.headingColor | default "near-black" }};
 $bodyLinkColor: {{ .Site.Params.bodyLinkColor | default "blue" }};
 $navLinkColor: {{ .Site.Params.navLinkColor | default "near-black" }};
+$navBgColor: {{ .Site.Params.navLinkColor | default "near-black" }};
 $sidebarLinkColor: {{ .Site.Params.sidebarLinkColor | default "near-black" }};
 $footerTextColor: {{ .Site.Params.footerTextColor | default "silver" }};
 $buttonTextColor: {{ .Site.Params.buttonTextColor | default "near-white" }};
@@ -25,7 +26,8 @@ $borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
 // colors set in data/theme.yaml
 // one of: forest / grayscale / peach / poppy / sky / violet / water
 {{ with $.Site.Params.theme }}
-@import '{{ printf "theme/%s" . | default "sky" }}';
+  @import '{{ printf "theme/%s" . | default "sky" }}';
+  @import 'set-theme';
 {{ end }}
 
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
@@ -342,9 +344,9 @@ a > svg.anchor-symbol:hover {
   width: 0%;
   content: '.'; /* make invisible, dot beneath links */
   color: transparent;
-  background: $navLinkColorCustom;
   height: .08em;
   pointer-events: none;
+  @extend .bg-#{$navBgColor};
 }
 
 .site-links a:hover:after {
@@ -354,7 +356,7 @@ a > svg.anchor-symbol:hover {
 .site-links a.active:after {
   width: 85%;  
   color: transparent;
-  background: $navLinkColorCustom;
+  @extend .bg-#{$navBgColor};
   height: .08em;
 }
 
