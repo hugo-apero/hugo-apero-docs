@@ -207,7 +207,7 @@ form {
   @extend .#{$buttonTextColor};
   }
   .action.text {
-    @extend .db, .mb4, .ttu, .tracked, .b, .link ;
+    @extend .db, .mb4, .ttu, .tracked, .fw5, .link ;
   }
 }
 

@@ -8,8 +8,8 @@
     {{ $header := printf "/%s/%s" .Section "header/index.md" }}
     {{ with site.GetPage $header }}
       <header class="page-header bb b--black-10 bw1 pb4 mb5 {{ if .Params.text_align_right }}tr{{ end }}">
-      {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">{{ $page.Title | markdownify }}</h1>
-      {{ else }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns db">{{ .Params.headline | markdownify }}</h1>{{ end }}
+      {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw4 mv4 lh-solid tracked-tight-ns db">{{ $page.Title | markdownify }}</h1>
+      {{ else }}<h1 class="f2 f1-m f-headline-l fw4 mv4 lh-solid tracked-tight-ns db">{{ .Params.headline | markdownify }}</h1>{{ end }}
       {{ with .Content}}
         <div class="pt2 f4 measure-wide lh-copy dib">{{ . | markdownify }}</div>
       {{ end }}
@@ -31,7 +31,7 @@
             {{ end }}
           {{ else }}
             {{ with .Title }}  
-            <h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns">{{ . | markdownify }}</h1>
+            <h1 class="f2 f1-m f-headline-l fw4 mv4 lh-solid tracked-tight-ns">{{ . | markdownify }}</h1>
             {{ end }}
           {{ end }}
           {{ if .Params.show_intro }}
@@ -56,7 +56,7 @@
                 <img src="{{ $avatar }}" class="h4 w4 dib {{if eq . "rounded"}}br3{{end}}{{if eq . "circle"}}br-100{{end}}" alt="avatar">
               {{ end }}
             {{ end }}
-            <h2 class="f-subheadline f4-ns fw6">{{ .Params.author }}</h2>
+            <h2 class="f-subheadline f4-ns fw4">{{ .Params.author }}</h2>
             <h5 class="f-subheadline f4 fw2 ttu tracked">{{ .Params.role | markdownify }}</h5>
             {{ if .Params.show_social }}
               <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2">

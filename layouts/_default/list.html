@@ -2,8 +2,8 @@
 <main class="page-main pa4" role="main">
   <section class="blog-intro mw7 center mb5">
     <h2 class="f2 f1-ns lh-solid tc center fw4">{{ .Title | markdownify }}</h2>
-    {{ with .Description }}<p class="f6 f5-ns measure lh-copy tc center">{{ . | markdownify }}</p>{{ end }}
-    {{ if .Params.show_author_byline }}<p class="f7 measure lh-copy tc center i">{{ if .Params.author }}Written by {{ .Params.author }}{{ end }}</p>{{ end }}
+    {{ with .Description }}<p class="f5 measure lh-copy tc center">{{ . | markdownify }}</p>{{ end }}
+    {{ if .Params.show_author_byline }}<p class="f6 measure lh-copy tc center i">{{ if .Params.author }}Written by {{ .Params.author }}{{ end }}</p>{{ end }}
   </section>
   <section class="blog-content mw7 center">
     {{ $caller := . }}
