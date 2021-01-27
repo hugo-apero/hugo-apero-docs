@@ -41,26 +41,28 @@ enableEmoji = true
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
   twitter = "apreshill"
   
-  # basic font options: sans-serif or serif
-  # for more http://tachyons.io/docs/typography/font-family/
-  textFontFamily = "sans-serif"
-  headingFontFamily = "sans-serif"
-  # alternatively, use a built-in font-family
+  # use a built-in color theme
+  # one of: forest / grayscale / peach / plum /
+  #         poppy / sky / violet / water 
+  theme = "sky"
+  
+  # or, leave theme empty & make your own palette
+  # see docs at https://hugo-apero.netlify.app/blog/customize-apero/
+  # the custom scss file must be in the assets/ folder
+  # add the filename name here, without extension
+  # to use hex colors instead of named tachyons colors, include "hex" in filename
+  custom_theme = "hex-colors" 
+  
+  # use a built-in font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
   customtextFontFamily = "Commissioner"
   customheadingFontFamily = "Fraunces"
-  
-  # use a built-in color theme
-  # one of: forest / grayscale / peach / plum /
-  #         poppy / sky / violet / water
-  theme = "sky"
-  
-  # or, leave theme empty & make your own palette
-  # the custom scss file must be in the assets-folder
-  # and added here with the file-name without scss extension
-  customSCSS = "custom"
-  
+  # alternatively, leave empty and select basic font options: sans-serif or serif
+  # for more http://tachyons.io/docs/typography/font-family/
+  textFontFamily = "sans-serif"
+  headingFontFamily = "sans-serif"
+
   # show/hide social icons in site header/footer/home page
   socialInHeader = false
   socialInFooter = true
