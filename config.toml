@@ -47,11 +47,11 @@ enableEmoji = true
   theme = "sky"
   
   # or, leave theme empty & make your own palette
-  # see docs at https://hugo-apero.netlify.app/blog/customize-apero/
+  # see docs at https://hugo-apero.netlify.app/blog/style-apero/
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
-  custom_theme = "hex-colors" 
+  custom_theme = "" 
   
   # use a built-in font-family
   # serif options: Fraunces / EB Garamond / Bitter
