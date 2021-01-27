@@ -6,10 +6,6 @@ copyright = "" # set to override the auto generated copyright using org info and
 googleAnalytics = ""
 disqusShortname = ""
 metaDataFormat = "yaml"
-pygmentsCodeFences = true
-pygmentsOptions = "linenos=table"
-# see more styles https://help.farbox.com/pygments.html
-pygmentsStyle = "friendly"
 footnoteReturnLinkContents = "&#8617;" # ↩
 # set deliberately low for testing choose your preffered number based on the blog layout you've chosen
 paginate = 5
@@ -26,7 +22,10 @@ enableEmoji = true
     startLevel = 2
     endLevel = 2
     ordered = false
-
+  [markup.highlight]
+    # one of: https://xyproto.github.io/splash/docs/ 
+    style = "github"
+    
 [params]
   orgName = "RStudio"
   orgLocal = "Anywhere"
@@ -42,44 +41,41 @@ enableEmoji = true
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
   twitter = "apreshill"
   
-  # basic font options: sans-serif or serif
-  # for more http://tachyons.io/docs/typography/font-family/
-  textFontFamily = "sans-serif"
-  headingFontFamily = "sans-serif"
-  # alternatively, use a built-in font-family
+  # use a built-in color theme
+  # one of: forest / grayscale / peach / plum /
+  #         poppy / sky / violet / water 
+  theme = "sky"
+  
+  # or, leave theme empty & make your own palette
+  # see docs at https://hugo-apero.netlify.app/blog/style-apero/
+  # the custom scss file must be in the assets/ folder
+  # add the filename name here, without extension
+  # to use hex colors instead of named tachyons colors, include "hex" in filename
+  custom_theme = "" 
+  
+  # use a built-in font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
   customtextFontFamily = "Commissioner"
   customheadingFontFamily = "Fraunces"
-  
-  # use a built-in color theme
-  # one of: forest / grayscale / peach / plum /
-  #         poppy / sky / violet / water
-  theme = "sky"
-  
-  # or, leave theme empty & make your own palette
-  # basic color options: use only color names as shown in the
-  # "Color Palette" section of http://tachyons.io/docs/themes/skins/
-  siteBgColor = "near-white"
-  sidebarBgColor = "light-gray"
-  headlineColor = "dark-pink"
-  headingColor = "near-black"
-  textColor = "dark-gray"
-  sidebarTextColor = "mid-gray"
-  bodyLinkColor = "blue"
-  navLinkColor = "near-black"
-  sidebarLinkColor = "near-black"
-  footerTextColor = "silver"
-  buttonTextColor = "near-white"
-  buttonBgColor = "black"
-  buttonHoverTextColor = "white"
-  buttonHoverBgColor = "blue"
-  borderColor = "moon-gray"
-  
+  # alternatively, leave empty and select basic font options: sans-serif or serif
+  # for more http://tachyons.io/docs/typography/font-family/
+  textFontFamily = "sans-serif"
+  headingFontFamily = "sans-serif"
+
   # show/hide social icons in site header/footer/home page
   socialInHeader = false
   socialInFooter = true
   socialInHome = true
+  
+  [comments]
+  # Configuration of https://utteranc.es/ for comments
+  [comments.utterances]
+    use_utterances = true
+    repo_name = "apreshill/hugo-apero"
+    issue_term = "pathname" # url, pathname, or title
+    theme = "github-light"
+    label = "comments :crystal_ball:"
 
 [taxonomies]
   category = "categories"

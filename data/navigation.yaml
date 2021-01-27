@@ -5,6 +5,6 @@ footer:
   - name: Contact
     title: Contact Form
     url: /contact/
-  - name: RSS
-    title: RSS Feed
-    url: /blog/index.xml
+  - name: Contributors
+    title: Contributors
+    url: /contributors/

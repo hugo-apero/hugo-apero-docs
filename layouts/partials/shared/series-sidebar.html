@@ -4,7 +4,7 @@
 {{ $series_toc_label := .Params.sidebar.text_series_label | default "In this series" }}
 {{ $page_toc_label := .Params.sidebar.text_contents_label | default "On this page" }}
 <div class="flex items-start sticky ph4 pb4">
-  <div class="w-50 ph0">
+  <div class="w-two-thirds w-50-l ph0">
     {{ with $section }}
     <h2 class="mt3 mb3 f5 fw7 ttu tracked"><a class="no-underline dim" href="{{ .RelPermalink }}">{{ end }}{{ $series_toc_label }}</a></h2>
     <nav id="SeriesTableOfContents">

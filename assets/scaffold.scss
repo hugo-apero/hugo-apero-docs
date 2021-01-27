@@ -1,35 +1,47 @@
-// variables based on tachyons classes
-// set font family options from config with defaults
-$textFontFamily: {{ .Site.Params.textFontFamily | default "sans-serif" }};
-$headingFontFamily: {{ .Site.Params.headingFontFamily | default "sans-serif" }};
-// set color options from config with defaults
-$siteBgColor: {{ .Site.Params.siteBgColor | default "near-white" }};
-$sidebarBgColor: {{ .Site.Params.sidebarBgColor | default "light-gray" }};
-$textColor: {{ .Site.Params.textColor | default "near-black" }};
-$sidebarTextColor: {{ .Site.Params.sidebarTextColor | default "dark-gray" }};
-$headlineColor: {{ .Site.Params.headlineColor | default "black" }};
-$headingColor: {{ .Site.Params.headingColor | default "near-black" }};
-$bodyLinkColor: {{ .Site.Params.bodyLinkColor | default "blue" }};
-$navLinkColor: {{ .Site.Params.navLinkColor | default "near-black" }};
-$sidebarLinkColor: {{ .Site.Params.sidebarLinkColor | default "near-black" }};
-$footerTextColor: {{ .Site.Params.footerTextColor | default "silver" }};
-$buttonTextColor: {{ .Site.Params.buttonTextColor | default "near-white" }};
-$buttonBgColor: {{ .Site.Params.buttonBgColor | default "black" }};
-$buttonHoverTextColor: {{ .Site.Params.buttonHoverTextColor | default "white" }};
-$buttonHoverBgColor: {{ .Site.Params.buttonHoverBgColor | default "blue" }};
-$borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
+
+// base color scheme
+@import 'base';
+
+// custom color themes
+// one of: forest / grayscale / peach / plum / poppy / sky / violet / water 
+// precedence: Params.theme > .Params.custom_colors 
+// custom colors may either be named tachyons color or hex codes
+{{ $themes := (slice "forest" "grayscale" "peach" "plum" "poppy" "sky" "violet" "water") }}
+{{ if site.Params.theme }}
+  {{ if in $themes site.Params.theme }}
+    @import '{{ printf "theme/%s" site.Params.theme }}';
+    @import 'theme/set-theme';
+  {{ else }}
+    {{ errorf "Selected theme '%s' is not one of the options." site.Params.theme }}
+  {{ end }}
+{{ else if site.Params.custom_theme }}
+  {{ $custom_file := (printf "%s/%s" "assets" site.Params.custom_theme ) }}
+  // detect if hex in user-provided filename
+  {{ $hex_colors := in site.Params.custom_theme "hex" }}
+  // detect if user-provided filename exists in assets
+  {{ if (fileExists (printf "%s.%s" $custom_file "scss")) -}}
+    {{ if not $hex_colors }}
+      // named colors can just be used
+      @import '{{ site.Params.custom_theme }}';
+    {{ else }}
+      // hex colors need set-theme too
+      @import '{{ site.Params.custom_theme }}';
+      @import 'theme/set-theme';
+    {{ end }}
+  {{ else }}
+    {{ errorf "Could not find custom color theme named '%s' in assets/ folder." site.Params.custom_theme }}
+  {{ end }}
+{{ end }}
 
 // learn about Tachyons http://tachyons.io
 @import 'tachyons';
 
-// colors set in data/theme.yaml
-// one of: forest / grayscale / peach / poppy / sky / violet / water
-{{ with $.Site.Params.theme }}
-@import '{{ printf "theme/%s" . | default "sky" }}';
-{{ end }}
-
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
 @import 'headroom';
+
+// add support for panelset from xaringanExtra package
+// written by Garrick Aden-Buie
+@import 'panelset';
 
 // apply tachyons font family and color options from config
 body {
@@ -78,9 +90,6 @@ h1, h2, h3, h4, h5, h6 {
   h4 { @extend .f4 ; }
   h5 { @extend .f5 ; }
   h6 { @extend .f6 ; }
-  
-  // make room for headroom.js
-  h2 { @extend .pt5 ; }
 
   > p { @extend .lh-copy ; }
 
@@ -95,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
     cite { @extend .f6, .i ; }
   }
 
-  ul, ol, dl { @extend .measure-wide, .lh-copy ; }
+  ul:not(.panel-tabs), ol, dl { @extend .measure-wide, .lh-copy ; }
   > dl dt { @extend .pl3, .b, .mb2 ; }
 
   hr { @extend .mv4, .ba, .b--#{$borderColor} ; }
@@ -341,9 +350,9 @@ a > svg.anchor-symbol:hover {
   width: 0%;
   content: '.'; /* make invisible, dot beneath links */
   color: transparent;
-  background: $navLinkColorCustom;
   height: .08em;
   pointer-events: none;
+  @extend .bg-#{$navBgColor};
 }
 
 .site-links a:hover:after {
@@ -353,7 +362,7 @@ a > svg.anchor-symbol:hover {
 .site-links a.active:after {
   width: 85%;  
   color: transparent;
-  background: $navLinkColorCustom;
+  @extend .bg-#{$navBgColor};
   height: .08em;
 }
 
@@ -374,29 +383,10 @@ nav#SectionTableOfContents ul li {
 }
 
 details#PageTableOfContents {
-  @extend .mt3, .pl2, .pr0, .ml0, .mr2, .w-50;
-}
-
-details#PageTableOfContents summary {
-  @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked, .#{$sidebarLinkColor};
-}
-
-// Show active page in series
-
-nav#SeriesTableOfContents ul li {
-  &.active {
-    @extend .bg-#{$siteBgColor};
+  @extend .mt3, .pl2, .pr0, .ml0, .mr2, .w-50, .dn, .db-l;
+  summary {
+    @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked, .#{$sidebarLinkColor};
   }
-  &:not(.active) {
-    @extend .hover-bg-#{$buttonHoverBgColor}, .hover-#{$buttonHoverTextColor};
-  }
-  &:hover:not(.active) a {
-    @extend .#{$buttonTextColor};
-  }
-}
-
-details#PageTableOfContents nav#TableOfContents ul li:hover {
-  @extend .bg-#{$siteBgColor};
 }
 
 // stickies should make room for headroom to peek down
@@ -465,9 +455,14 @@ article footer a.btn-links {
   }
 }
 
-// Collections: section table of contents
+// Series + collections table of contents
 
-nav#SectionTableOfContents ul li {
+details#PageTableOfContents nav#TableOfContents ul li:hover {
+  @extend .bg-#{$siteBgColor};
+}
+
+nav#SectionTableOfContents ul li,
+nav#SeriesTableOfContents ul li {
   @extend .pl2, .bl, .bw1, .b--transparent;
   &.active {
     @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw1;
@@ -502,9 +497,27 @@ nav#SectionTableOfContents ul details {
   @extend .#{$headingColor}, .f5;
 }
 
+// Style code
+pre {
+  @extend .pre, .br1, .pa3, .bg-transparent;
+  border: 1px solid #ebebeb;
+}
+
+pre code span {
+	font-weight: normal !important;
+}
+
+html, body {
+  scroll-padding-top: 73px;
+}
+
+
 // Fontawesome icons
 $fa-font-path:        "../webfonts";
 @import "fontawesome-free-5.15.1-web/scss/fontawesome.scss";
 @import "fontawesome-free-5.15.1-web/scss/solid.scss";
 @import "fontawesome-free-5.15.1-web/scss/regular.scss";
 @import "fontawesome-free-5.15.1-web/scss/brands.scss";
+
+// import a custom css file in assets
+@import "custom";
