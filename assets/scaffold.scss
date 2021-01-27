@@ -2,20 +2,39 @@
 // base color scheme
 @import 'base';
 
-// colors set in data/theme.yaml
-// one of: forest / grayscale / peach / poppy / sky / violet / water
-{{ with $.Site.Params.customSCSS }}
-  @import '{{ . }}';
+// custom color themes
+// one of: forest / grayscale / peach / plum / poppy / sky / violet / water 
+// precedence: Params.theme > .Params.custom_colors 
+// custom colors may either be named tachyons color or hex codes
+{{ $themes := (slice "forest" "grayscale" "peach" "plum" "poppy" "sky" "violet" "water") }}
+{{ if site.Params.theme }}
+  {{ if in $themes site.Params.theme }}
+    @import '{{ printf "theme/%s" site.Params.theme }}';
+    @import 'theme/set-theme';
+  {{ else }}
+    {{ errorf "Selected theme '%s' is not one of the options." site.Params.theme }}
+  {{ end }}
+{{ else if site.Params.custom_theme }}
+  {{ $custom_file := (printf "%s/%s" "assets" site.Params.custom_theme ) }}
+  // detect if hex in user-provided filename
+  {{ $hex_colors := in site.Params.custom_theme "hex" }}
+  // detect if user-provided filename exists in assets
+  {{ if (fileExists (printf "%s.%s" $custom_file "scss")) -}}
+    {{ if not $hex_colors }}
+      // named colors can just be used
+      @import '{{ site.Params.custom_theme }}';
+    {{ else }}
+      // hex colors need set-theme too
+      @import '{{ site.Params.custom_theme }}';
+      @import 'theme/set-theme';
+    {{ end }}
+  {{ else }}
+    {{ errorf "Could not find custom color theme named '%s' in assets/ folder." site.Params.custom_theme }}
+  {{ end }}
 {{ end }}
 
 // learn about Tachyons http://tachyons.io
 @import 'tachyons';
-
-// one of: forest / grayscale / peach / poppy / sky / violet / water
-{{ with $.Site.Params.theme }}
-  @import '{{ printf "theme/%s" . | default "sky" }}';
-  @import 'set-theme';
-{{ end }}
 
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
 @import 'headroom';
