@@ -41,40 +41,28 @@ enableEmoji = true
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
   twitter = "apreshill"
   
-  # basic font options: sans-serif or serif
-  # for more http://tachyons.io/docs/typography/font-family/
-  textFontFamily = "sans-serif"
-  headingFontFamily = "sans-serif"
-  # alternatively, use a built-in font-family
+  # use a built-in color theme
+  # one of: forest / grayscale / peach / plum /
+  #         poppy / sky / violet / water 
+  theme = "sky"
+  
+  # or, leave theme empty & make your own palette
+  # see docs at https://hugo-apero.netlify.app/blog/style-apero/
+  # the custom scss file must be in the assets/ folder
+  # add the filename name here, without extension
+  # to use hex colors instead of named tachyons colors, include "hex" in filename
+  custom_theme = "" 
+  
+  # use a built-in font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
   customtextFontFamily = "Commissioner"
   customheadingFontFamily = "Fraunces"
-  
-  # use a built-in color theme
-  # one of: forest / grayscale / peach / plum /
-  #         poppy / sky / violet / water
-  theme = "sky"
-  
-  # or, leave theme empty & make your own palette
-  # basic color options: use only color names as shown in the
-  # "Color Palette" section of http://tachyons.io/docs/themes/skins/
-  siteBgColor = "near-white"
-  sidebarBgColor = "light-gray"
-  headlineColor = "dark-pink"
-  headingColor = "near-black"
-  textColor = "dark-gray"
-  sidebarTextColor = "mid-gray"
-  bodyLinkColor = "blue"
-  navLinkColor = "near-black"
-  sidebarLinkColor = "near-black"
-  footerTextColor = "silver"
-  buttonTextColor = "near-white"
-  buttonBgColor = "black"
-  buttonHoverTextColor = "white"
-  buttonHoverBgColor = "blue"
-  borderColor = "moon-gray"
-  
+  # alternatively, leave empty and select basic font options: sans-serif or serif
+  # for more http://tachyons.io/docs/typography/font-family/
+  textFontFamily = "sans-serif"
+  headingFontFamily = "sans-serif"
+
   # show/hide social icons in site header/footer/home page
   socialInHeader = false
   socialInFooter = true

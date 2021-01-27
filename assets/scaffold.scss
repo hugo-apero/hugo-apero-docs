@@ -1,34 +1,40 @@
-// variables based on tachyons classes
-// set font family options from config with defaults
-$textFontFamily: {{ .Site.Params.textFontFamily | default "sans-serif" }};
-$headingFontFamily: {{ .Site.Params.headingFontFamily | default "sans-serif" }};
-// set color options from config with defaults
-$siteBgColor: {{ .Site.Params.siteBgColor | default "near-white" }};
-$sidebarBgColor: {{ .Site.Params.sidebarBgColor | default "light-gray" }};
-$textColor: {{ .Site.Params.textColor | default "near-black" }};
-$sidebarTextColor: {{ .Site.Params.sidebarTextColor | default "dark-gray" }};
-$headlineColor: {{ .Site.Params.headlineColor | default "black" }};
-$headingColor: {{ .Site.Params.headingColor | default "near-black" }};
-$bodyLinkColor: {{ .Site.Params.bodyLinkColor | default "blue" }};
-$navLinkColor: {{ .Site.Params.navLinkColor | default "near-black" }};
-$navBgColor: {{ .Site.Params.navLinkColor | default "near-black" }};
-$sidebarLinkColor: {{ .Site.Params.sidebarLinkColor | default "near-black" }};
-$footerTextColor: {{ .Site.Params.footerTextColor | default "silver" }};
-$buttonTextColor: {{ .Site.Params.buttonTextColor | default "near-white" }};
-$buttonBgColor: {{ .Site.Params.buttonBgColor | default "black" }};
-$buttonHoverTextColor: {{ .Site.Params.buttonHoverTextColor | default "white" }};
-$buttonHoverBgColor: {{ .Site.Params.buttonHoverBgColor | default "blue" }};
-$borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
+
+// base color scheme
+@import 'base';
+
+// custom color themes
+// one of: forest / grayscale / peach / plum / poppy / sky / violet / water 
+// precedence: Params.theme > .Params.custom_colors 
+// custom colors may either be named tachyons color or hex codes
+{{ $themes := (slice "forest" "grayscale" "peach" "plum" "poppy" "sky" "violet" "water") }}
+{{ if site.Params.theme }}
+  {{ if in $themes site.Params.theme }}
+    @import '{{ printf "theme/%s" site.Params.theme }}';
+    @import 'theme/set-theme';
+  {{ else }}
+    {{ errorf "Selected theme '%s' is not one of the options." site.Params.theme }}
+  {{ end }}
+{{ else if site.Params.custom_theme }}
+  {{ $custom_file := (printf "%s/%s" "assets" site.Params.custom_theme ) }}
+  // detect if hex in user-provided filename
+  {{ $hex_colors := in site.Params.custom_theme "hex" }}
+  // detect if user-provided filename exists in assets
+  {{ if (fileExists (printf "%s.%s" $custom_file "scss")) -}}
+    {{ if not $hex_colors }}
+      // named colors can just be used
+      @import '{{ site.Params.custom_theme }}';
+    {{ else }}
+      // hex colors need set-theme too
+      @import '{{ site.Params.custom_theme }}';
+      @import 'theme/set-theme';
+    {{ end }}
+  {{ else }}
+    {{ errorf "Could not find custom color theme named '%s' in assets/ folder." site.Params.custom_theme }}
+  {{ end }}
+{{ end }}
 
 // learn about Tachyons http://tachyons.io
 @import 'tachyons';
-
-// colors set in data/theme.yaml
-// one of: forest / grayscale / peach / poppy / sky / violet / water
-{{ with $.Site.Params.theme }}
-  @import '{{ printf "theme/%s" . | default "sky" }}';
-  @import 'set-theme';
-{{ end }}
 
 // learn about headroom.js https://wicky.nillia.ms/headroom.js/
 @import 'headroom';

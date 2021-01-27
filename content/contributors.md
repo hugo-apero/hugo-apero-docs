@@ -20,4 +20,6 @@ Thank you to all the folks who have contributed both technical and creative skil
 
 + [Yihui Xie :martial_arts_uniform:](https://yihui.org/) (for the blogdown package, getting me hooked on Hugo, and helping me with layout code inspired by his many Hugo themes)
 
++ [Athanasia Monika Mowinckel :purple_heart:](https://drmowinckels.io/) (for help finding :bug: and SASS support for making color themes work so much better :art:)
+
 And last but not least, Eric Anderson and the team at [Formspree](https://formspree.io/) for developing a Hugo theme with such great bones: <https://github.com/formspree/blogophonic-hugo>
