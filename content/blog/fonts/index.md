@@ -13,7 +13,7 @@ categories:
 layout: single
 ---
 
-As with [color themes](../style-apero), you can completely customize your site's fonts within minutes of creating a new site. How you do it depends on how much control and customization you need.
+As with [color themes](../color-themes), you can completely customize your site's fonts within minutes of creating a new site. How you do it depends on how much control and customization you need.
 
 ## Embedded fonts
 
