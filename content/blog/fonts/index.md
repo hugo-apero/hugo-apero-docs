@@ -145,3 +145,21 @@ Here is what this could look like (thanks to workshop participant [Issac Lee](ht
 ![](isaac-font.png)
 
 If you do all this, you have my consent to delete the theme's `static/fonts/` folder that holds all the custom embedded fonts so you aren't carrying those unnecessary files around with your site (do not delete the `static/webfonts/` folder- that holds the [Font Awesome icons](https://fontawesome.com/)!).
+
+For example, let's examine the 3 commits necessary to make [this magic](https://google-webfonts-helper.herokuapp.com/fonts/hachi-maru-pop?subsets=latin) happen:
+
+### Commit #1
+
+![](font-static-files.png)
+
+### Commit #2
+
+![](font-assets-css.png)
+
+### Commit #3
+
+![](font-config.png)
+
+### Final result
+
+![](hachi-font.png)
