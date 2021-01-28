@@ -33,8 +33,11 @@ enableEmoji = true
   favicon = "/img/favicon.ico"
   logo = "/img/blogophonic-mark-dark.png"
   mainSections = ["blog", "project", "talk"]
-  show_social_links = true
   navallcaps = true
+  # show/hide social icons in site header & footer
+  # configure social icons and links below in [[params.social]]
+  socialInHeader = false
+  socialInFooter = true
   # Default image for social sharing and search engines. 
   # Place image file in `static` folder and specify image name here.
   sharing_image = "/img/papillons.jpg"
@@ -64,11 +67,6 @@ enableEmoji = true
   textFontFamily = "sans-serif"
   headingFontFamily = "sans-serif"
 
-  # show/hide social icons in site header/footer/home page
-  socialInHeader = false
-  socialInFooter = true
-  socialInHome = true
-  
   [comments]
   # Configuration of https://utteranc.es/ for comments
   [comments.utterances]
@@ -77,6 +75,32 @@ enableEmoji = true
     issue_term = "pathname" # url, pathname, or title
     theme = "github-light"
     label = "comments :crystal_ball:"
+
+  # Social icons may appear on homepage and in site header or footer
+  # Configure show/hide above - add as many as you like below
+  # Icon pack "fab" includes brand icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
+  # Icon pack "fas" includes solid icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
+  # Icon pack "far" includes regular icons, see: https://fontawesome.com/icons?d=gallery&s=regular&m=free
+  [[params.social]]
+      icon      = "github" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://github.com/apreshill/apero"
+  [[params.social]]
+      icon      = "facebook-square" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://www.facebook.com/hashtag/ap%C3%A9ro"
+  [[params.social]]
+      icon      = "instagram" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://www.instagram.com/explore/tags/apero/"
+  [[params.social]]
+      icon      = "twitter" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://twitter.com/hashtag/apéro"
+  [[params.social]]
+      icon      = "rss" # icon name without the 'fa-'
+      icon_pack = "fas"
+      url       = "/blog/index.xml"
 
 [taxonomies]
   category = "categories"
