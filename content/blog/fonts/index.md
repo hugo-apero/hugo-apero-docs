@@ -95,6 +95,10 @@ For example, you may choose:
   headingFontFamily = "baskerville"
 ```
 
+And your site would look like:
+
+![](system-font.png)
+
 ## Use a custom font
 
 Alright alright alright. So you still want to use your own fonts. You'll need to do a bit more work to get this working, but not too much. If you made it here, I'm going to hope that you know a bit more about [self-hosting fonts](https://www.tunetheweb.com/blog/should-you-self-host-google-fonts/).
