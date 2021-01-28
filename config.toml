@@ -30,7 +30,7 @@ enableEmoji = true
   orgName = "RStudio"
   orgLocal = "Anywhere"
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
-  favicon = "/img/favicon.ico?v=0"
+  favicon = "/img/favicon.ico"
   logo = "/img/blogophonic-mark-dark.png"
   mainSections = ["blog", "project", "talk"]
   show_social_links = true
@@ -47,15 +47,16 @@ enableEmoji = true
   theme = "sky"
   
   # or, leave theme empty & make your own palette
-  # see docs at https://hugo-apero.netlify.app/blog/style-apero/
+  # see docs at https://hugo-apero.netlify.app/blog/color-themes/
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
   custom_theme = "" 
   
-  # use a built-in font-family
+  # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
+  # if you import your own fonts, name them here too
   customtextFontFamily = "Commissioner"
   customheadingFontFamily = "Fraunces"
   # alternatively, leave empty and select basic font options: sans-serif or serif
