@@ -155,20 +155,10 @@
        url('../fonts/alegreya-sans-v13-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-{{ with $.Site.Params.customtextFontFamily }}
-$textFontFamily: {{ . }}, sans-serif;
-{{ end }}
+// create custom font classes 
+.custom-text-font { font-family: $customtextFontFamily; }
+.custom-heading-font { font-family: $customheadingFontFamily; }
 
-{{ with $.Site.Params.customheadingFontFamily }}
-$headingFontFamily: {{ . }}, serif;
-{{ end }}
-
-body {
-  font-family: $textFontFamily;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: $headingFontFamily;
-}
-details#PageTableOfContents summary {
-  font-family: $headingFontFamily;
-}
+// override variables used in main with new custom class slugs
+$textFontFamily: custom-text-font;
+$headingFontFamily: custom-heading-font;

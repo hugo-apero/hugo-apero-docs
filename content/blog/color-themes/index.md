@@ -6,7 +6,7 @@ date: 2021-01-27
 author: "Alison Hill & Eric Anderson"
 draft: false
 tags:
-  - hugo-site
+  - style
 categories:
   - Theme Features
 # layout options: single, single-sidebar
@@ -58,24 +58,24 @@ All of the color themes were designed to meet [WCAG 2.0 level AA requirements](h
 
 ## Use Tachyons named colors
 
-This theme uses [Tachyons](http://tachyons.io), a design system that allows you 
+This theme uses [Tachyons](https://tachyons.io), a design system that allows you 
 to design gorgeous interfaces in the browser with little effort.
 
 ![Tachyons Logo Script](tachyons-logo-script.png)
 
 We've leveraged the [accessible color
-combinations](http://tachyons.io/docs/themes/skins/) included with Tachyons to
+combinations](https://tachyons.io/docs/themes/skins/) included with Tachyons to
 offer an easy way for you to setup your site using your favorite colors. Here are the steps:
 
 + Create an `assets/` folder in the root of your website project (don't add it to your `themes/` directory!).
 
 + Create a `.scss` file in the new `assets/` folder.
 
-+ Copy the code below for a full set of color parameters giving you control over the theme color scheme. For an option like `siteBgColor`, for example, you can type one of the predefined color names from Tachyons and save the file. Use only color names as shown in the "Color Palette" section of <http://tachyons.io/docs/themes/skins/>.
++ Copy the code below for a full set of color parameters giving you control over the theme color scheme. For an option like `siteBgColor`, for example, you can type one of the predefined color names from Tachyons and save the file. Use only color names as shown in the "Color Palette" section of <httpss://tachyons.io/docs/themes/skins/>.
 
 ```scss
 // basic color options: use only color names as shown in the
-// "Color Palette" section of http://tachyons.io/docs/themes/skins/
+// "Color Palette" section of httpss://tachyons.io/docs/themes/skins/
 $siteBgColor: "near-white" ;
 $sidebarBgColor: "light-gray" ;
 $textColor: "dark-gray" ;
@@ -84,7 +84,6 @@ $headlineColor: "dark-pink" ;
 $headingColor: "near-black" ;
 $bodyLinkColor: "blue" ;
 $navLinkColor: "near-black" ;
-$navBgColor: "near-black" ;
 $sidebarLinkColor: "near-black" ;
 $footerTextColor: "silver" ;
 $buttonTextColor: "near-white" ;
@@ -111,7 +110,7 @@ Your final `config.toml` would look something like this:
   theme = ""
   
   # or, leave theme empty & make your own palette
-  # see docs at https://hugo-apero.netlify.app/blog/customize-apero/
+  # see docs at https://hugo-apero.netlify.app/blog/color-themes/
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
@@ -154,7 +153,7 @@ After adding the name of your theme file (minus the `.scss` extension) that you 
   theme = ""
   
   # or, leave theme empty & make your own palette
-  # see docs at https://hugo-apero.netlify.app/blog/customize-apero/
+  # see docs at https://hugo-apero.netlify.app/blog/color-themes/
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename

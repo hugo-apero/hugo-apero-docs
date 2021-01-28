@@ -1,3 +1,12 @@
+// variables based on tachyons classes
+// set font family options from config with defaults
+$textFontFamily: {{ site.Params.textFontFamily | default "sans-serif" }};
+$headingFontFamily: {{ site.Params.headingFontFamily | default "sans-serif" }};
+
+// use custom fonts
+$customtextFontFamily: {{ site.Params.customtextFontFamily | default site.Params.textFontFamily }};
+$customheadingFontFamily: {{ site.Params.customheadingFontFamily | default site.Params.headingFontFamily }};
+@import 'custom-fonts';
 
 // base color scheme
 @import 'base';
@@ -49,6 +58,9 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   @extend .#{$headingFontFamily}, .#{$headingColor};
+}
+details#PageTableOfContents summary {
+  font-family: $headingFontFamily;
 }
 .f-headline,
 .f-subheadline {
