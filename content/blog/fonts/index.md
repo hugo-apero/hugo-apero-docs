@@ -19,7 +19,7 @@ As with [color themes](../color-themes), you can completely customize your site'
 
 Hugo Apéro includes 6 embedded fonts that work "out of the box." We selected 3 serif and 3 sans-serif options that we thought looked good with this theme, in our humble opinions. All embedded fonts include [real italics](https://www.marksimonson.com/notebook/view/FakevsTrueItalics) so you may <em>emphasize</em> to your <em>heart's</em> content :heart:! How to choose?
 
-You may choose fonts for the text and headings in your site's `config.toml` file. Scroll down to find:
+You may choose fonts for headings and body text in your site's `config.toml` file. Scroll down to find:
 
 ```toml
 [params]
@@ -60,8 +60,7 @@ Here are the links to each font so you can see them in action:
 
 ## Use attractive system fonts
 
-Alternatively, you may want to use a system font, which you know will be rendered reliably across languages, operating systems, and browsers. Since this theme uses [Tachyons](https://tachyons.io), we've leveraged the [accessible system font families](https://tachyons.io/docs/typography/font-family/) included with Tachyons to
-offer an easy way for you to setup your site typography. Why use system fonts?
+Alternatively, you may want to use a system font, which you know will be rendered reliably across languages, operating systems, and browsers. Apéro uses [Tachyons](https://tachyons.io) to render beautiful system font stacks for your site, making it super simple to configure and blazing fast to load. The default choices are `sans-serif` or `serif`, and can be assigned to headings and body text, respectively. Additional options can be found in the [Tachyons Font Family Reference](https://tachyons.io/docs/typography/font-family/). Why use system fonts?
 
 >  Relying on systems fonts greatly improves page performance and can also help your web application/site blend in with the user’s operating system. Readability is strongly linked to familiarity, so this helps create a more fluid reading experience, allowing your users to focus on your content. 
 >
@@ -71,7 +70,7 @@ Here is a step-by-step, using the `config.toml` file:
 
 + Leave both `customtextFontFamily` and `customheadingFontFamily` blank (with empty quotes, or comment out the line entirely).
 
-+ Just below those keys, select a `textFontFamily` and `headingFontFamily` from the options listed [here](http://tachyons.io/docs/typography/font-family/). All are lower case, and exclude the `.` in front. 
++ Just below those keys, select a `textFontFamily` and `headingFontFamily` from the options listed [here](http://tachyons.io/docs/typography/font-family/). All values are lower case, and exclude the `.` in front. 
 
 ```toml
 [params]
@@ -86,7 +85,7 @@ Here is a step-by-step, using the `config.toml` file:
   # alternatively, leave empty and select basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
   textFontFamily = "sans-serif"
-  headingFontFamily = "sans-serif"
+  headingFontFamily = "serif"
 ```
 
 For example, you may choose:
@@ -123,7 +122,7 @@ Here are the steps:
 }
 ```
 
-Your final step is to go back to your `config.toml` file and add the `font-family` values for the font you want to use to the `customtextFontFamily` and/or `customheadingFontFamily` keys. You can combine custom fonts with system fonts too.
+Your final step is to go back to your `config.toml` file and add the `font-family` values for the font(s) you want to use to the `customtextFontFamily` and/or `customheadingFontFamily` keys. You can combine custom fonts with system fonts too. 
 
 ```toml
 [params]
