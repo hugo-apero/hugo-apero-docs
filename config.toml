@@ -53,9 +53,10 @@ enableEmoji = true
   # to use hex colors instead of named tachyons colors, include "hex" in filename
   custom_theme = "" 
   
-  # use a built-in font-family
+  # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
+  # if you import your own fonts, name them here too
   customtextFontFamily = "Commissioner"
   customheadingFontFamily = "Fraunces"
   # alternatively, leave empty and select basic font options: sans-serif or serif
