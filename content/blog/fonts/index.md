@@ -104,11 +104,11 @@ Alright alright alright. So you still want to use your own fonts. You'll need to
 
 Here are the steps:
 
-+ Create a `static/fonts/` folder, and add the actual font files you'd like to embed to that folder. To download Google fonts, there is a [popular app](https://google-webfonts-helper.herokuapp.com/fonts) to help you, but it hasn't been updated and works but some fonts may not appear correctly. I recommend: <https://nextgenthemes.com/google-webfont-downloader/>.
++ Create a `static/fonts/` folder, and add the actual font files you'd like to embed to that folder. To download Google fonts, there is a [popular app](https://google-webfonts-helper.herokuapp.com/fonts) to help you. Select a font, then download the zip file containing the font files you'll need to embed.
 
 + Create an `assets/` folder in the root of your website project (don't add it to your `themes/` directory!).
 
-+ Create a file named `custom.scss` in the new `assets/` folder to define the [`@font-face` CSS rule](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) for each font/weight combination you downloaded. For example, here is a `custom.scss` that imports the [Nanum Myeongjo font](https://fonts.google.com/specimen/Nanum+Myeongjo).
++ Create a file named `custom.scss` in the new `assets/` folder to define the [`@font-face` CSS rule](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) for each font/weight combination you downloaded. For example, here is a `custom.scss` that imports the [Nanum Myeongjo font](https://fonts.google.com/specimen/Nanum+Myeongjo). The [webfonts helper app](https://google-webfonts-helper.herokuapp.com/fonts) will help write your CSS for you (using `../fonts/` to customize the folder prefix correctly by default), like this:
 
 ```scss
 /* nanum-myeongjo-regular - latin */
