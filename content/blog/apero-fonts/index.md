@@ -1,7 +1,7 @@
 ---
-title: "Style your site's typography"
+title: "Style your site typography"
 subtitle: "Use an embedded font (no CSS required!), rely on system fonts reliably using Tachyons, or bring your own font files- your choice."
-excerpt: "This theme offers three ways to customize your site's fonts. Choose from 6 embedded font options (including 3 serif and 3 sans-serif fonts), or rely on system fonts with reliable fallbacks using Tachyons. You may also bring your own font files (CSS required!)."
+excerpt: "This theme offers three ways to customize your site's fonts. Choose from 6 embedded font options, including 3 serif and 3 sans-serif fonts, or rely on system fonts with reliable fallbacks using Tachyons. You may also bring your own font files (CSS required!)."
 date: 2021-01-27
 author: "Alison Hill"
 draft: false
@@ -19,7 +19,7 @@ As with [color themes](../style-apero), you can completely customize your site's
 
 Hugo Apéro includes 6 embedded fonts that work "out of the box." We selected 3 serif and 3 sans-serif options that we thought looked good with this theme, in our humble opinions. All embedded fonts include [real italics](https://www.marksimonson.com/notebook/view/FakevsTrueItalics) so you may <em>emphasize</em> to your <em>heart's</em> content :heart:! How to choose?
 
-You may choose fonts for headings and for non-heading text in your site's `config.toml` file. Scroll down to find:
+You may choose fonts for the text and headings in your site's `config.toml` file. Scroll down to find:
 
 ```toml
 [params]
@@ -34,7 +34,7 @@ You may choose fonts for headings and for non-heading text in your site's `confi
 
 Here are the links to each font so you can see them in action:
 
-<h6 class="ttu tracked pv3 mt5 bt">Embedded font options</h6>
+<h6 class="ttu tracked pv3 bt">Embedded font options</h6>
     <table class="collapse ba bw1 b--moon-gray mv4 w-100">
       <thead>
         <tr>
@@ -105,9 +105,7 @@ Here are the steps:
 
 + Create an `assets/` folder in the root of your website project (don't add it to your `themes/` directory!).
 
-+ Create a file named `custom.scss` in the new `assets/` folder to define the [`@font-face` CSS rule](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) for each font/weight combination you downloaded.
-
-For example, here is a `custom.scss` that imports the [Nanum Myeongjo font](https://fonts.google.com/specimen/Nanum+Myeongjo).
++ Create a file named `custom.scss` in the new `assets/` folder to define the [`@font-face` CSS rule](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) for each font/weight combination you downloaded. For example, here is a `custom.scss` that imports the [Nanum Myeongjo font](https://fonts.google.com/specimen/Nanum+Myeongjo).
 
 ```scss
 /* nanum-myeongjo-regular - latin */
@@ -139,7 +137,7 @@ Your final step is to go back to your `config.toml` file and add the `font-famil
   headingFontFamily = ""
 ```
 
-Here is what this could look like (thanks to workshop participant [Isaac Lee](https://github.com/issactoast)!)
+Here is what this could look like (thanks to workshop participant [Issac Lee](https://github.com/issactoast)!)
 
 ![](isaac-font.png)
 
