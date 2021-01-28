@@ -48,7 +48,7 @@
         <p class="f7 dib mv1">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>
       {{ end }}
       {{ if .Params.links }}
-        <p class="dib pt1">
+        <p class="db pt1">
         {{ partial "shared/btn-links.html" . }}
         </p>
       {{ end }}
