@@ -53,7 +53,7 @@ Finally, add the `url` that you would like users to go to when they click on tha
 
 Now you should be all set to show/hide your social icons. Each of these will pull the social icons and urls from the settings you just created in your site configuration file.
 
-## Social in site header and footer
+## Show social in site header and footer
 
 Let's start with the header and footer, as those are site-wide. Open up your site `config.toml` file again and scroll down to the `[params]` section (it is actually :up: from where you configured these icons):
 
@@ -69,7 +69,7 @@ Let's start with the header and footer, as those are site-wide. Open up your sit
 
 That was easy!
 
-## Social in homepage
+## Show social in homepage
 
 Open up `content/_index.md`. That file's YAML controls what you see on the homepage. Set `show_social_links` like so:
 
@@ -79,7 +79,7 @@ show_social_links: true # specify social accounts in site config
 
 If you set this to `true` to show the icons on the homepage, your social icons in the footer will not show up even when you set `socialInFooter = true`, so as not to litter your site with too many icons.
 
-## Social in about page sidebar
+## Show social in about page sidebar
 
 Open up `content/about/sidebar/index.md`. That file's YAML controls what you see in the sidebar on the about page. Set `show_social_links` like so:
 
@@ -87,7 +87,7 @@ Open up `content/about/sidebar/index.md`. That file's YAML controls what you see
 show_social_links: true # specify social accounts in site config
 ```
 
-## Social in contact page
+## Show social in contact page
 
 You may use the YAML for your contact page (located in `content/form/contact.md`):
 
