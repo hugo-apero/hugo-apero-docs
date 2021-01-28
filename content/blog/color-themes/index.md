@@ -6,7 +6,7 @@ date: 2021-01-27
 author: "Alison Hill & Eric Anderson"
 draft: false
 tags:
-  - hugo-site
+  - style
 categories:
   - Theme Features
 # layout options: single, single-sidebar
