@@ -59,9 +59,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
   @extend .#{$headingFontFamily}, .#{$headingColor};
 }
-details#PageTableOfContents summary {
-  font-family: $headingFontFamily;
-}
 .f-headline,
 .f-subheadline {
   @extend .#{$headlineColor} ;

@@ -20,7 +20,7 @@
   {{- $has_headers := ge (len $headers) 1 -}}
   {{- if $has_headers -}}
   <details open id="PageTableOfContents">
-    <summary>{{ $page_toc_label }}</summary>
+    <summary><h2 class="mv0 f5 fw7 ttu tracked dib">{{ $page_toc_label }}</h2></summary>
     <div class="pl2 pr0 mh0">
     {{ $page.TableOfContents }}
     </div>
