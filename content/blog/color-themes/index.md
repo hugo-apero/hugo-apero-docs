@@ -111,7 +111,7 @@ Your final `config.toml` would look something like this:
   theme = ""
   
   # or, leave theme empty & make your own palette
-  # see docs at https://hugo-apero.netlify.app/blog/customize-apero/
+  # see docs at https://hugo-apero.netlify.app/blog/color-themes/
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
@@ -154,7 +154,7 @@ After adding the name of your theme file (minus the `.scss` extension) that you 
   theme = ""
   
   # or, leave theme empty & make your own palette
-  # see docs at https://hugo-apero.netlify.app/blog/customize-apero/
+  # see docs at https://hugo-apero.netlify.app/blog/color-themes/
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
