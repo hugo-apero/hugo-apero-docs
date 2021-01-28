@@ -1,7 +1,7 @@
 // variables based on tachyons classes
 // set font family options from config with defaults
-$textFontFamily: {{ .Site.Params.textFontFamily | default "sans-serif" }};
-$headingFontFamily: {{ .Site.Params.headingFontFamily | default "sans-serif" }};
+$textFontFamily: {{ site.Params.textFontFamily | default "sans-serif" }};
+$headingFontFamily: {{ site.Params.headingFontFamily | default "sans-serif" }};
 
 // use custom fonts
 $customtextFontFamily: {{ site.Params.customtextFontFamily | default site.Params.textFontFamily }};
