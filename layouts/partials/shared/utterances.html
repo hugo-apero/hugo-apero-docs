@@ -1,8 +1,12 @@
+{{ if site.Params.utterances.use_utterances }}
+{{ with site.Params.utterances }}
 <script src="https://utteranc.es/client.js"
-        repo="{{ site.Params.repo_name }}"
-        issue-term="{{ site.Params.comments.utterances.issue_term }}"
-        theme="{{ site.Params.comments.utterances.theme }}"
-        label="{{ site.Params.comments.utterances.label }}"
+        repo="{{ .repo_name }}"
+        issue-term="{{ .issue_term }}"
+        theme="{{ .theme }}"
+        label="{{ .label }}"
         crossorigin="anonymous"
         async>
 </script>
+{{ end }}
+{{ end }}
