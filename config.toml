@@ -68,7 +68,7 @@ enableEmoji = true
   headingFontFamily = "sans-serif"
 
   # Configuration of https://utteranc.es/ for comments
-  [[params.utterances]]
+  [params.utterances]
     use_utterances = true
     repo_name = "apreshill/hugo-apero"
     issue_term = "pathname" # url, pathname, or title
