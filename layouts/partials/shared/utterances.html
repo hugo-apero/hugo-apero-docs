@@ -1,4 +1,3 @@
-{{ if site.Params.utterances.use_utterances }}
 {{ with site.Params.utterances }}
 <script src="https://utteranc.es/client.js"
         repo="{{ .repo_name }}"
@@ -8,5 +7,4 @@
         crossorigin="anonymous"
         async>
 </script>
-{{ end }}
 {{ end }}
