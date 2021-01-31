@@ -1,11 +1,11 @@
-{{ with site.Params.utterances }}
+
 <script src="https://utteranc.es/client.js"
-        repo="{{ .repo_name }}"
-        issue-term="{{ .issue_term }}"
-        theme="{{ .theme }}"
-        label="{{ .label }}"
+        repo="{{ site.Params.utterances.repo_name }}"
+        issue-term="{{ site.Params.utterances.issue_term }}"
+        theme="{{ site.Params.utterances.theme }}"
+        label="{{ site.Params.utterances.label }}"
         crossorigin="anonymous"
         async>
 </script>
-{{ end }}
+
 
