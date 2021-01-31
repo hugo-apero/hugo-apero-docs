@@ -70,9 +70,9 @@ enableEmoji = true
   # Configuration of https://utteranc.es/ for comments
   [params.utterances]
     use_utterances = true
-    repo_name = "apreshill/hugo-apero"
+    repo_name = "apreshill/apero"
     issue_term = "pathname" # url, pathname, or title
-    theme = "github-light"
+    theme = "boxy-light"
     label = "comments :crystal_ball:"
 
   # Social icons may appear on homepage and in site header or footer
