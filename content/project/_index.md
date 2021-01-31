@@ -24,7 +24,7 @@ sidebar:
 cascade:    
   show_author_byline: true
   show_post_date: true
-  show_disqus_comments: false # see disqusShortname in site config
+  show_comments: false # see site config to choose Disqus or Utterances
   # for single-sidebar layout only
   sidebar:
     text_link_label: View all projects

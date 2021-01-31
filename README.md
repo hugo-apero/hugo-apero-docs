@@ -100,14 +100,14 @@ There are two sets of blog front matter. One set is for the blog itself (`/blog/
 
 #### Blog List
 
-For the blog, there are three `layout` choices: `list`, `list-sidebar`, or `list-grid`. We list the blog posts with a title and excerpt plus a thumbnail, byline, and dateline according to your boolean choice here. This is also where you enable the display of Disqus comments.
+For the blog, there are three `layout` choices: `list`, `list-sidebar`, or `list-grid`. We list the blog posts with a title and excerpt plus a thumbnail, byline, and dateline according to your boolean choice here. This is also where you enable the display of comments (Disqus or Utterances).
 
 ```yaml
 layout: list-sidebar # list, list-sidebar, list-grid
 show_post_thumbnail: true
 show_author_byline: true
 show_post_date: true
-show_disqus_comments: false # see disqusShortname in site config
+show_comments: false # disqus or utterances site config
 ```
 
 #### Blog Post
