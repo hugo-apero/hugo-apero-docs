@@ -18,6 +18,7 @@
 .bg-custom-button-bg-color { background-color: $buttonBgColorCustom; }
 .hover-bg-custom-button-hover-bg-color:hover { background-color: $buttonHoverBgColorCustom; }
 .b--custom-border-color { border-color: $borderColorCustom; }
+.custom-svg-color { color: $headlineColorCustom; stroke: $headlineColorCustom; fill: $headlineColorCustom; }
 
 // override variables used in main with new custom class slugs
 $siteBgColor: custom-site-bg-color;
@@ -36,3 +37,4 @@ $buttonHoverTextColor: custom-button-hover-text-color;
 $buttonBgColor: custom-button-bg-color;
 $buttonHoverBgColor: custom-button-hover-bg-color;
 $borderColor: custom-border-color;
+$svgColor: custom-svg-color;
