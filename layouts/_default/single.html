@@ -24,6 +24,9 @@
         {{ partial "shared/post-pagination.html" . }}
       </footer>
     </article>
+    <!-- add the applause button! -->
+    <applause-button class="mt5" style="width: 58px; height: 58px;"/>
+    </applause-button>
     {{ if .Params.show_comments }}
       {{ partial "shared/comments.html" . }}
     {{ end }}

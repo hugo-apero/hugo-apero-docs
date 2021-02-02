@@ -1,5 +1,6 @@
 // first import.
 import Headroom from 'js/headroom';
+import Applause from 'js/applause-button';
 
 document.addEventListener('DOMContentLoaded', function() {
   // grab the header element.

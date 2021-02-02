@@ -52,6 +52,15 @@ $customheadingFontFamily: {{ site.Params.customheadingFontFamily | default site.
 // written by Garrick Aden-Buie
 @import 'panelset';
 
+// learn about applause button https://applause-button.com/
+@import 'applause-button';
+applause-button {
+  @extend .#{$svgColor};
+}
+applause-button svg g.outline {
+  @extend .outline-transparent;
+}
+
 // apply tachyons font family and color options from config
 body {
   @extend .bg-#{$siteBgColor}, .#{$textFontFamily}, .#{$textColor};
