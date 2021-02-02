@@ -1,4 +1,4 @@
-baseURL = "https://hugo-apero.netlify.app/"
+baseURL = "https://hugo-apero-docs.netlify.app/"
 languageCode = "en"
 title = "Hugo Apéro"
 author = "Alison Hill"
