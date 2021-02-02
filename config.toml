@@ -47,7 +47,7 @@ enableEmoji = true
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water 
-  theme = "sky"
+  theme = "violet"
   
   # or, leave theme empty & make your own palette
   # see docs at https://hugo-apero.netlify.app/blog/color-themes/
@@ -83,7 +83,7 @@ enableEmoji = true
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://github.com/apreshill/apero"
+      url       = "https://github.com/hugo-apero/apero"
   [[params.social]]
       icon      = "facebook-square" # icon name without the 'fa-'
       icon_pack = "fab"
@@ -109,7 +109,7 @@ enableEmoji = true
 [menu]
   [[menu.header]]
     name = "About"
-    title = "About Blogophonic"
+    title = "About Apéro"
     url = "/about/"
     weight = 1
   [[menu.header]]
