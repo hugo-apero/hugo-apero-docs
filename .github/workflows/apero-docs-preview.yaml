@@ -1,6 +1,4 @@
 on:
-  push:
-    branches: gha
   schedule:
     # * is a special character in YAML so we have to quote this string
     # 3am Pacific = 11am UTC
