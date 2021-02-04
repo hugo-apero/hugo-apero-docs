@@ -1,13 +1,18 @@
 on:
   push:
-    branches:
-      - gha
+    branches: gha
+  schedule:
+    # * is a special character in YAML so we have to quote this string
+    # 3am Pacific = 11am UTC
+    # https://crontab.guru is your friend
+    - cron:  '0 12 * * *'
 
-name: build-site
+name: theme-preview
 
 jobs:
-  build-site:
+  theme-preview:
     runs-on: macOS-latest
+    if: github.event_name == 'schedule' || contains(github.event.head_commit.message, '[theme]')
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
