@@ -24,19 +24,11 @@ jobs:
 
       - name: Build website
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
           Rscript -e 'blogdown::build_site(baseURL = "https://hugo-apero.github.io/apero/")'
 
-      - name: Add nojekyll
-        run: |
-          cd public/
-          touch .nojekyll
-          
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: public # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages  # default
