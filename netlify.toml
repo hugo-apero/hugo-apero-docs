@@ -12,3 +12,9 @@ command = "hugo -F -b $DEPLOY_PRIME_URL"
 [context.production]
 [context.production.environment]
 HUGO_ENV = "production"
+
+# Specific branch context: all deploys from this specific branch will inherit
+# these settings.
+[context.gh-pages] # 'gh-pages' is a branch name
+command = "echo 'gh-pages'"
+publish = "."
