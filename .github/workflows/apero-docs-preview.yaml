@@ -6,7 +6,7 @@ on:
 name: build-site
 
 jobs:
-  hugo:
+  build-site:
     runs-on: macOS-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -18,6 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages("blogdown")
+          blogdown::install_hugo("0.79.0", extended=TRUE, force=TRUE)
           blogdown::install_theme(theme="hugo-apero/hugo-apero", force=TRUE)
         shell: Rscript {0}
 
@@ -25,12 +26,17 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          Rscript -e 'blogdown::build_site()'
+          Rscript -e 'blogdown::build_site(baseURL = "https://hugo-apero.github.io/apero/")'
+
+      - name: Add nojekyll
+        run: |
+          cd public/
+          touch .nojekyll
           
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: docs # The folder the action should deploy.
+          FOLDER: public # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
