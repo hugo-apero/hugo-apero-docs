@@ -15,6 +15,7 @@ HUGO_ENV = "production"
 
 # Specific branch context: all deploys from this specific branch will inherit
 # these settings.
+# https://community.netlify.com/t/deploy-branch-without-default-site-settings/22053/9
 [context.gh-pages] # 'gh-pages' is a branch name
-command = "echo 'gh-pages'"
+command = "true"
 publish = "."
