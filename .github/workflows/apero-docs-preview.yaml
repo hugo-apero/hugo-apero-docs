@@ -27,7 +27,7 @@ jobs:
           Rscript -e 'blogdown::build_site(baseURL = "https://hugo-apero.github.io/apero/")'
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.7.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
