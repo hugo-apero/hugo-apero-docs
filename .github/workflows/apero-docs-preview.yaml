@@ -1,0 +1,37 @@
+on:
+  schedule:
+    # * is a special character in YAML so we have to quote this string
+    # 3am Pacific = 11am UTC
+    # https://crontab.guru is your friend
+    - cron:  '0 12 * * *'
+
+name: theme-preview
+
+jobs:
+  theme-preview:
+    runs-on: macOS-latest
+    if: github.event_name == 'schedule' || contains(github.event.head_commit.message, '[theme]')
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: r-lib/actions/setup-r@v1
+
+      - name: Install dependencies
+        run: |
+          install.packages("blogdown")
+          blogdown::install_hugo("0.79.0", extended=TRUE, force=TRUE)
+          blogdown::install_theme(theme="hugo-apero/hugo-apero", force=TRUE)
+        shell: Rscript {0}
+
+      - name: Build website
+        run: |
+          Rscript -e 'blogdown::build_site(baseURL = "https://hugo-apero.github.io/apero/")'
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages  # default
