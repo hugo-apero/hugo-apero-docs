@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Hugo Apéro</title>
+    <link>https://hugo-apero.github.io/apero/tags/</link>
+    <description>Recent content in Tags on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>style</title>
+      <link>https://hugo-apero.github.io/apero/tags/style/</link>
+      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/tags/style/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo-site</title>
+      <link>https://hugo-apero.github.io/apero/tags/hugo-site/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/tags/hugo-site/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
