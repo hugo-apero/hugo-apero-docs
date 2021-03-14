@@ -1,7 +1,7 @@
 ---
 title: "Set up your social"
 subtitle: "Social icons may appear on several pages throughout your site. Learn how to set them up, and control where they show up."
-excerpt: "This theme offers built-in Font Awesome icons for organizing your collection of social accounts and their links. Use icons to help visitors find you wherever you want to be found, and learn how to show or hide them in your site's header, footer, homepage, about page, and contact form."
+excerpt: "This theme offers built-in Font Awesome icons and Academicons for organizing your collection of social accounts and their links. Use icons to help visitors find you wherever you want to be found, and learn how to show or hide them in your site's header, footer, homepage, about page, and contact form."
 date: 2021-01-28
 author: "Alison Hill & Eric Anderson"
 draft: false
@@ -41,13 +41,23 @@ Wherever you end up wanting to show your social icons, you'll need to start by s
   [[params.social]] <!--lather, rinse, repeat-->
 ```
 
-For each link, you'll need to start a new portion that begins with `[[params.social]]`. Then, pick your `icon` and `icon_pack` from the [Font Awesome](https://fontawesome.com/) free icon library:
+For each link, you'll need to start a new portion that begins with `[[params.social]]`. Then, pick your `icon` and `icon_pack` from the [Font Awesome](https://fontawesome.com/) or [Academicons](https://jpswalsh.github.io/academicons/) free icon libraries:
 
-+ Icon pack "fab" includes [brand icons](https://fontawesome.com/icons?d=gallery&s=brands&m=free)
++ Icon pack "fab" includes [brand icons](https://fontawesome.com/icons?d=gallery&s=brands&m=free) like [<i class="fab fa-twitter"></i>twitter](https://fontawesome.com/icons/twitter?style=brands)
 
-+ Icon pack "fas" includes [solid icons](https://fontawesome.com/icons?d=gallery&s=solid&m=free)
++ Icon pack "fas" includes [solid icons](https://fontawesome.com/icons?d=gallery&s=solid&m=free) like [<i class="fas fa-coffee"></i>coffee](https://fontawesome.com/icons/coffee?style=solid)
 
-+ Icon pack "far" includes [regular icons](https://fontawesome.com/icons?d=gallery&s=regular&m=free)
++ Icon pack "far" includes [regular icons](https://fontawesome.com/icons?d=gallery&s=regular&m=free) like [<i class="far fa-paper-plane"></i>paper plane](https://fontawesome.com/icons/paper-plane?style=regular)
+
++ Icon pack "ai" includes  [Academicons](https://jpswalsh.github.io/academicons/) like <i class="ai ai-impactstory"></i>impact story. 
+
+For icon names, leave off the prefix (i.e., don't include the `fa-` or the `ai-` before the icon name).
+
+```toml
+  [[params.social]]
+      icon      = "github" # this
+      icon      = "fa-github" # not this
+```
 
 Finally, add the `url` that you would like users to go to when they click on that icon. All external links (i.e., those that start with `http`) will open in a new tab (that is, `target="_blank"`); relative links to pages within the site will open in the same window.
 
@@ -74,7 +84,9 @@ That was easy!
 Open up `content/_index.md`. That file's YAML controls what you see on the homepage. Set `show_social_links` like so:
 
 ```yaml
+---
 show_social_links: true # specify social accounts in site config
+---
 ```
 
 If you set this to `true` to show the icons on the homepage, your social icons in the footer will not show up even when you set `socialInFooter = true`, so as not to litter your site with too many icons.
@@ -84,7 +96,9 @@ If you set this to `true` to show the icons on the homepage, your social icons i
 Open up `content/about/sidebar/index.md`. That file's YAML controls what you see in the sidebar on the about page. Set `show_social_links` like so:
 
 ```yaml
+---
 show_social_links: true # specify social accounts in site config
+---
 ```
 
 ## Show social in contact page
