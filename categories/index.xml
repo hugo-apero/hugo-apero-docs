@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Hugo Apéro</title>
+    <link>https://hugo-apero.github.io/apero/categories/</link>
+    <description>Recent content in Categories on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>evergreen</title>
+      <link>https://hugo-apero.github.io/apero/categories/evergreen/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/categories/evergreen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme Features</title>
+      <link>https://hugo-apero.github.io/apero/categories/theme-features/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/categories/theme-features/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workshop</title>
+      <link>https://hugo-apero.github.io/apero/categories/workshop/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/categories/workshop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://hugo-apero.github.io/apero/categories/r/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meetup</title>
+      <link>https://hugo-apero.github.io/apero/categories/meetup/</link>
+      <pubDate>Fri, 01 Jan 2021 14:15:59 -0600</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/categories/meetup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>package</title>
+      <link>https://hugo-apero.github.io/apero/categories/package/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/categories/package/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

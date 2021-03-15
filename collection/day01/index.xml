@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Day 01 on Hugo Apéro</title>
+    <link>https://hugo-apero.github.io/apero/collection/day01/</link>
+    <description>Recent content in Day 01 on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/collection/day01/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A GitHub profile</title>
+      <link>https://hugo-apero.github.io/apero/collection/day01/01-github/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/collection/day01/01-github/</guid>
+      <description>Profile     https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/personalizing-your-profile
+Pin projects to profile     https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/pinning-items-to-your-profile
+Profile README     This is new! Let&amp;rsquo;s do it:
+https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme</description>
+    </item>
+    
+    <item>
+      <title>A postcard</title>
+      <link>https://hugo-apero.github.io/apero/collection/day01/02-postcards/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/collection/day01/02-postcards/</guid>
+      <description>Pre-requisites     First, make sure you have the latest version of the postcards package installed from CRAN:
+install.packages(&amp;quot;postcards&amp;quot;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+ Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS).  packageVersion(&amp;quot;postcards&amp;quot;) [1] ‘0.2.0’  Create GitHub repo     Online.</description>
+    </item>
+    
+    <item>
+      <title>A distill site</title>
+      <link>https://hugo-apero.github.io/apero/collection/day01/03-distill/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/collection/day01/03-distill/</guid>
+      <description>Pre-requisites     First, make sure you have the latest version of the distill package installed from CRAN:
+install.packages(&amp;quot;distill&amp;quot;)  Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+ Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS).  &amp;lt;!-- --&amp;gt; packageVersion(&amp;quot;distill&amp;quot;) [1] ‘1.2’  Create GitHub repo     Online.</description>
+    </item>
+    
+  </channel>
+</rss>

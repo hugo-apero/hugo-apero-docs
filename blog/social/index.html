@@ -49,7 +49,7 @@
 Configure social     Wherever you end up wanting to show your social icons, you&rsquo;ll need to start by setting up the links in your site config.">
 <meta itemprop="datePublished" content="2021-01-28T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-01-28T00:00:00+00:00" />
-<meta itemprop="wordCount" content="499">
+<meta itemprop="wordCount" content="547">
 <meta itemprop="image" content="https://hugo-apero.github.io/apero/blog/social/featured.jpg">
 
 
@@ -62,7 +62,7 @@ Configure social     Wherever you end up wanting to show your social icons, you&
   <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
   
   
-  <link rel="stylesheet" href="/apero/style.main.min.dee6f2c72475234ef5c9d0666ec52c0d57d1fe0bd522feeb5a44928caf373973.css" integrity="sha256-3ubyxyR1I071ydBmbsUsDVfR/gvVIv7rWkSSjK83OXM=" media="screen">
+  <link rel="stylesheet" href="/apero/style.main.min.cffee8ac7cd6a512cbf66213989ed9f2aea2b2557028d6f9149a4cfadc16f46a.css" integrity="sha256-z/7orHzWpRLL9mITmJ7Z8q6islVwKNb5FJpM&#43;twW9Go=" media="screen">
   
   
   <script src="/apero/panelset.min.41f62c42d5f25dd80e81136866f4f1baa1bc17669edfd002e75c0e107953789b.js" type="text/javascript"></script>
@@ -159,22 +159,34 @@ Configure social     Wherever you end up wanting to show your social icons, you&
       url       = <span style="color:#d14">&#34;https://github.com/apreshill/apero&#34;</span>
   [[params.social]] <span style="color:#a61717;background-color:#e3d2d2">&lt;!--</span>lather, rinse, repeat<span style="color:#a61717;background-color:#e3d2d2">--&gt;</span>
 </code></pre></div><p>For each link, you&rsquo;ll need to start a new portion that begins with <code>[[params.social]]</code>. Then, pick your <code>icon</code> and <code>icon_pack</code> from the 
-<a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a> free icon library:</p>
+<a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a> or 
+<a href="https://jpswalsh.github.io/academicons/" target="_blank" rel="noopener">Academicons</a> free icon libraries:</p>
 <ul>
 <li>
 <p>Icon pack &ldquo;fab&rdquo; includes 
-<a href="https://fontawesome.com/icons?d=gallery&amp;s=brands&amp;m=free" target="_blank" rel="noopener">brand icons</a></p>
+<a href="https://fontawesome.com/icons?d=gallery&amp;s=brands&amp;m=free" target="_blank" rel="noopener">brand icons</a> like 
+<a href="https://fontawesome.com/icons/twitter?style=brands" target="_blank" rel="noopener"><i class="fab fa-twitter"></i>twitter</a></p>
 </li>
 <li>
 <p>Icon pack &ldquo;fas&rdquo; includes 
-<a href="https://fontawesome.com/icons?d=gallery&amp;s=solid&amp;m=free" target="_blank" rel="noopener">solid icons</a></p>
+<a href="https://fontawesome.com/icons?d=gallery&amp;s=solid&amp;m=free" target="_blank" rel="noopener">solid icons</a> like 
+<a href="https://fontawesome.com/icons/coffee?style=solid" target="_blank" rel="noopener"><i class="fas fa-coffee"></i>coffee</a></p>
 </li>
 <li>
 <p>Icon pack &ldquo;far&rdquo; includes 
-<a href="https://fontawesome.com/icons?d=gallery&amp;s=regular&amp;m=free" target="_blank" rel="noopener">regular icons</a></p>
+<a href="https://fontawesome.com/icons?d=gallery&amp;s=regular&amp;m=free" target="_blank" rel="noopener">regular icons</a> like 
+<a href="https://fontawesome.com/icons/paper-plane?style=regular" target="_blank" rel="noopener"><i class="far fa-paper-plane"></i>paper plane</a></p>
+</li>
+<li>
+<p>Icon pack &ldquo;ai&rdquo; includes  
+<a href="https://jpswalsh.github.io/academicons/" target="_blank" rel="noopener">Academicons</a> like <i class="ai ai-impactstory"></i>impact story.</p>
 </li>
 </ul>
-<p>Finally, add the <code>url</code> that you would like users to go to when they click on that icon. All external links (i.e., those that start with <code>http</code>) will open in a new tab (that is, <code>target=&quot;_blank&quot;</code>); relative links to pages within the site will open in the same window.</p>
+<p>For icon names, leave off the prefix (i.e., don&rsquo;t include the <code>fa-</code> or the <code>ai-</code> before the icon name).</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">  [[params.social]]
+      icon      = <span style="color:#d14">&#34;github&#34;</span> <span style="color:#998;font-style:italic"># this</span>
+      icon      = <span style="color:#d14">&#34;fa-github&#34;</span> <span style="color:#998;font-style:italic"># not this</span>
+</code></pre></div><p>Finally, add the <code>url</code> that you would like users to go to when they click on that icon. All external links (i.e., those that start with <code>http</code>) will open in a new tab (that is, <code>target=&quot;_blank&quot;</code>); relative links to pages within the site will open in the same window.</p>
 <p>Now you should be all set to show/hide your social icons. Each of these will pull the social icons and urls from the settings you just created in your site configuration file.</p>
 
 
@@ -206,7 +218,9 @@ Configure social     Wherever you end up wanting to show your social icons, you&
     </svg></a>
 </h2>
 <p>Open up <code>content/_index.md</code>. That file&rsquo;s YAML controls what you see on the homepage. Set <code>show_social_links</code> like so:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">show_social_links</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># specify social accounts in site config</span><span style="color:#bbb">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#555">---</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">show_social_links</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># specify social accounts in site config</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#555">---</span><span style="color:#bbb">
 </span></code></pre></div><p>If you set this to <code>true</code> to show the icons on the homepage, your social icons in the footer will not show up even when you set <code>socialInFooter = true</code>, so as not to litter your site with too many icons.</p>
 
 
@@ -219,7 +233,9 @@ Configure social     Wherever you end up wanting to show your social icons, you&
     </svg></a>
 </h2>
 <p>Open up <code>content/about/sidebar/index.md</code>. That file&rsquo;s YAML controls what you see in the sidebar on the about page. Set <code>show_social_links</code> like so:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">show_social_links</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># specify social accounts in site config</span><span style="color:#bbb">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#555">---</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">show_social_links</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># specify social accounts in site config</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#555">---</span><span style="color:#bbb">
 </span></code></pre></div>
 
 
@@ -243,7 +259,7 @@ Configure social     Wherever you end up wanting to show your social icons, you&
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">3 minute read, 499 words</dd>
+    <dd class="fw5 ml0">3 minute read, 547 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -266,6 +282,9 @@ Configure social     Wherever you end up wanting to show your social icons, you&
     <a class="prev dtc pr2 tl v-top fw6"
     href="https://hugo-apero.github.io/apero/blog/color-themes/">&larr; Style your site colors</a>
   
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://hugo-apero.github.io/apero/blog/homepage/">Customize your homepage &rarr;</a>
   
 </div>
 
@@ -299,7 +318,101 @@ Configure social     Wherever you end up wanting to show your social icons, you&
 Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
     </p>
     
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
       
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/hugo-apero/apero" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.facebook.com/hashtag/ap%C3%A9ro" title="facebook-square" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-square fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.instagram.com/explore/tags/apero/" title="instagram" target="_blank" rel="noopener">
+      <i class="fab fa-instagram fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/hashtag/ap%c3%a9ro" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0002-8082-1890" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="/apero/blog/index.xml" title="rss" >
+      <i class="fas fa-rss fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
     
     <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
       
