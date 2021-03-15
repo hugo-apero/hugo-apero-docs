@@ -11,7 +11,7 @@ categories:
 - evergreen
 ---
 
-Start customizing your Hugo Apéro homepage by opening up `content/_index.md`. When you open this file, you'll see a long-ish section of YAML with a series sof key-value pairss fenced in by three dashes (`---`). There is no content on this page below the YAML.
+Start customizing your Hugo Apéro homepage by opening up `content/_index.md`. When you open this file, you'll see a long-ish section of YAML with a series of key-value pairs fenced in by three dashes (`---`). There is no content on this page below the YAML.
 
 The underscore in the filename is important, and so is the filename, so don't change this! But do focus on changing the YAML values. 
 
