@@ -149,3 +149,15 @@ number_categories: 3 # set to zero to exclude
 ```
 
 These categories show up as clickable buttons above the outro.
+
+## Sharing image for the about page
+
+The about page will default to your site's default sharing image, set up in your `config.toml` file.
+
+```toml
+[params]
+  <!--snip snip-->
+  # Default image for social sharing and search engines. 
+  # Place image file in `static` folder and specify image name here.
+  sharing_image = "/img/papillons.jpg"
+```
