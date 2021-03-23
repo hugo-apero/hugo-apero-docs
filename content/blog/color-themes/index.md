@@ -32,7 +32,10 @@ without needing to write any CSS. You can select the color theme in your `config
   theme = ""
 ```
 
-Type one of the options like `"peach"` inside the quotation marks. If you have a Hugo server started (i.e., by using `blogdown::serve_site()`), when you save the `config.toml` file, your site preview will immediately and automatically update with your new color theme. For example, let's choose `"peach"`!
+Here is a [short video](https://youtu.be/a0ek3hWkSU8) that previews each of these color themes:
+{{< youtube a0ek3hWkSU8 >}}
+
+To use a theme, type one of the options like `"peach"` inside the quotation marks. If you have a Hugo server started (i.e., by using `blogdown::serve_site()`), when you save the `config.toml` file, your site preview will immediately and automatically update with your new color theme. For example, let's choose `"peach"`!
 
 ```toml
 [params]
