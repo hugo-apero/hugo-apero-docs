@@ -74,7 +74,7 @@ Open up `content/about/sidebar/index.md` to customize. This is another file wher
 
 ### Add your info and avatar
 
-Add your name as the `author` and a `role`. To add an avatar,
+Add your name as the `author` and a `role`. To add an avatar:
 
 1. Save an image with the word `"avatar"` in the filename to the `content/about/sidebar/` folder (so it should be alongside the `index.md` file named, for example, `alison-avatar.jpg` or `avatar-haifa.png`), and
 1. Then, select a shape for the image to display in the sidebar (one of: circle, square, rounded) in the YAML of `content/about/sidebar/index.md` (as shown below).
@@ -84,17 +84,19 @@ Add your name as the `author` and a `role`. To add an avatar,
 ## Configure sidebar content in narrow column
 author: "Hugo Apéro"
 role: "A Hugo theme"
-avatar_shape: rounded # circle, square, rounded
+avatar_shape: rounded # circle, square, rounded, leave blank to exclude
 ---
 ```
+
+If you don't want to feature an avatar image, leave this key blank in your YAML.
 
 ### Add social links & audio
 
 You may decide to show your social links here and an audio link. To show an audio link, you need to do four things:
 
 1. Record an `.m4a` audio file locally,
-1. Name the file with the word `"audio"` in the filename (so `alison-audio.m4a` or `audio-haifa.m4a`, for example), and
-1. Save this file in your `content/about/sidebar/` folder.
+1. Name the file with the word `"audio"` in the filename (so `alison-audio.m4a` or `audio-haifa.m4a`, for example), 
+1. Save this file in your `content/about/sidebar/` folder, and
 1. Add an audio link label in the YAML of `content/about/sidebar/index.md` (as shown below).
 
 ```yaml
@@ -103,6 +105,8 @@ show_social_links: true # specify social accounts in site config
 audio_link_label: "How to say my name" # leave blank to exclude
 ---
 ```
+
+If you don't want to include an audio link, leave this key blank in your YAML.
 
 ### Add additional links
 
