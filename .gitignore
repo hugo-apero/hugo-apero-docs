@@ -1,5 +1,8 @@
-*.DS_Store
-public/
-resources/
-node_modules/
 .Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+/public/
+.DS_Store
+/resources/
+Thumbs.db
