@@ -1,0 +1,351 @@
+// set your custom colors here
+$siteBgColorCustom: #fff7f5; 
+$sidebarBgColorCustom: #FEF0EC; 
+$textColorCustom: #3A0F03;
+$sidebarTextColorCustom: #220D07;
+
+$headlineColorCustom: #932210; 
+$headingColorCustom: #ce3d15; 
+
+$bodyLinkColorCustom: #BF4D31;
+$navLinkColorCustom: #C54B29;
+$sidebarLinkColorCustom: #741d06;
+
+$footerTextColorCustom: #747270;
+
+$buttonTextColorCustom: #FAF9F0;
+$buttonHoverTextColorCustom: #FAF9F0;
+$buttonBgColorCustom: #CE3D15;
+$buttonHoverBgColorCustom: #BC4524;
+$borderColorCustom: #FED0C3;
+
+// rules below
+
+// title slide
+
+.title-slide {
+  h1 {
+    font-family: 'Fraunces', serif;
+    color: $headingColorCustom;
+    font-size: 3em;
+    word-wrap: break-word;
+    letter-spacing: 1pt;
+    font-weight: 200;
+    margin-bottom: -10px !important;
+  }
+  
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 200;
+    font-size: 1.35em;
+    color: $headingColorCustom;
+    text-shadow: none;
+    text-transform: uppercase;
+    margin-bottom: 0px !important;
+    letter-spacing: .1em;
+  }
+
+  h3 {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 300;
+    font-size: 1.3em;
+    color: $sidebarTextColorCustom;
+    text-transform: none;
+  }
+
+  a {
+  color: $sidebarLinkColorCustom;
+  }
+}
+
+// all slides
+
+.remark-slide-content {
+  background-color: $siteBgColorCustom;
+  
+  h1 {
+	 margin-bottom: 0.5em !important;
+  }
+  
+  p, ul, ol, li {
+    font-size: 1.6rem;
+  }
+}
+
+// inverse slides
+
+.inverse {
+  background-color: $buttonHoverBgColorCustom;
+  color: $buttonHoverTextColorCustom;
+  text-shadow: none;
+  
+  h1, h2, h3 {
+	  color: $buttonTextColorCustom;
+  }
+  
+  .remark-inline-code {
+    color: $buttonHoverTextColorCustom;
+  }
+}
+
+
+.footnote {
+	bottom: 1em;
+	font-size: 75%;
+	color: $footerTextColorCustom;
+}
+
+img {
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+	/*background: #fff;*/
+}
+
+
+/* code */
+/* https://github.com/rstudio/blogdown/blob/master/docs/02-hugo.Rmd */
+
+pre {
+  border: 1px solid #ebebeb;
+  padding: 0.25em;
+  background-color: #fff;
+  overflow-x: auto;
+  border-radius: 0px; /*undo rounded corners*/
+}
+
+pre code { 
+  background: none; 
+  font-size: 0.8rem;
+}
+
+/* link color */
+a, a > code {
+  color: $bodyLinkColorCustom;
+}
+
+
+:any-link {
+    color: $bodyLinkColorCustom;
+    text-decoration: underline;
+}
+
+
+/* mouse over link */
+a:hover, a:active, a:focus {
+    color: rgba(231,85,60,.8);
+    text-decoration: underline;
+}
+
+.remark-code {
+  color: #E7553C;
+  font-size: 1.25em;
+}
+
+.remark-inline-code { 
+  color: #E7553C;
+  font-size: 1em;
+}
+
+.remark-code-line-highlighted { 
+  background-color:  #bed3eca1; 
+}
+
+
+
+
+blockquote {
+  border-left: solid 5px lightgray;
+  padding-left: 1em;
+}
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee }
+
+@page { margin: 0; }
+
+
+/* footer */
+
+div.my-footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 20px;
+    width: 100%;
+}
+
+div.my-footer span {
+    font-size: 10pt;
+    color: #ffffff;
+    position: absolute;
+    left: 15px;
+    bottom: 2px;
+}
+
+a.footer-link {
+    position: absolute;
+    bottom: 5px;
+    right: 50px;
+    height: 40px;
+    width: 150px;
+    color: #023d4d;
+}
+
+/* activities */
+
+.activity {
+  background-color: #121417;
+  color: #fff;
+}
+
+.activity h1,
+.activity h2 {
+  color: #fff;
+}
+
+
+
+/* --------------Even split- 3 columns--------------- */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+
+/*-------*/
+
+
+.columns {
+  display: flex;
+}
+
+.left-col {
+  width: 33%;
+  text-align: left;
+}
+
+.middle-col {
+  width: 33%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.right-col {
+  width: 33%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+
+.frame h1 {
+  color: #2f5275;
+  padding-bottom: 1.0em !important;
+  border-bottom: 3px solid #bed3ec;
+}
+
+.inverse .frame h1 {
+  color: #bed3ec;
+  padding-bottom: 1.0em !important;
+  border-bottom: 3px solid #bed3ec;
+}
+
+
+.hidden{
+  visibility: hidden;
+}
+
+.word-bubble {
+  font-family: 'Fraunces';
+  font-size: 1.2em;
+}
+
+
+/* https://github.com/yihui/xaringan/wiki/Progressbar */
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 8px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #495057;
+}
+
+.title-slide .remark-slide-number .progress-bar-container {
+  height: 0px;
+}
+
+hr {
+  color: #023d4d80;
+}
+
+// fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,200;1,200&display=swap');
+
+body { 
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 300;
+  color: $textColorCustom;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 200;
+  color: $headlineColorCustom;
+}
+
+h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 200;
+  color: $headingColorCustom;
+}
+
+h3 {
+  font-family: 'Commissioner', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: $headingColorCustom;
+  font-size: 1.3em !important;
+}
+
+h4, h5, h6 {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 300;
+  color: $headingColorCustom;
+}
+
+.remark-code,
+.remark-inline-code{ 
+  font-family: 'DM Mono', monospace;
+}
+
+@media print {
+  body {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 300;
+}
+}

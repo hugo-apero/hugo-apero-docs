@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduce Yourself Online</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Alison Presmanes Hill" />
+    <meta name="date" content="2021-05-26" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <link rel="stylesheet" href="libs/sass47d1e7ae54b4ceb54aca754536e04ebf/peach.min.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+class: title-slide, center, bottom
+background-image: url(img/innocents.png)
+background-position: 50% 0%
+background-size: 60%
+background-color: #FEF0EC
+
+# Introduce Yourself Online
+
+## A workshop for RLadies Tunis
+
+### Dr. Alison Presmanes Hill
+
+---
+class: center, bottom
+background-image: url(img/internet.jpg)
+background-position: 50% 20%
+background-size: 30%
+background-color: #ffffff
+
+# Why introduce yourself online? 
+
+---
+class: center, middle
+
+# Why introduce yourself online? 
+
+--
+
+Fame? 
+
+--
+
+Fortune? 
+
+--
+
+Friendship? 
+
+--
+
+Findability? 
+
+--
+
+Fun?
+
+--
+
+Functional?
+
+---
+class: center, middle
+
+# Why introduce yourself online? 
+
+
+~~Fame~~ ❌
+
+~~Fortune~~ ❌
+
+Friendship ✔️
+
+Findability ✔️
+
+Fun ✔️
+
+Functional ✔️
+
+---
+class: inverse, center, middle
+
+# Mood
+
+---
+background-image: url(img/mr-rogers.jpg)
+background-size: contain
+class: bottom, center
+
+
+&lt;!--https://twitter.com/jlengstorf/status/1334594454347415554?s=20--&gt;
+
+---
+class: middle
+
+## How to introduce yourself online?
+
+Lots of ways!
+
+--
+
+Today, we'll use blogdown 🍡
+
+---
+
+# But first...
+
+---
+class: bottom, center, inverse
+background-image: url(img/blogdown.png)
+background-position: 50% 20%
+background-size: 25%
+
+# Meet blogdown
+
+
+---
+
+# Meet blogdown
+
+--
+
+An R package...
+
+--
+
+that lets you create websites in RStudio...
+
+--
+
+and use R Markdown...plots, tables, outputs!
+
+???
+
+So what is blogdown?
+
+It is an R package... can I get a show of hands for everyone here who uses R? OK keep them up...
+
+That lets you create websites in RStudio...can I get all of you R users to keep your hand up if you use RStudio, so lower your hand if you don't use RStudio
+
+Perfect, thanks! So this is one of the first perks of blogdown, which is that you can build a website in the RStudio IDE using tools you are familiar with, and you won't need very much else to start.
+
+
+
+---
+class: inverse, center, middle
+
+# Why R Markdown?
+
+---
+class: center, middle
+
+# Why R Markdown?
+
+--
+
+Develop your code and ideas in reproducible documents
+
+--
+
+Knit plots, tables, and results together with narrative text
+
+--
+
+Create analyses ready to be shared
+
+--
+
+Plus: Use RStudio IDE
+
+--
+
+Use the tools you already use (or should be using- 😉) for your work
+
+---
+class: inverse, center, middle
+
+## What *is* R Markdown?
+
+---
+
+
+# What is R Markdown?
+
+
+1. An authoring framework for data science.
+
+1. A document format (`.Rmd`).
+
+1. An R package named `rmarkdown`.
+
+1. A file format for making dynamic documents with R. 
+
+1. A tool for integrating prose, code, and results.
+
+1. A computational document.
+
+1. Wizardry.
+
+
+---
+
+
+# What is R Markdown?
+
+1. ["An authoring framework for data science."](https://rmarkdown.rstudio.com/lesson-1.html) (✔️)
+
+1. [A document format (`.Rmd`).](https://bookdown.org/yihui/rmarkdown/) (✔️)
+
+1. [An R package named `rmarkdown`.](https://rmarkdown.rstudio.com/docs/) (✔️)
+
+1. ["A file format for making dynamic documents with R."](https://rmarkdown.rstudio.com/articles_intro.html) (✔️)
+
+1. ["A tool for integrating text, code, and results."](https://r4ds.had.co.nz/communicate-intro.html) (✔️)
+
+1. ["A computational document."](http://radar.oreilly.com/2011/07/wolframs-computational-documen.html) (✔️)
+
+1. Wizardry. (🧙‍♂️)
+
+---
+class: center
+background-image: url("img/rmd_flowchart.png")
+background-size: contain
+
+## What is R Markdown?
+
+---
+background-image: url(img/rmarkdown_hedgehog_wide.png)
+background-size: contain
+background-position: middle, center
+
+---
+class: center, middle
+
+.pull-left[
+![blogdown hex](img/blogdown.png)
+]
+
+.pull-right[
+![rmarkdown hex](img/rmarkdown.png)
+]
+
+.pull-left[
+![rmarkdown hex](img/hugo.png)
+]
+
+.pull-right[
+![blogdown hex](img/netlify-logo.png)
+]
+
+---
+class: inverse, bottom center
+background-image: url(img/gopher-hero.svg)
+background-position: 50% 20%
+background-size: 25%
+
+# Who is Hugo?
+
+??? 
+
+The package helps you to use a static site generator named Hugo. If you didn't understand much of the last sentence I said, that is OK! The main thing you'll want to know is that Hugo gives you over 100 themes to choose from, so you can create a custom-looking website, in the same way that Wordpress offers website themes.
+
+One difference here is that you own your content, and the entire pipeline for creating it, from start to finish, which I think is a huge benefit to users. You control what, you control when, you control how.
+
+---
+class: center, middle
+
+# Why Hugo?
+
+--
+
+Markdown first
+
+--
+
+Content organization (subfolders!)
+
+--
+
+Layouts
+
+--
+
+Multilingual sites
+
+--
+
+Powerful taxonomies
+
+--
+
+Magical [list templates](https://gohugo.io/templates/lists/)
+
+---
+class: inverse, center, middle
+
+## What *is* Hugo?
+
+--
+
+`themes/hugo-apero/layouts/`
+
+---
+class: middle
+
+
+```html
+&lt;header class="post-header"&gt;
+  &lt;h1 class="f1 lh-solid measure-narrow mb3 fw4"&gt;{{ .Title }}&lt;/h1&gt;
+  {{ if .Params.subtitle }}
+    &lt;h4 class="f4 mt0 mb4 lh-title measure"&gt;
+    {{ .Params.subtitle }}
+    &lt;/h4&gt;
+  {{ end }}
+&lt;/header&gt;
+```
+
+--
+
+
+![](img/hugo-single.png)
+
+---
+class: bottom, center
+background-image: url(img/mustache.jpg)
+background-size: 25%
+background-color: #ffffff
+
+
+## Hugo = a double curly brace templating system
+
+## `{{ &lt;hugo code goes here&gt; }}`
+
+
+---
+class: middle 
+
+# Use your YAMLs 🍠
+
+AKA "frontmatter"
+
+.pull-left[
+```yaml
+---
+title: "Using panelsets"
+subtitle: "How to add panelsets..."
+---
+```
+]
+
+--
+
+.pull-right[
+```go
+
+{{ .Title }}
+{{ .Params.subtitle }}
+
+```
+]
+
+
+---
+class: middle
+
+# Hugo Page Bundles
+
+```
+.
+├── content/
+│   ├── privacy/index.md       # =&gt; a leaf bundle
+│   └── faves/                 # =&gt; a branch bundle
+│       ├── _index.md          # =&gt; AHA!
+│       ├── roses/index.md     # =&gt; a leaf bundle
+│       ├── kittens/index.md   # =&gt; another leaf bundle
+│       └── kettles/index.md   # =&gt; yet another leaf bundle
+```
+
+---
+class: middle
+
+# Hugo list vs single templates
+
+.pull-left[
+![](img/hugo-list-page.png)
+]
+
+--
+
+.pull-right[
+![](img/hugo-single-page.png)
+]
+
+---
+class: middle
+
+# Hugo list vs single templates
+
+```
+.
+├── content/
+│   ├── privacy/index.md       # =&gt; single page
+│   └── faves/                 
+│       ├── _index.md          # =&gt; **list all faves**!
+│       ├── roses/index.md     # =&gt; single page
+│       ├── kittens/index.md   # =&gt; single page
+│       └── kettles/index.md   # =&gt; single page
+```
+
+---
+class: activity, center, middle
+
+# ⏱
+
+## To configure your new Hugo site!
+
+🕑 10 minutes
+
+---
+background-image: url(img/Whisper.jpg)
+background-size: contain
+
+&lt;div class="word-bubble" style="
+  position: absolute; 
+  text-align: center;
+  width: 50%; 
+  top: 100px;
+  left: 310px;
+  font-size: 1.3em;
+"&gt; We need a place to put things. &lt;/div&gt;
+
+
+
+---
+background-image: url("img/server.jpg")
+background-size: 80%
+background-position: bottom
+class: center, top
+background-color: #ffffff
+
+# Where to put things?
+
+
+--
+&lt;img src="https://github.com/nolistic.png" style="
+  position: absolute; 
+  width: 10%; 
+  top: 140px;
+  right: 60px;
+  border-radius: 50%;
+"&gt;
+
+???
+
+which is basically a big computer in the clouds
+
+hat/tip to Heather Nolis for that analogy.
+
+--
+&lt;img src="img/Netlify.png" style="
+  position: absolute; 
+  width: 23%; 
+  top: 218px;
+  right: 301px;
+"&gt;
+
+---
+class: inverse, center, middle
+
+# Why Netlify?
+
+---
+class: center, middle
+
+# Why Netlify?
+
+--
+
+Continuous deployment
+
+--
+
+Speaks Hugo (but not R)
+
+--
+
+FEATURES (PR deploy previews / branch deploys / rollbacks)
+
+---
+class: inverse, middle
+
+&gt; Continuous deployment works by connecting a Git repository to a Netlify site and keeping the two in sync.
+
+&gt; &amp;mdash; [Netlify docs](https://docs.netlify.com/site-deploys/create-deploys/)
+
+---
+class: center, middle
+
+# 📣 Speaks Hugo
+
+---
+class: middle, center
+
+&lt;img src="rladies-tunis_files/figure-html/unnamed-chunk-1-1.gif" width="80%" /&gt;
+
+---
+class: middle, center
+&lt;img src="rladies-tunis_files/figure-html/unnamed-chunk-2-1.gif" width="80%" /&gt;
+
+---
+class: middle, center
+
+&lt;img src="rladies-tunis_files/figure-html/unnamed-chunk-3-1.gif" width="80%" /&gt;
+
+
+---
+class: inverse, center, middle
+
+# Why Netlify?
+
+Go to this repo:
+&lt;https://github.com/apreshill/iyo-apero&gt;
+
+Click on the "Deploy to Netlify" button 🚀
+
+---
+class: activity, center, middle
+
+# ⏱
+
+## To your new site!
+
+Let's go on a file scavenger hunt.
+
+🕝 10 minutes
+
+
+
+
+---
+background-image: url(img/stars.jpg)
+background-position: 50% 20%
+background-size: 30%
+class: inverse, bottom, center
+
+# Why Hugo Apéro?
+
+
+---
+class: middle, center
+
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Build a website with HTML and CSS that somebody else wrote. &lt;a href="https://t.co/ya2NWe2rff"&gt;https://t.co/ya2NWe2rff&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alison Presmanes Hill (@apreshill) &lt;a href="https://twitter.com/apreshill/status/1280635175538311168?ref_src=twsrc%5Etfw"&gt;July 7, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; 
+
+
+
+
+---
+class: bottom, center
+background-image: url(img/goodnight-site.jpg)
+background-position: 50% 20%
+background-size: 50%
+background-color: #ffffff
+
+# Why blogdown?
+
+---
+class: center, middle
+
+# Why blogdown?
+
+--
+
+R!
+
+--
+
+Checking functions ✔️
+
+--
+
+Hugo versioning system
+
+--
+
+`.Rprofile` for custom experience 
+
+---
+class: activity, center, middle
+
+# ⏱
+
+## To your site!
+
+Run checks, or add/edit content.
+
+🕜 10 minutes
+
+---
+class: center, bottom
+background-image: url(img/question.jpg)
+background-position: 50% 10%
+background-size: 40%
+background-color: #ffffff
+
+# "Must I blog?"
+
+--
+
+No. 
+
+--
+
+But you can. And if you do, you may follow your own rules. It is *your* space.
+
+
+---
+class: inverse, center, middle
+
+# Why blog?
+
+
+---
+class: center, middle
+
+## Of digital streams, campfires, and gardens
+
+&lt;https://tomcritchlow.com/2018/10/10/of-gardens-and-wikis/&gt;
+
+## The garden and the stream, a technopastoral
+
+&lt;https://hapgood.us/2015/10/17/the-garden-and-the-stream-a-technopastoral/&gt;
+
+---
+background-image: url(img/river.jpg)
+background-position: right
+background-size: contain
+class: middle
+name: stream
+
+---
+template: stream
+
+.pull-left[
+# Streams
+]
+
+---
+template: stream
+
+.pull-left[
+
+&gt; You don’t experience the Stream by walking around it and looking at it, or following it to its end. You jump in and let it flow past. You feel the force of it hit you as things float by.
+
+&gt; It’s not that you are passive in the Stream. You can be active. But your actions in there — your blog posts, @ mentions, forum comments — exist in a context that is collapsed down to a simple timeline of events that together form a narrative.
+
+&gt; &amp;mdash; Mike Caulfield
+]
+
+---
+template: stream
+
+.pull-left[
+
+&gt; Streams - mostly Twitter for me, this is where fast twitch information discovery happens. The firehose of content. But with an undercurrent of creating new connections.
+
+&gt; &amp;mdash; Tom Critchlow
+]
+
+---
+name: campfire
+background-image: url(img/campfire.jpg)
+background-position: right
+background-size: 50%
+class: middle
+
+---
+template: campfire
+
+.pull-left[
+# Campfires
+]
+
+---
+template: campfire
+
+.pull-left[
+
+&gt; "Campfires - mostly blogging for me, though I know some folks gather around private slack groups too. My blog functions as a digital campfire (or a series of campfires) that are slower burn but fade relatively quickly over the timeframe of years. 
+
+&gt; Connection forming, thinking out loud, self referencing and connection forming. This builds muscle, helps me articulate my thinking and is the connective tissue between ideas, people and more."
+
+&gt; &amp;mdash; Tom Critchlow
+]
+
+---
+name: garden
+background-image: url(img/garden.jpg)
+background-position: right
+background-size: contain
+class: middle
+background-color: #f2f0ef
+
+
+---
+template: garden
+
+.pull-left[
+# Gardens
+]
+
+---
+template: garden
+
+.pull-left[
+
+&gt; Every walk through the garden creates new paths, new meanings, and when we add things to the garden we add them in a way that allows many future, unpredicted relationships.
+
+&gt; &amp;mdash; Mike Caulfield
+]
+
+---
+background-image: url(img/garden-main.png)
+background-position: center middle
+background-size: 30%
+class: bottom, center
+background-color: #ffffff
+
+## A Brief History &amp; Ethos of the Digital Garden
+
+&lt;https://maggieappleton.com/garden-history&gt;
+
+
+
+---
+template: garden
+
+.pull-left[
+
+&gt; Gardens are by nature non-homogenous. No two gardens are alike. Even if you plant the same plants as your neighbours, you plant them in a different arrangement.
+
+&gt; The point of the garden is that's it's a personal playspace. You organise the garden around the ideas and mediums that are particular to you.
+
+&gt; A large part of gardening is claiming a small patch of the web for yourself, one you fully own and control.
+
+&gt; &amp;mdash; Maggie Appleton
+
+]
+
+---
+background-image: url(img/digital-garden.png)
+background-position: center middle
+background-size: 70%
+class: bottom, center
+background-color: #ffffff
+
+
+&lt;https://maggieappleton.com/garden-history&gt;
+
+---
+background-image: url(img/seedling.jpg)
+background-position: right
+background-size: 50%
+class: middle
+background-color: #ffffff
+
+.pull-left[
+
+&gt; Level of effort put into them. 
+
+&gt; Degree of coherence and readability. 
+
+&gt; Seedlings &gt; Evergreen
+
+&gt; &amp;mdash; Maggie Appleton
+
+]
+
+---
+background-image: url(img/evergreen.jpg)
+background-position: right
+background-size: 50%
+class: middle
+background-color: #ffffff
+
+.pull-left[
+&gt; Level of effort put into them. 
+
+&gt; Degree of coherence and readability. 
+
+&gt; Seedlings &gt; Evergreen
+
+&gt; &amp;mdash; Maggie Appleton
+]
+
+
+---
+class: activity, center, middle
+
+# ⏱
+
+## To GitHub.com!
+
+Let’s go to our breakout rooms and make our GitHub name tags right now
+
+🕠 10 minutes
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n",
+"highlightStyle": "tomorrow",
+"highlightLanguage": ["r", "css", "yaml"],
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

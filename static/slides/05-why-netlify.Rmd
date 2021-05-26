@@ -1,0 +1,191 @@
+---
+title: "Introduce Yourself Online"
+subtitle: "A workshop @ rstudio::global(2021)"
+author: Dr. Alison Presmanes Hill
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "css/grayscale.css", "css/fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+      highlightStyle: solarized-light
+      highlightLanguage: ["r", "css", "yaml"]
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
+library(xaringanExtra)
+library(magick)
+library(purrr)
+```
+
+```{r share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+
+class: title-slide, center, bottom
+background-image: url(img/server.jpg)
+background-position: 50% 20%
+background-size: 50%
+background-color: #ffffff
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$subtitle`
+
+### `r rmarkdown::metadata$author`
+
+
+
+---
+background-image: url("img/server.jpg")
+background-size: 80%
+background-position: bottom
+class: center, top
+background-color: #ffffff
+
+# What is next?
+
+
+--
+<img src="https://github.com/nolistic.png" style="
+  position: absolute; 
+  width: 10%; 
+  top: 140px;
+  right: 60px;
+  border-radius: 50%;
+">
+
+???
+
+which is basically a big computer in the clouds
+
+hat/tip to Heather Nolis for that analogy.
+
+--
+<img src="img/Netlify.png" style="
+  position: absolute; 
+  width: 23%; 
+  top: 218px;
+  right: 301px;
+">
+
+---
+class: inverse, center, middle
+
+# Why Netlify?
+
+---
+class: center, middle
+
+# Why Netlify?
+
+--
+
+Continuous deployment
+
+--
+
+Speaks Hugo (but not R)
+
+--
+
+FEATURES (PR deploy previews / branch deploys / rollbacks)
+
+---
+class: inverse, middle
+
+> Continuous deployment works by connecting a Git repository to a Netlify site and keeping the two in sync.
+
+> &mdash; [Netlify docs](https://docs.netlify.com/site-deploys/create-deploys/)
+
+---
+class: center, middle
+
+# `r emo::ji("megaphone")` Speaks Hugo
+
+---
+class: middle, center
+
+```{r echo = FALSE, out.width="80%"}
+list_png <- c("img/blogdown-build/Slide1.png",
+              "img/blogdown-build/Slide2.png",
+              "img/blogdown-build/Slide3.png")
+
+list_png %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_scale("2000") %>% 
+  image_animate(fps = .5)  # animates, can opt for number of loops
+```
+
+---
+class: middle, center
+```{r echo = FALSE, out.width = "80%"}
+list_png <- c("img/blogdown-build/Slide3.png",
+              "img/blogdown-build/Slide4.png",
+              "img/blogdown-build/Slide5.png")
+
+list_png %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_scale("2000") %>% 
+  image_animate(fps = .5)  # animates, can opt for number of loops
+```
+
+---
+class: middle, center
+
+```{r echo = FALSE, out.width = "80%"}
+list_png <- c("img/blogdown-build/Slide6.png",
+              "img/blogdown-build/Slide7.png",
+              "img/blogdown-build/Slide8.png")
+
+list_png %>% 
+  map(image_read) %>% # reads each path file
+  image_join() %>% # joins image
+  image_scale("2000") %>% 
+  image_animate(fps = .5)  # animates, can opt for number of loops
+```
+
+
+---
+class: inverse, center, middle
+
+## Whither GitHub Pages?
+
+--
+
+If you `build_site()`, you can commit + push your `public/` folder to use GitHub Pages.
+
+---
+class: inverse, center, middle
+
+# Why Netlify?
+
+Go to this repo:
+<https://github.com/apreshill/iyo-apero>
+
+Click on the "Deploy to Netlify" button `r emo::ji("rocket")`
+
+---
+class: activity, center, middle
+
+# `r emo::ji("stopwatch")`
+
+## To your new site!
+
+Let's go on a file scavenger hunt.
+
+`r emo::ji("clock")` 10 minutes
