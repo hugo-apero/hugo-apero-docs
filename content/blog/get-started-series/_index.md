@@ -22,6 +22,7 @@ sidebar:
 
 # set up common front matter for all individual pages in series
 cascade:
+  draft: true
   layout: single-series       # for a series, do not change
   series: Get started  # name your series
   author: Alison Hill
