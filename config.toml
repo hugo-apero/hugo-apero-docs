@@ -112,7 +112,7 @@ enableEmoji = true
   [[menu.header]]
     name = "Get started"
     title = "Get started using the Hugo Apéro theme"
-    url = "/collection/"
+    url = "/get-started/"
     weight = 2
   [[menu.header]]
     name = "Blog"
