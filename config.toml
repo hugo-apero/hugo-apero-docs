@@ -115,9 +115,9 @@ enableEmoji = true
     url = "/get-started/"
     weight = 2
   [[menu.header]]
-    name = "Blog"
-    title = "Blog"
-    url = "/blog/"
+    name = "Learn"
+    title = "learn more about using the Hugo Apéro theme"
+    url = "/learn/"
     weight = 3
   [[menu.header]]
     name = "Projects"
