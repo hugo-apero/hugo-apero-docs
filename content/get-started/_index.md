@@ -1,4 +1,5 @@
 ---
+type: collection
 title: Get started
 description: |
   Start using Hugo Apéro with GitHub, Netlify, and the blogdown R package with RStudio.
@@ -22,6 +23,7 @@ sidebar:
 
 # set up common front matter for all individual pages in series
 cascade:
+  type: collection
   layout: single-series       # for a series, do not change
   series: Get started  # name your series
   author: Alison Hill
