@@ -3,7 +3,7 @@ title: Get started
 description: |
   Start using Hugo Apéro with GitHub, Netlify, and the blogdown R package with RStudio.
 author: Alison Hill
-show_post_thumbnail: true
+show_post_thumbnail: false
 thumbnail_left: true # for list-sidebar only
 show_author_byline: true
 show_post_date: true
