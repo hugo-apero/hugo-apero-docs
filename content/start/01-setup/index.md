@@ -111,13 +111,9 @@ Next, follow these steps to test your connection to GitHub from RStudio:
 
 Netlify is a platform that offers cloud hosting and serverless backend services for static websites. Lucky for us, that is what we need- we'll be making a static websites. Netlify has a free plan tier, which in my experience is plenty for personal websites. To sign up:
 
-1. Go online to [Netlify.com](https://www.netlify.com/).
+1. Sign up on <https://app.netlify.com/signup>.
 
-1. Click on the "Sign Up" button. 
-
-    ![](netlify-signup.png)
-
-1. Sign up using your existing GitHub account (no need to create another account), so select "GitHub" (you may need to sign in), and click to "Authorize Netlify."
+1. Select to sign up using your existing GitHub account (no need to create another account), so select "GitHub" (you may need to sign in), and click to "Authorize Netlify."
 
     ![](netlify-github.png)
 
