@@ -123,7 +123,13 @@ downloaded 21.3 MB
 {{< panelset >}}
 {{< panel name="To do :heavy_check_mark:" >}}
 
-Let's select `y` to let blogdown start a server for us.
+We are asked:
+
+```r
+► Want to serve and preview the site now? (y/n)
+```
+
+Select `y` to let blogdown start a server for us.
 
 Now, don't trap your site in the RStudio Viewer pane. Let it out! 
 
