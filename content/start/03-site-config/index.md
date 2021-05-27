@@ -16,9 +16,9 @@ The following site configuration options are found in the `config.toml` file at 
 
 You have three options for customizing colors:
 
-+ Use a [color theme](https://hugo-apero-docs.netlify.app/blog/color-themes/#use-a-color-theme),
-+ Use [Tachyons colors](https://hugo-apero-docs.netlify.app/blog/color-themes/#use-tachyons-named-colors), or
-+ Bring your own [hex codes](https://hugo-apero-docs.netlify.app/blog/color-themes/#bring-your-own-hex-codes).
++ Use a [color theme](/learn/color-themes/#use-a-color-theme),
++ Use [Tachyons colors](/learn/color-themes/#use-tachyons-named-colors), or
++ Bring your own [hex codes](/learn/color-themes/#bring-your-own-hex-codes).
 
 Find this section in your `config.toml` file and color away:
 
@@ -30,22 +30,22 @@ Find this section in your `config.toml` file and color away:
   theme = "peach"
   
   # or, leave theme empty & make your own palette
-  # see docs at https://hugo-apero.netlify.app/blog/color-themes/
+  # see docs at https://hugo-apero.netlify.app/learn/color-themes/
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
   custom_theme = "hex-colors" 
 ```
 
-Read the [full docs here](/blog/color-themes/).
+Read the [full docs here](/learn/color-themes/).
 
 ## Font options
 
 You have three options for customizing fonts:
 
-+ Use [embedded fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#embedded-fonts),
-+ Use attractive [system fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#use-attractive-system-fonts), or
-+ Use fully [custom fonts](https://hugo-apero-docs.netlify.app/blog/fonts/#use-a-custom-font).
++ Use [embedded fonts](/learn/fonts/#embedded-fonts),
++ Use attractive [system fonts](/learn/fonts/#use-attractive-system-fonts), or
++ Use fully [custom fonts](/learn/fonts/#use-a-custom-font).
 
 Find this section in your `config.toml` file and go to town:
 
@@ -59,7 +59,7 @@ Find this section in your `config.toml` file and go to town:
   headingFontFamily = "serif"
 ```
 
-Read the [full docs here](/blog/fonts/).
+Read the [full docs here](/learn/fonts/).
 
 ## Social icons
 
@@ -79,5 +79,5 @@ socialInFooter = false
   [[params.social]] <!--lather, rinse, repeat-->
 ```
 
-Read the [full docs here](/blog/social/).
+Read the [full docs here](/learn/social/).
 

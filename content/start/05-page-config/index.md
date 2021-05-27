@@ -118,7 +118,7 @@ content/
         └── home.jpeg
 ```
 
-Read the [full docs here](/blog/homepage/).
+Read the [full docs here](/learn/homepage/).
 
 
 ## About page
@@ -153,7 +153,7 @@ content/
 ```
 
 
-Read the [full docs here](/blog/about-page/).
+Read the [full docs here](/learn/about-page/).
 
 
 ## Regular page

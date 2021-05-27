@@ -14,17 +14,17 @@ There are two sets of front matter for each content section. One set is for the 
 
 Apéro provides unique layouts for three main content sections:
 
-+ blogs,
-+ projects, and
-+ talks.
++ blogs (Ex: https://hugo-apero.netlify.app/blog/),
++ projects (Ex: https://hugo-apero.netlify.app/project/), and
++ talks (Ex: https://hugo-apero.netlify.app/talk/).
 
-These are easy to see in your content folder structure (note the folder names are singular, not plural):
+These are easy to see in your content folder structure and the structure of the urls for your site (note the folder names are singular, not plural):
 
 ```bash
 content/
-├── blog/
-├── project/
-└── talk/
+├── blog/    --> https://mydomain.io/blog/
+├── project/ --> https://mydomain.io/project/
+└── talk/    --> https://mydomain.io/talk/
 ```
 
 

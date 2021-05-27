@@ -143,7 +143,7 @@ Click the <i class="fas fa-external-link-alt"></i> icon to *Show in new window* 
 {{< /panel >}}
 {{< /panelset >}}
     
-If you followed these steps successfully and are looking at a Hugo Apéro site in your local browser, you are all set to start configuring your site :rocket:
+If you followed these steps successfully and are looking at a Hugo Apéro site in your local browser, you are all set to start [configuring your site](../03-site-config) :rocket:
 
 ## New site, GitHub last
 

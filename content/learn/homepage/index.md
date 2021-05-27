@@ -86,7 +86,7 @@ show_social_links: true # specify social accounts in site config
 ---
 ```
 
-See [Set up your social](/blog/social/) to find out how to configure your social icons and links.
+See [Set up your social](/learn/social/) to find out how to configure your social icons and links.
 
 ## Show action link
 

@@ -1,9 +1,8 @@
 ---
-title: A Blog That Works
+title: Learn about Hugo Apéro
 description: |
-  This is a fully featured blog that supports categories, 
-  tags, series, and pagination.
-author: "The R Markdown Team @RStudio"
+  Learn how to use Hugo Apéro to build a personal website.
+author: "Alisson Hill"
 show_post_thumbnail: true
 show_author_byline: true
 show_post_date: true
@@ -12,30 +11,25 @@ layout: list-sidebar # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 
-  title: A Sidebar for Your Thoughts
+  title: Learn about Hugo Apéro
   description: |
-    This is a fully featured blog that supports categories,
-    tags, series, and pagination. Even this sidebar offers 
-    a ton of customizations.
-    
-    Check out the _index.md file in the /blog folder 
-    to edit this content. 
-  author: "The R Markdown Team @RStudio"
+    Learn how to use Hugo Apéro to build a personal website.
+  author: "Alison Hill"
   text_link_label: Subscribe via RSS
   text_link_url: /index.xml
-  show_sidebar_adunit: true # show ad container
+  show_sidebar_adunit: false # show ad container
 
 # set up common front matter for all pages inside blog/
 cascade:
   type: blog
-  author: "The R Markdown Team @RStudio"
+  author: "Alison Hill"
   show_author_byline: true
   show_post_date: true
   show_comments: true # see site config to choose Disqus or Utterances
   # for single-sidebar layout
   sidebar:
-    text_link_label: View recent posts
-    text_link_url: /blog/
+    text_link_label: View recent articles
+    text_link_url: /learn/
     show_sidebar_adunit: false # show ad container
 ---
 
