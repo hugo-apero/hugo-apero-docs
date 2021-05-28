@@ -21,7 +21,7 @@ cascade:
   show_comments: true # see site config to choose Disqus or Utterances
 ```
 
-You can still override any of these options in the YAML front matter of an individual page- it will always trump the cascade if present.
+You can still override any of these options in the YAML front matter of an individual page- it will always trump the cascade if present. To learn more about single pages, read the [Hugo docs](https://gohugo.io/templates/single-page-templates/).
 
 In the front matter of a page, along with things you'd expect like title, subtitle, excerpt, and author, there are two choices for `layout`: 
 

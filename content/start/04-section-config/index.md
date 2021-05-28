@@ -31,6 +31,8 @@ content/
 
 The following page configuration options are found in the front matter of each content section of a Hugo Apéro site.
 
+To learn more about section page templates, read the [Hugo docs](https://gohugo.io/templates/section-templates/).
+
 ## Lists of pages
 
 Section pages are always lists. For most sections, there are three listing `layout` choices: 
