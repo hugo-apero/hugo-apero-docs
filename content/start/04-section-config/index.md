@@ -19,6 +19,32 @@ Apéro provides unique layouts for three main content sections:
 + projects (Ex: https://hugo-apero.netlify.app/project/), and
 + talks (Ex: https://hugo-apero.netlify.app/talk/).
 
+{{< panelset >}}
+{{< panel name="blog :camera:" >}}
+
+With a `list-sidebar` layout and thumbnails
+
+![](list-sidebar.png)
+
+{{< /panel >}}
+{{< panel name="project :camera:" >}}
+
+With a `list-grid` layout and thumbnails
+
+![](project-grid.png)
+
+{{< /panel >}}
+
+{{< panel name="talk :camera:" >}}
+
+With a `list` layout and thumbnails
+
+![](talk-list.png)
+
+{{< /panel >}}
+
+{{< /panelset >}}
+
 These are easy to see in your content folder structure and the structure of the urls for your site (note the folder names are singular, not plural):
 
 ```bash
@@ -40,6 +66,26 @@ Section pages are always lists. For most sections, there are three listing `layo
 + `list` (blogs, projects, talks)
 + `list-sidebar` (blogs, projects, talks), or 
 + `list-grid` (blogs and projects only).
+
+{{< panelset >}}
+{{< panel name="list :camera:" >}}
+
+![](list.png)
+
+{{< /panel >}}
+{{< panel name="list-grid :camera:" >}}
+
+![](list-grid.png)
+
+{{< /panel >}}
+
+{{< panel name="list-sidebar :camera:" >}}
+
+![](list-sidebar.png)
+
+{{< /panel >}}
+
+{{< /panelset >}}
 
 We list each section pages with a title and excerpt plus a thumbnail, byline, and dateline according to your boolean choice here.
 
