@@ -1,5 +1,6 @@
 ---
 title: "02: Create your site"
+slug: create-site
 weight: 2
 subtitle: ""
 excerpt: "How to use the blogdown R package to create a new site, update the theme for an existing Hugo Apéro site, or convert an existing site to this theme."

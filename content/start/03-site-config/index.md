@@ -1,5 +1,6 @@
 ---
 title: "03: Site configuration"
+slug: site-config
 weight: 3
 subtitle: ""
 excerpt: "Hugo uses the config.toml found in the site root to configure your site. In this article, we highlight key options in this file, and some options added by the Hugo Apéro theme which you can access in the `[params]` section."
@@ -10,7 +11,17 @@ draft: false
 
 The following site configuration options are found in the `config.toml` file at the root of this Hugo site.
 
+## Hugo-defined variables
 
+A few Hugo-defined variables are included the example site's `config.toml` file. You can find a complete list in the [Hugo docs](https://gohugo.io/getting-started/configuration/#all-configuration-settings). Some key ones you'll want to edit:
+
+```toml
+baseURL = "/"
+title = "Hugo Apéro"
+author = "Alison Hill"
+```
+
+At a minimum, change these values.
 
 ## Color themes
 
@@ -81,3 +92,30 @@ socialInFooter = false
 
 Read the [full docs here](/learn/social/).
 
+## Header menu
+
+Find this section in your `config.toml` file to change the menu items in the site header:
+
+```toml
+[menu]
+  [[menu.header]]
+    name = "About"
+    title = "About Apéro"
+    url = "/about/"
+    weight = 1
+  [[menu.header]] <!--lather, rinse, repeat-->
+```
+
+## Footer menu
+
+Just below the header menu, you'll find the menu items for the footer as well:
+
+```toml
+[menu]
+  [[menu.footer]]
+    name = "License"
+    title = "License"
+    url = "/license/"
+    weight = 1
+  [[menu.footer]] <!--lather, rinse, repeat-->
+```

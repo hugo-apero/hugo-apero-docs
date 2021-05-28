@@ -1,5 +1,6 @@
 ---
 title: "04: Section configuration"
+slug: section-config
 weight: 4
 subtitle: "Content sections can all be configured to showcase your blog, projects, and talks."
 excerpt: "Hugo allows you to use a page's front matter (written in yaml, toml, or json) to keep metadata attached to markdown files. The motto in Hugo is 'everything is a page.' This includes listing pages, which we use to help users browse pages within a section."
@@ -141,7 +142,7 @@ Changing permalinks will only change the url a visitor sees- not your underlying
 
 ### Level 3: Rename your folder
 
-Your last option is to change the actual name of the folder. This change is pretty disruptive, because by default Hugo applies the theme's layout files based on inferring the content section from your directory structure.
+Your last option is to change the actual name of the folder. This change is pretty disruptive, because by default Hugo applies the theme's layout files based on inferring the content section from your directory structure. 
 
 ```bash
 content/
@@ -150,7 +151,7 @@ content/
 └── talk/    -> use talk layouts
 ```
 
-If you rename `project -> portfolio`, Hugo won't know the right layout file to use, and will use an Apéro default layout file, which is likely not what you want.
+If you rename `project -> portfolio`, Hugo won't know the right layout file to use, and will use an Apéro default layout file, which is likely not what you want. Section is determined by a content’s location on disk and cannot be specified in the front matter. A content's `type` is also determined by its location on disk but, unlike section, it **can** be specified in the front matter. 
 
 ```bash
 content/
@@ -159,6 +160,8 @@ content/
 └── talk/    -> use talk layouts
 ```
 
+Read more about overriding destination paths via front matter in the [Hugo docs](https://gohugo.io/content-management/organization/). 
+
 If you rename a folder, you'll need to tell Hugo where to find the right Apéro layout file. Do this by editing the section configuration file. In our example, this would be `content/portfolio/_index.md` and add this to your YAML:
 
 ```yaml
@@ -166,7 +169,16 @@ cascade:
   type: project
 ```
 
-This tells Hugo to use the `project` layouts for this section, but also for all pages in this section too. Read more about cascading front matter in the [Hugo docs](https://gohugo.io/content-management/front-matter/).
+This tells Hugo to use the `project` layouts for this section, but also for all pages in this section too. Read more about cascading front matter in the [Hugo docs](https://gohugo.io/content-management/front-matter/). 
+
+If you want your new section to show up in the "about" page, update the `mainSections` in your `config.toml` file too:
+
+```toml
+[params]
+   mainSections = ["blog", "project", "book"]
+```
+
+If yoou are curious how `mainSections` works, read about it in the [Hugo docs](https://gohugo.io/functions/where/#mainsections).
 
 ## Reusing sections
 
@@ -207,4 +219,11 @@ The tricks shared above can *also* apply to adding sections. Say you want to hav
         title = "Books I have written"
         url = "/book/"
         weight = 3
+    ```
+    
+1. If you want your new section to show up in the "about" page, update the `mainSections` in your `config.toml` file too:
+
+    ```toml
+    [params]
+      mainSections = ["blog", "project", "book"]
     ```

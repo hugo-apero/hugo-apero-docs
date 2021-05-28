@@ -1,6 +1,7 @@
 ---
 title: "01: Set up"
 weight: 1
+slug: setup
 subtitle: "How to prepare to make a new Hugo website (for real)."
 excerpt: "Getting any website up and running with all the moving parts (GitHub, Hugo, Netlify) can take a few tries. This article will help you get your :duck: :duck: :duck: in a row."
 date: 2021-05-26
