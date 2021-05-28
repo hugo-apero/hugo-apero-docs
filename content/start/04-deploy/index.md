@@ -34,7 +34,7 @@ You can use the RStudio to push your current website project to GitHub. How?
 
 ## Connect Netlify to GitHub repo
 
-You already have setup a free Netlify account linked to your GitHub account, [right](../setup)?
+You already have setup a free Netlify account linked to your GitHub account, [right](../setup/#sign-up-for-netlify)?
 
 {{< panelset >}}
 {{< panel name="To do :heavy_check_mark:" >}}
