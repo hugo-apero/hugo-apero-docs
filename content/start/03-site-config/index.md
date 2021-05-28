@@ -168,4 +168,4 @@ The blogdown R package has a checking function to help you make sure that your c
 ― Check complete: config.toml
 ```
 
-We have a `[TODO]` item- we need to update our `baseURL`. To get one, we'll need to deploy our site first.
+We have a `[TODO]` item- we need to update our `baseURL`. To get one, we'll need to [deploy our site first](../deploy).
