@@ -19,6 +19,8 @@ A few Hugo-defined variables are included the example site's `config.toml` file.
 baseURL = "/"
 title = "Hugo Apéro"
 author = "Alison Hill"
+# set deliberately low for testing- choose your preferred number 
+paginate = 5
 ```
 
 At a minimum, change these values.
@@ -149,3 +151,21 @@ Just below the header menu, you'll find the menu items for the footer as well:
     weight = 1
   [[menu.footer]] <!--lather, rinse, repeat-->
 ```
+
+## Check your configuration file
+
+The blogdown R package has a checking function to help you make sure that your configuration file has all the fiddly bits right. I encourage you to use it whenever you edit this file:
+
+```r
+> blogdown::check_config()
+― Checking config.toml
+| Checking "baseURL" setting for Hugo...
+● [TODO] Update "baseURL" to your actual URL when ready to publish.
+| Checking "ignoreFiles" setting for Hugo...
+○ "ignoreFiles" looks good - nothing to do here!
+| Checking setting for Hugo's Markdown renderer...
+○ All set! Found the "unsafe" setting for goldmark.
+― Check complete: config.toml
+```
+
+We have a `[TODO]` item- we need to update our `baseURL`. To get one, we'll need to deploy our site first.

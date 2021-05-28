@@ -1,7 +1,7 @@
 ---
-title: "04: Section configuration"
+title: "05: Section configuration"
 slug: section-config
-weight: 4
+weight: 5
 subtitle: "Content sections can all be configured to showcase your blog, projects, and talks."
 excerpt: "Hugo allows you to use a page's front matter (written in yaml, toml, or json) to keep metadata attached to markdown files. The motto in Hugo is 'everything is a page.' This includes listing pages, which we use to help users browse pages within a section."
 date: 2021-05-26
