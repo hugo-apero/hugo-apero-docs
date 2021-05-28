@@ -27,7 +27,7 @@ At a minimum, change these values.
 
 The Apéro theme also defines additional site-wide, global variables. All are listed under the `[params]` section in your `config.toml` file. The most important to touch are:
 
-```
+```toml
 [params]
   orgName = "RStudio"
   orgLocal = "Anywhere"
