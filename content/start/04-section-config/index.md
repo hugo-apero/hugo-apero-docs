@@ -24,7 +24,7 @@ Apéro provides unique layouts for three main content sections:
 
 With a `list-sidebar` layout and thumbnails
 
-![](list-sidebar.png)
+![](list-sb.png)
 
 {{< /panel >}}
 {{< panel name="project :camera:" >}}
@@ -81,7 +81,7 @@ Section pages are always lists. For most sections, there are three listing `layo
 
 {{< panel name="list-sidebar :camera:" >}}
 
-![](list-sidebar.png)
+![](list-sb.png)
 
 {{< /panel >}}
 
