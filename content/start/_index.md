@@ -27,7 +27,6 @@ sidebar:
 cascade:
   type: collection
   layout: single-series       # for a series, do not change
-  series: Get started  # name your series
   author: Alison Hill
   show_author_byline: true
   show_post_date: true
