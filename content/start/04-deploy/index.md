@@ -32,6 +32,13 @@ You can use the RStudio to push your current website project to GitHub. How?
 
 + Click "Commit"
 
+Did this work? The usethis package has a function, [`browse_github()`](https://usethis.r-lib.org/reference/browse-this.html), for easily opening a new browser window to visit the GitHub repository associated with your current website:
+
+```r
+# install.packages("usethis")
+usethis::browse_github()
+```
+
 ## Connect Netlify to GitHub repo
 
 You already have setup a free Netlify account linked to your GitHub account, [right](../setup/#sign-up-for-netlify)?
