@@ -223,10 +223,10 @@ If you want your new section to show up in the "about" page, update the `mainSec
 
 ```toml
 [params]
-   mainSections = ["blog", "project", "book"]
+   mainSections = ["blog", "portfolio", "talk"]
 ```
 
-If yoou are curious how `mainSections` works, read about it in the [Hugo docs](https://gohugo.io/functions/where/#mainsections).
+If you are curious how `mainSections` works, read about it in the [Hugo docs](https://gohugo.io/functions/where/#mainsections).
 
 ## Reusing sections
 
