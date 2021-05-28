@@ -32,7 +32,7 @@ The following page configuration options are found in the front matter of each c
 
 ## Lists of pages
 
-For most sections, there are three listing `layout` choices: 
+Section pages are always lists. For most sections, there are three listing `layout` choices: 
 
 + `list` (blogs, projects, talks)
 + `list-sidebar` (blogs, projects, talks), or 
@@ -70,7 +70,7 @@ content/
 
 If your image happens to be a hex shape (like an R package hex sticker), include the word `hex` in the filename too, like `my-featured-hex.png`.
 
-## List sidebar content
+### List sidebar content
 
 If you choose the `list-sidebar` layout for a section, you can configure the sidebar content in the same `/section/_index.md` file.
 

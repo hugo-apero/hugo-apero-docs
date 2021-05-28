@@ -7,7 +7,7 @@ date: 2021-05-26
 draft: false
 ---
 
-## Single pages
+## Single pages in sections
 
 You have two options for where to place front matter for single pages. You can use the front matter of the page like `/blog/my-blog-post/index.md`, or you could use the `cascade` key in the section front matter like `/blog/_index.md`. You can set up the cascade to avoid repeating yourself, if you want to make sure to configure all pages in the same section the same way:
 
