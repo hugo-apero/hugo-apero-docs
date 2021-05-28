@@ -32,6 +32,20 @@ In the front matter of a page, along with things you'd expect like title, subtit
 layout: single # single or single-sidebar
 ```
 
+{{< panelset >}}
+{{< panel name="single :camera:" >}}
+
+![](single.png)
+
+{{< /panel >}}
+{{< panel name="single-sidebar :camera:" >}}
+
+![](single-sb.png)
+
+{{< /panel >}}
+
+{{< /panelset >}}
+
 Either of these layouts will work for any content section (blogs, projects, talks), and can even be mixed and matched within any content section. You can also add link buttons to the top of a single page in any content section (helpful for sharing external resources related to a page like a slide deck, YouTube video, GitHub repository, etc.):
 
 ```yaml
@@ -83,7 +97,23 @@ content/
 
 If you want the sidebar image to **also** be the thumbnail image on the listing page, add the word `featured` to the filename (like `featured-sidebar.jpg` or even `mario-kart-sidebar-featured.png`). The featured image will also be that page's social sharing image. 
 
-## Home page
+## Homepage
+
+The homepage of your site can be quickly configured:
+
+{{< panelset >}}
+{{< panel name="preview :camera:" >}}
+
+![](homepage.png)
+
+{{< /panel >}}
+{{< panel name="alt preview :camera:" >}}
+
+![](homepage-alt.png)
+
+{{< /panel >}}
+
+{{< /panelset >}}
 
 Fill out the YAML in `/content/_index.md`:
 
@@ -123,6 +153,22 @@ Read the [full docs here](/learn/homepage/).
 
 
 ## About page
+
+The "about" page of your site can also be quickly configured:
+
+{{< panelset >}}
+{{< panel name="preview :camera:" >}}
+
+![](about-page.png)
+
+{{< /panel >}}
+{{< panel name="alt preview :camera:" >}}
+
+![](about-alt.png)
+
+{{< /panel >}}
+
+{{< /panelset >}}
 
 Fill out the YAML front matter in four markdown files:
 
@@ -168,7 +214,7 @@ show_title_as_headline: false
 
 ## Contact page
 
-This website comes with a Formspree form that's designed to work with a static website. You can edit the one already present in the site content.
+This website comes with a Formspree form that's designed to work with a static website. You can edit the one already present in the site content. Here is a preview: https://hugo-apero.netlify.app/contact/
 
 ```bash
 content/
