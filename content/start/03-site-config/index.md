@@ -11,7 +11,7 @@ draft: false
 
 The following site configuration options are found in the `config.toml` file at the root of this Hugo site.
 
-## Hugo-defined variables
+## Hugo variables
 
 A few Hugo-defined variables are included the example site's `config.toml` file. You can find a complete list in the [Hugo docs](https://gohugo.io/getting-started/configuration/#all-configuration-settings). Some key ones you'll want to edit:
 
@@ -22,6 +22,37 @@ author = "Alison Hill"
 ```
 
 At a minimum, change these values.
+
+## Apéro variables
+
+The Apéro theme also defines additional site-wide, global variables. All are listed under the `[params]` section in your `config.toml` file. The most important to touch are:
+
+```
+[params]
+  orgName = "RStudio"
+  orgLocal = "Anywhere"
+  description = "A modern, beautiful, and easily configurable blog theme for Hugo."
+  favicon = "/img/favicon.ico"
+  logo = "/img/blogophonic-mark-dark.png"
+  mainSections = ["blog", "project", "talk"]
+  navallcaps = true
+  # Default image for social sharing and search engines. 
+  # Place image file in `static` folder and specify image name here.
+  sharing_image = "/img/papillons.jpg"
+  # Twitter username (without @). Used when a visitor shares your site on Twitter.
+  twitter = "apreshill"
+```
+
+For all image files (`favicon`, `logo`, and `sharing_image`), the files should be placed in the `/static/` folder in your project root. The default `config.toml` file shows them inside `/static/img/`, for example:
+
+```bash
+config.toml
+static/
+└── img/
+    ├── favicon.ico 
+    ├── blogophonic-mark-dark.png
+    └── papillons.jpg
+```
 
 ## Color themes
 
@@ -65,6 +96,7 @@ Find this section in your `config.toml` file and go to town:
   # use an embedded font
   customtextFontFamily = "Commissioner"
   customheadingFontFamily = "Fraunces"
+  
   # or choose a system font stack
   textFontFamily = "sans-serif"
   headingFontFamily = "serif"
@@ -80,9 +112,10 @@ Find this section in your `config.toml` file and link all the things:
 
 ```toml
 [params]
-# show/hide social icons in site header/footer
-socialInHeader = false
-socialInFooter = false
+  # show/hide social icons in site header & footer
+  socialInHeader = false
+  socialInFooter = false
+  
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
@@ -92,7 +125,7 @@ socialInFooter = false
 
 Read the [full docs here](/learn/social/).
 
-## Header menu
+## Menus
 
 Find this section in your `config.toml` file to change the menu items in the site header:
 
@@ -106,12 +139,9 @@ Find this section in your `config.toml` file to change the menu items in the sit
   [[menu.header]] <!--lather, rinse, repeat-->
 ```
 
-## Footer menu
-
 Just below the header menu, you'll find the menu items for the footer as well:
 
 ```toml
-[menu]
   [[menu.footer]]
     name = "License"
     title = "License"
