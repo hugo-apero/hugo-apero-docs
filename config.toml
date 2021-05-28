@@ -94,8 +94,8 @@ enableEmoji = true
       icon_pack = "fab"
       url       = "https://youtube.com/playlist?list=PLzxicn7kBeay3kTPuTQ9lSi7I5jfWmEwc"
   [[params.social]]
-      icon      = "address-card" # icon name without the 'fa-'
-      icon_pack = "fas"
+      icon      = "lemon" # icon name without the 'fa-'
+      icon_pack = "far"
       url       = "https://hugo-apero.netlify.app/"
 
 [taxonomies]
