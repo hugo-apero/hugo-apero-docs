@@ -16,5 +16,9 @@ links:
   icon_pack: fas
   name: https://www.kelly-bodwin.com/
   url: https://www.kelly-bodwin.com/
+- icon: github
+  icon_pack: fab
+  name: source
+  url: https://github.com/kbodwin/kbodwin-apero
 ---
 

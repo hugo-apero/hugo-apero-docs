@@ -2,7 +2,7 @@
 title: "Ethics Committee Resources"
 subtitle: "A collection of resources relating to medical and data ethics"
 excerpt: "A collection of resources relating to medical and data ethics"
-weight: 5
+weight: 6
 author: "Alison Hill"
 draft: false
 categories:

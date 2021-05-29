@@ -13,5 +13,9 @@ links:
   icon_pack: fas
   name: https://aleach.ca/
   url: https://aleach.ca/
+- icon: github
+  icon_pack: fab
+  name: source
+  url: https://github.com/leachandrew/aleach_ca
 ---
 

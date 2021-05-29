@@ -2,7 +2,7 @@
 title: "Introduce Yourself Online"
 subtitle: "A workshop @ rstudio::global(2021)"
 excerpt: "A workshop @ rstudio::global(2021)"
-weight: 6
+weight: 7
 author: "Alison Hill"
 draft: false
 categories:
@@ -14,5 +14,9 @@ links:
   icon_pack: fas
   name: https://iyo-rstudio-global.netlify.app/
   url: https://iyo-rstudio-global.netlify.app/
+- icon: github
+  icon_pack: fab
+  name: source
+  url: https://github.com/rstudio-education/iyo-rstudio-global
 ---
 
