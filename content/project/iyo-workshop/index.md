@@ -2,7 +2,7 @@
 title: "Introduce Yourself Online"
 subtitle: "A workshop @ rstudio::global(2021)"
 excerpt: "A workshop @ rstudio::global(2021)"
-weight: 7
+weight: 8
 author: "Alison Hill"
 draft: false
 categories:
