@@ -2,7 +2,7 @@ library(magick)
 library(fs)
 library(purrr)
 
-img_ls <- dir_ls(path = "content/project/", glob = "*photo.jpg", recurse = TRUE)
+img_ls <- dir_ls(path = "content/project/", glob = "*featured*", recurse = TRUE)
 
 scale_sq <- function(sq) {
   sq %>%
