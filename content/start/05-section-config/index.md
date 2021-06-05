@@ -104,7 +104,7 @@ show_post_date: true
 layout: list-sidebar # list, list-sidebar, list-grid
 ```
 
-### Thumbnail images
+## Thumbnail images
 
 Any of the list layouts can be used with thumbnails (`show_post_thumbnail: true`) or without thumbnails (`show_post_thumbnail: false`). They all look good, and work well on mobile!
 
@@ -130,7 +130,7 @@ content/
         └── index.md
 ```
 
-### List sidebar content
+## List sidebar content
 
 If you choose the `list-sidebar` layout for a section, you can configure the sidebar content in the same `/section/_index.md` file.
 
