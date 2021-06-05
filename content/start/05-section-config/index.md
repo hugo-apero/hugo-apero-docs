@@ -104,7 +104,9 @@ show_post_date: true
 layout: list-sidebar # list, list-sidebar, list-grid
 ```
 
-Any of the layouts can be used with or without post thumbnails (seriously- they all look good and work well on mobile!). 
+### Thumbnail images
+
+Any of the list layouts can be used with thumbnails (`show_post_thumbnail: true`) or without thumbnails (`show_post_thumbnail: false`). They all look good, and work well on mobile!
 
 If you show thumbnails, the image file in each page's bundle with the word `featured` in the filename will be used as the page thumbnail in the list (like `featured.jpg` or even `mario-kart-featured.png`). The featured image will also be that page's social sharing image. 
 
@@ -113,11 +115,20 @@ content/
 └── blog
     ├── _index.md
     └── my-blog-post
-        ├── my-featured.jpg
+        ├── my-featured.jpg <- your thumbnail!
         └── index.md
 ```
 
 If your image happens to be a hex shape (like an R package hex sticker), include the word `hex` in the filename too, like `my-featured-hex.png`.
+
+```bash
+content/
+└── blog
+    ├── _index.md
+    └── my-blog-post
+        ├── my-featured-hex.jpg <- your thumbnail!
+        └── index.md
+```
 
 ### List sidebar content
 
