@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages("blogdown")
-          blogdown::install_hugo("0.79.0", extended=TRUE, force=TRUE)
+          blogdown::install_hugo("0.80.0", extended=TRUE, force=TRUE)
           blogdown::install_theme(theme="hugo-apero/hugo-apero", force=TRUE)
         shell: Rscript {0}
 
