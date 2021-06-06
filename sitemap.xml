@@ -3,82 +3,132 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/collection/day02/01-netlify/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/start/setup/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/blog/spoonful-series/01-spoonful/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/project/kelly/</loc>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/collection/day01/01-github/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/start/create-site/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/collection/prework/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/project/jesse/</loc>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/collection/day01/</loc>
-    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/start/site-config/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/collection/day01/02-postcards/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/project/andrew/</loc>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/blog/spoonful-series/02-spoonful/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/start/deploy/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/collection/day02/02-blogdown/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/project/john/</loc>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/collection/day02/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/start/section-config/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/blog/spoonful-series/03-spoonful/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/project/alison/</loc>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/collection/day01/03-distill/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/start/page-config/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/collection/day02/03-blogdown/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/project/enrico/</loc>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/blog/</loc>
-    <lastmod>2021-03-14T00:00:00+00:00</lastmod>
+    <loc>https://hugo-apero.github.io/apero/project/silvia/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/project/beamilz/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/project/ethics-comm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/project/iyo-workshop/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/tags/blogdown/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://hugo-apero.github.io/apero/categories/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/start/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/tags/github/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/tags/hugo/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/tags/netlify/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/tags/rstudio/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/categories/setup/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/tags/</loc>
+    <lastmod>2021-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/learn/about-page/</loc>
     <lastmod>2021-03-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/blog/about-page/</loc>
-    <lastmod>2021-03-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/blog/homepage/</loc>
+    <loc>https://hugo-apero.github.io/apero/learn/homepage/</loc>
     <lastmod>2021-03-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -88,12 +138,12 @@
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/</loc>
+    <loc>https://hugo-apero.github.io/apero/learn/</loc>
     <lastmod>2021-03-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/blog/social/</loc>
+    <loc>https://hugo-apero.github.io/apero/learn/social/</loc>
     <lastmod>2021-01-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -108,23 +158,13 @@
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/blog/color-themes/</loc>
+    <loc>https://hugo-apero.github.io/apero/learn/color-themes/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/blog/fonts/</loc>
+    <loc>https://hugo-apero.github.io/apero/learn/fonts/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/tags/</loc>
-    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/collection/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -143,32 +183,7 @@
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/series/a-spoonful-of-hugo/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/blog/spoonful-series/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/tags/hugo-site/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/categories/r/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/series/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/blog/seedling/</loc>
+    <loc>https://hugo-apero.github.io/apero/learn/seedling/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -183,52 +198,22 @@
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/blog/rmarkdown/</loc>
-    <lastmod>2020-12-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/blog/rmd/</loc>
-    <lastmod>2020-12-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://hugo-apero.github.io/apero/talk/seedling/</loc>
     <lastmod>2020-01-13T14:15:59-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/project/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/categories/package/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/project/giraffes/</loc>
-    <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/blog/css-grid-scaffold/</loc>
+    <loc>https://hugo-apero.github.io/apero/learn/css-grid-scaffold/</loc>
     <lastmod>2019-07-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/project/penguins/</loc>
+    <loc>https://hugo-apero.github.io/apero/tags/hugo-site/</loc>
     <lastmod>2019-07-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hugo-apero.github.io/apero/project/bakeoff/</loc>
-    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hugo-apero.github.io/apero/blog/built-in-contact-form/</loc>
+    <loc>https://hugo-apero.github.io/apero/learn/built-in-contact-form/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -256,7 +241,19 @@
   </url>
   
   <url>
+    <loc>https://hugo-apero.github.io/apero/categories/example/</loc>
+  </url>
+  
+  <url>
     <loc>https://hugo-apero.github.io/apero/license/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/series/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hugo-apero.github.io/apero/project/</loc>
   </url>
   
 </urlset>

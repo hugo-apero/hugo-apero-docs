@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.80.0" />
+<title>01: Set up | Hugo Apéro</title>
+
+
+<meta property="twitter:site" content="@apreshill">
+<meta property="twitter:creator" content="@apreshill">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="How to prepare to make a new Hugo website (for real).">
+
+
+<meta property="og:site_name" content="Hugo Apéro">
+<meta property="og:title" content="01: Set up | Hugo Apéro">
+<meta property="og:description" content="How to prepare to make a new Hugo website (for real)." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://hugo-apero.github.io/apero/start/setup/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://hugo-apero.github.io/apero/start/sidebar-featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://hugo-apero.github.io/apero/start/sidebar-featured.jpg" >
+    
+    
+  <meta itemprop="name" content="01: Set up">
+<meta itemprop="description" content="tl;dr     To start, you&rsquo;ll need the following in place (all are free):
+  Recent versions of R and RStudio installed
+  R: v &gt;= 3.6.0, https://cloud.r-project.org/
+  RStudio: v &gt;= 1.4, https://www.rstudio.com/products/rstudio/download/#download
+    A free GitHub account (https://github.com/join)
+  A working connection to GitHub from RStudio (see free book: https://happygitwithr.com/)
+  A free Netlify account connected to your GitHub account (https://app.">
+<meta itemprop="datePublished" content="2021-05-26T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-05-26T00:00:00+00:00" />
+<meta itemprop="wordCount" content="508">
+
+
+
+<meta itemprop="keywords" content="blogdown,netlify,hugo,rstudio,github," />
+
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/apero/style.main.min.70cc9560c525f9eb4a1f338f627f1cc13b0362f8ab263ee89219a4ced2973455.css" integrity="sha256-cMyVYMUl&#43;etKHzOPYn8cwTsDYvirJj7okhmkztKXNFU=" media="screen">
+  
+  
+  <script src="/apero/panelset.min.41f62c42d5f25dd80e81136866f4f1baa1bc17669edfd002e75c0e107953789b.js" type="text/javascript"></script>
+  
+  
+  <script src="/apero/main.min.07ec8e08cbb63db3a2cf7d4a7df6f7be00c715f13b64d8df6a2c48441ba8b14b.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single-series">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://hugo-apero.github.io/apero/" title="Home">
+      <img src="/apero/img/lemon.png" class="dib db-l h2 w-auto" alt="Hugo Apéro">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/about/" title="About Apéro">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/get-started/" title="Get started using the Hugo Apéro theme">Get started</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/learn/" title="learn more about using the Hugo Apéro theme">Learn</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/project/" title="Project Portfolio">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/elements/" title="Element Page">Elements</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+
+<main class="page-main ph4 pt4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pr3-l">
+      <header class="post-header">
+        <h4 class="breadcrumb pb5">
+
+ 
+ 
+    
+ 
+ 
+    
+ 
+
+  
+    
+      <a href="/apero/start/">Get started</a> >
+    
+
+
+  
+    
+      01: Set up
+    
+
+
+</h4>
+
+
+
+
+        
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">01: Set up</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">How to prepare to make a new Hugo website (for real).</h4>
+        <p class="f6 measure lh-copy mv1">By Alison Hill in <a href="https://hugo-apero.github.io/apero/categories/setup">setup</a> </p>
+        <p class="f7 db mv0 ttu">May 26, 2021</p>
+        
+        
+      
+        
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h2 id="tldr">tl;dr
+  <a href="#tldr"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>To start, you&rsquo;ll need the following in place (all are free):</p>
+<ul>
+<li>
+<p>Recent versions of R and RStudio installed</p>
+<ul>
+<li>
+<p>R: v &gt;= 3.6.0, <a href="https://cloud.r-project.org/">https://cloud.r-project.org/</a></p>
+</li>
+<li>
+<p>RStudio: v &gt;= 1.4, <a href="https://www.rstudio.com/products/rstudio/download/#download">https://www.rstudio.com/products/rstudio/download/#download</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>A free GitHub account (<a href="https://github.com/join">https://github.com/join</a>)</p>
+</li>
+<li>
+<p>A working connection to GitHub from RStudio (see free book: <a href="https://happygitwithr.com/">https://happygitwithr.com/</a>)</p>
+</li>
+<li>
+<p>A free Netlify account connected to your GitHub account (<a href="https://app.netlify.com/signup">https://app.netlify.com/signup</a>)</p>
+</li>
+<li>
+<p>A recent version of the blogdown R package installed.</p>
+</li>
+<li>
+<p>A recent version of Hugo.</p>
+</li>
+</ul>
+<p>To set these up for the first time, read on.</p>
+
+
+
+
+<h2 id="install-r-and-rstudio">Install R and RStudio
+  <a href="#install-r-and-rstudio"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>For a pep talk about getting current on these installations, please read: <a href="https://happygitwithr.com/install-r-rstudio.html">https://happygitwithr.com/install-r-rstudio.html</a></p>
+<ul>
+<li>
+<p>Install a recent version of R (&gt;=3.6.0), which is available for free at <a href="https://cloud.r-project.org/">https://cloud.r-project.org/</a>. Check your current version:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">R.version.string
+</code></pre></div></li>
+<li>
+<p>Install a recent version of the RStudio Desktop Integrated Development Environment (IDE version &gt;= 1.4), available for free (
+<a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank" rel="noopener">RStudio Desktop Open Source License</a>). Check your current version:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#998;font-style:italic"># install.packages(&#34;rstudioapi&#34;)</span>
+rstudioapi<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">getVersion</span>()
+</code></pre></div></li>
+</ul>
+
+
+
+
+<h2 id="create-a-github-account">Create a GitHub account
+  <a href="#create-a-github-account"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Sign up for a free GitHub.com account at <a href="https://github.com/join">https://github.com/join</a> if you don&rsquo;t already have one.</p>
+<p>Complete these 
+<a href="https://happygitwithr.com/install-intro.html" target="_blank" rel="noopener">installation instructions</a>:</p>
+<ul>
+<li>
+<p>
+<a href="https://happygitwithr.com/install-git.html" target="_blank" rel="noopener">Install Git</a></p>
+</li>
+<li>
+<p>
+<a href="https://happygitwithr.com/hello-git.html" target="_blank" rel="noopener">Introduce yourself to Git</a></p>
+</li>
+<li>
+<p>
+<a href="https://happygitwithr.com/push-pull-github.html" target="_blank" rel="noopener">Connect to GitHub</a></p>
+</li>
+<li>
+<p>
+<a href="https://happygitwithr.com/credential-caching.html" target="_blank" rel="noopener">Cache credentials for HTTPS</a></p>
+</li>
+<li>
+<p>Check your new repository settings. As of 
+<a href="https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories/" target="_blank" rel="noopener">October 1, 2020</a>, GitHub will set <code>main</code> as the default branch for all new repositories, instead of <code>master</code>. To check this, for user accounts, go to: <a href="https://github.com/settings/repositories">https://github.com/settings/repositories</a></p>
+<p>You should see something like this:</p>
+<p><img src="github-main.png" alt=""></p>
+<p>If yours still says <code>master</code>, you may change it to <code>main</code> here if you wish.</p>
+</li>
+</ul>
+<p>Did it all work? Check that this works:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#998;font-style:italic"># install.packages(&#34;usethis&#34;)</span>
+usethis<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">git_sitrep</span>()
+</code></pre></div>
+
+
+
+<h2 id="connect-rstudio-to-your-github">Connect RStudio to your GitHub
+  <a href="#connect-rstudio-to-your-github"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>We assume the following:</p>
+<ul>
+<li>
+<p>You have installed/updated R and RStudio.</p>
+</li>
+<li>
+<p>You have a free GitHub account.</p>
+</li>
+<li>
+<p>You have installed Git.</p>
+</li>
+<li>
+<p>You have introduced yourself to Git.</p>
+</li>
+<li>
+<p>You have confirmed that you can push to / pull from GitHub from the command line.</p>
+</li>
+</ul>
+<p>Next, follow these steps to test your connection to GitHub from RStudio:</p>
+<ul>
+<li>
+<p>
+<a href="https://happygitwithr.com/rstudio-git-github.html" target="_blank" rel="noopener">Connect RStudio to Git and GitHub</a></p>
+</li>
+<li>
+<p>Troubleshooting help:</p>
+<ul>
+<li>
+<a href="https://happygitwithr.com/rstudio-see-git.html" target="_blank" rel="noopener">Detect Git from RStudio</a></li>
+<li>
+<a href="https://happygitwithr.com/troubleshooting.html" target="_blank" rel="noopener">More troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+<h2 id="sign-up-for-netlify">Sign up for Netlify
+  <a href="#sign-up-for-netlify"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Netlify is a platform that offers cloud hosting and serverless backend services for static websites. Lucky for us, that is what we need- we&rsquo;ll be making a static websites. Netlify has a free plan tier, which in my experience is plenty for personal websites. To sign up:</p>
+<ol>
+<li>
+<p>Sign up on <a href="https://app.netlify.com/signup">https://app.netlify.com/signup</a>.</p>
+</li>
+<li>
+<p>Select to sign up using your existing GitHub account (no need to create another account), so select &ldquo;GitHub&rdquo; (you may need to sign in), and click to &ldquo;Authorize Netlify.&rdquo;</p>
+<p><img src="netlify-github.png" alt=""></p>
+</li>
+</ol>
+
+
+
+
+<h2 id="install-blogdown">Install blogdown
+  <a href="#install-blogdown"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>We&rsquo;ll use the blogdown package to make a Hugo website from the comfort of RStudio. Install by connecting to the internet, opening RStudio, and running at the command line:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#900;font-weight:bold">install.packages</span>(<span style="color:#d14">&#34;blogdown&#34;</span>)
+</code></pre></div><p>Restart your R session before using any newly installed packages 😄</p>
+
+
+
+
+<h2 id="install-hugo">Install Hugo
+  <a href="#install-hugo"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>We&rsquo;ll use Hugo to build our site. Use the blogdown package to install Hugo:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#000;font-weight:bold">&gt;</span> blogdown<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">install_hugo</span>()
+</code></pre></div><p>And ensure your current version is at least as high as:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#000;font-weight:bold">&gt;</span> blogdown<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">hugo_version</span>()
+[1] ‘<span style="color:#099">0.80.0</span>’
+</code></pre></div>
+
+
+
+<h2 id="markdown-review">Markdown review
+  <a href="#markdown-review"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Please complete this 
+<a href="https://commonmark.org/help/tutorial/" target="_blank" rel="noopener">10-minute interactive tutorial on Markdown</a>.</p>
+
+
+
+
+<h2 id="you-made-it">You made it!
+  <a href="#you-made-it"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>With all this preparation in place, you are ready to 
+<a href="../02-create">create your site</a></p>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://hugo-apero.github.io/apero/start/create-site/">02: Create your site &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+  </section>
+</main>
+
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/apero/start/sidebar-featured.jpg" class="db ma0">
+
+                         
+ 
+
+
+
+<div class="flex items-start sticky ph4 pb4 flex-row">
+  <div class="w-two-thirds w-50-l ph0">
+    <h2 class="mv3 f5 fw7 ttu tracked">
+      <a class="no-underline dim" href="/apero/start/">In this series</a></h2>
+    <nav id="SectionTableOfContents" aria-label="SectionTableOfContents">
+        <ul>
+        
+          
+          
+          <li class="active" hugo-nav="/apero/start/setup/">
+            <a href="https://hugo-apero.github.io/apero/start/setup/">01: Set up</a></li>
+          
+          </li>
+        
+          
+          
+          <li class="" hugo-nav="/apero/start/create-site/">
+            <a href="https://hugo-apero.github.io/apero/start/create-site/">02: Create your site</a></li>
+          
+          </li>
+        
+          
+          
+          <li class="" hugo-nav="/apero/start/site-config/">
+            <a href="https://hugo-apero.github.io/apero/start/site-config/">03: Site configuration</a></li>
+          
+          </li>
+        
+          
+          
+          <li class="" hugo-nav="/apero/start/deploy/">
+            <a href="https://hugo-apero.github.io/apero/start/deploy/">04: Deploy your site</a></li>
+          
+          </li>
+        
+          
+          
+          <li class="" hugo-nav="/apero/start/section-config/">
+            <a href="https://hugo-apero.github.io/apero/start/section-config/">05: Section configuration</a></li>
+          
+          </li>
+        
+          
+          
+          <li class="" hugo-nav="/apero/start/page-config/">
+            <a href="https://hugo-apero.github.io/apero/start/page-config/">06: Page configuration</a></li>
+          
+          </li>
+        
+        </ul>
+    </nav>
+  </div>
+  <details id="PageTableOfContents">
+    <summary><h2 class="mv0 f5 fw7 ttu tracked dib">On this page<h2></summary>
+    <div class="pl2 pr0 mh0">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tldr">tl;dr</a></li>
+    <li><a href="#install-r-and-rstudio">Install R and RStudio</a></li>
+    <li><a href="#create-a-github-account">Create a GitHub account</a></li>
+    <li><a href="#connect-rstudio-to-your-github">Connect RStudio to your GitHub</a></li>
+    <li><a href="#sign-up-for-netlify">Sign up for Netlify</a></li>
+    <li><a href="#install-blogdown">Install blogdown</a></li>
+    <li><a href="#install-hugo">Install Hugo</a></li>
+    <li><a href="#markdown-review">Markdown review</a></li>
+    <li><a href="#you-made-it">You made it!</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+  
+</div>
+
+</aside>
+
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2021 RStudio, Anywhere
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/hugo-apero/" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/apreshill" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://youtube.com/playlist?list=PLzxicn7kBeay3kTPuTQ9lSi7I5jfWmEwc" title="youtube" target="_blank" rel="noopener">
+      <i class="fab fa-youtube fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://hugo-apero.netlify.app/" title="lemon" target="_blank" rel="noopener">
+      <i class="far fa-lemon fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/apero/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/apero/contact/" title="Contact form">Contact</a>
+      
+      <a class="dib pv1 ph2 link" href="/apero/contributors/" title="Contributors">Contributors</a>
+      
+    </div>
+  </nav>
+</footer>
+
+      </div>
+    </body>
+</html>

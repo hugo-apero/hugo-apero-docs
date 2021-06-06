@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>setup</title>
+      <link>https://hugo-apero.github.io/apero/categories/setup/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/categories/setup/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>evergreen</title>
       <link>https://hugo-apero.github.io/apero/categories/evergreen/</link>
@@ -35,15 +44,6 @@
     </item>
     
     <item>
-      <title>R</title>
-      <link>https://hugo-apero.github.io/apero/categories/r/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-apero.github.io/apero/categories/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>meetup</title>
       <link>https://hugo-apero.github.io/apero/categories/meetup/</link>
       <pubDate>Fri, 01 Jan 2021 14:15:59 -0600</pubDate>
@@ -53,11 +53,11 @@
     </item>
     
     <item>
-      <title>package</title>
-      <link>https://hugo-apero.github.io/apero/categories/package/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      <title>example</title>
+      <link>https://hugo-apero.github.io/apero/categories/example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-apero.github.io/apero/categories/package/</guid>
+      <guid>https://hugo-apero.github.io/apero/categories/example/</guid>
       <description></description>
     </item>
     

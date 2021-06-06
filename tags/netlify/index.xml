@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>netlify on Hugo Apéro</title>
+    <link>https://hugo-apero.github.io/apero/tags/netlify/</link>
+    <description>Recent content in netlify on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/tags/netlify/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>01: Set up</title>
+      <link>https://hugo-apero.github.io/apero/start/setup/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/start/setup/</guid>
+      <description>tl;dr     To start, you&amp;rsquo;ll need the following in place (all are free):
+  Recent versions of R and RStudio installed
+  R: v &amp;gt;= 3.6.0, https://cloud.r-project.org/
+  RStudio: v &amp;gt;= 1.4, https://www.rstudio.com/products/rstudio/download/#download
+    A free GitHub account (https://github.com/join)
+  A working connection to GitHub from RStudio (see free book: https://happygitwithr.com/)
+  A free Netlify account connected to your GitHub account (https://app.</description>
+    </item>
+    
+  </channel>
+</rss>

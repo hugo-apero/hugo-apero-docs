@@ -6,7 +6,52 @@
     <description>Recent content in Tags on Hugo Apéro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blogdown</title>
+      <link>https://hugo-apero.github.io/apero/tags/blogdown/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://hugo-apero.github.io/apero/tags/github/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://hugo-apero.github.io/apero/tags/hugo/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netlify</title>
+      <link>https://hugo-apero.github.io/apero/tags/netlify/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/tags/netlify/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rstudio</title>
+      <link>https://hugo-apero.github.io/apero/tags/rstudio/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/tags/rstudio/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>style</title>
       <link>https://hugo-apero.github.io/apero/tags/style/</link>
@@ -19,7 +64,7 @@
     <item>
       <title>hugo-site</title>
       <link>https://hugo-apero.github.io/apero/tags/hugo-site/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://hugo-apero.github.io/apero/tags/hugo-site/</guid>
       <description></description>

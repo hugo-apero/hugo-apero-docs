@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Get started on Hugo Apéro</title>
+    <link>https://hugo-apero.github.io/apero/start/</link>
+    <description>Recent content in Get started on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/start/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>01: Set up</title>
+      <link>https://hugo-apero.github.io/apero/start/setup/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/start/setup/</guid>
+      <description>tl;dr     To start, you&amp;rsquo;ll need the following in place (all are free):
+  Recent versions of R and RStudio installed
+  R: v &amp;gt;= 3.6.0, https://cloud.r-project.org/
+  RStudio: v &amp;gt;= 1.4, https://www.rstudio.com/products/rstudio/download/#download
+    A free GitHub account (https://github.com/join)
+  A working connection to GitHub from RStudio (see free book: https://happygitwithr.com/)
+  A free Netlify account connected to your GitHub account (https://app.</description>
+    </item>
+    
+    <item>
+      <title>02: Create your site</title>
+      <link>https://hugo-apero.github.io/apero/start/create-site/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/start/create-site/</guid>
+      <description>New site, GitHub first     This is my recommended workflow for most users.
+Create repo     To do ✔️ Create a new repository on GitHub from https://github.com/new:
+  Check to initialize with a README
+  Don&amp;rsquo;t add .gitignore- this will be taken care of later.
+   Screenshot 📷   To do ✔️ From the main page of your new repository, and under the repository name:</description>
+    </item>
+    
+    <item>
+      <title>03: Site configuration</title>
+      <link>https://hugo-apero.github.io/apero/start/site-config/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/start/site-config/</guid>
+      <description>The following site configuration options are found in the config.toml file at the root of this Hugo site.
+Hugo variables     A few Hugo-defined variables are included the example site&amp;rsquo;s config.toml file. You can find a complete list in the Hugo docs. Some key ones you&amp;rsquo;ll want to edit:
+baseURL = &amp;#34;/&amp;#34; title = &amp;#34;Hugo Apéro&amp;#34; author = &amp;#34;Alison Hill&amp;#34; # set deliberately low for testing- choose your preferred number  paginate = 5 At a minimum, change these values.</description>
+    </item>
+    
+    <item>
+      <title>04: Deploy your site</title>
+      <link>https://hugo-apero.github.io/apero/start/deploy/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/start/deploy/</guid>
+      <description>To preview your site locally, we have been using a blogdown function (or Add-in in RStudio):
+blogdown::serve_site() If you then push to GitHub, you are committing the source files (but not the built site) to GitHub. This is actually preferred, because we can teach Netlify how to build our site for us using the source files.
+Push to GitHub     You can use the RStudio to push your current website project to GitHub.</description>
+    </item>
+    
+    <item>
+      <title>05: Section configuration</title>
+      <link>https://hugo-apero.github.io/apero/start/section-config/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/start/section-config/</guid>
+      <description>Hugo allows you to use a page&amp;rsquo;s front matter (written in yaml, toml, or json) to keep metadata attached to markdown files. The motto in Hugo is &amp;ldquo;everything is a page.&amp;rdquo;
+There are two sets of front matter for each content section. One set is for the section itself (/blog/_index.md), and the other for each page within a section, which consist of front matter plus content (/blog/my-blog-post/index.md). Both sections (/blog/_index.md) and single pages (/blog/my-blog-post/index.</description>
+    </item>
+    
+    <item>
+      <title>06: Page configuration</title>
+      <link>https://hugo-apero.github.io/apero/start/page-config/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/start/page-config/</guid>
+      <description>Single pages in sections     You have two options for where to place front matter for single pages. You can use the front matter of the page like /blog/my-blog-post/index.md, or you could use the cascade key in the section front matter like /blog/_index.md. You can set up the cascade to avoid repeating yourself, if you want to make sure to configure all pages in the same section the same way:</description>
+    </item>
+    
+  </channel>
+</rss>

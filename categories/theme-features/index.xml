@@ -8,46 +8,11 @@
     <language>en</language>
     <lastBuildDate>Thu, 28 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/categories/theme-features/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>A first post</title>
-      <link>https://hugo-apero.github.io/apero/blog/spoonful-series/01-spoonful/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-apero.github.io/apero/blog/spoonful-series/01-spoonful/</guid>
-      <description>Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
-Here I am: content/blog/spoonful-series/01-spoonful.md  To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
-My content section is: blog  My layout is: single-series   does this work?     or this?      Let&amp;rsquo;s start.
-beginning     middle     end     </description>
-    </item>
-    
-    <item>
-      <title>A second post</title>
-      <link>https://hugo-apero.github.io/apero/blog/spoonful-series/02-spoonful/</link>
-      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-apero.github.io/apero/blog/spoonful-series/02-spoonful/</guid>
-      <description>Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
-Here I am: content/blog/spoonful-series/02-spoonful/index.md  To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
-My content section is: blog  My layout is: single-series  Images in this page bundle: /apero/blog/spoonful-series/02-spoonful/sidebar-inverse.jpg   part 2!     does this work?      now for some very cool things     more     get ready!</description>
-    </item>
-    
-    <item>
-      <title>A third post</title>
-      <link>https://hugo-apero.github.io/apero/blog/spoonful-series/03-spoonful/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-apero.github.io/apero/blog/spoonful-series/03-spoonful/</guid>
-      <description>Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
-Here I am: content/blog/spoonful-series/03-spoonful/index.markdown  Here is my R Markdown source file: blog/spoonful-series/03-spoonful/index.Rmarkdown You&#39;ll want to edit this file, then re-knit to see the changes take effect in your site preview.
- To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
-My content section is: blog  My layout is: single-series  Images in this page bundle: /apero/blog/spoonful-series/03-spoonful/featured-photo.</description>
-    </item>
-    
-    <item>
       <title>Set up your social</title>
-      <link>https://hugo-apero.github.io/apero/blog/social/</link>
+      <link>https://hugo-apero.github.io/apero/learn/social/</link>
       <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-apero.github.io/apero/blog/social/</guid>
+      <guid>https://hugo-apero.github.io/apero/learn/social/</guid>
       <description>There are five places where you can choose to show social icons. Here is the tl;dr:
  site header (set in config.toml), site footer (set in config.toml),  homepage (set in content/_index.md),  about page in the sidebar (set in content/about/sidebar/index.md), and  contact page (set in content/form/contact.md).  Read on to learn how to set up your social icons, and how to show/hide them.
 Configure social     Wherever you end up wanting to show your social icons, you&amp;rsquo;ll need to start by setting up the links in your site config.</description>
@@ -55,39 +20,30 @@ Configure social     Wherever you end up wanting to show your social icons, you&
     
     <item>
       <title>Style your site colors</title>
-      <link>https://hugo-apero.github.io/apero/blog/color-themes/</link>
+      <link>https://hugo-apero.github.io/apero/learn/color-themes/</link>
       <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-apero.github.io/apero/blog/color-themes/</guid>
+      <guid>https://hugo-apero.github.io/apero/learn/color-themes/</guid>
       <description>You can totally customize your site&amp;rsquo;s theme colors within minutes of creating a new site. Read on to find out how, and decide which of the three options meets your needs.
 Use a color theme     Hugo Apéro includes 8 built-in color themes that work &amp;ldquo;out of the box.&amp;rdquo; This means you can use a color theme to quickly customize the look of your site without needing to write any CSS.</description>
     </item>
     
     <item>
       <title>Style your site typography</title>
-      <link>https://hugo-apero.github.io/apero/blog/fonts/</link>
+      <link>https://hugo-apero.github.io/apero/learn/fonts/</link>
       <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-apero.github.io/apero/blog/fonts/</guid>
+      <guid>https://hugo-apero.github.io/apero/learn/fonts/</guid>
       <description>As with color themes, you can completely customize your site&amp;rsquo;s fonts within minutes of creating a new site. How you do it depends on how much control and customization you need.
 Embedded fonts     Hugo Apéro includes 6 embedded fonts that work &amp;ldquo;out of the box.&amp;rdquo; We selected 3 serif and 3 sans-serif options that we thought looked good with this theme, in our humble opinions. All embedded fonts include real italics so you may emphasize to your heart&amp;rsquo;s content ❤️!</description>
     </item>
     
     <item>
-      <title>A Spoonful of Hugo</title>
-      <link>https://hugo-apero.github.io/apero/blog/spoonful-series/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-apero.github.io/apero/blog/spoonful-series/</guid>
-      <description>** No content below YAML for the series _index. This file is a leaf bundle, and provides settings for the listing page layout and sidebar content.**</description>
-    </item>
-    
-    <item>
       <title>Using panelsets</title>
-      <link>https://hugo-apero.github.io/apero/blog/seedling/</link>
+      <link>https://hugo-apero.github.io/apero/learn/seedling/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-apero.github.io/apero/blog/seedling/</guid>
+      <guid>https://hugo-apero.github.io/apero/learn/seedling/</guid>
       <description>Courtesy of panelset.js by Garrick Aden-Buie, from his xaringanExtra package: https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset
 For example, this panelset:
 Hello! 👋 hello
@@ -97,49 +53,21 @@ Hello! 👋 hello
     </item>
     
     <item>
-      <title>Tachyons for Style</title>
-      <link>https://hugo-apero.github.io/apero/project/giraffes/</link>
-      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-apero.github.io/apero/project/giraffes/</guid>
-      <description>Tachyons is a design system that allows you to design gorgeous interfaces in the browser with little effort.      Because Speed     Building this static site generator theme was the first time I used an Atomic (or Functional) CSS system like Tachyons. It&amp;rsquo;s a design system that provides very small (which means fast) CSS modules that you can use in your HTML. So, rather than writing every line of CSS, you apply the style you need as you write your HTML with easy to understand shorthand class names.</description>
-    </item>
-    
-    <item>
       <title>CSS Grid Scaffold</title>
-      <link>https://hugo-apero.github.io/apero/blog/css-grid-scaffold/</link>
+      <link>https://hugo-apero.github.io/apero/learn/css-grid-scaffold/</link>
       <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-apero.github.io/apero/blog/css-grid-scaffold/</guid>
+      <guid>https://hugo-apero.github.io/apero/learn/css-grid-scaffold/</guid>
       <description>“Grid is the very first CSS module created specifically to solve the layout problems we&amp;rsquo;ve all been hacking our way around for as long as we&amp;rsquo;ve been making websites.”     — Chris House, A Complete Guide to CSS Grid Layout 1
  Overview     Since I began building websites in Y2K, I&amp;rsquo;ve lost count how many times the phrase &amp;ldquo;&amp;hellip;there&amp;rsquo;s got to be a better way to do this&amp;rdquo; has passed my lips.</description>
     </item>
     
     <item>
-      <title>Palmer Penguins</title>
-      <link>https://hugo-apero.github.io/apero/project/penguins/</link>
-      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-apero.github.io/apero/project/penguins/</guid>
-      <description>“Grid is the very first CSS module created specifically to solve the layout problems we&amp;rsquo;ve all been hacking our way around for as long as we&amp;rsquo;ve been making websites.”     — Chris House, A Complete Guide to CSS Grid Layout 1
- Since I began building websites in Y2K, I&amp;rsquo;ve lost count how many times the phrase &amp;ldquo;&amp;hellip;there&amp;rsquo;s got to be a better way to do this&amp;rdquo; has passed my lips.</description>
-    </item>
-    
-    <item>
-      <title>Bakeoff</title>
-      <link>https://hugo-apero.github.io/apero/project/bakeoff/</link>
-      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugo-apero.github.io/apero/project/bakeoff/</guid>
-      <description>Formspree makes it easy to receive submissions from HTML forms on your static website.      Functional Form     This theme has a form-to-email feature built in, thanks to the simple Formspree integration. All you need to activate the form is a valid recipient email address saved in the front matter of the form (/content/forms/contact.md). Of course, the example shown below (your@email.here) must not be used.</description>
-    </item>
-    
-    <item>
       <title>Built-in Contact Form</title>
-      <link>https://hugo-apero.github.io/apero/blog/built-in-contact-form/</link>
+      <link>https://hugo-apero.github.io/apero/learn/built-in-contact-form/</link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-apero.github.io/apero/blog/built-in-contact-form/</guid>
+      <guid>https://hugo-apero.github.io/apero/learn/built-in-contact-form/</guid>
       <description>Formspree makes it easy to receive submissions from HTML forms on your static website.      Functional Form     This theme has a form-to-email feature built in, thanks to the simple Formspree integration. All you need to activate the form is a valid recipient email address saved in the front matter of the form (/content/forms/contact.md). Of course, the example shown below (your@email.here) must not be used.</description>
     </item>
     

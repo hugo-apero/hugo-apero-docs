@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.80.0" />
+<title>06: Page configuration | Hugo Apéro</title>
+
+
+<meta property="twitter:site" content="@apreshill">
+<meta property="twitter:creator" content="@apreshill">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="How to configure your single pages across content sections.">
+
+
+<meta property="og:site_name" content="Hugo Apéro">
+<meta property="og:title" content="06: Page configuration | Hugo Apéro">
+<meta property="og:description" content="How to configure your single pages across content sections." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://hugo-apero.github.io/apero/start/page-config/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://hugo-apero.github.io/apero/start/sidebar-featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://hugo-apero.github.io/apero/start/sidebar-featured.jpg" >
+    
+    
+  <meta itemprop="name" content="06: Page configuration">
+<meta itemprop="description" content="Single pages in sections     You have two options for where to place front matter for single pages. You can use the front matter of the page like /blog/my-blog-post/index.md, or you could use the cascade key in the section front matter like /blog/_index.md. You can set up the cascade to avoid repeating yourself, if you want to make sure to configure all pages in the same section the same way:">
+<meta itemprop="datePublished" content="2021-05-26T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-05-26T00:00:00+00:00" />
+<meta itemprop="wordCount" content="863">
+
+
+
+<meta itemprop="keywords" content="" />
+
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/apero/style.main.min.70cc9560c525f9eb4a1f338f627f1cc13b0362f8ab263ee89219a4ced2973455.css" integrity="sha256-cMyVYMUl&#43;etKHzOPYn8cwTsDYvirJj7okhmkztKXNFU=" media="screen">
+  
+  
+  <script src="/apero/panelset.min.41f62c42d5f25dd80e81136866f4f1baa1bc17669edfd002e75c0e107953789b.js" type="text/javascript"></script>
+  
+  
+  <script src="/apero/main.min.07ec8e08cbb63db3a2cf7d4a7df6f7be00c715f13b64d8df6a2c48441ba8b14b.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single-series">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://hugo-apero.github.io/apero/" title="Home">
+      <img src="/apero/img/lemon.png" class="dib db-l h2 w-auto" alt="Hugo Apéro">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/about/" title="About Apéro">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/get-started/" title="Get started using the Hugo Apéro theme">Get started</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/learn/" title="learn more about using the Hugo Apéro theme">Learn</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/project/" title="Project Portfolio">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/apero/elements/" title="Element Page">Elements</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+
+<main class="page-main ph4 pt4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pr3-l">
+      <header class="post-header">
+        <h4 class="breadcrumb pb5">
+
+ 
+ 
+    
+ 
+ 
+    
+ 
+
+  
+    
+      <a href="/apero/start/">Get started</a> >
+    
+
+
+  
+    
+      06: Page configuration
+    
+
+
+</h4>
+
+
+
+
+        
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">06: Page configuration</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">How to configure your single pages across content sections.</h4>
+        <p class="f6 measure lh-copy mv1">By Alison Hill</p>
+        <p class="f7 db mv0 ttu">May 26, 2021</p>
+        
+        
+      
+        
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h2 id="single-pages-in-sections">Single pages in sections
+  <a href="#single-pages-in-sections"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>You have two options for where to place front matter for single pages. You can use the front matter of the page like <code>/blog/my-blog-post/index.md</code>, or you could use the <code>cascade</code> key in the section front matter like <code>/blog/_index.md</code>. You can set up the cascade to avoid repeating yourself, if you want to make sure to configure all pages in the same section the same way:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#998;font-style:italic"># set up common front matter for all pages inside blog/</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">cascade</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">author</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;Alison Hill&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">show_author_byline</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">show_post_date</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">show_comments</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># see site config to choose Disqus or Utterances</span><span style="color:#bbb">
+</span></code></pre></div><p>You can still override any of these options in the YAML front matter of an individual page- it will always trump the cascade if present. To learn more about single pages, read the 
+<a href="https://gohugo.io/templates/single-page-templates/" target="_blank" rel="noopener">Hugo docs</a>.</p>
+<p>In the front matter of a page, along with things you&rsquo;d expect like title, subtitle, excerpt, and author, there are two choices for <code>layout</code>:</p>
+<ul>
+<li><code>single</code> or</li>
+<li><code>single-sidebar</code>.</li>
+</ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">layout</span>:<span style="color:#bbb"> </span>single<span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># single or single-sidebar</span><span style="color:#bbb">
+</span></code></pre></div><div id="" class="panelset">
+  
+<div class="panel">
+  <div class="panel-name">single 📷</div>
+  
+  <p><img src="single.png" alt=""></p>
+</div>
+<div class="panel">
+  <div class="panel-name">single-sidebar 📷</div>
+  
+  <p><img src="single-sb.png" alt=""></p>
+</div>
+
+
+</div>
+<p>Either of these layouts will work for any content section (blogs, projects, talks), and can even be mixed and matched within any content section. You can also add link buttons to the top of a single page in any content section (helpful for sharing external resources related to a page like a slide deck, YouTube video, GitHub repository, etc.):</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">links</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"></span>- <span style="color:#000080">icon</span>:<span style="color:#bbb"> </span>door-open<span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># icon name without the &#39;fa-&#39;</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">icon_pack</span>:<span style="color:#bbb"> </span>fas<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">name</span>:<span style="color:#bbb"> </span>website<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">url</span>:<span style="color:#bbb"> </span>https://allisonhorst.github.io/palmerpenguins/<span style="color:#bbb">
+</span><span style="color:#bbb"></span>- <span style="color:#000080">icon</span>:<span style="color:#bbb"> </span>github<span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># icon name without the &#39;fa-&#39;</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">icon_pack</span>:<span style="color:#bbb"> </span>fab<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">name</span>:<span style="color:#bbb"> </span>code<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">url</span>:<span style="color:#bbb"> </span>https://github.com/allisonhorst/palmerpenguins/<span style="color:#bbb">
+</span><span style="color:#bbb"></span>- <span style="color:#000080">icon</span>:<span style="color:#bbb"> </span>newspaper<span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># icon name without the &#39;fa-&#39;</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">icon_pack</span>:<span style="color:#bbb"> </span>far<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">name</span>:<span style="color:#bbb"> </span>Blog post<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">url</span>:<span style="color:#bbb"> </span>https://education.rstudio.com/blog/2020/07/palmerpenguins-cran/<span style="color:#bbb">
+</span></code></pre></div><p>For each link, pick your <code>icon</code> and <code>icon_pack</code> from the 
+<a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a> [fab / fas / far] or 
+<a href="https://jpswalsh.github.io/academicons/" target="_blank" rel="noopener">Academicons</a> [ai] free icon libraries.</p>
+<p>All external links (i.e., those that start with <code>http</code>) will open in a new tab (that is, <code>target=&quot;_blank&quot;</code>); relative links to pages within the site will open in the same window (links relative to your site root should start with <code>/</code>; links relative to the current page should not; to link up from current directory use <code>../</code> to go up a level).</p>
+
+
+
+
+<h3 id="page-sidebar-content">Page sidebar content
+  <a href="#page-sidebar-content"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>When you use the <code>single-sidebar</code> layout, the sidebar contents can be controlled by either the page file (<code>/blog/my-blog-post/index.md</code>) or the the section page file (<code>/blog/_index.md</code>) containing a set of front matter for that section&rsquo;s sidebar. In this file you can specify an image, title, description, author name (good for groups or teams), a text link and a boolean for the ad unit.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#998;font-style:italic"># set up common front matter for all pages inside blog/</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">cascade</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#998;font-style:italic"># for single-sidebar layout</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">sidebar</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">text_link_label</span>:<span style="color:#bbb"> </span>View recent talks<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">text_link_url</span>:<span style="color:#bbb"> </span>/talk/<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">show_sidebar_adunit</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span><span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># show ad container</span><span style="color:#bbb">
+</span></code></pre></div><p>By default, the page sidebar will use the section&rsquo;s <code>sidebar-listing</code> image if present. To instead use a unique page-specific sidebar image, the image file in that page&rsquo;s bundle with the word <code>sidebar</code> in the filename will be used in the sidebar (like <code>sidebar.jpg</code> or even <code>mario-kart-sidebar.png</code>).</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content/
+└── blog
+    ├── _index.md
+    ├── sidebar-listing.png
+    └── my-blog-post
+        ├── my-featured-thumbnail.jpg 
+        ├── my-post-sidebar.jpg
+        └── index.md
+</code></pre></div><p>If you want the sidebar image to <strong>also</strong> be the thumbnail image on the listing page, add the word <code>featured</code> to the filename (like <code>featured-sidebar.jpg</code> or even <code>mario-kart-sidebar-featured.png</code>). The featured image will also be that page&rsquo;s social sharing image.</p>
+
+
+
+
+<h2 id="homepage">Homepage
+  <a href="#homepage"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>The homepage of your site can be quickly configured:</p>
+<div id="" class="panelset">
+  
+<div class="panel">
+  <div class="panel-name">preview 📷</div>
+  
+  <p><img src="homepage.png" alt=""></p>
+</div>
+<div class="panel">
+  <div class="panel-name">alt preview 📷</div>
+  
+  <p><img src="homepage-alt.png" alt=""></p>
+</div>
+
+
+</div>
+<p>Fill out the YAML in <code>/content/_index.md</code>:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#555">---</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">title</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;Alison Hill&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">subtitle</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;Product Manager, Data Science Communication @RStudio&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">description</span>:<span style="color:#bbb"> </span>|<span style="color:#d14">
+</span><span style="color:#d14">  longish
+</span><span style="color:#d14">  text
+</span><span style="color:#d14">  here.</span><span style="color:#bbb">  
+</span><span style="color:#bbb"></span><span style="color:#000080">images</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#998;font-style:italic"># goes in /static/img</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span>- img/home.jpeg<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">image_left</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">text_align_left</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">show_social_links</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># specify social accounts in site config</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">show_action_link</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">action_link</span>:<span style="color:#bbb"> </span>/about<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">action_label</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;About me &amp;rarr;&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">action_type</span>:<span style="color:#bbb"> </span>text<span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># text, button</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">type</span>:<span style="color:#bbb"> </span>home<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#555">---</span><span style="color:#bbb">
+</span></code></pre></div><p>The homepage image goes in the <code>/static/</code> folder:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content/
+├── _index.md
+└── static/
+    └── img/
+        └── home.jpeg
+</code></pre></div><p>Read the 
+<a href="/learn/homepage/">full docs here</a>.</p>
+
+
+
+
+<h2 id="about-page">About page
+  <a href="#about-page"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>The &ldquo;about&rdquo; page of your site can also be quickly configured:</p>
+<div id="" class="panelset">
+  
+<div class="panel">
+  <div class="panel-name">preview 📷</div>
+  
+  <p><img src="about-page.png" alt=""></p>
+</div>
+<div class="panel">
+  <div class="panel-name">alt preview 📷</div>
+  
+  <p><img src="about-alt.png" alt=""></p>
+</div>
+
+
+</div>
+<p>Fill out the YAML front matter in four markdown files:</p>
+<ul>
+<li><code>/content/about/_index.md</code>,</li>
+<li><code>/content/about/header/index.md</code> (if you want one),</li>
+<li><code>/content/about/main/index.md</code> (the wide column), and</li>
+<li><code>/content/about/sidebar/index.md</code> (the narrow column).</li>
+</ul>
+<p>To change which content sections are previewed, use <code>mainSections</code> in your <code>config.toml</code> file:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[params]
+  mainSections = [<span style="color:#d14">&#34;blog&#34;</span>, <span style="color:#d14">&#34;project&#34;</span>, <span style="color:#d14">&#34;talk&#34;</span>]
+</code></pre></div><p>For the avatar image, name the image file <code>avatar</code> and save in the <code>/content/about/sidebar/</code> folder. For the audio file, name it <code>audio</code> and save in the same folder:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content/
+├── _index.md
+└── about/
+    ├── _index.md
+    ├── header/index.md
+    ├── main/index.md
+    └──  sidebar/
+        ├── index.md
+        ├── avatar.jpg
+        └── audio.m4a
+</code></pre></div><p>Read the 
+<a href="/learn/about-page/">full docs here</a>.</p>
+
+
+
+
+<h2 id="regular-page">Regular page
+  <a href="#regular-page"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>A regular page (not a form and not a page in a content section like blogs, projects, or talks) has a few configurations as well. There are two <code>layout</code> options: <code>standard</code> or <code>wide-body</code>, and an option to show the page title as a large headline at the top above the content.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">layout</span>:<span style="color:#bbb"> </span>standard<span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># standard or wide-body</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">show_title_as_headline</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">false</span><span style="color:#bbb">
+</span></code></pre></div>
+
+
+
+<h2 id="contact-page">Contact page
+  <a href="#contact-page"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>This website comes with a Formspree form that&rsquo;s designed to work with a static website. You can edit the one already present in the site content. Here is a preview: <a href="https://hugo-apero.netlify.app/contact/">https://hugo-apero.netlify.app/contact/</a></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content/
+└── form/
+    └── contact.md
+</code></pre></div><p>Your new contact page contains auto-generated front matter that defines the form name, title, date, and url, and more. Most important is the <code>formspree_form_id</code> key. You can find this on the integration page which is displayed after you create a new form. It looks like <code>https://formspree.io/&lt;hashid&gt;</code>.</p>
+<p>You can also specify a description that will display below the title, choose a right or left position for the form itself via <code>layout</code>, set a preferred <code>submit_button_label</code>, and toggle a few things on or off.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">description</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">layout</span>:<span style="color:#bbb"> </span>split-right<span style="color:#bbb"> </span><span style="color:#998;font-style:italic"># split-right or split-left</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">submit_button_label</span>:<span style="color:#bbb"> </span>Send<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">show_social_links</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">show_poweredby_formspree</span>:<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">formspree_form_id</span>:<span style="color:#bbb"> </span>&lt;hashid&gt;<span style="color:#bbb">
+</span></code></pre></div>
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://hugo-apero.github.io/apero/start/section-config/">&larr; 05: Section configuration</a>
+  
+  
+  
+</div>
+
+      </footer>
+    </article>
+    
+  </section>
+</main>
+
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/apero/start/sidebar-featured.jpg" class="db ma0">
+
+                         
+ 
+
+
+
+<div class="flex items-start sticky ph4 pb4 flex-row">
+  <div class="w-two-thirds w-50-l ph0">
+    <h2 class="mv3 f5 fw7 ttu tracked">
+      <a class="no-underline dim" href="/apero/start/">In this series</a></h2>
+    <nav id="SectionTableOfContents" aria-label="SectionTableOfContents">
+        <ul>
+        
+          
+          
+          <li class="" hugo-nav="/apero/start/setup/">
+            <a href="https://hugo-apero.github.io/apero/start/setup/">01: Set up</a></li>
+          
+          </li>
+        
+          
+          
+          <li class="" hugo-nav="/apero/start/create-site/">
+            <a href="https://hugo-apero.github.io/apero/start/create-site/">02: Create your site</a></li>
+          
+          </li>
+        
+          
+          
+          <li class="" hugo-nav="/apero/start/site-config/">
+            <a href="https://hugo-apero.github.io/apero/start/site-config/">03: Site configuration</a></li>
+          
+          </li>
+        
+          
+          
+          <li class="" hugo-nav="/apero/start/deploy/">
+            <a href="https://hugo-apero.github.io/apero/start/deploy/">04: Deploy your site</a></li>
+          
+          </li>
+        
+          
+          
+          <li class="" hugo-nav="/apero/start/section-config/">
+            <a href="https://hugo-apero.github.io/apero/start/section-config/">05: Section configuration</a></li>
+          
+          </li>
+        
+          
+          
+          <li class="active" hugo-nav="/apero/start/page-config/">
+            <a href="https://hugo-apero.github.io/apero/start/page-config/">06: Page configuration</a></li>
+          
+          </li>
+        
+        </ul>
+    </nav>
+  </div>
+  <details id="PageTableOfContents">
+    <summary><h2 class="mv0 f5 fw7 ttu tracked dib">On this page<h2></summary>
+    <div class="pl2 pr0 mh0">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#single-pages-in-sections">Single pages in sections</a></li>
+    <li><a href="#homepage">Homepage</a></li>
+    <li><a href="#about-page">About page</a></li>
+    <li><a href="#regular-page">Regular page</a></li>
+    <li><a href="#contact-page">Contact page</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+  
+</div>
+
+</aside>
+
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2021 RStudio, Anywhere
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/hugo-apero/" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/apreshill" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://youtube.com/playlist?list=PLzxicn7kBeay3kTPuTQ9lSi7I5jfWmEwc" title="youtube" target="_blank" rel="noopener">
+      <i class="fab fa-youtube fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://hugo-apero.netlify.app/" title="lemon" target="_blank" rel="noopener">
+      <i class="far fa-lemon fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/apero/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/apero/contact/" title="Contact form">Contact</a>
+      
+      <a class="dib pv1 ph2 link" href="/apero/contributors/" title="Contributors">Contributors</a>
+      
+    </div>
+  </nav>
+</footer>
+
+      </div>
+    </body>
+</html>

@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo-apero.github.io/apero/categories/evergreen/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Customize your about page</title>
-      <link>https://hugo-apero.github.io/apero/blog/about-page/</link>
+      <link>https://hugo-apero.github.io/apero/learn/about-page/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-apero.github.io/apero/blog/about-page/</guid>
+      <guid>https://hugo-apero.github.io/apero/learn/about-page/</guid>
       <description>There are three main sections to the about page.
 The header is on top, and includes a headline and subheadline. This section is optional.
 The sidebar, which can appear on either the left or the right, is a narrow column with the option to include an avatar, audio file, social icons, and a quick list of links.
@@ -21,10 +21,10 @@ The main section is the wide column that appears next to the sidebar. It allows 
     
     <item>
       <title>Customize your homepage</title>
-      <link>https://hugo-apero.github.io/apero/blog/homepage/</link>
+      <link>https://hugo-apero.github.io/apero/learn/homepage/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo-apero.github.io/apero/blog/homepage/</guid>
+      <guid>https://hugo-apero.github.io/apero/learn/homepage/</guid>
       <description>Start customizing your Hugo Apéro homepage by opening up content/_index.md. When you open this file, you&amp;rsquo;ll see a long-ish section of YAML with a series of key-value pairs fenced in by three dashes (---). There is no content on this page below the YAML.
 The underscore in the filename is important, and so is the filename, so don&amp;rsquo;t change this! But do focus on changing the YAML values.
 Add an image     Place the homepage image in the static/ folder in the root of your website project (don&amp;rsquo;t add it to your themes/hugo-apero/static folder!</description>
