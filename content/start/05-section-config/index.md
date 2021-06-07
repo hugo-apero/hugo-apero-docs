@@ -130,6 +130,27 @@ content/
         └── index.md
 ```
 
+## Page excerpts
+
+Whether or not you use thumbnail images, an excerpt of each page's content is shown on the listing page. The summary is configured inside each page's file:
+
+```bash
+content/
+└── blog
+    ├── _index.md
+    └── my-blog-post
+        ├── my-featured-hex.jpg 
+        └── index.md            <- the source file!
+```
+
+This theme looks for the YAML key in this order:
+
++ Is there a YAML key named `excerpt`?
++ If no `excerpt`, is there a key named `summary` (if you used Hugo Academic previously, your excerpts may line up with this YAML key instead)
++ If no `excerpt` or `summary` found, the first 70 words of your content will be used as the summary.
+
+Read more about auto-generated content summaries in the [Hugo docs](https://gohugo.io/content-management/summaries/).
+
 ## List sidebar content
 
 If you choose the `list-sidebar` layout for a section, you can configure the sidebar content in the same `/section/_index.md` file.
