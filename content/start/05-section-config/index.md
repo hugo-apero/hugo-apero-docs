@@ -15,9 +15,9 @@ There are two sets of front matter for each content section. One set is for the 
 
 Apéro provides unique layouts for three main content sections:
 
-+ blogs (Ex: https://hugo-apero.netlify.app/blog/),
-+ projects (Ex: https://hugo-apero.netlify.app/project/), and
-+ talks (Ex: https://hugo-apero.netlify.app/talk/).
++ blogs (Ex: <https://hugo-apero.netlify.app/blog/>),
++ projects (Ex: <https://hugo-apero.netlify.app/project/>), and
++ talks (Ex: <https://hugo-apero.netlify.app/talk/>).
 
 {{< panelset >}}
 {{< panel name="blog :camera:" >}}
