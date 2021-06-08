@@ -48,7 +48,7 @@
 There are two sets of front matter for each content section. One set is for the section itself (/blog/_index.md), and the other for each page within a section, which consist of front matter plus content (/blog/my-blog-post/index.md). Both sections (/blog/_index.md) and single pages (/blog/my-blog-post/index.">
 <meta itemprop="datePublished" content="2021-05-26T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-05-26T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1130">
+<meta itemprop="wordCount" content="1245">
 
 
 
@@ -159,9 +159,9 @@ There are two sets of front matter for each content section. One set is for the 
 <p>There are two sets of front matter for each content section. One set is for the section itself (<code>/blog/_index.md</code>), and the other for each page within a section, which consist of front matter plus content (<code>/blog/my-blog-post/index.md</code>). Both sections (<code>/blog/_index.md</code>) and single pages (<code>/blog/my-blog-post/index.md</code>) are markdown files, but the <code>_index</code> filename tells you that is a section configuration file.</p>
 <p>Apéro provides unique layouts for three main content sections:</p>
 <ul>
-<li>blogs (Ex: <a href="https://hugo-apero.netlify.app/blog/),">https://hugo-apero.netlify.app/blog/),</a></li>
-<li>projects (Ex: <a href="https://hugo-apero.netlify.app/project/),">https://hugo-apero.netlify.app/project/),</a> and</li>
-<li>talks (Ex: <a href="https://hugo-apero.netlify.app/talk/)">https://hugo-apero.netlify.app/talk/)</a>.</li>
+<li>blogs (Ex: <a href="https://hugo-apero.netlify.app/blog/">https://hugo-apero.netlify.app/blog/</a>),</li>
+<li>projects (Ex: <a href="https://hugo-apero.netlify.app/project/">https://hugo-apero.netlify.app/project/</a>), and</li>
+<li>talks (Ex: <a href="https://hugo-apero.netlify.app/talk/">https://hugo-apero.netlify.app/talk/</a>).</li>
 </ul>
 <div id="" class="panelset">
   
@@ -274,6 +274,31 @@ There are two sets of front matter for each content section. One set is for the 
         ├── my-featured-hex.jpg &lt;- your thumbnail!
         └── index.md
 </code></pre></div>
+
+
+
+<h2 id="page-excerpts">Page excerpts
+  <a href="#page-excerpts"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Whether or not you use thumbnail images, an excerpt of each page&rsquo;s content is shown on the listing page. The summary is configured inside each page&rsquo;s file:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">content/
+└── blog
+    ├── _index.md
+    └── my-blog-post
+        ├── my-featured-hex.jpg 
+        └── index.md            &lt;- the <span style="color:#0086b3">source</span> file!
+</code></pre></div><p>This theme looks for the YAML key in this order:</p>
+<ul>
+<li>Is there a YAML key named <code>excerpt</code>?</li>
+<li>If no <code>excerpt</code>, is there a key named <code>summary</code> (if you used Hugo Academic previously, your excerpts may line up with this YAML key instead)</li>
+<li>If no <code>excerpt</code> or <code>summary</code> found, the first 70 words of your content will be used as the summary.</li>
+</ul>
+<p>Read more about auto-generated content summaries in the 
+<a href="https://gohugo.io/content-management/summaries/" target="_blank" rel="noopener">Hugo docs</a>.</p>
+
 
 
 
@@ -536,6 +561,7 @@ There are two sets of front matter for each content section. One set is for the 
   <ul>
     <li><a href="#lists-of-pages">Lists of pages</a></li>
     <li><a href="#thumbnail-images">Thumbnail images</a></li>
+    <li><a href="#page-excerpts">Page excerpts</a></li>
     <li><a href="#list-sidebar-content">List sidebar content</a></li>
     <li><a href="#renaming-sections">Renaming sections</a></li>
     <li><a href="#reusing-sections">Reusing sections</a></li>
