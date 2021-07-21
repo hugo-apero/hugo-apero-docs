@@ -88,7 +88,8 @@ Use blogdown to create the Hugo Apéro example website:
 > library(blogdown)
 > new_site(theme = "hugo-apero/hugo-apero", 
            format = "toml",
-           sample = FALSE)
+           sample = FALSE,
+           empty_dirs = TRUE)
 ```
 
 Take a moment to read through the message that prints your console (shown right) - importantly, it tells you how to start and stop the server so you can preview your site. 
