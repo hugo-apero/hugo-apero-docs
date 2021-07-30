@@ -203,6 +203,15 @@ There are two sets of front matter for each content section. One set is for the 
     </item>
     
     <item>
+      <title>Zoë Turner</title>
+      <link>https://hugo-apero.github.io/apero/project/zoe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/project/zoe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Customize your about page</title>
       <link>https://hugo-apero.github.io/apero/learn/about-page/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
