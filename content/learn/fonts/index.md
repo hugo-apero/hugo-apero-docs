@@ -26,7 +26,7 @@ You may choose fonts for headings and body text in your site's `config.toml` fil
   <!--snip snip-->
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
-  # sans-serif options: Commissioner / Alegreya Sans / Metropolis
+  # sans-serif options: Commissioner / Atkinson Hyperlegible / Metropolis
   # if you import your own fonts, name them here too
   customtextFontFamily = "Commissioner"
   customheadingFontFamily = "Fraunces"
@@ -49,7 +49,7 @@ Here are the links to each font so you can see them in action:
         </tr>
         <tr class="stripe-dark">
           <td class="pa3"><a href="https://fonts.google.com/specimen/EB+Garamond">EB Garamond</a></td>
-          <td class="pa3"><a href="https://fonts.google.com/specimen/Alegreya+Sans">Alegreya Sans</a></td>
+          <td class="pa3"><a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">Atkinson Hyperlegible</a></td>
         </tr>
         <tr class="stripe-dark">
           <td class="pa3"><a href="https://fonts.google.com/specimen/Bitter">Bitter</a></td>
@@ -77,7 +77,7 @@ Here is a step-by-step, using the `config.toml` file:
   <!--snip snip-->
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
-  # sans-serif options: Commissioner / Alegreya Sans / Metropolis
+  # sans-serif options: Commissioner / Atkinson Hyperlegible / Metropolis
   # if you import your own fonts, name them here too
   customtextFontFamily = ""
   customheadingFontFamily = ""
@@ -129,7 +129,7 @@ Your final step is to go back to your `config.toml` file and add the `font-famil
   <!--snip snip-->
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
-  # sans-serif options: Commissioner / Alegreya Sans / Metropolis
+  # sans-serif options: Commissioner / Atkinson Hyperlegible / Metropolis
   # if you import your own fonts, name them here too
   customtextFontFamily = ""
   customheadingFontFamily = "Nanum Myeongjo"
