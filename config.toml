@@ -90,6 +90,10 @@ enableEmoji = true
       icon_pack = "fab"
       url       = "https://twitter.com/apreshill"
   [[params.social]]
+      icon      = "discord" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://discord.gg/QbGXCFTMNb"
+  [[params.social]]
       icon      = "youtube" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://youtube.com/playlist?list=PLzxicn7kBeay3kTPuTQ9lSi7I5jfWmEwc"
