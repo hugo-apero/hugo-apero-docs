@@ -400,7 +400,8 @@ There are two sets of front matter for each content section. One set is for the 
 </code></pre></div><p>Read more about overriding destination paths via front matter in the 
 <a href="https://gohugo.io/content-management/organization/" target="_blank" rel="noopener">Hugo docs</a>.</p>
 <p>If you rename a folder, you&rsquo;ll need to tell Hugo where to find the right Apéro layout file. Do this by editing the section configuration file. In our example, this would be <code>content/portfolio/_index.md</code> and add this to your YAML:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">cascade</span>:<span style="color:#bbb">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">type</span>:<span style="color:#bbb"> </span>project<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">cascade</span>:<span style="color:#bbb">
 </span><span style="color:#bbb">  </span><span style="color:#000080">type</span>:<span style="color:#bbb"> </span>project<span style="color:#bbb">
 </span></code></pre></div><p>This tells Hugo to use the <code>project</code> layouts for this section, but also for all pages in this section too. Read more about cascading front matter in the 
 <a href="https://gohugo.io/content-management/front-matter/" target="_blank" rel="noopener">Hugo docs</a>.</p>
@@ -431,7 +432,8 @@ There are two sets of front matter for each content section. One set is for the 
 </code></pre></div></li>
 <li>
 <p>Open up the <code>/book/_index.md</code> file and add:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">cascade</span>:<span style="color:#bbb">
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">type</span>:<span style="color:#bbb"> </span>project<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">cascade</span>:<span style="color:#bbb">
 </span><span style="color:#bbb">  </span><span style="color:#000080">type</span>:<span style="color:#bbb"> </span>project<span style="color:#bbb">
 </span></code></pre></div></li>
 <li>
