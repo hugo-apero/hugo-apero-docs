@@ -245,6 +245,7 @@ Read more about overriding destination paths via front matter in the [Hugo docs]
 If you rename a folder, you'll need to tell Hugo where to find the right Apéro layout file. Do this by editing the section configuration file. In our example, this would be `content/portfolio/_index.md` and add this to your YAML:
 
 ```yaml
+type: project
 cascade:
   type: project
 ```
@@ -276,6 +277,7 @@ The tricks shared above can *also* apply to adding sections. Say you want to hav
 1. Open up the `/book/_index.md` file and add:
 
     ```yaml
+    type: project
     cascade:
       type: project
     ```
