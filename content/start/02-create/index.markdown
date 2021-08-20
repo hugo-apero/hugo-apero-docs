@@ -17,7 +17,7 @@ This is my *recommended* workflow for most users.
 {{< panelset >}}
 {{< panel name="To do :heavy_check_mark:" >}}
 
-Create a new repository on GitHub from https://github.com/new:
+Create a new repository on GitHub from <https://github.com/new>:
 
 + Check to initialize with a `README` 
 
