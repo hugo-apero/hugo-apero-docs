@@ -12,7 +12,7 @@ date: 2021-01-01
 First, make sure you have the latest version of the blogdown package installed from CRAN:
 
 ```
-install.packages("blogdoown")
+install.packages("blogdown")
 ```
 
 Restart your R session. If you use RStudio, use the menu item *Session > Restart R* or the associated keyboard shortcut:
