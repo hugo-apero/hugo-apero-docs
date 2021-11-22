@@ -150,4 +150,4 @@ Please complete this [10-minute interactive tutorial on Markdown](https://common
 
 ## You made it!
 
-With all this preparation in place, you are ready to [create your site](../02-create)
+With all this preparation in place, you are ready to [create your site](../create-site)
