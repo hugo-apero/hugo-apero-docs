@@ -29,14 +29,15 @@ Was created by combining this theme's `panelset` and `panel` shortcodes:
 
 ```go
 {{</* panelset class="greetings" */>}}
-{{% panel name="Hello! :wave:" %}}
+{{%/* panel name="Hello! :wave:" */%}}
   __Hello__ ! You can put `markdown` content, it will be nicely rendered :smile:
-{{% /panel %}}
-{{% panel name="Goodbye :dash:" %}}
+{{%/* /panel */%}}
+{{%/* panel name="Goodbye :dash:" */%}}
   goodbye
-{{% /panel %}}
+{{%/* /panel */%}}
 {{</* /panelset */>}}
 ```
+
 
 
 You could also revert to HTML as well. For example, this panelset:
