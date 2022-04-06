@@ -60,15 +60,15 @@ For a pep talk about getting current on these installations, please read: https:
 
 Sign up for a free GitHub.com account at <https://github.com/join> if you don't already have one. 
 
-Complete these [installation instructions](https://happygitwithr.com/install-intro.html):
+Complete these installation instructions:
 
 + [Install Git](https://happygitwithr.com/install-git.html)
 
 + [Introduce yourself to Git](https://happygitwithr.com/hello-git.html)
 
-+ [Connect to GitHub](https://happygitwithr.com/push-pull-github.html)
++ [Set up credentials](https://happygitwithr.com/https-pat.html)
 
-+ [Cache credentials for HTTPS](https://happygitwithr.com/credential-caching.html)
++ [Connect to GitHub](https://happygitwithr.com/push-pull-github.html)
 
 + Check your new repository settings. As of [October 1, 2020](https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories/), GitHub will set `main` as the default branch for all new repositories, instead of `master`. To check this, for user accounts, go to: <https://github.com/settings/repositories>
 
