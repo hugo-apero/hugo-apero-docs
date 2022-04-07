@@ -149,6 +149,15 @@ There are two sets of front matter for each content section. One set is for the 
     </item>
     
     <item>
+      <title>Eric Nantz</title>
+      <link>https://hugo-apero.github.io/apero/project/eric/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-apero.github.io/apero/project/eric/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Silvia Canelón</title>
       <link>https://hugo-apero.github.io/apero/project/silvia/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
