@@ -1,0 +1,38 @@
+// ------------------------------
+// DO NOT EDIT BELOW THIS LINE
+
+// create Dark color classes based on tachyons prefix when needed
+.bg-dark-mode-site-bg-color { background-color: $siteBgColorDark; }
+.bg-dark-mode-sidebar-bg-color { background-color: $sidebarBgColorDark; }
+.dark-mode-text-color { color: $textColorDark; }
+.dark-mode-sidebar-text-color { color: $sidebarTextColorDark; }
+.dark-mode-headline-color { color: $headlineColorDark; }
+.dark-mode-heading-color { color: $headingColorDark; }
+.dark-mode-body-link-color { color: $bodyLinkColorDark; }
+.dark-mode-nav-link-color { color: $navLinkColorDark; }
+.bg-dark-mode-nav-bg-color { background-color: $navLinkColorDark; }
+.dark-mode-sidebar-link-color { color: $sidebarLinkColorDark; }
+.dark-mode-footer-text-color { color: $footerTextColorDark; }
+.dark-mode-button-text-color { color: $buttonTextColorDark; }
+.hover-dark-mode-button-hover-text-color:hover { color: $buttonHoverTextColorDark; }
+.bg-dark-mode-button-bg-color { background-color: $buttonBgColorDark; }
+.hover-bg-dark-mode-button-hover-bg-color:hover { background-color: $buttonHoverBgColorDark; }
+.b--dark-mode-border-color { border-color: $borderColorDark; }
+
+// override variables used in main with new Dark class slugs
+$siteBgColorDark: dark-mode-site-bg-color;
+$sidebarBgColorDark: dark-mode-sidebar-bg-color;
+$textColorDark: dark-mode-text-color;
+$sidebarTextColorDark: dark-mode-sidebar-text-color;
+$headlineColorDark: dark-mode-headline-color;
+$headingColorDark: dark-mode-heading-color;
+$bodyLinkColorDark: dark-mode-body-link-color;
+$navLinkColorDark: dark-mode-nav-link-color;
+$navBgColorDark: dark-mode-nav-bg-color;
+$sidebarLinkColorDark: dark-mode-sidebar-link-color;
+$footerTextColorDark: dark-mode-footer-text-color;
+$buttonTextColorDark: dark-mode-button-text-color;
+$buttonHoverTextColorDark: dark-mode-button-hover-text-color;
+$buttonBgColorDark: dark-mode-button-bg-color;
+$buttonHoverBgColorDark: dark-mode-button-hover-bg-color;
+$borderColorDark: dark-mode-border-color;

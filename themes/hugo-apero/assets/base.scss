@@ -1,5 +1,5 @@
 // color variables based on tachyons classes
-// set default color options 
+// set default color options
 $siteBgColor: "near-white" ;
 $sidebarBgColor: "light-gray" ;
 $textColor: "near-black" ;
@@ -16,3 +16,28 @@ $buttonBgColor: "black" ;
 $buttonHoverTextColor: "white" ;
 $buttonHoverBgColor: "blue" ;
 $borderColor: "moon-gray" ;
+
+
+$siteBgColorDark: "black" ;
+$sidebarBgColorDark: "light-gray" ;
+$textColorDark: "near-black" ;
+$sidebarTextColorDark: "dark-gray" ;
+$headlineColorDark: "black" ;
+$headingColorDark: "near-black" ;
+$bodyLinkColorDark: "blue" ;
+$navLinkColorDark: "near-black" ;
+$navBgColorDark: "near-black" ;
+$sidebarLinkColorDark: "near-black" ;
+$footerTextColorDark: "silver" ;
+$buttonTextColorDark: "near-white" ;
+$buttonBgColorDark: "black" ;
+$buttonHoverTextColorDark: "white" ;
+$buttonHoverBgColorDark: "blue" ;
+$borderColorDark: "moon-gray" ;
+
+code.has-jax {
+    -webkit-font-smoothing: antialiased;
+    background: inherit !important;
+    border: none !important;
+    font-size: 100%;
+}
