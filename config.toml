@@ -101,6 +101,10 @@ enableEmoji = true
       icon      = "lemon" # icon name without the 'fa-'
       icon_pack = "far"
       url       = "https://hugo-apero.netlify.app/"
+  [[params.social]]
+      icon      = "bluesky" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://bsky.app/profile/apreshill.com"
 
 [taxonomies]
   category = "categories"
