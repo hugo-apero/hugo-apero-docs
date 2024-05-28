@@ -86,7 +86,7 @@ enableEmoji = true
       icon_pack = "fab"
       url       = "https://github.com/hugo-apero/"
   [[params.social]]
-      icon      = "twitter" # icon name without the 'fa-'
+      icon      = "x-twitter" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://twitter.com/apreshill"
   [[params.social]]
