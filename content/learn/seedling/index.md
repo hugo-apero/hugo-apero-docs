@@ -12,30 +12,32 @@ categories:
 ---
 
 Courtesy of panelset.js by Garrick Aden-Buie, from his xaringanExtra package: https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset
+adapted into [Hugo Shortcodes](https://gohugo.io/content-management/shortcodes/)
 
 For example, this panelset:
 
 {{< panelset class="greetings" >}}
-{{< panel name="Hello! :wave:" >}}
-  hello
-{{< /panel >}}
-{{< panel name="Goodbye :dash:" >}}
+{{% panel name="Hello! :wave:" %}}
+  __Hello__ ! You can put `markdown` content, it will be nicely rendered :smile:
+{{% /panel %}}
+{{% panel name="Goodbye :dash:" %}}
   goodbye
-{{< /panel >}}
+{{% /panel %}}
 {{< /panelset  >}}
 
 Was created by combining this theme's `panelset` and `panel` shortcodes:
 
 ```go
 {{</* panelset class="greetings" */>}}
-{{</* panel name="Hello! :wave:" */>}}
-  hello
-{{</* /panel */>}}
-{{</* panel name="Goodbye :dash:" */>}}
+{{%/* panel name="Hello! :wave:" */%}}
+  __Hello__ ! You can put `markdown` content, it will be nicely rendered :smile:
+{{%/* /panel */%}}
+{{%/* panel name="Goodbye :dash:" */%}}
   goodbye
-{{</* /panel */>}}
+{{%/* /panel */%}}
 {{</* /panelset */>}}
 ```
+
 
 
 You could also revert to HTML as well. For example, this panelset:
