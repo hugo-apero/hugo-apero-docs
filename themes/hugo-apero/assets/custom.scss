@@ -1,1 +1,513 @@
-// Override this file to add your own SCSS styling.
+body.dark-mode,
+dark-mode main * {
+  // apply tachyons font family and color options from config
+  .headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+    background-color: $siteBgColorDark;
+    opacity: 0.9;
+  }
+
+    background-color: $siteBgColorDark;
+    color: $textColorDark;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $headingColorDark;
+  }
+  .f-headline,
+  .f-subheadline {
+    color: $headlineColorDark;
+
+    &-ns, &-m, &-l {
+      color: $headlineColorDark ;
+    }
+  }
+
+  .site-brand,
+  .site-links a,
+  .site-header .social-icon-links a,
+  .site-footer .site-copyright a,
+  .site-footer .social-icon-links a,
+  .page-main a.link {
+    color: $navLinkColorDark;
+  }
+  .page-main a:not(.link),
+  .page-main .social-icon-links a {
+    color: $bodyLinkColorDark;
+  }
+  .page-sidebar {
+    background-color: $sidebarBgColorDark;
+    color: $sidebarTextColorDark;
+  }
+  .page-sidebar a:not(.link) {
+    color: $sidebarLinkColorDark;
+  }
+  .site-footer {
+    color: $footerTextColorDark;
+  }
+
+  .post-body,
+  .page-body {
+
+    h1, h2, h3, h4, h5, h6 { @extend .lh-title ; }
+    h1 { @extend .f1 ; }
+    h2 { @extend .f2 ; }
+    h3 { @extend .f3 ; }
+    h4 { @extend .f4 ; }
+    h5 { @extend .f5 ; }
+    h6 { @extend .f6 ; }
+
+    > p { @extend .lh-copy ; }
+
+    > p > code {
+      @extend .f6, .ph1, .bg-white-50 ;
+    }
+
+    blockquote {
+      @extend .ml0, .pl3, .bl, .bw2, .measure-wide ;
+      border-color: $borderColorDark;
+
+      p, cite { @extend .lh-copy ; }
+      cite { @extend .f6, .i ; }
+    }
+
+    ul:not(.panel-tabs), ol, dl { @extend .measure-wide, .lh-copy ; }
+    > dl dt { @extend .pl3, .b, .mb2 ; }
+
+    hr { @extend .mv4, .ba ;
+    border-color: $borderColorDark; }
+
+    > table {
+      @extend .collapse, .mv4, .w-100, .ba, .bw1 ;
+      border-color: $borderColorDark;
+
+      tbody tr { @extend .stripe-dark ; }
+      th { @extend .pa3, .f7, .fw7, .ttu, .tl, .v-btm ; }
+      td { @extend .pa3, .f6, .v-top ; }
+    }
+
+    > .footnotes {
+      @extend .f7 ;
+
+      ol { @extend .mw-100 ; }
+    }
+
+    details {
+      @extend .mt4 ;
+    }
+  }
+
+  // apply tachyons classes to blog lists
+  .blog-content {
+    article { border-color: $borderColorDark;  }
+   .group-content { border-color: $borderColorDark;  }
+  }
+  .list-sidebar {
+    article:first-of-type {
+      @extend .mt4-l ;
+    }
+  }
+
+  // make the ad unit sticky and pad details
+  .page-sidebar {
+    .ad-unit {
+      background-color: $sidebarBgColorDark;
+    }
+    details {
+      @extend .ph4, .mv4 ;
+    }
+  }
+
+  // SHORTCODES
+  // apply tachyons classes to highlight shortcode (and markdown codefence)
+  .highlight { @extend .f6, .lh-copy ; }
+
+  // apply tachyons classes to figure shortcode
+  figure {
+    @extend .mr0, .ml0 ;
+
+    figcaption p,
+    figcaption h4 {
+      @extend .f7 ;
+    }
+    figcaption p {
+      @extend .fw4, .mv1 ;
+    }
+  }
+
+
+  // FORMS
+  form {
+    @extend .mb4 ;
+
+    legend {
+      @extend .ph0, .mh0, .fw6, .clip ;
+    }
+    fieldset {
+      @extend .f5, .measure-wide, .ba, .bw0, .b--transparent, .pa0, .mv3, .mh0 ;
+    }
+    label {
+      @extend .db, .f6, .lh-copy ;
+    }
+    select,
+    [type="text"],
+    [type="email"] {
+      @extend .input-reset, .pa3, .mt2, .mb3, .ba, .br0, .bg-transparent, .w-100 ;
+       border-color: $borderColorDark;
+    }
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .b--transparent, .link, .pointer, .bg-animate;
+      color: $buttonTextColorDark;
+      //hover: $buttonHoverTextColorDark;
+      //background-color: $buttonBgColorDark;
+     hover-bg: $buttonHoverBgColorDark;
+     hover-bg-custom-button-hover-bg-color: $buttonHoverBgColorDark;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      @extend .mv2, .mh1 ;
+    }
+    textarea {
+      @extend .input-reset, .pa3, .mt2, .mb3, .mh0, .lh-copy, .ba, .br0,  .bg-transparent, .w-100 ;
+      border-color: $borderColorDark;
+    }
+    select:focus,
+    textarea:focus,
+    [type="text"]:focus,
+    [type="email"]:focus {
+      @extend .bg-white-50 ;
+    }
+  }
+  // home page action jackson
+  .home {
+    .action.button {
+      @extend .input-reset, .ph4, .pv3, .mb3, .f6, .ttu, .tracked, .b, .bw1, .br0, .link, .pointer, .bg-animate, .b--transparent;
+      color: $headlineColorDark;
+      background-color: $sidebarBgColorDark;
+      hover-bg: $buttonHoverBgColorDark;
+    }
+    a.action.button:hover {
+    color:$buttonTextColorDark;
+    }
+    .action.text {
+      @extend .db, .mb4, .ttu, .tracked, .b, .link ;
+    }
+  }
+
+  // CSS GRID SCAFFOLD
+  .grid-container {
+    @extend .w-100 ;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: dense;
+    grid-gap: 0px;
+    margin: 0px auto;
+    max-width: 1440px;
+  }
+  .site-header {
+    grid-column: 1 / 7;
+  }
+  .page-main {
+    grid-column: 1 / 7;
+  }
+  .site-footer {
+    grid-column: 1 / 7;
+  }
+
+  .list-sidebar {
+    .page-main {
+      grid-column: 3 / 7;
+    }
+    .page-sidebar {
+      grid-column: 1 / 3;
+    }
+  }
+  .single-sidebar {
+    .page-main {
+      grid-column: 1 / 5;
+    }
+    .page-sidebar {
+      grid-column: 5 / 7;
+    }
+  }
+  .single-series {
+    .page-sidebar {
+      grid-column: 1 / 3;
+    }
+    .page-main {
+      grid-column: 3 / 7;
+    }
+
+  }
+
+  // SCAFFOLD MEDIA QUERY
+  @media screen and (max-width: 768px) {
+    .site-header {
+      order: 1;
+    }
+    .page-main {
+      order: 2;
+    }
+    .page-sidebar {
+      order: 3;
+    }
+    .site-footer {
+      order: 4;
+    }
+    .list-sidebar {
+      .page-main,
+      .page-sidebar {
+        grid-column: 1 / 7;
+      }
+      .page-main {
+        order: 3;
+      }
+      .page-sidebar {
+        order: 2;
+      }
+    }
+    .single-sidebar {
+      .page-main,
+      .page-sidebar {
+        grid-column: 1 / 7;
+      }
+    }
+    .single-series {
+      .page-main,
+      .page-sidebar {
+        grid-column: 1 / 7;
+      }
+      .page-main {
+        order: 3;
+      }
+      .page-sidebar {
+        order: 2;
+      }
+    }
+  }
+
+  // anchor links
+  a > svg.anchor-symbol {
+    color: transparent;
+    margin-left: .5rem;
+    fill: $black-40;
+    height: 22px;
+  }
+
+  a > svg.anchor-symbol:hover {
+    fill: $black-60;
+    transition: fill 0.3s ease;
+  }
+
+
+
+
+  /*----NAV LINK HOVER ANIMATION -----*/
+  /* from Desiree: https://github.com/dcossyleon/blogdown_desiree/blob/master/assets/scss/custom.scss */
+
+  /* stroke */
+
+  .site-links a,
+  .site-links a:after,
+  .site-links a:before {
+    transition: all .5s;
+  }
+
+  .site-links a {
+    position: relative;
+  }
+
+  .site-links a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.'; /* make invisible, dot beneath links */
+    color: transparent;
+    height: .08em;
+    pointer-events: none;
+    background-color: $navBgColorDark;
+  }
+
+  .site-links a:hover:after {
+    width: 85%;
+  }
+
+  .site-links a.active:after {
+    width: 85%;
+    color: transparent;
+    background-color: $navBgColorDark;
+    height: .08em;
+  }
+
+
+  // TOCs
+
+  // Position page and series TOC
+
+  nav#TableOfContents ul,
+  nav#SeriesTableOfContents ul,
+  nav#SectionTableOfContents ul {
+    @extend .list, .pa0;
+  }
+
+  nav#TableOfContents ul li,
+  nav#SeriesTableOfContents ul li,
+  nav#SectionTableOfContents ul li {
+    @extend .lh-copy, .pl2, .pv1;
+  }
+
+  details#PageTableOfContents {
+    @extend .mt3, .pl2, .pr0, .ml0, .mr2, .w-50, .dn, .db-l;
+    summary {
+      @extend .mb3, .f5, .fw7, .pl2, .ttu, .tracked,;
+       color: $sidebarLinkColorDark;
+    }
+  }
+
+  // stickies should make room for headroom to peek down
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    @extend .static-l, .top-0-l, .pt5;
+  }
+
+  .about-sidebar {
+    @extend .self-start, .sticky;
+    background-color: $sidebarBgColorDark;
+    color: $sidebarTextColorDark;
+    height: 100vh;
+  }
+  .about-sidebar a:not(.link) {
+    color: $sidebarTextColorDark;
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-sidebar {
+      order: 1;
+    }
+  }
+
+  audio {
+    filter: sepia(0%) saturate(0%) grayscale(1) contrast(99%) invert(100%);
+    width: 8rem;
+    height: 2rem;
+  }
+  .controls button:hover,
+  .controls button:focus {
+    @extend .o-10;
+  }
+
+
+  // apply tachyons classes to about page lists and collections
+  .featured-content h5,
+  .featured-content article,
+  .post-header h2 {
+    border-color: $borderColorDark;
+  }
+
+  // button links in single page headers + listing page footers
+  .post-header a.btn-links,
+  article footer a.btn-links {
+      @extend .fw4, .ph3, .pv2, .mb3, .f6, .ttu, .tracked, .b, .br0, .link, .pointer, .bg-animate, .bg-transparent;
+      color:$headingColorDark;
+      hover-color:$buttonHoverTextColorDark;
+      hover-bg:$buttonHoverBgColorDark;
+  }
+
+  // dividers for talks
+  .middot-divider::after {
+  	content: '\00B7';
+  	@extend .mh1;
+    color: $headingColorDark
+  }
+
+  // Responsive table to hold event details
+
+  .event-details {
+    .first-column {
+      @extend .fl, .w-100, .pv2, .w-25-ns;
+      .row-label {
+        @extend .f-subheadline, .f5, .fw2, .ttu, .tracked, .pa0, .ma0, .lh-copy;
+      }
+    }
+    .second-column {
+      @extend .fl, .w-100, .pv2, .w-75-ns;
+      .row-details {
+        @extend .f5, .measure, .lh-copy, .mv0;
+      }
+    }
+  }
+
+
+
+  // Series + collections table of contents
+
+  details#PageTableOfContents nav#TableOfContents ul li:hover {
+    background-color: $siteBgColorDark;
+  }
+
+  nav#SectionTableOfContents ul li,
+  nav#SeriesTableOfContents ul li {
+    @extend .pl2, .bl, .bw1, .b--transparent;
+    &.active {
+      @extend .pl3, .bl, .bw1;
+      background-color: $siteBgColorDark;
+      border-color: $borderColorDark;
+    }
+    &:not(.active) {
+      @extend .pl3, .dim, .bl, .bw1, .b--transparent;
+    }
+    &:hover:not(.active) a {
+      color: $headlineColorDark;
+      border-color: $borderColorDark;
+    }
+  }
+
+  nav#SectionTableOfContents ul details {
+    @extend .pv1, .mv0, .pr0;
+    padding-left: 1.25rem;
+    &.active {
+      border-color: $borderColorDark;
+      @extend .bl, .bw1, .pl3;
+    }
+    summary {
+      color: $sidebarLinkColorDark;
+      @extend .pb2;
+    }
+    li {
+      @extend .pl0;
+      &.active {
+        background: $siteBgColorDark;
+        @extend .pl3, .bl, .b--transparent, .bw1;
+      }
+    }
+  }
+
+  .list-sidebar ul li::marker,
+  .list ul li::marker{
+    color: $headingColorDark;
+    @extend .f5;
+  }
+
+
+  // Style code
+  pre {
+    @extend .pre, .br1, .pa3, .bg-transparent, .overflow-x-auto, .overflow-y-hidden;
+    border: 1px solid #ebebeb;
+  }
+
+  pre code span {
+  	font-weight: normal !important;
+  }
+
+  html, body {
+    scroll-padding-top: 73px;
+  }
+}
